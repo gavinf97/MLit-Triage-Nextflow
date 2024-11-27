@@ -1,2 +1,5 @@
 # Ignore the papers downloaded by EPMC_API_USE.ipynb
 stage1_papers_downloaded/
+
+# Ignore any html downloaded from DOME
+*.html
