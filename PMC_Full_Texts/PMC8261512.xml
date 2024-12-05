@@ -1,0 +1,2283 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.2 20190208//EN" "JATS-archivearticle1-mathml3.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archive-oasis-article1-mathml3.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jpoasis-nisons2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Adv Sci (Weinh)</journal-id><journal-id journal-id-type="iso-abbrev">Adv Sci (Weinh)</journal-id><journal-id journal-id-type="doi">10.1002/(ISSN)2198-3844</journal-id><journal-id journal-id-type="publisher-id">ADVS</journal-id><journal-title-group><journal-title>Advanced Science</journal-title></journal-title-group><issn pub-type="epub">2198-3844</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">8261512</article-id><article-id pub-id-type="doi">10.1002/advs.202100104</article-id><article-id pub-id-type="publisher-id">ADVS2626</article-id><article-categories><subj-group subj-group-type="overline"><subject>Research Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Research Articles</subject></subj-group></article-categories><title-group><article-title>A Noninvasive Multianalytical Approach for Lung Cancer Diagnosis of Patients with Pulmonary Nodules</article-title></title-group><contrib-group><contrib id="advs2626-cr-0001" contrib-type="author"><name><surname>Liu</surname><given-names>Quan&#x02010;Xing</given-names></name><xref ref-type="aff" rid="advs2626-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="advs2626-cr-0002" contrib-type="author"><name><surname>Zhou</surname><given-names>Dong</given-names></name><xref ref-type="aff" rid="advs2626-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="advs2626-cr-0003" contrib-type="author"><name><surname>Han</surname><given-names>Tian&#x02010;Cheng</given-names></name><xref ref-type="aff" rid="advs2626-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="advs2626-cr-0004" contrib-type="author"><name><surname>Lu</surname><given-names>Xiao</given-names></name><xref ref-type="aff" rid="advs2626-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="advs2626-cr-0005" contrib-type="author"><name><surname>Hou</surname><given-names>Bing</given-names></name><xref ref-type="aff" rid="advs2626-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="advs2626-cr-0006" contrib-type="author"><name><surname>Li</surname><given-names>Man&#x02010;Yuan</given-names></name><xref ref-type="aff" rid="advs2626-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="advs2626-cr-0007" contrib-type="author"><name><surname>Yang</surname><given-names>Gui&#x02010;Xue</given-names></name><xref ref-type="aff" rid="advs2626-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="advs2626-cr-0008" contrib-type="author"><name><surname>Li</surname><given-names>Qing&#x02010;Yuan</given-names></name><xref ref-type="aff" rid="advs2626-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="advs2626-cr-0009" contrib-type="author"><name><surname>Pei</surname><given-names>Zhi&#x02010;Hua</given-names></name><xref ref-type="aff" rid="advs2626-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="advs2626-cr-0010" contrib-type="author"><name><surname>Hong</surname><given-names>Yuan&#x02010;Yuan</given-names></name><xref ref-type="aff" rid="advs2626-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="advs2626-cr-0011" contrib-type="author"><name><surname>Zhang</surname><given-names>Ya&#x02010;Xi</given-names></name><xref ref-type="aff" rid="advs2626-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="advs2626-cr-0012" contrib-type="author"><name><surname>Chen</surname><given-names>Wei&#x02010;Zhi</given-names></name><xref ref-type="aff" rid="advs2626-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="advs2626-cr-0013" contrib-type="author" corresp="yes"><name><surname>Zheng</surname><given-names>Hong</given-names></name><xref ref-type="aff" rid="advs2626-aff-0001">
+<sup>1</sup>
+</xref><address><email>ziecoe@tmmu.edu.cn</email></address></contrib><contrib id="advs2626-cr-0014" contrib-type="author" corresp="yes"><name><surname>He</surname><given-names>Ji</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-9556-652X</contrib-id><xref ref-type="aff" rid="advs2626-aff-0002">
+<sup>2</sup>
+</xref><address><email>he.ji@genecast.com.cn</email></address></contrib><contrib id="advs2626-cr-0015" contrib-type="author" corresp="yes"><name><surname>Dai</surname><given-names>Ji&#x02010;Gang</given-names></name><xref ref-type="aff" rid="advs2626-aff-0001">
+<sup>1</sup>
+</xref><address><email>daijigang@tmmu.edu.cn</email></address></contrib></contrib-group><aff id="advs2626-aff-0001">
+<label><sup>1</sup></label>
+<named-content content-type="organisation-division">Department of Thoracic Surgery, Xinqiao Hospital</named-content>
+<institution>Third Military Medical University (Army Medical University)</institution>
+<named-content content-type="street">Xinqiao Main Street</named-content>
+<city>Chongqing</city>
+<postal-code>400037</postal-code>
+<country country="CN">China</country>
+</aff><aff id="advs2626-aff-0002">
+<label><sup>2</sup></label>
+<institution>GeneCast Biotechnology Co., Ltd</institution>
+<named-content content-type="street">88 Danshan Road, Xidong Chuangrong Building, Suite C&#x02010;1310</named-content>
+<city>Wuxi</city>
+<named-content content-type="country-part">Jiangsu</named-content>
+<postal-code>214104</postal-code>
+<country country="CN">China</country>
+</aff><author-notes><corresp id="correspondenceTo"><label>*</label>E&#x02010;mail: <email>ziecoe@tmmu.edu.cn</email>; <email>he.ji@genecast.com.cn</email>; <email>daijigang@tmmu.edu.cn</email> (Lead contact)<break/></corresp></author-notes><pub-date pub-type="epub"><day>07</day><month>5</month><year>2021</year></pub-date><pub-date pub-type="collection"><month>7</month><year>2021</year></pub-date><volume>8</volume><issue>13</issue><issue-id pub-id-type="doi">10.1002/advs.v8.13</issue-id><elocation-id>2100104</elocation-id><history><date date-type="rev-recd"><day>25</day><month>3</month><year>2021</year></date><date date-type="received"><day>11</day><month>1</month><year>2021</year></date></history><permissions><!--<copyright-statement content-type="issue-copyright">&#x000a9; 2021 Wiley&#x02010;VCH GmbH<copyright-statement>--><copyright-statement content-type="article-copyright">&#x000a9; 2021 The Authors. Advanced Science published by Wiley&#x02010;VCH GmbH</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:href="file:ADVS-8-2100104.pdf"/><abstract><title>Abstract</title><p>Addressing the high false&#x02010;positive rate of conventional low&#x02010;dose computed tomography (LDCT) for lung cancer diagnosis, the efficacy of incorporating blood&#x02010;based noninvasive testing for assisting practicing clinician's decision making in diagnosis of pulmonary nodules (PNs) is investigated. In this prospective observative study, next generation sequencing&#x02010; (NGS&#x02010;) based cell&#x02010;free DNA (cfDNA) mutation profiling, NGS&#x02010;based cfDNA methylation profiling, and blood&#x02010;based protein cancer biomarker testing are performed for patients with PNs, who are diagnosed as high&#x02010;risk patients through LDCT and subsequently undergo surgical resections, with tissue sections pathologically examined and classified. Using pathological classification as the gold standard, statistical and machine learning methods are used to select molecular markers associated with tissue's malignant classification based on a 98&#x02010;patient discovery cohort (28 benign and 70 malignant), and to construct an integrative multianalytical model for tissue malignancy prediction. Predictive models based on individual testing platforms have shown varying levels of performance, while their final integrative model produces an area under the receiver operating characteristic curve (AUC) of 0.85. The model's performance is further confirmed on a 29&#x02010;patient independent validation cohort (14 benign and 15 malignant, with power&#x000a0;&#x0003e;&#x000a0;0.90), reproducing AUC of 0.86, which translates to an overall sensitivity of 80% and specificity of 85.7%.</p></abstract><abstract id="advs2626-abs-0001" abstract-type="graphical"><p>An integrative multianalytical machine learning model based on patient clinical features, cfDNA mutation, cfDNA methylation, and protein cancer biomarkers for noninvasive cancer diagnosis of lung pulmonary nodules has achieved an area under the receiver operating characteristic curve of 0.85 on a 98&#x02010;patient discovery cohort, and 0.86 on a 29&#x02010;patient independent validation cohort, translating to 80% sensitivity and 85.7% specificity.
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xlink:href="ADVS-8-2100104-g001.jpg" position="anchor" id="jats-graphic-1" orientation="portrait"/></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="advs2626-kwd-0001">cfDNA methylation</kwd><kwd id="advs2626-kwd-0002">cfDNA mutations</kwd><kwd id="advs2626-kwd-0003">circulating tumor DNA</kwd><kwd id="advs2626-kwd-0004">lung cancer diagnosis</kwd><kwd id="advs2626-kwd-0005">machine learning</kwd><kwd id="advs2626-kwd-0006">protein cancer biomarkers</kwd><kwd id="advs2626-kwd-0007">pulmonary nodules</kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source>Clinical Research Foundation of Army Medical University</funding-source><award-id>2018XLC2014</award-id><award-id>2018JSLC033</award-id><award-id>2018XLC3035</award-id></award-group><award-group id="funding-0002"><funding-source><institution-wrap><institution>National Natural Science Foundation of China </institution><institution-id institution-id-type="open-funder-registry">10.13039/501100001809</institution-id></institution-wrap></funding-source><award-id>81972190</award-id><award-id>81702247</award-id></award-group></funding-group><counts><fig-count count="6"/><table-count count="1"/><page-count count="12"/><word-count count="9468"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>July 7, 2021</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.0.4 mode:remove_FC converted:07.07.2021</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="advs2626-cit-0039">
+<string-name>
+<given-names>Q.&#x02010;X.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Zhou</surname>
+</string-name>, <string-name>
+<given-names>T.&#x02010;C.</given-names>
+<surname>Han</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Lu</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Hou</surname>
+</string-name>, <string-name>
+<given-names>M.&#x02010;Y.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>G.&#x02010;X.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name>
+<given-names>Q.&#x02010;Y.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>Z.&#x02010;H.</given-names>
+<surname>Pei</surname>
+</string-name>, <string-name>
+<given-names>Y.&#x02010;Y.</given-names>
+<surname>Hong</surname>
+</string-name>, <string-name>
+<given-names>Y.&#x02010;X.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name>
+<given-names>W.&#x02010;Z.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Zheng</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>He</surname>
+</string-name>, <string-name>
+<given-names>J.&#x02010;G.</given-names>
+<surname>Dai</surname>
+</string-name>, <article-title>A Noninvasive Multianalytical Approach for Lung Cancer Diagnosis of Patients with Pulmonary Nodules</article-title>. <source xml:lang="en">Adv. Sci.</source>
+<year>2021</year>, <volume>8</volume>, <elocation-id>2100104</elocation-id>. <pub-id pub-id-type="doi">10.1002/advs.202100104</pub-id>
+</mixed-citation>
+</p></notes></front><body><sec id="advs2626-sec-0010"><label>1</label><title>Introduction</title><p>Low&#x02010;dose computed tomography (LDCT) is commonly used to screen for lung cancer (LC) in high&#x02010;risk patients. When the original definition for a positive screen from the United States&#x02013;based National Lung Screening Trial is used, LDCT performance suffered from a substantial number of positive calls (27%), of which 96% have been determined to be false positives.<sup>[</sup>
+<xref rid="advs2626-bib-0001" ref-type="ref">
+<sup>1</sup>
+</xref>
+<sup>]</sup> A subsequent NELSON trial then used a substantially different definition of a positive screening result to reduce the proportion of false positives to 60%, but it led to a 10&#x02010;fold decrease of sensitivity for LC detection with 2.7% positive rate.<sup>[</sup>
+<xref rid="advs2626-bib-0002" ref-type="ref">
+<sup>2</sup>
+</xref>
+<sup>]</sup> Distinguishing small malignant nodules in computed tomography (CT) scan from benign ones is particularly challenging because of their ambiguous radiographic characteristics.<sup>[</sup>
+<xref rid="advs2626-bib-0003" ref-type="ref">
+<sup>3</sup>
+</xref>
+<sup>]</sup> This issue is particularly outstanding in the authors&#x02019; hospital as it is further complicated by the relatively high prevalence of tuberculomas patients in the Chinese population.</p><p>Facing a similar dilemma, many biomarkers clinically used to broadly assess cancer risk lack the needed specificity. For example, serum&#x02010;based protein cancer biomarkers such as cancer antigen 125 (CA 125), carcinoem&#x02010;bryonic antigen (CEA), prostate&#x02010;specific antigen (PSA), and cancer antigen 19&#x02010;9 (CA 19&#x02010;9) are commonly used for monitoring lung cancer patients. But these proteins are also found in the serum of individuals without cancer which limits their clinical utility for early stage lung cancer diagnosis.<sup>[</sup>
+<xref rid="advs2626-bib-0004" ref-type="ref">
+<sup>4</sup>
+</xref>
+<sup>]</sup> Thus, there is an ongoing quest for biomarkers with higher specificity to supplement existing clinical practices.</p><p>Recent advance of circulating tumor DNA (ctDNA, which is one of the primary oncology research focuses based on cell&#x02010;free DNA (cfDNA)) studies offers a promising platform for noninvasive investigation of genomic alterations that are specific to the tumor. A ctDNA study typically only involves drawing liquid from the patients, such as blood, pleural fluid, cerebrospinal fluid, etc., which, compared to conventional surgery&#x02010;based biopsy approaches, incurs minimal impacts to solid tumor microenvironment, and hence avoids potential stress&#x02010;induced tumor cell proliferation. The application of next&#x02010;generation sequencing (NGS), together with advanced computational methods, has greatly enabled ctDNA&#x02010;based tumor mutational profiling in a broad range of cancer types.<sup>[</sup>
+<xref rid="advs2626-bib-0005" ref-type="ref">
+<sup>5</sup>
+</xref>, <xref rid="advs2626-bib-0006" ref-type="ref">
+<sup>6</sup>
+</xref>
+<sup>]</sup> These approaches have been successfully applied to positively diagnosed cancer patients, sometimes with reference tumor tissue sequencing profiling in order to guide treatment.<sup>[</sup>
+<xref rid="advs2626-bib-0006" ref-type="ref">
+<sup>6</sup>
+</xref>, <xref rid="advs2626-bib-0007" ref-type="ref">
+<sup>7</sup>
+</xref>
+<sup>]</sup> Meanwhile, the application of blood&#x02010;based mutational profiling for cancer screening and early detection is in its infancy, despite a number of high&#x02010;profile research publications.<sup>[</sup>
+<xref rid="advs2626-bib-0008" ref-type="ref">
+<sup>8</sup>
+</xref>, <xref rid="advs2626-bib-0009" ref-type="ref">
+<sup>9</sup>
+</xref>, <xref rid="advs2626-bib-0010" ref-type="ref">
+<sup>10</sup>
+</xref>
+<sup>]</sup> This is probably because the allele frequencies of these mutation targets are so low when the tumors are small<sup>[</sup>
+<xref rid="advs2626-bib-0011" ref-type="ref">
+<sup>11</sup>
+</xref>, <xref rid="advs2626-bib-0012" ref-type="ref">
+<sup>12</sup>
+</xref>
+<sup>]</sup> that they pose a challenge for reliable detection by present technologies. On lung cancer in particular, Phallen et&#x000a0;al. compared the cfDNA mutation profiles in early&#x02010;stage lung cancer against health person, and reported they may be potential noninvasive detection biomarkers.<sup>[</sup>
+<xref rid="advs2626-bib-0013" ref-type="ref">
+<sup>13</sup>
+</xref>
+<sup>]</sup> However, studies on mutational biomarkers for segregating malignant lung nodules from benign ones are scarcely reported.</p><p>Global hypomethylation of DNA sequences and focal hypermethylation at CpG islands (CGIs) have been widely observed at early stages of tumorigenesis, making DNA methylation profiling an appealing approach for cancer early detection. Several studies have been reported for blood&#x02010;based screening and diagnosis of lung cancer.<sup>[</sup>
+<xref rid="advs2626-bib-0014" ref-type="ref">
+<sup>14</sup>
+</xref>, <xref rid="advs2626-bib-0015" ref-type="ref">
+<sup>15</sup>
+</xref>, <xref rid="advs2626-bib-0016" ref-type="ref">
+<sup>16</sup>
+</xref>
+<sup>]</sup> Ooki et&#x000a0;al. designed a cfDNA methylation panel for early lung cancer detection, yet still based on healthy controls.<sup>[</sup>
+<xref rid="advs2626-bib-0017" ref-type="ref">
+<sup>17</sup>
+</xref>
+<sup>]</sup> Hulbert et&#x000a0;al. reported that the methylation profile of the promoter regions of 6 genes can produce high diagnostic accuracy for early stage lung cancer.<sup>[</sup>
+<xref rid="advs2626-bib-0018" ref-type="ref">
+<sup>18</sup>
+</xref>
+<sup>]</sup> This technique was also reported with high sensitivity and specificity for the detection of early stage NSCLC in Chinese patients with small nodules.<sup>[</sup>
+<xref rid="advs2626-bib-0019" ref-type="ref">
+<sup>19</sup>
+</xref>
+<sup>]</sup> A clinical research reported by Liang et&#x000a0;al. has shown that nine specific methylation markers were effective in differentiating lung cancers from benign pulmonary nodules (PNs).<sup>[</sup>
+<xref rid="advs2626-bib-0020" ref-type="ref">
+<sup>20</sup>
+</xref>
+<sup>]</sup> Such proof&#x02010;of&#x02010;concept work would generally require further improvement before its application to clinical practice as the performance of the test is in par with the more conventional and convenient LDCT.</p><p>A conspicuous issue with profiling using a single technology platform, being either imaging, protein biomarker, DNA mutation, or DNA methylation, is associated with the selection of biomarkers for construction of the predictive models. Given the complexity of tumor biology, a single testing platform could easily introduce systematically investigational bias to the predictive model as the observed data reflect only one aspect of the patient/sample. Moreover, clinical studies often face real&#x02010;world challenges in limited cohort size, coupling with the massive search space for potential predictive markers, the outcome models have unsurprisingly demonstrated great level of variance across different platforms and studies. Naturally, integrative analysis of multiomics data could provide a more comprehensive view of patients, reduce system bias and variance, and hence facilitate more accurate clinical decision making. A number of studies, despite few, have already shown that combining multiomics features could improve the performance of cancer screening. For example, the CancerSeek panel by Cohen et&#x000a0;al. based on DNA point mutations and protein cancer markers has achieved a sensitivity of 59% and specificity of 99% in differentiating resectable lung cancer from normal sample.<sup>[</sup>
+<xref rid="advs2626-bib-0008" ref-type="ref">
+<sup>8</sup>
+</xref>
+<sup>]</sup> And the PANOPTIC classifier by Silverstri et&#x000a0;al. based on protein cancer biomarkers and patient's clinical characteristics was able to distinguish benign from malignant lung nodules with sensitivity of 97% and specificity of 44%.<sup>[</sup>
+<xref rid="advs2626-bib-0021" ref-type="ref">
+<sup>21</sup>
+</xref>
+<sup>]</sup>
+</p><p>Our study aims to advance above&#x02010;mentioned state of the art in two aspects. First, we focus on the challenging clinical application which is differentiating malignant lesions from benign ones, rather than tumor tissues against normal samples. Lesions, being pathologically altered tissues, may share a great level of molecular characteristics in comparison to normal samples, regardless of their malignancy, and hence warrant more subtle and more difficult differentiation between malignant and benign ones. Second, we evaluate the level of performance improvement through integrating higher variety of multiomics platforms including clinical feature, protein biomarker, cfDNA mutation, and cfDNA methylation to reduce systematic bias and variance, and hence improve the diagnostical efficacy of lung PNs. In this proof&#x02010;of&#x02010;concept stage, our goal was not to replace the widely adopted LDCT and its subsequent clinician's review process, but rather, to provide additional assessment metrics to assist in clinician's decision making. Given LDCT's limitation on false&#x02010;positive rate, we aimed to improve the specificity of our test for this purpose, so that, when factoring our test result together with LDCT imaging, a clinician would become more confident in excluding negative cases from subsequently unnecessary treatment.</p></sec><sec id="advs2626-sec-0020"><label>2</label><title>Results and Discussion</title><p>Our study followed a typical &#x0201c;supervised learning&#x0201d; paradigm consisting of two sequential stages. In the discovery stage, various clinical and molecular features of samples on the discovery cohort were evaluated using statistical and machine learning methods to identify potential markers that are of predictive significance for PN malignancy. Then predictive models are constructed and tested with their parameters optimized. In the validation stage, the optimized predictive models are further benchmarked on an independent validation cohort to evaluate the models&#x02019; power of generalization on unknown samples. Readers shall note that due to space limitation, and with clinical practicing personnel as our targeted audience, the rest of our manuscript is slightly leaning toward the analytical results, their interpretation, and their real&#x02010;world implications in a clinical setup, rather than the algorithmic details of the computational methodology for data processing and data analysis.</p><sec id="advs2626-sec-0030"><label>2.1</label><title>Study Participants and Sample Characteristics</title><p>This study included tissue and plasma samples from patients screened positive for pulmonary nodules &#x0003c;3cm&#x000a0;in diameter by CT scan and subsequently underwent surgical resections during February 17th, 2019&#x02014;December 10th, 2019. All enrolled patients were required to be free of previous cancer history. Blood sample of sufficient quantity for this study was drawn prior to surgery, hence required a prospective observative clinical setup, although data analysis was conducted retrospectively without affecting the initial clinical decision. During discovery phase, patients were enrolled and tested without selection, so as to guarantee a real&#x02010;world positive (malignant) rate in the cohort. During validation phase, high&#x02010;risk patients (based on clinical factors) of low LDCT detection confidence (i.e., more likely negative/benign) were encouraged to enroll, in order to meet the cohort size criteria based on power analysis. Pathological assessment of PN samples was determined based on surgically resected tissue sections according to 2015 WHO Histological Classification of Lung Cancer. The collection of all samples was approved by the Ethical Committee of the Second Affiliated Hospital of Army Military Medical University (Project ID: 2019&#x02010;009&#x02010;01), and all participants provided written informed consent.</p><p>99 plasma samples were initially collected and enrolled in discovery cohort. Of them, one sample was excluded due to sample quality control (QC) failure, leaving 98 samples including 28 for patients with benign PNs and 70 malignant subject to multianalytical testing. Two patients (one benign and one malignant) did not perform protein biomarker testing and hence were excluded from protein biomarker discovery and integrative multianalytic model studies. After discovery study, a separate set of 29 samples (14 benign and 15 malignant) were enrolled in independent validation cohort (<bold>Figure</bold>&#x000a0;<xref rid="advs2626-fig-0001" ref-type="fig">
+<bold>1</bold>
+</xref>). Near the closure of the analysis, retrospectively enrolled samples also included 57 tissue samples for evaluation of the concordance of DNA methylation profiles, based on the selected methylation feature sites, between paired tissue and plasma of the same individual. Similarly, 55 tissue samples were sequenced for DNA mutations for evaluation of concordance with their paired plasma samples.</p><fig fig-type="Figure" xml:lang="en" id="advs2626-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Overview of the patient cohort used in our study.</p></caption><graphic id="jats-graphic-3" xlink:href="ADVS-8-2100104-g006"/></fig></sec><sec id="advs2626-sec-0040"><label>2.2</label><title>Clinical Features&#x02019; Correlation with PN Malignancy and Their Predictive Power</title><p>Collected clinical information of the patients included patient age, gender, smoking history, alcohol intake history, family history of cancer, nodule length, nodule width, and nodule attenuation on CT. Two nodule size calculations in forms of nodule length x nodule width, and (nodule length + nodule width)/2 were further derived. <bold>Table</bold>&#x000a0;<xref rid="advs2626-tbl-0001" ref-type="table">
+<bold>1</bold>
+</xref> summarizes the distribution of patient cohorts and their clinical features.</p><table-wrap id="advs2626-tbl-0001" xml:lang="en" content-type="Table" orientation="portrait" position="float"><label>Table 1</label><caption><p>Summary of patient demographics and clinical profiles in our study</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="char" char="(" span="1"/><col align="char" char="(" span="1"/><col align="char" char="(" span="1"/><col align="char" char="(" span="1"/><thead><tr><th align="left" rowspan="1" colspan="1"/><th align="left" rowspan="1" colspan="1"/><th style="border-bottom:solid 1px #000000" colspan="2" align="center" rowspan="1">Discovery cohort [<italic>N</italic> = 98]</th><th style="border-bottom:solid 1px #000000" colspan="2" align="center" rowspan="1">Independent validation cohort [<italic>N</italic> = 29]</th></tr><tr style="border-bottom:solid 1px #000000"><th align="left" rowspan="1" colspan="1"/><th align="left" rowspan="1" colspan="1"/><th align="center" rowspan="1" colspan="1">Benign [<italic>n</italic> = 28]</th><th align="center" rowspan="1" colspan="1">Malignant [<italic>n</italic> = 70]</th><th align="center" rowspan="1" colspan="1">Benign [<italic>n</italic> = 14]</th><th align="center" rowspan="1" colspan="1">Malignant [<italic>n</italic> = 15]</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Patient age</td><td align="left" rowspan="1" colspan="1"/><td align="center" rowspan="1" colspan="1">51.8&#x000b1;8.0</td><td align="center" rowspan="1" colspan="1">58.7&#x000b1;8.1</td><td align="center" rowspan="1" colspan="1">52.5&#x000b1;7.8</td><td align="center" rowspan="1" colspan="1">59.1&#x000b1;9.0</td></tr><tr><td align="left" rowspan="1" colspan="1">Gender</td><td align="left" rowspan="1" colspan="1">Male</td><td align="char" rowspan="1" colspan="1">16 (57.1%)</td><td align="char" rowspan="1" colspan="1">39 (55.7%)</td><td align="char" rowspan="1" colspan="1">7 (50%)</td><td align="char" rowspan="1" colspan="1">3 (20%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Female</td><td align="char" rowspan="1" colspan="1">12 (42.9%)</td><td align="char" rowspan="1" colspan="1">31 (44.3%)</td><td align="char" rowspan="1" colspan="1">7 (50%)</td><td align="char" rowspan="1" colspan="1">12 (80%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Smoking history</td><td align="left" rowspan="1" colspan="1">Smokers</td><td align="char" rowspan="1" colspan="1">11 (39.3%)</td><td align="char" rowspan="1" colspan="1">30 (42.9%)</td><td align="char" rowspan="1" colspan="1">3 (21.4%)</td><td align="char" rowspan="1" colspan="1">2 (13.3%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Nonsmokers</td><td align="char" rowspan="1" colspan="1">17 (60.7%)</td><td align="char" rowspan="1" colspan="1">40 (57.1%)</td><td align="char" rowspan="1" colspan="1">11 (78.6%)</td><td align="char" rowspan="1" colspan="1">13 (86.7%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Drinking history</td><td align="left" rowspan="1" colspan="1">Drinking</td><td align="char" rowspan="1" colspan="1">2 (7.1%)</td><td align="char" rowspan="1" colspan="1">13 (18.6%)</td><td align="char" rowspan="1" colspan="1">2 (14.3%)</td><td align="char" rowspan="1" colspan="1">1 (6.7%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Nondrinking</td><td align="char" rowspan="1" colspan="1">26 (92.9%)</td><td align="char" rowspan="1" colspan="1">57 (81.4%)</td><td align="char" rowspan="1" colspan="1">12 (85.7%)</td><td align="char" rowspan="1" colspan="1">14 (93.3%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Family cancer history</td><td align="left" rowspan="1" colspan="1">Yes</td><td align="char" rowspan="1" colspan="1">3 (10.7%)</td><td align="char" rowspan="1" colspan="1">17 (24.3%)</td><td align="char" rowspan="1" colspan="1">3 (21.4%)</td><td align="char" rowspan="1" colspan="1">1 (6.7%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">No</td><td align="char" rowspan="1" colspan="1">25 (89.3%)</td><td align="char" rowspan="1" colspan="1">53 (75.7%)</td><td align="char" rowspan="1" colspan="1">11 (78.6%)</td><td align="char" rowspan="1" colspan="1">14 (93.3%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Nodule type</td><td align="left" rowspan="1" colspan="1">Solid</td><td align="char" rowspan="1" colspan="1">24 (85.7%)</td><td align="char" rowspan="1" colspan="1">52 (74.3%)</td><td align="char" rowspan="1" colspan="1">14 (100%)</td><td align="char" rowspan="1" colspan="1">14 (93.3%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Part&#x02010;solid</td><td align="char" rowspan="1" colspan="1">4 (14.3%)</td><td align="char" rowspan="1" colspan="1">18 (25.7%)</td><td align="char" rowspan="1" colspan="1">0 (0%)</td><td align="char" rowspan="1" colspan="1">1 (6.7%)</td></tr><tr><td align="left" rowspan="1" colspan="1">Nodule length [cm]</td><td align="left" rowspan="1" colspan="1"/><td align="center" rowspan="1" colspan="1">1.71&#x000b1;0.62</td><td align="center" rowspan="1" colspan="1">2.06&#x000b1;0.58</td><td align="center" rowspan="1" colspan="1">1.94&#x000b1;0.63</td><td align="center" rowspan="1" colspan="1">2.05&#x000b1;0.60</td></tr><tr><td align="left" rowspan="1" colspan="1">Nodule width [cm]</td><td align="left" rowspan="1" colspan="1"/><td align="center" rowspan="1" colspan="1">1.34&#x000b1;0.53</td><td align="center" rowspan="1" colspan="1">1.67&#x000b1;0.53</td><td align="center" rowspan="1" colspan="1">1.45&#x000b1;0.60</td><td align="center" rowspan="1" colspan="1">1.63&#x000b1;0.60</td></tr><tr><td align="left" rowspan="1" colspan="1">Pathology assessment</td><td align="left" rowspan="1" colspan="1">Carcinoid</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">1 (1.4%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">0 (0%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Squamous cell carcinoma</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">6 (8.6%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">0 (0%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Large cell carcinoma</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">2 (2.9%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">0 (0%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Small cell lung cancer</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">3 (4.3%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">0 (0%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Adenocarcinoma</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">58 (82.9%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">15 (100%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Hamartoma</td><td align="char" rowspan="1" colspan="1">5 (17.9%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">1 (7.1%)</td><td align="char" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Atypical adenomatous hyperplasia of the lung</td><td align="char" rowspan="1" colspan="1">1 (3.6%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">0 (0%)</td><td align="char" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Tuberculosis</td><td align="char" rowspan="1" colspan="1">18 (64.3%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">8 (57.1%)</td><td align="char" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Granulomatous inflammation</td><td align="char" rowspan="1" colspan="1">1 (3.6%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">3 (21.4%)</td><td align="char" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Epithelioid vascular mesothelioma</td><td align="char" rowspan="1" colspan="1">1 (3.6%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">0 (0%)</td><td align="char" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Sclerosing alveolar cell tumor</td><td align="char" rowspan="1" colspan="1">2 (7.1%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">1 (7.1%)</td><td align="char" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Castleman disease</td><td align="char" rowspan="1" colspan="1">0 (0%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">1 (7.1%)</td><td align="char" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">Stage</td><td align="left" rowspan="1" colspan="1">Ia</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">19 (27.1%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">6 (40%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">Ib</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">41 (58.6%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">9 (60%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">IIb</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">4 (5.7%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">0 (0%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">IIIa</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">4 (5.7%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">0 (0%)</td></tr><tr><td align="left" rowspan="1" colspan="1"/><td align="left" rowspan="1" colspan="1">IIIb</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">2 (2.9%)</td><td align="char" rowspan="1" colspan="1"/><td align="char" rowspan="1" colspan="1">0 (0%)</td></tr></tbody></table><permissions><copyright-holder>John Wiley &#x00026; Sons, Ltd.</copyright-holder></permissions></table-wrap><p>On the discovery cohort, the 10 clinical features (Table <xref rid="advs2626-supitem-0002" ref-type="supplementary-material">S1a</xref>, Supporting Information) were assessed on their statistical significance in differentiating benign and malignant groups (Table <xref rid="advs2626-supitem-0003" ref-type="supplementary-material">S2</xref>, Supporting Information). Patient age consistently showed statistical significance based on our selection criteria (detailed below in the Experimental Section), with univariate prediction AUC = 0.75 on the discovery cohort (Table <xref rid="advs2626-supitem-0003" ref-type="supplementary-material">S2</xref>, Supporting Information) and mean AUC = 0.77 through bootstrapping (<bold>Figure</bold>&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">
+<bold>2</bold>a</xref>). The positive correlation between patient age and PN malignancy is quite understandable, given that cancer risk increases as a patient get older. Additionally, one would assume that in patients of older age, their PNs would have developed longer, carrying a higher risk of malignancy.</p><fig fig-type="Figure" xml:lang="en" id="advs2626-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>Performance of various predictive models in forms of receiver operating characteristic (ROC) curves and area under curve (AUC) scores. The performance of various predictive models based on different feature sets, namely clinical features, protein biomarkers, cfDNA mutations, cfDNA methylation, and integrated multianalytical model, respectively. The ROC curves of models are shown as lines of different colors. AUC and the 95% CI of each model are shown in the legend. a) Models&#x02019; performance on the 98&#x02010;patient discovery cohort. b) Models&#x02019; performance on the 29&#x02010;patient independent validation cohort.</p></caption><graphic id="jats-graphic-5" xlink:href="ADVS-8-2100104-g003"/></fig><p>The four nodule size measurements showed sufficient statistical significance on the discovery cohort, with AUCs slightly lower than that of patient age, and varying from 0.66 to 0.72. However, when we tested various multivariate modules using different combination of patient age and nodule size features for prediction of PN malignancy, all models performed worse than the univariance patient age model alone. This indicated that while nodule size might surface as a differentiating marker between malignant and benign nodules at the cohort level, it alone lacks the predictive power at individual sample level. This may suggest that instead of the nodule size, the cell composition and molecular characteristics of the nodule have more to do with its malignancy, and hence warrant comprehensive molecular studies in addition to CT imaging analysis.</p></sec><sec id="advs2626-sec-0050"><label>2.3</label><title>Integrative Analysis of Multiple Protein Biomarkers for PN Malignancy Assessment</title><p>Eight protein cancer biomarkers most commonly used and most conveniently accessible for clinical cancer screening, namely cancer antigen 125 (CA 125), cancer antigen 15&#x02010;3 (CA 15&#x02010;3), carcinoembryonic antigen (CEA), cytokeratin&#x02010;19 fragment (CYFRA 21&#x02010;1), neuron&#x02010;specific enolase (NSE), pro&#x02010;gastrin&#x02010;releasing peptide precursor (PROGRP), squamous cell carcinoma antigen (SCC), and serum ferritin (SF) were measured Xingqiao Hospital. Based on the chemiluminescent immunoassay (CLIA) platform and following manufacturer's standard operational procedure (SOP), reagent kits being used included CA 125 II Reagent Kit (Abbott GmbH &#x00026; Co. KG) for CA 125, CA 15&#x02010;3 Reagent Kit (Abbott GmbH &#x00026; Co. KG) for CA 15&#x02010;3, CEA Reagent Kit (Abbott Ireland Diagnostics Division) for CEA, ARCHITECT CYFRA 21&#x02010;1 Reagent Kit (Abbott GmbH &#x00026; Co. KG) for CYFRA 21&#x02010;1, ARCHITECT ProGRP Reagent Kit (Abbott GmbH &#x00026; Co. KG) for PROGRP, ARCHITECT SCC Reagent Kit(Abbott GmbH &#x00026; Co. KG) for SCC, Ferritin Reagent Kit (Abbott Ireland Diagnostics Division) for SF. And finally, NSE was measured by an electrochemiluminescence assay kit (ECLIA, Roche Diagnostics GmbH) following SOP.</p><p>Based on univariate analysis on the discovery cohort (Table <xref rid="advs2626-supitem-0004" ref-type="supplementary-material">S3a</xref>, Supporting Information), CEA, CYFRA 21&#x02010;1, and SCC have shown statistical significance (Table <xref rid="advs2626-supitem-0005" ref-type="supplementary-material">S4</xref>, Supporting Information), with predictive AUCs of 0.72, 0.68, and 0.67, respectively. Using these three markers, a multivariate predictive model based on support vector machine (SVM)<sup>[</sup>
+<xref rid="advs2626-bib-0022" ref-type="ref">
+<sup>22</sup>
+</xref>, <xref rid="advs2626-bib-0023" ref-type="ref">
+<sup>23</sup>
+</xref>
+<sup>]</sup> was constructed and tested on the discovery cohort with bootstrapping AUC = 0.71 (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2a</xref>).</p><p>While the multivariate model had a slightly lower AUC than that of the univariance CEA, our previous empirical experiments suggested this was an acceptable and negligible performance fluctuation due to subsampling during bootstrapping, which sometimes was actually an indication that the model may have reached a relatively robust local optimization. Despite this, protein cancer biomarkers, when used alone or in combination for prediction, consistently underperformed the earlier selected clinical feature (patient age) in the same discovery cohort. While it appears somewhat surprising, it is still understandable given the well&#x02010;known lack of specificity of protein cancer biomarker testing.</p></sec><sec id="advs2626-sec-0060"><label>2.4</label><title>Limitation of cfDNA Mutation Profiling for PN Malignancy Analysis</title><p>cfDNA mutation testing was conducted at GeneCast Biotechnology Co. Ltd. using a unique molecular identifier&#x02010; (UMI&#x02010;) based and capture&#x02010;based 29&#x02010;gene NGS panel, with somatic mutations called through an in&#x02010;house bioinformatics pipeline (Experimental Section). The 29&#x02010;gene panel was designed based on curation of genes mostly related to cancer origination and development, in association with their mutation prevalence based on public databases including The Cancer Genome Atlas (TCGA) and Catalogue of Somatic Mutations in Cancer (COSMIC). After necessary QC checking and filtering based on established and validated criteria, the number of detected somatic mutations in each cfDNA sample on the discovery cohort ranged from 2 to 47, with median of 13 and average of 14.3 (Table <xref rid="advs2626-supitem-0006" ref-type="supplementary-material">S5</xref>, Supporting Information).</p><p>Further review of individual mutations suggested their scarce prevalence on the discovery cohort. This is probably due to the complexity of cancer origination and evolution, together with a significant percentage of noncancerous samples on the cohort. This has posted great challenge to our marker selection work, as no mutation had shown statistical significance through univariate analysis on the discovery cohort.</p><p>To tackle this obstruction, we categorized each sample's mutations into four different functional levels, based on their match to publicly available hotspots and their functional annotations (Experimental Section), and based on an assumption that mutations in the same functional level could be approximated equally in the process of cancer cell evolution. We then represented each category with two numeric features, namely the count of mutations and the maximal variant allele frequency of the mutations, respectively. This process in combination aggregated each sample's mutation profile into eight numerical features (Table <xref rid="advs2626-supitem-0006" ref-type="supplementary-material">S5</xref>, Supporting Information). Modeling based on these features, SVM performed AUC = 0.54 on the discovery cohort (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2a</xref>).</p><p>To understand the cause to the significantly low efficacy of cfDNA mutation profiling, we further evaluated the concordance of the mutations between the paired tumor&#x02010;plasma samples, based on the additional 55 tumor sequencing cohort (26 benign and 29 malignant). Among the 60 mutations detected across the 29 malignant tumor samples, only 1 showed concordance with a total of 268 mutations detected by the correspondingly paired plasma sample, whereas among the 31 mutations for the 26 benign tumor samples, only 2 were concordant with a total of 288 in plasma. This suggested that in our specific application, the mutations detected in plasma have a poor specificity in relevance to the lesion of our particular interest, highlighting the caveats of cfDNA mutation profiling technology, not only due to the technology's limited sensitivity, but also due to the complexity of cancerous cell formation and evolution.</p></sec><sec id="advs2626-sec-0070"><label>2.5</label><title>Prediction of PN Malignancy Using cfDNA Methylation Markers</title><p>cfDNA methylation profiling was conducted at GeneCast Biotechnology Co. Ltd using capture&#x02010;based NGS panel designed primarily based on the publicly available Cancer Genome Atlas (TCGA) dataset. Using data on the discovery set (Table <xref rid="advs2626-supitem-0007" ref-type="supplementary-material">S6</xref>, Supporting Information), methylated CpG sites were first clustered into 697 methylation&#x02010;correlated blocks (MCBs) for feature representation (Experimental Section). 43 MCBs showed statistical significance on the discovery cohort (Table <xref rid="advs2626-supitem-0008" ref-type="supplementary-material">S7</xref>, Supporting Information), of which 30 were selected as multivariate predictors through machine learning (<bold>Figure</bold>&#x000a0;<xref rid="advs2626-fig-0003" ref-type="fig">
+<bold>3</bold>
+</xref>). SVM model using the 30 MCBs performed AUC = 0.81 on the discovery cohort (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2a</xref>). This is by far the best performed molecular profiling platform being investigated in our studies, consistently showing a superior sensitivity compared to protein cancer biomarkers and DNA mutations when maintained in the same level of specificity using different cut&#x02010;off values (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2a</xref>).</p><fig fig-type="Figure" xml:lang="en" id="advs2626-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>cfDNA methylation profiles of all patients in the discovery cohort and the independent validation cohort, represented using the 30&#x02010;MCB feature set. Colored bars indicate the average methylation level for the corresponding MCB.</p></caption><graphic id="jats-graphic-7" xlink:href="ADVS-8-2100104-g002"/></fig></sec><sec id="advs2626-sec-0080"><label>2.6</label><title>Integration of Multianalytical Tests for PN Malignancy Prediction</title><p>A side&#x02010;by&#x02010;side comparison of all four models&#x02019; predictions on the discovery cohort indicated majority of consistency but a certain disagreement at the same time on each sample. Borrowing the concept of &#x0201c;majority voting,&#x0201d; we integrated all models&#x02019; predictive output through a subsequentially weighted average approach (Experimental Section). Bernoulli Naive Bayesian (BNB)<sup>[</sup>
+<xref rid="advs2626-bib-0024" ref-type="ref">
+<sup>24</sup>
+</xref>
+<sup>]</sup> learning model was trained on the discovery cohort, using each individual model's predictive output as its input, and the sample's pathological classification as the desired result. The integrative multianalytic BNB model has since achieved a significantly improved performance of AUC = 0.85 on the discovery cohort (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2a</xref>).</p><p>It is interesting to observe that the Bayesian&#x02010;based model has outperformed any of its componential models. While patient clinical information (patient age) and protein cancer biomarker platform have shown unsatisfactory specificity, and DNA mutation platform has a very poor sensitivity, through mathematical integration, they still have contributed to achieving further performance gain on top of the DNA methylation platform, echoing an old proverb that &#x0201c;two hands are better than one,&#x0201d; and highlighting the importance of multiomics molecular testing for highly complex clinical challenges, such as PN malignancy assessment. The improved performance of the integrative model however may not appear surprising to machine learning methodology researchers. In essence, the BNB model in our study was utilized as a stacking ensemble classifier.<sup>[</sup>
+<xref rid="advs2626-bib-0025" ref-type="ref">
+<sup>25</sup>
+</xref>
+<sup>]</sup> Previous studies have proven that provided the first layer of input classifiers have limited correlation and are complementary to each other, which is in our case, a second layer ensemble classifier would then be able to average out noise from diverse models and thereby enhance the generalizable signal, yielding an improved accuracy.<sup>[</sup>
+<xref rid="advs2626-bib-0025" ref-type="ref">
+<sup>25</sup>
+</xref>
+<sup>]</sup> Further investigation of the integrative model's intermediate weights data showed that the model assigned significantly lower importance weights to protein biomarkers (mean = 0.68) and cfDNA mutations (0.71) than to cfDNA methylation (0.74) and clinical features (0.76) (Figure <xref rid="advs2626-supitem-0001" ref-type="supplementary-material">S3</xref>, Supporting Information), which in general agreed with each individual model's performance in our study and previous reports.<sup>[</sup>
+<xref rid="advs2626-bib-0026" ref-type="ref">
+<sup>26</sup>
+</xref>
+<sup>]</sup>
+</p></sec><sec id="advs2626-sec-0090"><label>2.7</label><title>Independent Validation of PN Malignancy Markers and Predictive Models</title><p>With the statistical markers identified from each testing platform, and multivariate and multianalytical models established using samples on the discovery cohort, we further benchmarked them on the 29&#x02010;patient independent validation cohort (14 benign and 15 malignant). Based on AUC of 0.85 on the discovery cohort for the final integrative model, and assuming an <italic>&#x003b1;</italic> of 0.05, a power analysis on the statistical test of the significance for AUC requires a minimal of 11 benign and 11 malignant samples to achieve adequate power of 0.9.<sup>[</sup>
+<xref rid="advs2626-bib-0027" ref-type="ref">
+<sup>27</sup>
+</xref>
+<sup>]</sup>
+</p><p>The univariate clinical feature, patient age, in general maintained its predictive power on the validation cohort (Table <xref rid="advs2626-supitem-0002" ref-type="supplementary-material">S1b</xref>, Supporting Information) with AUC = 0.73 (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2b</xref>), which translated to a sensitivity of 73.3% and specificity of 64.3% using a cut&#x02010;off age = 54 (Figure <xref rid="advs2626-supitem-0001" ref-type="supplementary-material">S1</xref>, Supporting Information). The age cut&#x02010;off was determined on the discovery cohort to optimize the predictive model's performance (measured as sensitivity + specificity).</p><p>On the protein cancer biomarker platform, the three selected markers (CEA, CYFRA 21&#x02010;1, and SCC, respectively) demonstrated certain univariate predictive power degradation on the independent validation cohort (Table <xref rid="advs2626-supitem-0004" ref-type="supplementary-material">S3b</xref>, Supporting Information), with AUCs dropping from 0.72, 0.68, and 0.67, respectively, on the discovery cohort to 0.54, 0.52, and 0.66, respectively, on the validation cohort. Their combined multivariate prediction however has held more steadily, from AUC = 0.71 on the discovery cohort to AUC = 0.67 on the validation cohort (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2b</xref>), corresponding to sensitivity of 60% and specificity of 71.4% using an optimized SVM prediction score cutoff of 0.670, and reflecting a slight improvement on performance reproducibility over individual protein biomarkers. It is worthwhile to mention that our observation that the algorithmic combination of multiple protein biomarkers outperforms each individual biomarker is consistent with previous research, such as the Xpressys 13&#x02010;protein classifier for management of lung nodules that has consistent diagnostic information of &#x02248;10% (Youden's index).<sup>[</sup>
+<xref rid="advs2626-bib-0028" ref-type="ref">
+<sup>28</sup>
+</xref>
+<sup>]</sup>
+</p><p>The cfDNA mutation model that suffered from a low AUC = 0.54 on the discovery cohort maintained a same level AUC = 0.62 on the independent validation cohort (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2b</xref>; and Table <xref rid="advs2626-supitem-0006" ref-type="supplementary-material">S5b</xref>, Supporting Information), which made it difficult to balance prediction sensitivity and specificity, yielding sensitivity = 80% and specificity = 42.9% using an optimized cut&#x02010;off threshold of 0.660 for the prediction output score.</p><p>The cfDNA methylation model has shown a certain performance degradation on the validation cohort as well, dropping from AUC = 0.81 on the discovery cohort to AUC = 0.72 on the validation cohort (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2b</xref>; and Table <xref rid="advs2626-supitem-0007" ref-type="supplementary-material">S6b</xref>, Supporting Information), which translated to sensitivity = 93.3% and specificity = 42.9% using an optimized prediction score cut&#x02010;off of 0.606. This however is still considered a satisfactory performance in a clinical setting.</p><p>To further cross&#x02010;validate the cfDNA&#x02010;based MCB features, independent tissue DNA (tDNA) methylation sequencing were conducted on 57 patients across both discovery and validation cohorts who consented to additional tissue sequencing (27 benign and 30 malignant; and Table <xref rid="advs2626-supitem-0009" ref-type="supplementary-material">S8</xref>, Supporting Information), with each MCB's statistical significance assessed on this cohort based on Wilcoxon test (Figure <xref rid="advs2626-supitem-0001" ref-type="supplementary-material">S2a</xref>, Supporting Information). On a majority of MCBs, tDNA profiles showed a higher difference across benign and malignant groups than cfDNA, indicating these MCBs were picking malignant tumor&#x02010;specific features. At the same time, cfDNA profiles showed a high Pearson correlation coefficient of 0.84 with those of tDNA (Figure <xref rid="advs2626-supitem-0001" ref-type="supplementary-material">S2b</xref>, Supporting Information), strongly supporting that cfDNA&#x02010;based MCB measurements were indeed primarily derived from their paired tissue samples.</p><p>Finally, in spite of varying level of performance fluctuation of each individual testing platform's predictive model, the integrative multianalytical model has steadily held its performance with AUC = 0.86 on the validation cohort (in comparison to AUC = 0.85 on the discovery cohort) (Figure&#x000a0;<xref rid="advs2626-fig-0002" ref-type="fig">2b</xref>), corresponding to sensitivity = 80% and specificity = 85.7% using prediction score cut&#x02010;off of 0.761, striking a satisfactory balance of sensitivity and specificity, and in general significantly outperforming any individual testing platform. To further understand how the integrative model's prediction stacked with each individual model, we compared their prediction output on each validation (in terms of benign/malignant using the earlier&#x02010;mentioned optimized cut&#x02010;off thresholds) against the gold&#x02010;standard pathology assessment (<bold>Figure</bold>&#x000a0;<xref rid="advs2626-fig-0004" ref-type="fig">
+<bold>4</bold>
+</xref>). It is evidential that on the majority (19 out of 24) of samples on which the four individual models made conflicting predictions, the integrative model was able to achieve a more comprehensive assembly of each individual model's output into a correct prediction that matched the pathology assessment, proving the earlier mentioned analogy that &#x0201c;two hands are better than one&#x0201d;.</p><fig fig-type="Figure" xml:lang="en" id="advs2626-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>Predictive outcome of various models in comparison to the gold standard pathology assessment on the independent validation cohort. Samples were sorted according to nodule length.</p></caption><graphic id="jats-graphic-9" xlink:href="ADVS-8-2100104-g005"/></fig></sec><sec id="advs2626-sec-0100"><label>2.8</label><title>Correlation of the Integrative Multianalytical Model's Performance with Nodule Size</title><p>Since it is widely observed that the quantity of circulating tumor DNA in blood is positively correlated with the stage of the cancer and the tumor volume,<sup>[</sup>
+<xref rid="advs2626-bib-0029" ref-type="ref">
+<sup>29</sup>
+</xref>
+<sup>]</sup> we looked into the average extracted cfDNA quantity (normalized to ng&#x000a0;mL<sup>&#x02212;1</sup> of whole blood) of the malignant samples and the integrative model's performance according to three different nodule length ranges, namely &#x0003c; = 1,&#x000a0;&#x0003e;1&#x000a0;&#x0003c; = 2,&#x000a0;and &#x0003e;2&#x000a0;&#x0003c; = 3,&#x000a0;respectively (Table <xref rid="advs2626-supitem-0010" ref-type="supplementary-material">S9</xref>, Supporting Information).</p><p>Our data did in general supported the correlation between cfDNA quantity and nodule size, with average extracted cfDNA quantity on the discovery cohort changing from 551&#x000a0;ng&#x000a0;mL<sup>&#x02212;1</sup>&#x000a0;for&#x000a0;&#x0003c; = 1&#x000a0;cm,&#x000a0;to 613.35&#x000a0;ng&#x000a0;mL<sup>&#x02212;1</sup>&#x000a0;for&#x000a0;1&#x02013;2&#x000a0;cm,&#x000a0;and&#x000a0;to 625.71&#x000a0;ng&#x000a0;mL<sup>&#x02212;1</sup>&#x000a0;for&#x000a0;2&#x02013;3&#x000a0;cm,&#x000a0;respectively;&#x000a0;and on the independent validation cohort 858,&#x000a0;703.33,&#x000a0;and&#x000a0;1015.75&#x000a0;ng&#x000a0;mL<sup>&#x02212;1</sup>,&#x000a0;respectively. However, the integrative model's performance, measured in either AUC, sensitivity, or specificity, despite showing a certain level of fluctuation, did not support such a positive correlation (Table <xref rid="advs2626-supitem-0010" ref-type="supplementary-material">S9</xref>, Supporting Information). While arguably this could be due to the relatively small cohort size in our study that failed to reveal a clear statistical trend, we suspect this was also in supportive to our earlier observation that nodule size (and hence cfDNA quantity, too) was not a strong clinical predictor to PN malignancy, further strengthen our belief that molecular testing could provide a more comprehensive understanding to PN's cell composition and its malignancy than imaging per se. Additionally, our integrative multianalytical molecular testing approach has reached a sensitivity level that is generally not impacted by the small nodule size. This is evidential in Figure&#x000a0;<xref rid="advs2626-fig-0004" ref-type="fig">4</xref> as well, where the integrative model's performance did not show statistical bias across samples of different nodule sizes.</p></sec><sec id="advs2626-sec-0110"><label>2.9</label><title>Comparison between Integrative Multianalytical Model and PET/CT in Distinguishing Malignant Nodules from Tuberculomas</title><p>Molecular/anatomic imaging with <sup>18</sup>F&#x02010;fluorodeoxyglucose positron emission tomography/computed tomography (PET/CT) has been widely recognized for detecting, identifying, and staging lung cancer. It provides metabolic readings, with a maximum standardized uptake value (SUVmax) &#x0003e;2.5&#x000a0;typically adopted as a cutoff value for distinguishing lung malignancies from benign diseases.<sup>[</sup>
+<xref rid="advs2626-bib-0030" ref-type="ref">
+<sup>30</sup>
+</xref>, <xref rid="advs2626-bib-0031" ref-type="ref">
+<sup>31</sup>
+</xref>
+<sup>]</sup> As a baseline reference, we studied an independent cohort of 61 patients who have taken PET/CT, of whom, 50 were later pathologically confirmed with malignant nodules and 11 with tuberculomas (Table <xref rid="advs2626-supitem-0011" ref-type="supplementary-material">S10</xref>, Supporting Information). While SUVmax in malignant nodules were in general higher than those in tuberculomas (7.18&#x000a0;&#x000b1;&#x000a0;3.82&#x000a0;vs&#x000a0;5.36&#x000a0;&#x000b1;&#x000a0;3.78),&#x000a0;there was no statistical significance (<italic>p</italic> = 0.264, <italic>t</italic> = 1.147). Notably, should SUVmax solely be used for decision making, 9 out of 11 tuberculomas samples with SUVmax&#x000a0;&#x0003e;&#x000a0;2.5 would have been misdiagnosed as malignant, corresponding to AUC = 0.65, sensitivity = 90%, and specificity = 9.1% (<bold>Figure</bold>&#x000a0;<xref rid="advs2626-fig-0005" ref-type="fig">
+<bold>5</bold>
+</xref>). In contrast, for the 23 patients in our independent validation cohort who had either malignant nodules (15) or tuberculomas (8), our integrative multianalytical model had AUC = 0.94, sensitivity = 80%, and specificity = 87.5% (Figure&#x000a0;<xref rid="advs2626-fig-0005" ref-type="fig">5</xref>; and Table <xref rid="advs2626-supitem-0012" ref-type="supplementary-material">S11</xref>, Supporting Information). Although these two sets of performance metrics were based on two different cohorts due to the limitation that no patient in our cohort took PET/CT, and the relatively small cohorts does not speak statistical significance, they still provided some promising baseline understanding on our approach's advantage over PET/CT.</p><fig fig-type="Figure" xml:lang="en" id="advs2626-fig-0005" orientation="portrait" position="float"><label>Figure 5</label><caption><p>Performance comparison between PET/CT and our integrative multianalytical model, in forms of receiver operating characteristic (ROC) curves and area under curve (AUC) scores.</p></caption><graphic id="jats-graphic-11" xlink:href="ADVS-8-2100104-g004"/></fig></sec><sec id="advs2626-sec-0120"><label>2.10</label><title>Cost and Availability Analysis of the Proposed Approach</title><p>While our manuscript has primarily focused on the clinical validity of the proposed approach, its real&#x02010;world economic implications shall not be overlooked before we evaluate its clinical utility. Since the primary goal of our study is to reduce over&#x02010;treatment (unnecessary surgery) of patients carrying benign lung nodules, and blood&#x02010;drawing in our approach is significantly more appealing to patients than an invasive lobectomy or sublobar resection procedure, should the total monetary cost of our combined molecular tests be lower than that of a surgery, our multiomics approach would become at least financially beneficial to the particular benign patient (in addition to all other healthcare&#x02010;related benefits). And should the total testing cost of the whole tested patient population be lower than the surgical cost of all benign patients, our approach would benefit the overall clinical field. In our study, based on the material and labor costs of our testing and an estimated industrial profit margin, the hypothetical patient&#x02010;billed testing cost is still only &#x02248;44% of the total perioperative expense of a surgery (4000 USD vs 9000 USD). Still, this is based on the relatively large NGS panels for marker discovery in our initial experimental design. Once our small selection of predictive DNA methylation MCB markers and protein cancer biomarkers have been clinically validated in future clinical trials, it is hopeful to further cut down the testing costs. Thus, our approach has a great potential of being not only clinically feasible, but also monetarily affordable.</p><p>The second aspect of cost to patients is time&#x02014;and closely related, test availability&#x02014;while they await testing outcome and a go/no&#x02010;go decision on surgery. For now, the complexity of NGS&#x02010;related molecular bench work almost certainly warrants the necessity of a central molecular lab (instead of a more accessible and more rapid local point&#x02010;of&#x02010;care device), which typically requires at least several business days of turn&#x02010;around&#x02010;time (TAT). Fortunately, recent years of technological and logistical advances in NGS and molecular testing have shown that this level of testing TAT would not become a significant bottleneck in the clinical decision&#x02010;making process, as the real&#x02010;world lead time for surgical operation would typically extend beyond this TAT.</p></sec></sec><sec id="advs2626-sec-0130"><label>3</label><title>Conclusion and Future Work</title><p>LDCT's high false&#x02010;positive rate remains a challenge for diagnosis of lung PNs, which is further compounded by the relatively high prevalence of tuberculomas patients in the authors&#x02019; clinical setting. Our study adopted clinical features, protein cancer biomarkers, cfDNA mutations, and cfDNA methylation profile to garner a comprehensive profiling of PNs, and established an integrative multianalytical model in detecting malignant lung nodules from the CT diagnosis lung nodules. The model demonstrated high discriminatory power to differentiate patients with lung cancer from benign nodules on the 98&#x02010;patient discovery cohort (AUC = 0.85), which was further independently validated with AUC = 0.86 on a 29&#x02010;patient validation cohort. The integrative model significantly outperformed models based on any individual testing platform. Additionally, the model has shown significantly better performance (AUC = 0.94) in diagnosis between tuberculoma and malignant lung nodules which was a difficult task for PET/CT (AUC = 0.65). In conclusion, our study lays an effective novel approach for noninvasive diagnosis of malignant pulmonary nodules and has shown a great potential for real&#x02010;world clinical utility.</p><sec id="advs2626-sec-0140"><label>3.1</label><title>Added Value of Our Study</title><p>Different sets of cfDNA methylation markers have been reported in the literature for lung cancer diagnosis. Examples include the 9 cfDNA methylation sites by Liang et&#x000a0;al.<sup>[</sup>
+<xref rid="advs2626-bib-0018" ref-type="ref">
+<sup>18</sup>
+</xref>
+<sup>]</sup> and the three&#x02010;gene combination model by Chen et&#x000a0;al.<sup>[</sup>
+<xref rid="advs2626-bib-0017" ref-type="ref">
+<sup>17</sup>
+</xref>
+<sup>]</sup> The latter however was reported with drastically declined sensitivity and specificity with the decrease of nodule size.<sup>[</sup>
+<xref rid="advs2626-bib-0017" ref-type="ref">
+<sup>17</sup>
+</xref>
+<sup>]</sup> Our study used gene&#x02010;independent MCB as markers. The 30&#x02010;MCBs marker set covered larger genomic regions than previous studies, which probably was the reason that our final model maintained relatively high sensitivity and specificity regardless of nodule size, as methylation of cytosine in CpG islands silences hundreds of genes that are involved in the initiation and progression of lung cancer.<sup>[</sup>
+<xref rid="advs2626-bib-0032" ref-type="ref">
+<sup>32</sup>
+</xref>
+<sup>]</sup> From a data perspective, since each MCB marker is a consolidation and arithmetic mean of multiple CpG islands, the practice reduces model variance due to overfitting during marker selection and hence improves the predictive model's robustness. The similar concept, when applied to cfDNA mutation analysis, has also shown its effectiveness in handling sparse, low prevalence point&#x02010;mutation data.</p><p>Our study is probably the first that combines all clinical features, protein cancer biomarkers, cfDNA mutations, and cfDNA methylation to garner a more comprehensive understanding of PNs and hence achieve a better balance of predictive sensitivity and specificity. The Bayesian&#x02010;based integrative multianalytical model has outperformed any individual model in our study and maintained a reasonably stable and balanced sensitivity and specificity across both discovery and independent validation cohorts. Our study has clearly shown the strength of a comprehensive multiomics approach for addressing challenging clinical applications.</p></sec><sec id="advs2626-sec-0150"><label>3.2</label><title>Future Work</title><p>There are several limitations of our study that warrant future work. First, the patients with pure ground glass nodules were not included in this phase, which remains a future work. Second, our model was limited to patients with pulmonary nodules screened by CT, for the purpose of assisting CT diagnosis. Its performance for cancer screening of healthy people is yet to be assessed. Third, our model is for prediction on malignant nodules and invasive cancer, and its diagnostic effect on preinvasive lesions, such as minimally invasive adenocarcinoma and adenocarcinoma in situ needs further verification. And finally, despite having been independently validated on a 29&#x02010;patient cohort, the predictive performance of our model, and hence the efficacy of our approach remains to be further validated in a much larger and more diverse patient population, a work that is already underway and expected to be reported in a follow&#x02010;up manuscript.</p></sec></sec><sec id="advs2626-sec-0160"><label>4</label><title>Experimental Section</title><sec id="advs2626-sec-0170"><sec id="advs2626-sec-0180"><sec id="advs2626-sec-0190"><title>Sample Collection</title><p>10&#x000a0;mL of blood was drawn and stored in Cell&#x02010;Free DNA Storage Tube (PET) (cwbiotech Cat# CWY025M) at room temperature. Blood was centrifuged at 1600&#x000a0;rpm for 10 min at room temperature and separate plasma in a new tube with a pipette. Plasma was centrifuged at 12&#x0202f;000&#x000a0;rpm for 15 min at 4&#x000a0;&#x000b0;C,&#x000a0;and separate supernatant in a new tube with a pipette. Plasma was separated from blood (no apparent hemolysis) within 72 h after blood draw and stored at &#x02212;80&#x000a0;&#x000b0;C until DNA isolation.</p></sec><sec id="advs2626-sec-0200"><title>cfDNA Extraction</title><p>cfDNA was extracted using the MagMAX Cell&#x02010;Free DNA Isolation (Thermo Fisher Cat#A29319) per manufacturer instructions. Germline DNA was isolated from PBMCs using the TIANamp Blood DNA Kit (TIANGEN). At least 10&#x000a0;ng cfDNA was required both for DNA and methylation sequencing libraries preparation. Tissue genomic DNA (gDNA) was isolated from malignant and benign FFPE lung tissue samples using the MagPure FFPE DNA LQ Kit B (Magen Cat# D6323&#x02010;02B) according to the manufacture's protocol. At least 100&#x000a0;ng gDNA was required for methylation sequencing library preparation.</p></sec><sec id="advs2626-sec-0210"><title>cfDNA Mutation Profiling</title><p>cfDNA mutation sequencing was based on a lab&#x02010;developed capture panel test at GeneCast Biotechnology Co. Ltd., that has been internally validated following College of American Pathologists (CAP) guidelines. Briefly, cfDNA mutation sequencing libraries were prepared using KAPA HyperPrep Kit (Roche), based on adapters with unique molecular identifiers (UMIs). After adapter ligation, DNA was hybridized to an in&#x02010;house designed 29&#x02010;gene mutation panel of 124 Kb size, using xGen Hybridization and Wash kit (IDT). The final sequencing libraries were quantified using Qubit dsDNA HS Assay Kit (Thermo Fisher Cat#Q32854). DNA libraries were sequenced on an Illumina NovaSeq 6000 sequencing system paired&#x02010;end 151bp&#x000a0;read length.</p></sec><sec id="advs2626-sec-0220"><title>cfDNA Mutation Calling</title><p>Point mutations including SNVs, InDels and multinucleotide variants (MNV) were called using a validated in&#x02010;house UMI&#x02010;aware bioinformatics pipeline that incorporates a number of publicly available and internal software tools including Illumina bcl2fastq (<ext-link ext-link-type="uri" xlink:href="https://support.illumina.com/sequencing/sequencing_software/bcl2fastq-conversion-software.html">https://support.illumina.com/sequencing/sequencing_software/bcl2fastq&#x02010;conversion&#x02010;software.html</ext-link>) for sequencing reads demultiplexing, Trimmomatic<sup>[</sup>
+<xref rid="advs2626-bib-0033" ref-type="ref">
+<sup>33</sup>
+</xref>
+<sup>]</sup> for base quality trimming, BWA&#x02010;mem<sup>[</sup>
+<xref rid="advs2626-bib-0034" ref-type="ref">
+<sup>34</sup>
+</xref>
+<sup>]</sup> for sequencing mapping to hg19 reference genome (<ext-link ext-link-type="uri" xlink:href="http://hgdownload.cse.ucsc.edu/goldenpath/hg19/bigZips/hg19.fa.gz">http://hgdownload.cse.ucsc.edu/goldenpath/hg19/bigZips/hg19.fa.gz</ext-link>), fgbio tools (<ext-link ext-link-type="uri" xlink:href="https://github.com/fulcrum-genomics/fgbio">https://github.com/fulcrum&#x02010;genomics/fgbio</ext-link>) for UMI processing, pysam (<ext-link ext-link-type="uri" xlink:href="https://github.com/Debian/pysam">https://github.com/Debian/pysam</ext-link>) for mapped reads processing and variant calling, etc. Sample&#x02010;matched WBCs and an internal reference variant database of normal samples were used to identify matched germline SNPs and clonal hematopoiesis mutations. An internal sequencing specific error database was also used to remove false positive variants due to laboratory processing and sequencing artifacts.</p></sec><sec id="advs2626-sec-0230"><title>cfDNA Mutation Classification</title><p>cfDNA mutations were classified into four different levels. The single residue or in&#x02010;frame indel mutation hotspot identified in the 24&#x000a0;592 tumor samples listed in the Memorial Sloan Kettering Cancer Center Cancer Hotspots database (<ext-link ext-link-type="uri" xlink:href="https://www.cancerhotspots.org">https://www.cancerhotspots.org</ext-link>) was used as a core hotspot list. Level 1 mutations were defined as oncogene variants showing in the core hotspot list. Level 2 mutations were either tumor suppressor gene variants in the core hotspot list, or any other deleterious tumor suppressor gene variants as annotated by SIFT<sup>[</sup>
+<xref rid="advs2626-bib-0035" ref-type="ref">
+<sup>35</sup>
+</xref>
+<sup>]</sup> and PolyPhen.<sup>[</sup>
+<xref rid="advs2626-bib-0036" ref-type="ref">
+<sup>36</sup>
+</xref>
+<sup>]</sup> The remaining exonic nonsynonymous mutations were classified as Level 3. And all other mutations fell in Level 4.</p></sec><sec id="advs2626-sec-0240"><title>cfDNA Methylation Profiling</title><p>cfDNA Methylation sequencing was conducted at GeneCast Biotechnology Co., Ltd based on a 1.16 Mb capture panel designed surrounding over 95&#x000a0;000 CpG sites that were selected based on publicly available The Cancer Genome Atlas (TCGA) data. Methylation libraries were prepared using Accel&#x02010;NGS Methyl&#x02010;Seq DNA Library Kit (Swift Biosciences Cat#30&#x0202f;096). Hybridization to the capture panel was carried out using SeqCap EZ Hyb and Wash Kit (Roche Cat# 5&#x0202f;634&#x0202f;253&#x0202f;001). And the purification was accomplished using Seq Cap EZ Pure Capture Bead Kit (Cat# 6&#x0202f;977&#x0202f;952&#x0202f;001). The final sequencing libraries were quantified using Qubit dsDNA HS Assay Kit (Thermo Fisher Cat#Q32854). Methylation libraries were sequenced on an Illumina Xten Sequencing System with read length of paired&#x02010;end 151bp.</p></sec><sec id="advs2626-sec-0250"><title>cfDNA&#x000a0;Methylation&#x000a0;Data Processing</title><p>Methylation sequencing reads were processed using an in&#x02010;house pipeline that contained Illumina bcl2fastq for demultiplexing, Trimmomatic for base quality trimming, BisMark<sup>[</sup>
+<xref rid="advs2626-bib-0037" ref-type="ref">
+<sup>37</sup>
+</xref>
+<sup>]</sup> for reference genome mapping, BisMark, Samtools, and BamUtil (<ext-link ext-link-type="uri" xlink:href="https://github.com/statgen/bamUtil">https://github.com/statgen/bamUtil</ext-link>) for mapped reads deduplication, sorting and clipping. Reads with mapping quality less than 20 and conversion rate less than 95% were filtered out. Methylation level of CpG sites were called by BisSNP<sup>[</sup>
+<xref rid="advs2626-bib-0038" ref-type="ref">
+<sup>38</sup>
+</xref>
+<sup>]</sup> in the form of beta&#x02010;value. For quality control, CpG sites with depth &#x0003c;100x&#x000a0;were removed and beta&#x02010;values of sites &#x0003c;2&#x000a0;supporting methylated reads were replaced by 0. A MCB is defined as a genomic region that contains at least 3 CpG sites, each site with &#x0003c; = 100&#x000a0;bp distance and &#x0003e; = 0.9 Pearson's correlation coefficient to its adjacent site. Correlations between each pair of neighboring CpG sites were calculated for benign and malignant groups in the discovery cohort respectively. Only those blocks with high correlations in both two groups were considered. 697 MCBs were generated under the criteria, consisting of 4678 CpG sites. The mean beta&#x02010;value of CpG sites in an MCB was used as the methylation level of the MCB.</p></sec><sec id="advs2626-sec-0260"><title>Univariate Analysis for Marker Selection</title><p>For data based on clinical features, cancer protein biomarkers, and cfDNA methylation MCBs, six univariate tests including ANOVA, Fisher's exact test, Chi&#x02010;Square test, Wilcoxon rank sum test, Mann&#x02013;Whitney test, and Student's <italic>t</italic>&#x02010;test were conducted on the discovery cohort to assess each variable's differentiating power between the benign and the malignant sample groups. <italic>p</italic>&#x000a0;&#x0003c;&#x000a0;0.1 in each test was considered statistically significant. A variable is considered as a candidate marker only if it is statistically significant in at least four of the six tests. The univariate predictive AUC was also calculated for reference purpose but not used as a marker selection criterion. All univariate tests were conducted using R version 3.6.3 (<ext-link ext-link-type="uri" xlink:href="https://www.r-project.org/">https://www.r&#x02010;project.org/</ext-link>).</p></sec><sec id="advs2626-sec-0270"><title>Machine Learning for Nodule Malignancy Classification</title><p>Each numeric data point <italic>x</italic> was first normalized to log2(<italic>x&#x000a0;</italic>+&#x000a0;1) for outlier control and Gaussian distribution approximation. Missing data point was imputed with median value of the corresponding feature readings on the discovery cohort. Data were finally standardized using z&#x02010;score, which is calculated as <italic>z</italic> = (<italic>x</italic> &#x02013; mean(<italic>X</italic>))/std(<italic>X</italic>) where X is all reading of <italic>x</italic> on the discovery cohort. For methylation MCB features, Recursive Feature Elimination with Cross&#x02010;Validation (RFECV)<sup>[</sup>
+<xref rid="advs2626-bib-0022" ref-type="ref">
+<sup>22</sup>
+</xref>
+<sup>]</sup> was used to conduct additional feature selection in order to optimize the model's accuracy on the discovery cohort. This process was implemented through in&#x02010;house Python (version 3.7) scripts based on machine&#x02010;learning package <italic>scikit&#x02010;learn</italic>. Each round of the RFECV process works by recursively removing lower&#x02010;ranked features from the candidate feature set and evaluate through cross&#x02010;validation the performance of the remaining features, until an optimized performance is achieved. Through 20 stratified shuffled&#x02010;split cross&#x02010;validator with 10 splitting iterations and a range of 20&#x02013;40% test size, 30 MCBs out of the initially screened 43 candidates were selected as the consensus feature set for subsequent training. A classifier based on SVM<sup>[</sup>
+<xref rid="advs2626-bib-0023" ref-type="ref">
+<sup>23</sup>
+</xref>
+<sup>]</sup> implemented in the same in&#x02010;house Python software kit was trained with its performance assessed based on 13&#x02010;fold cross&#x02010;validation. SVM works by optimizing the parameters for a predefined type of hyperplane (termed as kernel) that separates the benign and malignant classes in the study to maximize the total distance between all training data points to the hyperplane, in other words, to optimize the separation of the two classes. A straightforward liner kernel was used in the study. In each fold, hyper&#x02010;parameter optimization was tuned by a cross validation grid exhaustive search, with randomly selected 60% samples on the discovery cohort for training and the remaining 40% for testing and refitted the training cohort with the best score parameters.</p></sec><sec id="advs2626-sec-0280"><title>Integrative Multianalytical Model</title><p>Each individual model's predictive output on each study field (namely clinical features, cancer protein markers, cfDNA mutations, and cfDNA methylation) consisted a probability score of being malignant. The four scores were used as the input of a subsequent BNB<sup>[</sup>
+<xref rid="advs2626-bib-0024" ref-type="ref">
+<sup>24</sup>
+</xref>
+<sup>]</sup> model that was trained to optimize the assignment of &#x0201c;voting power&#x0201d; (i.e., importance weight) to each individual model in order to fit each data point's known classification label. BNB is a probabilistic algorithm based on probability theory and Bayes&#x02019; Theorem to predict the probability of an unknown input belonging to predefined classes. In lay language, since the performance of each individual classifier on the training dataset (i.e., the probability of the input sample's malignance being correctly predicted when the classifier outputs a certain output score) is known, it would be able to derive a weighted average formula to calculate the probability of an input sample being malignant based on the combination of all four classifiers&#x02019; prediction scores. The algorithm was implemented in the same above&#x02010;mentioned in&#x02010;house Python toolkit.</p></sec><sec id="advs2626-sec-0290"><title>Statistical Analysis</title><p>Due to the prospective observative nature of the study, no statistical analysis was performed to determine the discovery cohort size, which was largely affected by sample availability. Patient enrollment was stopped for discovery based on the performance analysis of the predictive markers and models, cofactoring the overall project timeline. Power analysis for determining the size of the independent validation cohort was done using <italic>One ROC Curve Power Analysis</italic> module of <italic>PASS 2020</italic> software, based on the model of Obuchowski and McCLISH.<sup>[</sup>
+<xref rid="advs2626-bib-0027" ref-type="ref">
+<sup>27</sup>
+</xref>
+<sup>]</sup>
+</p></sec></sec></sec></sec><sec sec-type="COI-statement" id="advs2626-sec-0310"><title>Conflict of Interest</title><p>The authors declare no conflict of interest.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material content-type="local-data" id="advs2626-supitem-0001"><caption><p>Supporting Information</p></caption><media xlink:href="ADVS-8-2100104-s009.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0002"><caption><p>Supplemental Table 1</p></caption><media xlink:href="ADVS-8-2100104-s003.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0003"><caption><p>Supplemental Table 2</p></caption><media xlink:href="ADVS-8-2100104-s004.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0004"><caption><p>Supplemental Table 3</p></caption><media xlink:href="ADVS-8-2100104-s006.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0005"><caption><p>Supplemental Table 4</p></caption><media xlink:href="ADVS-8-2100104-s008.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0006"><caption><p>Supplemental Table 5</p></caption><media xlink:href="ADVS-8-2100104-s012.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0007"><caption><p>Supplemental Table 6</p></caption><media xlink:href="ADVS-8-2100104-s011.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0008"><caption><p>Supplemental Table 7</p></caption><media xlink:href="ADVS-8-2100104-s002.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0009"><caption><p>Supplemental Table 8</p></caption><media xlink:href="ADVS-8-2100104-s007.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0010"><caption><p>Supplemental Table 9</p></caption><media xlink:href="ADVS-8-2100104-s010.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0011"><caption><p>Supplemental Table 10</p></caption><media xlink:href="ADVS-8-2100104-s001.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="advs2626-supitem-0012"><caption><p>Supplemental Table 11</p></caption><media xlink:href="ADVS-8-2100104-s005.xlsx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="advs2626-sec-0300"><title>Acknowledgements</title><p>Q.&#x02010;X.L., D.Z., T.&#x02010;C.H., and X.L. contributed equally to this work. The study was supported by funding from the Clinical Research Foundation of Army Medical University (No. 2018JSLC033 and 2018XLC2014) for Dai and (No. 2018XLC3035) for Zheng, National Natural Science Foundation of China (No. 81972190) for Dai and (No. 81702247) for Zheng.</p></ack><sec id="advs2626-sec-0330" sec-type="data-availability"><title>Data Availability Statement</title><p>The data that support the findings of this study are available in the supplementary material of this article. Raw sequencing data are openly available at https://bigd.big.ac.cn/bioproject/browse/PRJCA003983 or from the author.</p></sec><ref-list id="advs2626-bibl-0001"><ref id="advs2626-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="advs2626-cit-0001">
+<string-name>
+<given-names>D. R.</given-names>
+<surname>Aberle</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Demello</surname>
+</string-name>, <string-name>
+<given-names>C. D.</given-names>
+<surname>Berg</surname>
+</string-name>, <string-name>
+<given-names>W. C.</given-names>
+<surname>Black</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Brewer</surname>
+</string-name>, <string-name>
+<given-names>T. R.</given-names>
+<surname>Church</surname>
+</string-name>, <string-name>
+<given-names>K. L.</given-names>
+<surname>Clingan</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Duan</surname>
+</string-name>, <string-name>
+<given-names>R. M.</given-names>
+<surname>Fagerstrom</surname>
+</string-name>, <string-name>
+<given-names>I. F.</given-names>
+<surname>Gareen</surname>
+</string-name>, <string-name>
+<given-names>C. A.</given-names>
+<surname>Gatsonis</surname>
+</string-name>, <string-name>
+<given-names>D. S.</given-names>
+<surname>Gierada</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Jain</surname>
+</string-name>, <string-name>
+<given-names>G. C.</given-names>
+<surname>Jones</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Mahon</surname>
+</string-name>, <string-name>
+<given-names>P. M.</given-names>
+<surname>Marcus</surname>
+</string-name>, <string-name>
+<given-names>J. M.</given-names>
+<surname>Rathmell</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Sicks</surname>
+</string-name>, <source xml:lang="en">N. Engl. J. Med.</source>
+<year>2013</year>, <volume>369</volume>, <fpage>920</fpage>.<pub-id pub-id-type="pmid">24004119</pub-id></mixed-citation></ref><ref id="advs2626-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="advs2626-cit-0002">
+<string-name>
+<given-names>N.</given-names>
+<surname>Horeweg</surname>
+</string-name>, <string-name>
+<given-names>E. T.</given-names>
+<surname>Scholten</surname>
+</string-name>, <string-name>
+<given-names>P. A.</given-names>
+<surname>De Jong</surname>
+</string-name>, <string-name>
+<given-names>C. M.</given-names>
+<surname>Van Der Aalst</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Weenink</surname>
+</string-name>, <string-name>
+<given-names>J.&#x02010;W. J.</given-names>
+<surname>Lammers</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Nackaerts</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Vliegenthart</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Ten Haaf</surname>
+</string-name>, <string-name>
+<given-names>U. A.</given-names>
+<surname>Yousaf&#x02010;Khan</surname>
+</string-name>, <string-name>
+<given-names>M. A.</given-names>
+<surname>Heuvelmans</surname>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Thunnissen</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Oudkerk</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Mali</surname>
+</string-name>, <string-name>
+<given-names>H. J.</given-names>
+<surname>De Koning</surname>
+</string-name>, <source xml:lang="en">Lancet Oncol.</source>
+<year>2014</year>, <volume>15</volume>, <fpage>1342</fpage>.<pub-id pub-id-type="pmid">25282284</pub-id></mixed-citation></ref><ref id="advs2626-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="advs2626-cit-0003">
+<string-name>
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>Q.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>M. J.</given-names>
+<surname>Mcgettigan</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Balagurunathan</surname>
+</string-name>, <string-name>
+<given-names>A. L.</given-names>
+<surname>Garcia</surname>
+</string-name>, <string-name>
+<given-names>Z. J.</given-names>
+<surname>Thompson</surname>
+</string-name>, <string-name>
+<given-names>J. J.</given-names>
+<surname>Heine</surname>
+</string-name>, <string-name>
+<given-names>Z.</given-names>
+<surname>Ye</surname>
+</string-name>, <string-name>
+<given-names>R. J.</given-names>
+<surname>Gillies</surname>
+</string-name>, <string-name>
+<given-names>M. B.</given-names>
+<surname>Schabath</surname>
+</string-name>, <source xml:lang="en">Radiology</source>
+<year>2018</year>, <volume>286</volume>, <fpage>298</fpage>.<pub-id pub-id-type="pmid">28837413</pub-id></mixed-citation></ref><ref id="advs2626-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="advs2626-cit-0004">
+<string-name>
+<given-names>K.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Kang</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Wang</surname>
+</string-name>, <source xml:lang="en">Expert Rev. Mol. Diagn.</source>
+<year>2019</year>, <volume>19</volume>, <fpage>419</fpage>.<pub-id pub-id-type="pmid">30905203</pub-id></mixed-citation></ref><ref id="advs2626-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="advs2626-cit-0005">
+<string-name>
+<given-names>R. B.</given-names>
+<surname>Lanman</surname>
+</string-name>, <string-name>
+<given-names>S. A.</given-names>
+<surname>Mortimer</surname>
+</string-name>, <string-name>
+<given-names>O. A.</given-names>
+<surname>Zill</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Sebisanovic</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Lopez</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Blau</surname>
+</string-name>, <string-name>
+<given-names>E. A.</given-names>
+<surname>Collisson</surname>
+</string-name>, <string-name>
+<given-names>S. G.</given-names>
+<surname>Divers</surname>
+</string-name>, <string-name>
+<given-names>D. S. B.</given-names>
+<surname>Hoon</surname>
+</string-name>, <string-name>
+<given-names>E. S.</given-names>
+<surname>Kopetz</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name>
+<given-names>P. G.</given-names>
+<surname>Nikolinakos</surname>
+</string-name>, <string-name>
+<given-names>A. M.</given-names>
+<surname>Baca</surname>
+</string-name>, <string-name>
+<given-names>B. G.</given-names>
+<surname>Kermani</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Eltoukhy</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Talasaz</surname>
+</string-name>, <source xml:lang="en">PLoS One</source>
+<year>2015</year>, <volume>10</volume>, <elocation-id>e0140712</elocation-id>.<pub-id pub-id-type="pmid">26474073</pub-id></mixed-citation></ref><ref id="advs2626-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="advs2626-cit-0006">
+<string-name>
+<given-names>T.</given-names>
+<surname>Forshew</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Murtaza</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Parkinson</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Gale</surname>
+</string-name>, <string-name>
+<given-names>D. W. Y.</given-names>
+<surname>Tsui</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Kaper</surname>
+</string-name>, <string-name>
+<given-names>S.&#x02010;J.</given-names>
+<surname>Dawson</surname>
+</string-name>, <string-name>
+<given-names>A. M.</given-names>
+<surname>Piskorz</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Jimenez&#x02010;Linan</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Bentley</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Hadfield</surname>
+</string-name>, <string-name>
+<given-names>A. P.</given-names>
+<surname>May</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Caldas</surname>
+</string-name>, <string-name>
+<given-names>J. D.</given-names>
+<surname>Brenton</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Rosenfeld</surname>
+</string-name>, <source xml:lang="en">Sci. Transl. Med.</source>
+<year>2012</year>, <volume>4</volume>, <elocation-id>136ra68</elocation-id>.</mixed-citation></ref><ref id="advs2626-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="advs2626-cit-0007">
+<string-name>
+<given-names>S. T.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name>
+<given-names>W.&#x02010;S.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name>
+<given-names>R. B.</given-names>
+<surname>Lanman</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Mortimer</surname>
+</string-name>, <string-name>
+<given-names>O. A.</given-names>
+<surname>Zill</surname>
+</string-name>, <string-name>
+<given-names>K.&#x02010;M.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name>
+<given-names>K. T.</given-names>
+<surname>Jang</surname>
+</string-name>, <string-name>
+<given-names>S.&#x02010;H.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name>
+<given-names>S. H.</given-names>
+<surname>Park</surname>
+</string-name>, <string-name>
+<given-names>J. O.</given-names>
+<surname>Park</surname>
+</string-name>, <string-name>
+<given-names>Y. S.</given-names>
+<surname>Park</surname>
+</string-name>, <string-name>
+<given-names>H. Y.</given-names>
+<surname>Lim</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Eltoukhy</surname>
+</string-name>, <string-name>
+<given-names>W. K.</given-names>
+<surname>Kang</surname>
+</string-name>, <string-name>
+<given-names>W. Y.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name>
+<given-names>H.&#x02010;C.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Park</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Talasaz</surname>
+</string-name>, <source xml:lang="en">Oncotarget</source>
+<year>2015</year>, <volume>6</volume>, <elocation-id>40360</elocation-id>.<pub-id pub-id-type="pmid">26452027</pub-id></mixed-citation></ref><ref id="advs2626-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="advs2626-cit-0008">
+<string-name>
+<given-names>J. D.</given-names>
+<surname>Cohen</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Thoburn</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Afsari</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Danilova</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Douville</surname>
+</string-name>, <string-name>
+<given-names>A. A.</given-names>
+<surname>Javed</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Wong</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Mattox</surname>
+</string-name>, <string-name>
+<given-names>R. H.</given-names>
+<surname>Hruban</surname>
+</string-name>, <string-name>
+<given-names>C. L.</given-names>
+<surname>Wolfgang</surname>
+</string-name>, <string-name>
+<given-names>M. G.</given-names>
+<surname>Goggins</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Dal Molin</surname>
+</string-name>, <string-name>
+<given-names>T.&#x02010;L.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Roden</surname>
+</string-name>, <string-name>
+<given-names>A. P.</given-names>
+<surname>Klein</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Ptak</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Dobbyn</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Schaefer</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Silliman</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Popoli</surname>
+</string-name>, <string-name>
+<given-names>J. T.</given-names>
+<surname>Vogelstein</surname>
+</string-name>, <string-name>
+<given-names>J. D.</given-names>
+<surname>Browne</surname>
+</string-name>, <string-name>
+<given-names>R. E.</given-names>
+<surname>Schoen</surname>
+</string-name>, <string-name>
+<given-names>R. E.</given-names>
+<surname>Brand</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Tie</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Gibbs</surname>
+</string-name>, <string-name>
+<given-names>H.&#x02010;L.</given-names>
+<surname>Wong</surname>
+</string-name>, <string-name>
+<given-names>A. S.</given-names>
+<surname>Mansfield</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Jen</surname>
+</string-name>, <string-name>
+<given-names>S. M.</given-names>
+<surname>Hanash</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Falconi</surname>
+</string-name>, <string-name>
+<given-names>P. J.</given-names>
+<surname>Allen</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Zhou</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Bettegowda</surname>
+</string-name>, <string-name>
+<given-names>L. A.</given-names>
+<surname>Diaz</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Tomasetti</surname>
+</string-name>, <string-name>
+<given-names>K. W.</given-names>
+<surname>Kinzler</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Vogelstein</surname>
+</string-name>, <string-name>
+<given-names>A. M.</given-names>
+<surname>Lennon</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Papadopoulos</surname>
+</string-name>, <source xml:lang="en">Science</source>
+<year>2018</year>, <volume>359</volume>, <fpage>926</fpage>.<pub-id pub-id-type="pmid">29348365</pub-id></mixed-citation></ref><ref id="advs2626-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="advs2626-cit-0009">
+<string-name>
+<given-names>C.</given-names>
+<surname>Qu</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Zeng</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Lu</surname>
+</string-name>, <string-name>
+<given-names>Q.</given-names>
+<surname>Song</surname>
+</string-name>, <string-name>
+<given-names>B. H.</given-names>
+<surname>Diplas</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Tan</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Fan</surname>
+</string-name>, <string-name>
+<given-names>Q.</given-names>
+<surname>Guo</surname>
+</string-name>, <string-name>
+<given-names>Z.</given-names>
+<surname>Zhu</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Yin</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Jiang</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>He</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Bi</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Tang</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Lv</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Zhou</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Cai</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Yan</surname>
+</string-name>, <string-name>
+<given-names>Y.&#x02010;X.</given-names>
+<surname>Zeng</surname>
+</string-name>, <string-name>
+<given-names>W. K.</given-names>
+<surname>Cavenee</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Jiao</surname>
+</string-name>, <source xml:lang="en">Proc. Natl. Acad. Sci. USA</source>
+<year>2019</year>, <volume>116</volume>, <fpage>6308</fpage>.<pub-id pub-id-type="pmid">30858324</pub-id></mixed-citation></ref><ref id="advs2626-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="advs2626-cit-0010">
+<string-name>
+<given-names>J. J.</given-names>
+<surname>Chabon</surname>
+</string-name>, <string-name>
+<given-names>E. G.</given-names>
+<surname>Hamilton</surname>
+</string-name>, <string-name>
+<given-names>D. M.</given-names>
+<surname>Kurtz</surname>
+</string-name>, <string-name>
+<given-names>M. S.</given-names>
+<surname>Esfahani</surname>
+</string-name>, <string-name>
+<given-names>E. J.</given-names>
+<surname>Moding</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Stehr</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Schroers&#x02010;Martin</surname>
+</string-name>, <string-name>
+<given-names>B. Y.</given-names>
+<surname>Nabet</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>A. A.</given-names>
+<surname>Chaudhuri</surname>
+</string-name>, <string-name>
+<given-names>C. L.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name>
+<given-names>A. B.</given-names>
+<surname>Hui</surname>
+</string-name>, <string-name>
+<given-names>M. C.</given-names>
+<surname>Jin</surname>
+</string-name>, <string-name>
+<given-names>T. D.</given-names>
+<surname>Azad</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Almanza</surname>
+</string-name>, <string-name>
+<given-names>Y.&#x02010;J.</given-names>
+<surname>Jeon</surname>
+</string-name>, <string-name>
+<given-names>M. C.</given-names>
+<surname>Nesselbush</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Co Ting Keh</surname>
+</string-name>, <string-name>
+<given-names>R. F.</given-names>
+<surname>Bonilla</surname>
+</string-name>, <string-name>
+<given-names>C. H.</given-names>
+<surname>Yoo</surname>
+</string-name>, <string-name>
+<given-names>R. B.</given-names>
+<surname>Ko</surname>
+</string-name>, <string-name>
+<given-names>E. L.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>D. J.</given-names>
+<surname>Merriott</surname>
+</string-name>, <string-name>
+<given-names>P. P.</given-names>
+<surname>Massion</surname>
+</string-name>, <string-name>
+<given-names>A. S.</given-names>
+<surname>Mansfield</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Jen</surname>
+</string-name>, <string-name>
+<given-names>H. Z.</given-names>
+<surname>Ren</surname>
+</string-name>, <string-name>
+<given-names>S. H.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name>
+<given-names>C. L.</given-names>
+<surname>Costantino</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Burr</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Tibshirani</surname>
+</string-name>, <string-name>
+<given-names>S. S.</given-names>
+<surname>Gambhir</surname>
+</string-name>, <string-name>
+<given-names>G. J.</given-names>
+<surname>Berry</surname>
+</string-name>, <string-name>
+<given-names>K. C.</given-names>
+<surname>Jensen</surname>
+</string-name>, <string-name>
+<given-names>R. B.</given-names>
+<surname>West</surname>
+</string-name>, <string-name>
+<given-names>J. W.</given-names>
+<surname>Neal</surname>
+</string-name>, <string-name>
+<given-names>H. A.</given-names>
+<surname>Wakelee</surname>
+</string-name>, <string-name>
+<given-names>B. W.</given-names>
+<surname>Loo</surname>
+</string-name>, <string-name>
+<given-names>C. A.</given-names>
+<surname>Kunder</surname>
+</string-name>, <string-name>
+<given-names>A. N.</given-names>
+<surname>Leung</surname>
+</string-name>, <string-name>
+<given-names>N. S.</given-names>
+<surname>Lui</surname>
+</string-name>, <string-name>
+<given-names>M. F.</given-names>
+<surname>Berry</surname>
+</string-name>, <string-name>
+<given-names>J. B.</given-names>
+<surname>Shrager</surname>
+</string-name>, <string-name>
+<given-names>V. S.</given-names>
+<surname>Nair</surname>
+</string-name>, <string-name>
+<given-names>D. A.</given-names>
+<surname>Haber</surname>
+</string-name>, <string-name>
+<given-names>L. V.</given-names>
+<surname>Sequist</surname>
+</string-name>, <string-name>
+<given-names>A. A.</given-names>
+<surname>Alizadeh</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Diehn</surname>
+</string-name>, <source xml:lang="en">Nature</source>
+<year>2020</year>, <volume>580</volume>, <fpage>245</fpage>.<pub-id pub-id-type="pmid">32269342</pub-id></mixed-citation></ref><ref id="advs2626-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="advs2626-cit-0011">
+<string-name>
+<given-names>C.</given-names>
+<surname>Abbosh</surname>
+</string-name>, <string-name>
+<given-names>N. J.</given-names>
+<surname>Birkbak</surname>
+</string-name>, <string-name>
+<given-names>G. A.</given-names>
+<surname>Wilson</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Jamal&#x02010;Hanjani</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Constantin</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Salari</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Le Quesne</surname>
+</string-name>, <string-name>
+<given-names>D. A.</given-names>
+<surname>Moore</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Veeriah</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Rosenthal</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Marafioti</surname>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Kirkizlar</surname>
+</string-name>, <string-name>
+<given-names>T. B. K.</given-names>
+<surname>Watkins</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Mcgranahan</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Ward</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Martinson</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Riley</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Fraioli</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Al Bakir</surname>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Gr&#x000f6;nroos</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Zambrana</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Endozo</surname>
+</string-name>, <string-name>
+<given-names>W. L.</given-names>
+<surname>Bi</surname>
+</string-name>, <string-name>
+<given-names>F. M.</given-names>
+<surname>Fennessy</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Sponer</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Johnson</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Laycock</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Shafi</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Czyzewska&#x02010;Khan</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Rowan</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Chambers</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Matthews</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Turajlic</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Hiley</surname>
+</string-name>, <string-name>
+<given-names>S. M.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name>
+<given-names>M. D.</given-names>
+<surname>Forster</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Ahmad</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Falzon</surname>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Borg</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Lawrence</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Hayward</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Kolvekar</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Panagiotopoulos</surname>
+</string-name>, <string-name>
+<given-names>S. M.</given-names>
+<surname>Janes</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Thakrar</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Ahmed</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Blackhall</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Summers</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Hafez</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Naik</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Ganguly</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Kareht</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Shah</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Joseph</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Marie Quinn</surname>
+</string-name>, <string-name>
+<given-names>P. A.</given-names>
+<surname>Crosbie</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Naidu</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Middleton</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Langman</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Trotter</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Nicolson</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Remmen</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Kerr</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Chetty</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Gomersall</surname>
+</string-name>, <string-name>
+<given-names>D. A.</given-names>
+<surname>Fennell</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Nakas</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Rathinam</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Anand</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Khan</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Russell</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Ezhil</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Ismail</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Irvin&#x02010;Sellers</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Prakash</surname>
+</string-name>, <string-name>
+<given-names>J. F.</given-names>
+<surname>Lester</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Kornaszewska</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Attanoos</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Adams</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Davies</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Oukrif</surname>
+</string-name>, <string-name>
+<given-names>A. U.</given-names>
+<surname>Akarca</surname>
+</string-name>, <string-name>
+<given-names>J. A.</given-names>
+<surname>Hartley</surname>
+</string-name>, <string-name>
+<given-names>H. L.</given-names>
+<surname>Lowe</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Lock</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Iles</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Bell</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Ngai</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Elgar</surname>
+</string-name>, <string-name>
+<given-names>Z.</given-names>
+<surname>Szallasi</surname>
+</string-name>, <string-name>
+<given-names>R. F.</given-names>
+<surname>Schwarz</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Herrero</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Stewart</surname>
+</string-name>, <string-name>
+<given-names>S. A.</given-names>
+<surname>Quezada</surname>
+</string-name>, <string-name>
+<given-names>K. S.</given-names>
+<surname>Peggs</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Van Loo</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Dive</surname>
+</string-name>, <string-name>
+<given-names>C. J.</given-names>
+<surname>Lin</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Rabinowitz</surname>
+</string-name>, <string-name>
+<given-names>H. J. W. L.</given-names>
+<surname>Aerts</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Hackshaw</surname>
+</string-name>, <string-name>
+<given-names>J. A.</given-names>
+<surname>Shaw</surname>
+</string-name>, <string-name>
+<given-names>B. G.</given-names>
+<surname>Zimmermann</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Swanton</surname>
+</string-name>, <source xml:lang="en">Nature</source>
+<year>2017</year>, <volume>545</volume>, <fpage>446</fpage>.<pub-id pub-id-type="pmid">28445469</pub-id></mixed-citation></ref><ref id="advs2626-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="advs2626-cit-0012">
+<string-name>
+<given-names>C.</given-names>
+<surname>Abbosh</surname>
+</string-name>, <string-name>
+<given-names>N. J.</given-names>
+<surname>Birkbak</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Swanton</surname>
+</string-name>, <source xml:lang="en">Nat. Rev. Clin. Oncol.</source>
+<year>2018</year>, <volume>15</volume>, <fpage>577</fpage>.<pub-id pub-id-type="pmid">29968853</pub-id></mixed-citation></ref><ref id="advs2626-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="advs2626-cit-0013">
+<string-name>
+<given-names>J.</given-names>
+<surname>Phallen</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Sausen</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Adleff</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Leal</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Hruban</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>White</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Anagnostou</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Fiksel</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Cristiano</surname>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Papp</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Speir</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Reinert</surname>
+</string-name>, <string-name>
+<given-names>M.&#x02010;B. W.</given-names>
+<surname>Orntoft</surname>
+</string-name>, <string-name>
+<given-names>B. D.</given-names>
+<surname>Woodward</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Murphy</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Parpart&#x02010;Li</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Riley</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Nesselbush</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Sengamalay</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Georgiadis</surname>
+</string-name>, <string-name>
+<given-names>Q. K.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>M. R.</given-names>
+<surname>Madsen</surname>
+</string-name>, <string-name>
+<given-names>F. V.</given-names>
+<surname>Mortensen</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Huiskens</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Punt</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Van Grieken</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Fijneman</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Meijer</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Husain</surname>
+</string-name>, <string-name>
+<given-names>R. B.</given-names>
+<surname>Scharpf</surname>
+</string-name>, <string-name>
+<given-names>L. A.</given-names>
+<surname>Diaz</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Jones</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Angiuoli</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>&#x000d8;rntoft</surname>
+</string-name>, <string-name>
+<given-names>H. J.</given-names>
+<surname>Nielsen</surname>
+</string-name>, <string-name>
+<given-names>C. L.</given-names>
+<surname>Andersen</surname>
+</string-name>, <string-name>
+<given-names>V. E.</given-names>
+<surname>Velculescu</surname>
+</string-name>, <source xml:lang="en">Sci. Transl. Med.</source>
+<year>2017</year>, <volume>9</volume>, <elocation-id>eaan2415</elocation-id>.<pub-id pub-id-type="pmid">28814544</pub-id></mixed-citation></ref><ref id="advs2626-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="advs2626-cit-0014">
+<string-name>
+<given-names>C.</given-names>
+<surname>Kneip</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Schmidt</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Seegebarth</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Weickmann</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Fleischhacker</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Liebenberg</surname>
+</string-name>, <string-name>
+<given-names>J. K.</given-names>
+<surname>Field</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Dietrich</surname>
+</string-name>, <source xml:lang="en">J. Thorac. Oncol.</source>
+<year>2011</year>, <volume>6</volume>, <fpage>1632</fpage>.<pub-id pub-id-type="pmid">21694641</pub-id></mixed-citation></ref><ref id="advs2626-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="advs2626-cit-0015">
+<string-name>
+<given-names>T.</given-names>
+<surname>Powr&#x000f3;zek</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Krawczyk</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Nico&#x0015b;</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Ku&#x0017a;nar&#x02010;Kami&#x00144;ska</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Batura&#x02010;Gabryel</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Milanowski</surname>
+</string-name>, <source xml:lang="en">Clin. Transl. Oncol.</source>
+<year>2016</year>, <volume>18</volume>, <fpage>398</fpage>.<pub-id pub-id-type="pmid">26311076</pub-id></mixed-citation></ref><ref id="advs2626-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="advs2626-cit-0016">
+<string-name>
+<given-names>T.</given-names>
+<surname>Powr&#x000f3;zek</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Krawczyk</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Kucharczyk</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Milanowski</surname>
+</string-name>, <source xml:lang="en">Med. Oncol.</source>
+<year>2014</year>, <volume>31</volume>, <fpage>917</fpage>.<pub-id pub-id-type="pmid">24633736</pub-id></mixed-citation></ref><ref id="advs2626-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="advs2626-cit-0017">
+<string-name>
+<given-names>A.</given-names>
+<surname>Ooki</surname>
+</string-name>, <string-name>
+<given-names>Z.</given-names>
+<surname>Maleki</surname>
+</string-name>, <string-name>
+<given-names>J.&#x02010;C. J.</given-names>
+<surname>Tsay</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Goparaju</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Brait</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Turaga</surname>
+</string-name>, <string-name>
+<given-names>H.&#x02010;S.</given-names>
+<surname>Nam</surname>
+</string-name>, <string-name>
+<given-names>W. N.</given-names>
+<surname>Rom</surname>
+</string-name>, <string-name>
+<given-names>H. I.</given-names>
+<surname>Pass</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Sidransky</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Guerrero&#x02010;Preston</surname>
+</string-name>, <string-name>
+<given-names>M. O.</given-names>
+<surname>Hoque</surname>
+</string-name>, <source xml:lang="en">Clin. Cancer Res.</source>
+<year>2017</year>, <volume>23</volume>, <fpage>7141</fpage>.<pub-id pub-id-type="pmid">28855354</pub-id></mixed-citation></ref><ref id="advs2626-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="advs2626-cit-0018">
+<string-name>
+<given-names>A.</given-names>
+<surname>Hulbert</surname>
+</string-name>, <string-name>
+<given-names>I.</given-names>
+<surname>Jusue&#x02010;Torres</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Stark</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Rodgers</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Griffin</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Wrangle</surname>
+</string-name>, <string-name>
+<given-names>S. A.</given-names>
+<surname>Belinsky</surname>
+</string-name>, <string-name>
+<given-names>T.&#x02010;H.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>S. C.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name>
+<given-names>S. B.</given-names>
+<surname>Baylin</surname>
+</string-name>, <string-name>
+<given-names>M. V.</given-names>
+<surname>Brock</surname>
+</string-name>, <string-name>
+<given-names>J. G.</given-names>
+<surname>Herman</surname>
+</string-name>, <source xml:lang="en">Clin. Cancer Res.</source>
+<year>2017</year>, <volume>23</volume>, <fpage>1998</fpage>.<pub-id pub-id-type="pmid">27729459</pub-id></mixed-citation></ref><ref id="advs2626-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="advs2626-cit-0019">
+<string-name>
+<given-names>C.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Yin</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Peng</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Tang</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Hulbert</surname>
+</string-name>, <string-name>
+<given-names>M. V.</given-names>
+<surname>Brock</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name>
+<given-names>J. G.</given-names>
+<surname>Herman</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Yu</surname>
+</string-name>, <source xml:lang="en">Clin. Epigenet.</source>
+<year>2020</year>, <volume>12</volume>, <fpage>11</fpage>.</mixed-citation></ref><ref id="advs2626-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="advs2626-cit-0020">
+<string-name>
+<given-names>W.</given-names>
+<surname>Liang</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Zhao</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Huang</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Gao</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Tao</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Yang</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Ping</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Shen</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Fu</surname>
+</string-name>, <string-name>
+<given-names>Z.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name>
+<given-names>P. W.</given-names>
+<surname>Laird</surname>
+</string-name>, <string-name>
+<given-names>X.</given-names>
+<surname>Cai</surname>
+</string-name>, <string-name>
+<given-names>J.&#x02010;B.</given-names>
+<surname>Fan</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>He</surname>
+</string-name>, <source xml:lang="en">Theranostics</source>
+<year>2019</year>, <volume>9</volume>, <fpage>2056</fpage>.<pub-id pub-id-type="pmid">31037156</pub-id></mixed-citation></ref><ref id="advs2626-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="advs2626-cit-0021">
+<string-name>
+<given-names>G. A.</given-names>
+<surname>Silvestri</surname>
+</string-name>, <string-name>
+<given-names>N. T.</given-names>
+<surname>Tanner</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Kearney</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Vachani</surname>
+</string-name>, <string-name>
+<given-names>P. P.</given-names>
+<surname>Massion</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Porter</surname>
+</string-name>, <string-name>
+<given-names>S. C.</given-names>
+<surname>Springmeyer</surname>
+</string-name>, <string-name>
+<given-names>K. C.</given-names>
+<surname>Fang</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Midthun</surname>
+</string-name>, <string-name>
+<given-names>P. J.</given-names>
+<surname>Mazzone</surname>
+</string-name>, <string-name>
+<given-names>G. A.</given-names>
+<surname>Silvestri</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Leake</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Mazzone</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Beukemann</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Midthun</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Mccarthy</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Sigal</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Deluca</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Laberge</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Fortin</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Balaan</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Dimitt</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Pierre</surname>
+</string-name>, <string-name>
+<given-names>F.</given-names>
+<surname>Allison</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Yarmus</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Oakjones&#x02010;Burgess</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Tanner</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Leake</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Ettinger</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Setchfield</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Madtes</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Hubbard</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Mcconnell</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Robinson</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Lackey</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Jacques</surname>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Kuo</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Markland&#x02010;Gentles</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Massion</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Muterspaug</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Leach</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Rothe</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Rom</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Pass</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Sorenson</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Chesnutt</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Georgeson</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Balekian</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Fisher</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Murali</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Overton</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Desai</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Levesque</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Krimsky</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>King</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Vachani</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Maletteri</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Mileham</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Carter</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Hong</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Ma</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Voelker</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Barrentine</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Aronson</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Henderson</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Lamberti</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Krawiecki</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Case</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Wilkins</surname>
+</string-name>, <string-name>
+<given-names>J. M.</given-names>
+<surname>Ayers</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Fangmann</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Landis</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Desouza</surname>
+</string-name>, <string-name>
+<given-names>Z.</given-names>
+<surname>Hammoud</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Kah</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Sanchez</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Murdoch</surname>
+</string-name>, <source xml:lang="en">Chest</source>
+<year>2018</year>, <volume>154</volume>, <fpage>491</fpage>.<pub-id pub-id-type="pmid">29496499</pub-id></mixed-citation></ref><ref id="advs2626-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="advs2626-cit-0022">
+<string-name>
+<given-names>I.</given-names>
+<surname>Guyon</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Weston</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Barnhill</surname>
+</string-name>, <string-name>
+<given-names>V.</given-names>
+<surname>Vapnik</surname>
+</string-name>, <source xml:lang="en">Mach. Learn.</source>
+<year>2002</year>, <volume>46</volume>, <fpage>389</fpage>.</mixed-citation></ref><ref id="advs2626-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="advs2626-cit-0023">
+<string-name>
+<given-names>C.&#x02010;C.</given-names>
+<surname>Chang</surname>
+</string-name>, <string-name>
+<given-names>C.&#x02010;J.</given-names>
+<surname>Lin</surname>
+</string-name>, <source xml:lang="en">ACM Trans. Intell. Syst. Technol.</source>
+<year>2011</year>, <volume>2</volume>, <fpage>27</fpage>.</mixed-citation></ref><ref id="advs2626-bib-0024"><label>24</label><mixed-citation publication-type="book" id="advs2626-cit-0024">
+<string-name>
+<given-names>H.</given-names>
+<surname>Zhang</surname>
+</string-name>, in <source xml:lang="en">Proc. 17th Int. FLAIRS Conf.</source>, <publisher-name>AAAI Press</publisher-name>, <publisher-loc>Palo Alto, CA</publisher-loc>
+<year>2004</year>.</mixed-citation></ref><ref id="advs2626-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="advs2626-cit-0025">
+<string-name>
+<given-names>K.</given-names>
+<surname>Tumer</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Ghosh</surname>
+</string-name>, <source xml:lang="en">Connect. Sci.</source>
+<year>1996</year>, <volume>8</volume>, <fpage>385</fpage>.</mixed-citation></ref><ref id="advs2626-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="advs2626-cit-0026">
+<string-name>
+<given-names>L. M.</given-names>
+<surname>Seijo</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Peled</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Ajona</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Boeri</surname>
+</string-name>, <string-name>
+<given-names>J. K.</given-names>
+<surname>Field</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Sozzi</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Pio</surname>
+</string-name>, <string-name>
+<given-names>J. J.</given-names>
+<surname>Zulueta</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Spira</surname>
+</string-name>, <string-name>
+<given-names>P. P.</given-names>
+<surname>Massion</surname>
+</string-name>, <string-name>
+<given-names>P. J.</given-names>
+<surname>Mazzone</surname>
+</string-name>, <string-name>
+<given-names>L. M.</given-names>
+<surname>Montuenga</surname>
+</string-name>, <source xml:lang="en">J. Thorac. Oncol.</source>
+<year>2019</year>, <volume>14</volume>, <fpage>343</fpage>.<pub-id pub-id-type="pmid">30529598</pub-id></mixed-citation></ref><ref id="advs2626-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="advs2626-cit-0027">
+<string-name>
+<given-names>N. A.</given-names>
+<surname>Obuchowski</surname>
+</string-name>, <string-name>
+<given-names>D. K.</given-names>
+<surname>Mcclish</surname>
+</string-name>, <source xml:lang="en">Stat. Med.</source>
+<year>1997</year>, <volume>16</volume>, <fpage>1529</fpage>.<pub-id pub-id-type="pmid">9249923</pub-id></mixed-citation></ref><ref id="advs2626-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="advs2626-cit-0028">
+<string-name>
+<given-names>X.&#x02010;J.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Hayward</surname>
+</string-name>, <string-name>
+<given-names>P.&#x02010;Y.</given-names>
+<surname>Fong</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Dominguez</surname>
+</string-name>, <string-name>
+<given-names>S. W.</given-names>
+<surname>Hunsucker</surname>
+</string-name>, <string-name>
+<given-names>L. W.</given-names>
+<surname>Lee</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>McLean</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Law</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Butler</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Schirm</surname>
+</string-name>, <string-name>
+<given-names>O.</given-names>
+<surname>Gingras</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Lamontagne</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Allard</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Chelsky</surname>
+</string-name>, <string-name>
+<given-names>N. D.</given-names>
+<surname>Price</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Lam</surname>
+</string-name>, <string-name>
+<given-names>P. P.</given-names>
+<surname>Massion</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Pass</surname>
+</string-name>, <string-name>
+<given-names>W. N.</given-names>
+<surname>Rom</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Vachani</surname>
+</string-name>, <string-name>
+<given-names>K. C.</given-names>
+<surname>Fang</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Hood</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Kearney</surname>
+</string-name>, <source xml:lang="en">Sci. Transl. Med.</source>
+<year>2013</year>, <volume>5</volume>, <elocation-id>207ra142</elocation-id>..</mixed-citation></ref><ref id="advs2626-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="advs2626-cit-0029">
+<string-name>
+<given-names>A. M.</given-names>
+<surname>Newman</surname>
+</string-name>, <string-name>
+<given-names>S. V.</given-names>
+<surname>Bratman</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>To</surname>
+</string-name>, <string-name>
+<given-names>J. F.</given-names>
+<surname>Wynne</surname>
+</string-name>, <string-name>
+<given-names>N. C. W.</given-names>
+<surname>Eclov</surname>
+</string-name>, <string-name>
+<given-names>L. A.</given-names>
+<surname>Modlin</surname>
+</string-name>, <string-name>
+<given-names>C. L.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name>
+<given-names>J. W.</given-names>
+<surname>Neal</surname>
+</string-name>, <string-name>
+<given-names>H. A.</given-names>
+<surname>Wakelee</surname>
+</string-name>, <string-name>
+<given-names>R. E.</given-names>
+<surname>Merritt</surname>
+</string-name>, <string-name>
+<given-names>J. B.</given-names>
+<surname>Shrager</surname>
+</string-name>, <string-name>
+<given-names>B. W.</given-names>
+<surname>Loo</surname>
+</string-name>, <string-name>
+<given-names>A. A.</given-names>
+<surname>Alizadeh</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Diehn</surname>
+</string-name>, <source xml:lang="en">Nat. Med.</source>
+<year>2014</year>, <volume>20</volume>, <fpage>548</fpage>.<pub-id pub-id-type="pmid">24705333</pub-id></mixed-citation></ref><ref id="advs2626-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="advs2626-cit-0030">
+<string-name>
+<given-names>V. J.</given-names>
+<surname>Lowe</surname>
+</string-name>, <string-name>
+<given-names>J. W.</given-names>
+<surname>Fletcher</surname>
+</string-name>, <string-name>
+<given-names>L.</given-names>
+<surname>Gobar</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Lawson</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Kirchner</surname>
+</string-name>, <string-name>
+<given-names>P.</given-names>
+<surname>Valk</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Karis</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Hubner</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Delbeke</surname>
+</string-name>, <string-name>
+<given-names>E. V.</given-names>
+<surname>Heiberg</surname>
+</string-name>, <string-name>
+<given-names>E. F.</given-names>
+<surname>Patz</surname>
+</string-name>, <string-name>
+<given-names>R. E.</given-names>
+<surname>Coleman</surname>
+</string-name>, <source xml:lang="en">J. Clin. Oncol.</source>
+<year>1998</year>, <volume>16</volume>, <fpage>1075</fpage>.<pub-id pub-id-type="pmid">9508193</pub-id></mixed-citation></ref><ref id="advs2626-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="advs2626-cit-0031">
+<string-name>
+<given-names>Y.</given-names>
+<surname>Hashimoto</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Tsujikawa</surname>
+</string-name>, <string-name>
+<given-names>C.</given-names>
+<surname>Kondo</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Maki</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Momose</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Nagai</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Ohnuki</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Nishikawa</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Kusakabe</surname>
+</string-name>, <source xml:lang="en">J. Nucl. Med.</source>
+<year>2006</year>, <volume>47</volume>, <fpage>426</fpage>..<pub-id pub-id-type="pmid">16513611</pub-id></mixed-citation></ref><ref id="advs2626-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="advs2626-cit-0032">
+<string-name>
+<given-names>K. D.</given-names>
+<surname>Hansen</surname>
+</string-name>, <string-name>
+<given-names>W.</given-names>
+<surname>Timp</surname>
+</string-name>, <string-name>
+<given-names>H. C.</given-names>
+<surname>Bravo</surname>
+</string-name>, <string-name>
+<given-names>S.</given-names>
+<surname>Sabunciyan</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Langmead</surname>
+</string-name>, <string-name>
+<given-names>O. G.</given-names>
+<surname>Mcdonald</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Wen</surname>
+</string-name>, <string-name>
+<given-names>H.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name>
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name>
+<given-names>D.</given-names>
+<surname>Diep</surname>
+</string-name>, <string-name>
+<given-names>E.</given-names>
+<surname>Briem</surname>
+</string-name>, <string-name>
+<given-names>K.</given-names>
+<surname>Zhang</surname>
+</string-name>, <string-name>
+<given-names>R. A.</given-names>
+<surname>Irizarry</surname>
+</string-name>, <string-name>
+<given-names>A. P.</given-names>
+<surname>Feinberg</surname>
+</string-name>, <source xml:lang="en">Nat. Genet.</source>
+<year>2011</year>, <volume>43</volume>, <fpage>768</fpage>.<pub-id pub-id-type="pmid">21706001</pub-id></mixed-citation></ref><ref id="advs2626-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="advs2626-cit-0033">
+<string-name>
+<given-names>A. M.</given-names>
+<surname>Bolger</surname>
+</string-name>, <string-name>
+<given-names>M.</given-names>
+<surname>Lohse</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Usadel</surname>
+</string-name>, <source xml:lang="en">Bioinformatics</source>
+<year>2014</year>, <volume>30</volume>, <fpage>2114</fpage>.<pub-id pub-id-type="pmid">24695404</pub-id></mixed-citation></ref><ref id="advs2626-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="advs2626-cit-0034">
+<string-name>
+<given-names>H.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name>
+<given-names>B.</given-names>
+<surname>Handsaker</surname>
+</string-name>, <string-name>
+<given-names>A.</given-names>
+<surname>Wysoker</surname>
+</string-name>, <string-name>
+<given-names>T.</given-names>
+<surname>Fennell</surname>
+</string-name>, <string-name>
+<given-names>J.</given-names>
+<surname>Ruan</surname>
+</string-name>, <string-name>
+<given-names>N.</given-names>
+<surname>Homer</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Marth</surname>
+</string-name>, <string-name>
+<given-names>G.</given-names>
+<surname>Abecasis</surname>
+</string-name>, <string-name>
+<given-names>R.</given-names>
+<surname>Durbin</surname>
+</string-name>, <source xml:lang="en">Bioinformatics</source>
+<year>2009</year>, <volume>25</volume>, <fpage>2078</fpage>.<pub-id pub-id-type="pmid">19505943</pub-id></mixed-citation></ref><ref id="advs2626-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="advs2626-cit-0035">
+<string-name>
+<given-names>P. C.</given-names>
+<surname>Ng</surname>
+</string-name>, <source xml:lang="en">Nucleic Acids Res.</source>
+<year>2003</year>, <volume>31</volume>, <fpage>3812</fpage>.<pub-id pub-id-type="pmid">12824425</pub-id></mixed-citation></ref><ref id="advs2626-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="advs2626-cit-0036">
+<string-name>
+<given-names>V.</given-names>
+<surname>Ramensky</surname>
+</string-name>, <source xml:lang="en">Nucleic Acids Res.</source>
+<year>2002</year>, <volume>30</volume>, <fpage>3894</fpage>.<pub-id pub-id-type="pmid">12202775</pub-id></mixed-citation></ref><ref id="advs2626-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="advs2626-cit-0037">
+<string-name>
+<given-names>F.</given-names>
+<surname>Krueger</surname>
+</string-name>, <string-name>
+<given-names>S. R.</given-names>
+<surname>Andrews</surname>
+</string-name>, <source xml:lang="en">Bioinformatics</source>
+<year>2011</year>, <volume>27</volume>, <fpage>1571</fpage>.<pub-id pub-id-type="pmid">21493656</pub-id></mixed-citation></ref><ref id="advs2626-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="advs2626-cit-0038">
+<string-name>
+<given-names>Y.</given-names>
+<surname>Liu</surname>
+</string-name>, <string-name>
+<given-names>K. D.</given-names>
+<surname>Siegmund</surname>
+</string-name>, <string-name>
+<given-names>P. W.</given-names>
+<surname>Laird</surname>
+</string-name>, <string-name>
+<given-names>B. P.</given-names>
+<surname>Berman</surname>
+</string-name>, <source xml:lang="en">Genome Biol.</source>
+<year>2012</year>, <volume>13</volume>, <fpage>R61</fpage>.<pub-id pub-id-type="pmid">22784381</pub-id></mixed-citation></ref></ref-list></back></article>

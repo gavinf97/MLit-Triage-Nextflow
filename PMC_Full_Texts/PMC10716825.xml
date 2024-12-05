@@ -1,0 +1,418 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.3 20210610//EN" "JATS-archivearticle1-3-mathml3.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.3" xml:lang="en" article-type="research-article"><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.2?><?ConverterInfo.XSLTName jats2jats3.xsl?><?ConverterInfo.Version 1?><?properties open_access?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Gigascience</journal-id><journal-id journal-id-type="iso-abbrev">Gigascience</journal-id><journal-id journal-id-type="publisher-id">gigascience</journal-id><journal-title-group><journal-title>GigaScience</journal-title></journal-title-group><issn pub-type="epub">2047-217X</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta>
+<article-meta><article-id pub-id-type="pmcid">10716825</article-id><article-id pub-id-type="doi">10.1093/gigascience/giad108</article-id><article-id pub-id-type="publisher-id">giad108</article-id><article-categories><subj-group subj-group-type="heading"><subject>Technical Note</subject></subj-group><subj-group subj-group-type="category-taxonomy-collection"><subject>AcademicSubjects/SCI00960</subject><subject>AcademicSubjects/SCI02254</subject></subj-group></article-categories><title-group><article-title>MLcps: machine learning cumulative performance score for classification problems</article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-3186-7478</contrib-id><name><surname>Akshay</surname><given-names>Akshay</given-names></name><aff>
+<institution>Functional Urology Research Group, Department for BioMedical Research DBMR, University of Bern</institution>, <addr-line>3008 Bern</addr-line>, <country country="CH">Switzerland</country></aff><aff>
+<institution>Graduate School for Cellular and Biomedical Sciences, University of Bern</institution>, <addr-line>3012 Bern</addr-line>, <country country="CH">Switzerland</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-3986-4028</contrib-id><name><surname>Abedi</surname><given-names>Masoud</given-names></name><aff>
+<institution>Department of Medical Data Science, Leipzig University Medical Centre</institution>, <addr-line>04107 Leipzig</addr-line>, <country country="DE">Germany</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5750-7801</contrib-id><name><surname>Shekarchizadeh</surname><given-names>Navid</given-names></name><aff>
+<institution>Department of Medical Data Science, Leipzig University Medical Centre</institution>, <addr-line>04107 Leipzig</addr-line>, <country country="DE">Germany</country></aff><aff>
+<institution>Center for Scalable Data Analytics and Artificial Intelligence (ScaDS.AI) Dresden/Leipzig</institution>, <addr-line>04105 Leipzig</addr-line>, <country country="DE">Germany</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-8271-014X</contrib-id><name><surname>Burkhard</surname><given-names>Fiona C</given-names></name><aff>
+<institution>Functional Urology Research Group, Department for BioMedical Research DBMR, University of Bern</institution>, <addr-line>3008 Bern</addr-line>, <country country="CH">Switzerland</country></aff><aff>
+<institution>Department of Urology, Inselspital University Hospital</institution>, <addr-line>3010 Bern</addr-line>, <country country="CH">Switzerland</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-9248-6348</contrib-id><name><surname>Katoch</surname><given-names>Mitali</given-names></name><aff>
+<institution>Institute of Neuropathology, Universit&#x000e4;tsklinikum Erlangen, Friedrich-Alexander-Universit&#x000e4;t Erlangen-N&#x000fc;rnberg (FAU)</institution>, <addr-line>91054 Erlangen</addr-line>, <country country="DE">Germany</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-6914-9135</contrib-id><name><surname>Bigger-Allen</surname><given-names>Alex</given-names></name><aff>
+<institution>Biological &#x00026; Biomedical Sciences Program, Division of Medical Sciences, Harvard Medical School</institution>, <addr-line>02115 Boston, MA</addr-line>, <country country="US">USA</country></aff><aff>
+<institution>Urological Diseases Research Center, Boston Children's Hospital</institution>, <addr-line>02115 Boston, MA</addr-line>, <country country="US">USA</country></aff><aff>
+<institution>Department of Surgery</institution>, Harvard Medical School, <addr-line>02115 Boston, MA</addr-line>, <country country="US">USA</country></aff><aff>
+<institution>Broad Institute of MIT and Harvard</institution>, <addr-line>02142 Cambridge, MA</addr-line>, <country country="US">USA</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-0943-6236</contrib-id><name><surname>Adam</surname><given-names>Rosalyn M</given-names></name><aff>
+<institution>Urological Diseases Research Center, Boston Children's Hospital</institution>, <addr-line>02115 Boston, MA</addr-line>, <country country="US">USA</country></aff><aff>
+<institution>Department of Surgery</institution>, Harvard Medical School, <addr-line>02115 Boston, MA</addr-line>, <country country="US">USA</country></aff><aff>
+<institution>Broad Institute of MIT and Harvard</institution>, <addr-line>02142 Cambridge, MA</addr-line>, <country country="US">USA</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-2042-1139</contrib-id><name><surname>Monastyrskaya</surname><given-names>Katia</given-names></name><aff>
+<institution>Functional Urology Research Group, Department for BioMedical Research DBMR, University of Bern</institution>, <addr-line>3008 Bern</addr-line>, <country country="CH">Switzerland</country></aff><aff>
+<institution>Department of Urology, Inselspital University Hospital</institution>, <addr-line>3010 Bern</addr-line>, <country country="CH">Switzerland</country></aff></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-9625-6259</contrib-id><name><surname>Gheinani</surname><given-names>Ali Hashemi</given-names></name><!--Ali.HashemiGheinani@childrens.harvard.edu--><aff>
+<institution>Functional Urology Research Group, Department for BioMedical Research DBMR, University of Bern</institution>, <addr-line>3008 Bern</addr-line>, <country country="CH">Switzerland</country></aff><aff>
+<institution>Department of Urology, Inselspital University Hospital</institution>, <addr-line>3010 Bern</addr-line>, <country country="CH">Switzerland</country></aff><aff>
+<institution>Urological Diseases Research Center, Boston Children's Hospital</institution>, <addr-line>02115 Boston, MA</addr-line>, <country country="US">USA</country></aff><aff>
+<institution>Department of Surgery</institution>, Harvard Medical School, <addr-line>02115 Boston, MA</addr-line>, <country country="US">USA</country></aff><aff>
+<institution>Broad Institute of MIT and Harvard</institution>, <addr-line>02142 Cambridge, MA</addr-line>, <country country="US">USA</country></aff><xref rid="cor1" ref-type="corresp"/></contrib></contrib-group><author-notes><corresp id="cor1">Correspondence address. Ali Hashemi Gheinani, Urological Diseases Research Center, Boston Children's Hospital, Harvard Medical School and Broad Institute of MIT and Harvard, 02115 Cambridge, MA, USA. E-mail: <email>Ali.HashemiGheinani@childrens.harvard.edu</email></corresp></author-notes><pub-date pub-type="collection"><year>2023</year></pub-date><pub-date pub-type="epub" iso-8601-date="2023-12-13"><day>13</day><month>12</month><year>2023</year></pub-date><pub-date pub-type="pmc-release"><day>13</day><month>12</month><year>2023</year></pub-date><volume>12</volume><elocation-id>giad108</elocation-id><history><date date-type="received"><day>06</day><month>7</month><year>2023</year></date><date date-type="rev-recd"><day>02</day><month>10</month><year>2023</year></date><date date-type="accepted"><day>23</day><month>11</month><year>2023</year></date></history><permissions><copyright-statement>&#x000a9; The Author(s) 2023. Published by Oxford University Press GigaScience.</copyright-statement><copyright-year>2023</copyright-year><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xlink:href="giad108.pdf"/><abstract><title>Abstract</title><sec id="abs1"><title>Background</title><p>Assessing the performance of machine learning (ML) models requires careful consideration of the evaluation metrics used. It is often necessary to utilize multiple metrics to gain a comprehensive understanding of a trained model&#x02019;s performance, as each metric focuses on a specific aspect. However, comparing the scores of these individual metrics for each model to determine the best-performing model can be time-consuming and susceptible to subjective user preferences, potentially introducing bias.</p></sec><sec id="abs2"><title>Results</title><p>We propose the Machine Learning Cumulative Performance Score (MLcps), a novel evaluation metric for classification problems. MLcps integrates several precomputed evaluation metrics into a unified score, enabling a comprehensive assessment of the trained model&#x02019;s strengths and weaknesses. We tested MLcps on 4 publicly available datasets, and the results demonstrate that MLcps provides a holistic evaluation of the model&#x02019;s robustness, ensuring a thorough understanding of its overall performance.</p></sec><sec id="abs3"><title>Conclusions</title><p>By utilizing MLcps, researchers and practitioners no longer need to individually examine and compare multiple metrics to identify the best-performing models. Instead, they can rely on a single MLcps value to assess the overall performance of their ML models. This streamlined evaluation process saves valuable time and effort, enhancing the efficiency of model evaluation. MLcps is available as a Python package at <ext-link xlink:href="https://pypi.org/project/MLcps/" ext-link-type="uri">https://pypi.org/project/MLcps/</ext-link>.</p></sec></abstract><kwd-group kwd-group-type="keywords"><kwd>machine learning</kwd><kwd>classification problems</kwd><kwd>model evaluation</kwd><kwd>unified evaluation score</kwd><kwd>Python package</kwd></kwd-group><funding-group><award-group award-type="grant"><funding-source>
+<institution-wrap><institution>National Science Foundation</institution><institution-id institution-id-type="DOI">10.13039/100000001</institution-id></institution-wrap>
+</funding-source><award-id>310030</award-id><award-id>175773</award-id><award-id>212298</award-id></award-group></funding-group><counts><page-count count="9"/></counts></article-meta></front><body><boxed-text position="float"><label>Key points</label><list list-type="bullet"><list-item><p>Evaluating machine learning models involves considering multiple metrics. Comparing scores of individual metrics to determine the best model can be time-consuming and subjective, potentially introducing bias.</p></list-item><list-item><p>The proposed Machine Learning Cumulative Performance Score (MLcps) is a novel evaluation metric for classification problems. It integrates multiple evaluation metrics into a unified score, providing a holistic understanding of model performance.</p></list-item><list-item><p>MLcps outperforms standard metric-based rankings, offering a more reliable and consistent assessment of model performance.</p></list-item><list-item><p>MLcps is available as a Python package, making it easily accessible for researchers to incorporate into their evaluation pipelines.</p></list-item></list></boxed-text><sec sec-type="intro" id="sec2"><title>Introduction</title><p>The evaluation of machine learning (ML) models is crucial in the ML workflow as it helps determine their effectiveness. However, it is essential to select the appropriate evaluation metric since the performance of a trained model is only as good as the metric used for evaluation [<xref rid="bib1" ref-type="bibr">1&#x02013;5</xref>]. Numerous metrics are available for assessing the performance of ML models, with each metric focusing on a specific aspect of the model&#x02019;s performance [<xref rid="bib6" ref-type="bibr">6</xref>, <xref rid="bib7" ref-type="bibr">7</xref>]. For example, the &#x0201c;recall&#x0201d; metric effectively measures a model&#x02019;s ability to predict positive class instances but does not provide insights into the negative class instances. This poses a significant challenge because a model that performs well according to one metric may not exhibit the same level of performance when evaluated using another metric [<xref rid="bib8" ref-type="bibr">8&#x02013;14</xref>]. Hence, relying solely on a single performance metric is inadequate in practical scenarios.</p><p>Furthermore, the characteristics and composition of the available dataset can influence the behavior and outcomes of various metrics. For instance, when dealing with imbalanced datasets, accuracy becomes an inadequate metric, and relying solely on accuracy can lead to misleading interpretations [<xref rid="bib15" ref-type="bibr">15</xref>]. Therefore, it is crucial to calculate multiple performance metrics for each model to evaluate its performance comprehensively [<xref rid="bib7" ref-type="bibr">7</xref>]. By considering various evaluation metrics, we can gain a holistic view of a model&#x02019;s performance and make informed decisions about the best-performing model for a given task.</p><p>When calculating multiple metrics for a model, there is often an assumption that the best model will consistently achieve the highest scores across all metrics. However, this assumption is rarely true in practical scenarios, necessitating the comparison of the individual metrics of different models to identify the best-performing model. However, comparing metric scores for many models can be labor-intensive and susceptible to user preference bias [<xref rid="bib16" ref-type="bibr">16</xref>]. As a result, the complexity of finding the best model increases exponentially when considering the comparison of different metrics.</p><p>Apart from these limitations, some methods prevent users from evaluating model performance with multiple metrics simultaneously. For example, in the field of biology, the wrapper-based feature selection method is commonly used to identify important features from a large set of original attributes. This method trains a model with different feature subsets and selects the subset that shows the best performance compared to the other subsets. Unfortunately, these methods are limited to evaluating model performance using only one metric at a time. This constraint can potentially lead to overfitting to a specific metric, resulting in the selection of suboptimal feature subsets that lack generalizability.</p><p>In the realm of information retrieval (IR), Chakrabarti et al. [<xref rid="bib17" ref-type="bibr">17</xref>] previously introduced novel algorithms designed to merge multiple ranking criteria into a unified approach, ultimately enhancing the optimization of search results. Building upon this research, Geng and Cheng [<xref rid="bib18" ref-type="bibr">18</xref>] further investigated learning to rank, considering multiple evaluation metrics, and proposed the combination of multiple metrics to optimize IR metrics.</p><p>Here, we introduce a novel evaluation metric called the Machine Learning Cumulative Performance Score (MLcps) to address the challenges associated with model evaluation in the field of machine learning. MLcps is a unified score that follows a similar methodology compared to the previously mentioned study related to IR. MLcps combines precomputed performance metrics into a single score while preserving their distinct characteristics. By leveraging multiple metrics, MLcps provides a more comprehensive evaluation of machine learning model performance. To enhance the accessibility of MLcps, we have implemented it as a Python package, enabling direct comparisons of trained ML models to assess their performance.</p></sec><sec sec-type="discussion|results" id="sec3"><title>Results and Discussion</title><p>In this section, the results of the current study are showcased, with a specific focus on evaluating MLcps as a robust measure for assessing ML model performance. The primary objective of this analysis is to shed light on the effectiveness of MLcps in ranking models based on their consistency and excellence across multiple performance metrics. Furthermore, we explore the reliability of MLcps in selecting models that not only excel on training data but also demonstrate the ability to generalize well to unseen datasets.</p><p>Additionally, we emphasize the importance of employing a diverse set of performance metrics when evaluating machine learning models. By doing so, we aim to provide a comprehensive understanding of model performance beyond traditional measures and showcase the significance of considering various aspects of model behavior in real-world applications.</p><sec id="sec3-1"><title>Evaluating MLcps robustness</title><p>Each performance metric represents a specific aspect of model performance, and for a model to be considered robust and superior, it should consistently excel across all these metrics. This consistency can be reflected by having the lowest standard deviation (SD) across performance metrics. Therefore, our analysis revolves around understanding the relationship between MLcps and SD. This evaluation helps determine the reliability of MLcps as a performance measure.</p><p>To assess MLcps&#x02019; robustness as a model performance measure, we analyzed multiple models across 5 distinct datasets (Table&#x000a0;<xref rid="tbl1" ref-type="table">1</xref>). Our findings consistently revealed a strong correlation between the highest MLcps score and the lowest SD in performance metric scores (Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1A</xref>, <xref rid="fig1" ref-type="fig">B</xref> and Fig. <xref rid="fig2" ref-type="fig">2A</xref>, <xref rid="fig2" ref-type="fig">B</xref>). This correlation indicates that MLcps reliably identifies the best-performing model when it consistently excels across all metrics, validating its reliability as a performance measure.</p><fig position="float" id="fig1"><label>Figure 1:</label><caption><p>SD of performance metrics and MLcps comparison for CLL and cervical cancer datasets. (A, B) The SD of performance metric scores for ML algorithms trained on the CLL and cervical cancer datasets, respectively. The bars in the plot represent the SD of performance metric scores and are displayed on the left y-axis. The bars are arranged from left to right, with smaller SD values on the left and larger SD values on the right. A red dot on the plot represents the MLcps, which is displayed on the right y-axis. (C, D) MLcps for training data from the CLL and cervical cancer datasets, respectively. The numerical MLcps values are indicated within each bar. Rankings, enclosed in brackets, reflect model performance based on MLcps.</p></caption><graphic xlink:href="giad108fig1" position="float"/></fig><fig position="float" id="fig2"><label>Figure 2:</label><caption><p>SD of performance metrics and MLcps comparison for TCGA mRNA and miRNA datasets. (A, B) The SD of performance metric scores for ML algorithms trained on the mRNA and miRNA datasets, respectively. The bars in the plot represent the SD of performance metric scores and are displayed on the left y-axis. The bars are arranged from left to right, with smaller SD values on the left and larger SD values on the right. A red dot on the plot represents the MLcps, which is displayed on the right y-axis. (C, D) A comparison of MLcps for training and test data from the mRNA and miRNA datasets, respectively. The numerical MLcps values are indicated within each bar. Rankings, enclosed in brackets, reflect model performance based on MLcps, whether computed from the training or test data.</p></caption><graphic xlink:href="giad108fig2" position="float"/></fig><table-wrap position="float" id="tbl1"><label>Table 1:</label><caption><p>Example datasets used in this study</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">Dataset</th><th rowspan="1" colspan="1">Data type</th><th rowspan="1" colspan="1">Number of samples</th><th rowspan="1" colspan="1">Number of features</th><th rowspan="1" colspan="1">Target class ratio</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">CLL</td><td rowspan="1" colspan="1">mRNA</td><td rowspan="1" colspan="1">136</td><td rowspan="1" colspan="1">5,000</td><td rowspan="1" colspan="1">Male (<italic toggle="yes">n</italic> = 82)/Female (<italic toggle="yes">n</italic> = 54)</td></tr><tr><td rowspan="1" colspan="1">Cervical cancer</td><td rowspan="1" colspan="1">miRNA</td><td rowspan="1" colspan="1">58</td><td rowspan="1" colspan="1">714</td><td rowspan="1" colspan="1">Normal (<italic toggle="yes">n</italic> = 29)/Tumor (<italic toggle="yes">n</italic> = 29)</td></tr><tr><td rowspan="1" colspan="1">TCGA-BRCA</td><td rowspan="1" colspan="1">miRNA</td><td rowspan="1" colspan="1">1,207</td><td rowspan="1" colspan="1">1,404</td><td rowspan="1" colspan="1">Normal (<italic toggle="yes">n</italic> = 104)/Tumor (<italic toggle="yes">n</italic> = 1,104)</td></tr><tr><td rowspan="1" colspan="1">TCGA-BRCA</td><td rowspan="1" colspan="1">mRNA</td><td rowspan="1" colspan="1">1,219</td><td rowspan="1" colspan="1">5,520</td><td rowspan="1" colspan="1">Normal (<italic toggle="yes">n</italic> = 113)/Tumor (<italic toggle="yes">n</italic> = 1,106)</td></tr><tr><td rowspan="1" colspan="1">Body signal</td><td rowspan="1" colspan="1">Body signal data (hemoglobin, triglyceride)</td><td rowspan="1" colspan="1">100,000</td><td rowspan="1" colspan="1">21</td><td rowspan="1" colspan="1">
+<bold>Consume Alcohol</bold>
+<break/>Yes (<italic toggle="yes">n</italic> = 50,173)/No (<italic toggle="yes">n</italic> = 49,827)</td></tr></tbody></table></table-wrap><p>However, there are important exceptions that require attention. For instance, in the chronic lymphocytic leukemia (CLL) dataset, the GP model outperforms the dummy model in terms of MLcps score, even though the dummy model has a lower SD (Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1A</xref>). Similarly, in the cervical cancer dataset, the MLcps scores of the extra trees classifier (ETC), support vector machine (SVM), and random forest (RF) classifier models surpass that of the linear discriminant analysis (LDA) model, despite the LDA model having a lower SD (Fig. <xref rid="fig1" ref-type="fig">1B</xref>). Similar exceptions were observed in the body signals dataset as well (<xref rid="sup9" ref-type="supplementary-material">Supplementary Fig. S4A</xref>).</p><p>These exceptions can be attributed to the fact that while these models exhibit lower SD compared to others, they also perform poorly for each individual metric. Consequently, their low MLcps scores accurately reflect their subpar performance across all metrics. This observation acknowledges that a model with poor performance metrics may still have a smaller SD when compared to other models. These exceptions underscore that MLcps takes into account not only the SD but also the overall magnitude of performance metric scores, thereby providing a comprehensive evaluation of ML models&#x02019; performance.</p></sec><sec id="sec3-2"><title>Consistency in model performance across training and test datasets</title><p>To evaluate the reliability of MLcps in selecting the best-performing models, we examined the consistency of model performance between the training and test datasets. Among the 5 datasets, the The Cancer Genome Atlas (TCGA) breast invasive carcinoma (BRCA) and body signals datasets offered a larger sample size, allowing us to create an independent test set comprising 30% of the data. When analyzing these 3 datasets, we found that the model identified as the best performer based on MLcps also demonstrated the best performance on the independent test set (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2C</xref>, <xref rid="fig2" ref-type="fig">D</xref>).</p><p>Furthermore, it is noteworthy that if we solely relied on the SD to rank the models, the Logistic Regression (LR) model would have been chosen as the best performer on the training dataset of TCGA-BRCA mRNA (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2B</xref>). However, when evaluating its performance on the test dataset, LR did not even rank among the top 2 (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2D</xref>). Similarly, in the body signals dataset, the bagging classifier model would have been considered the best performer based on the SD criteria (<xref rid="sup9" ref-type="supplementary-material">Supplementary Fig. S4A</xref>). However, it is important to note that on the test dataset, this model ranked fourth in terms of performance (<xref rid="sup9" ref-type="supplementary-material">Supplementary Fig. S4B</xref>).</p><p>In contrast, when sorting the model performance based on MLcps, the ranking remained consistent across both training and test datasets, providing a more robust measure of model performance (<xref rid="sup9" ref-type="supplementary-material">Supplementary Fig. S4B</xref>). These findings indicate that MLcps effectively identifies models that not only perform well on the training data but also generalize well to unseen data, highlighting its comprehensive ability to assess model performance across different datasets.</p></sec><sec id="sec3-3"><title>Importance of utilizing multiple performance metrics</title><p>To emphasize the significance of using multiple performance metrics in evaluating ML model performance, we employed a visual representation of the metric scores using a 2-dimensional polar coordinate system for each ML algorithm trained on different datasets. Our results demonstrated that both precision and average precision metrics consistently yielded high scores (&#x0003e;90%) for all the trained models in the TCGA miRNA (<xref rid="sup9" ref-type="supplementary-material">Supplementary Fig. S1B, C</xref>) and mRNA datasets (<xref rid="sup9" ref-type="supplementary-material">Supplementary Fig. S2B, C</xref>). However, relying solely on these metrics would have resulted in mistakenly selecting the dummy model as the best-performing one. This highlights the crucial importance of incorporating multiple performance metrics to obtain a more accurate assessment of ML model performance. Importantly, this phenomenon was not observed in the CLL and cervical cancer datasets (<xref rid="sup9" ref-type="supplementary-material">Supplementary Figs. S1A, S2A</xref>), indicating that the interpretation of performance metrics is dataset dependent. By considering a diverse range of metrics, researchers and practitioners can make more informed decisions regarding the usefulness and reliability of ML models.</p></sec></sec><sec sec-type="materials|methods" id="sec4"><title>Materials and Methods</title><sec id="sec4-1"><title>MLcps methodology</title><p>The MLcps algorithm requires an input table consisting of columns that hold various performance metrics, such as F1, accuracy, and recall. The rows in the table represent different machine learning methods, such as k-nearest neighbors (KNN) and SVM. Typically, this table is generated as the output of a standard machine learning pipeline (<xref rid="fig3" ref-type="fig">Fig. 3A</xref>&#x02013;<xref rid="fig3" ref-type="fig">C</xref>). In principle, MLcps can be calculated for any evaluation metric. However, it is highly recommended that all of them are on the same scale; for example, if accuracy ranges between 0 and 1, then the F1 metric should also be in the same range, not in percentages.</p><fig position="float" id="fig3"><label>Figure 3:</label><caption><p>Schematic overview of the complete analysis process for MLcps Python package. Before using the MLcps Python package, one needs to prepare the raw data (A). This input table can be RNA sequencing, proteomics, patients&#x02019; profile, molecular data, and so on (normally these data are in txt or csv format). Next step is to perform multiple ML algorithms (B). Performing this step can be done by any package or programming language of choice. The next step is to evaluate the performance of the ML algorithms. We recommend the use of multiple metrics such as F1, recall, and so on (C). The performance metric scores then need to be arranged in a tabular format, as depicted in (C). This table will be used as an input for the MLcps package. From here on, the MLcps will process the data. MLcps involves 3 steps: projection, calculation, and visualization (PCV). To calculate the cumulative score of each ML algorithm in the input data, MLcps first projects the performance metric onto the 2-dimensional polar coordinates system (D). Next, the projected polygon&#x02019;s area is calculated (E). Finally, the user can visualize this MLcps to rank the performance of given ML algorithms (F). The lower panel (G&#x02013;N) visualizes the procedure to calculate the surface area as a cumulative score in detail. The names of the algorithms are just mentioned as an example and other algorithms can be used too. BC: bagging classifier; DTC: decision tree classifier; ETC: extra trees classifier; GP: Gaussian process classifier; KNN: k-nearest neighbors; LDA: linear discriminant analysis; RF: random forest classifier; SVM: support vector machine.</p></caption><graphic xlink:href="giad108fig3" position="float"/></fig><p>To calculate MLcps, the first step involves plotting the precalculated performance metrics on a 2-dimensional polar coordinate system (<xref rid="fig3" ref-type="fig">Fig. 3D</xref>). In this polar coordinate system, each metric is represented as a ray, and the length of the ray corresponds to the metric value. This representation allows the polar plane to be divided into multiple triangles, with the number of triangles being equal to the available evaluation metrics. The combined area of these individual triangles represents the total area of the polar plane and serves as the MLcps (<xref rid="fig3" ref-type="fig">Fig. 3E</xref>).</p><p>Finally, the MLcps can be visually represented using a bar chart, as shown in&#x000a0;<xref rid="fig3" ref-type="fig">Fig. 3F</xref>. It provides a clear and visually informative depiction of the relative performance of different machine learning methods. By examining the bar chart, one can easily identify the performance differences between various ML methods.</p></sec><sec id="sec4-2"><title>Area calculation of a 2-dimensional polar plane</title><p>The projection of multiple evaluation metrics onto a 2-dimensional polar coordinate system divides the polar plane into several triangles. Therefore, the total sum of the areas of these triangles is equal to the total area of the polar plane generated by the multiple performance scores. In order to calculate the area of each individual triangle, as described in Equation (<xref rid="equ1" ref-type="disp-formula">1</xref>), we need to multiply half the length of base by the height drawn to that side (<xref rid="fig3" ref-type="fig">Fig. 3G</xref>&#x02013;<xref rid="fig3" ref-type="fig">N</xref>).</p><disp-formula id="equ1">
+<label>(1)</label>
+<tex-math id="TM0001" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{\rm Area}_{\Delta ABC} = \frac{1}{2} \, ah
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where</p><list list-type="simple"><list-item><p>
+<italic toggle="yes">a</italic> = represents the side (base), and</p></list-item><list-item><p>
+<italic toggle="yes">h</italic> = represents the height drawn to that side.</p></list-item></list><p>However, to apply this formula, we require the value for the height (<italic toggle="yes">h</italic>) variable, which cannot be controlled in a polar plane. Nonetheless, we do have control over the angles (<inline-formula><tex-math id="TM0002" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta $\end{document}</tex-math></inline-formula>) of all the triangles, which can be calculated by dividing 360 degrees by the number of performance metrics used, as described in&#x000a0;Equation (<xref rid="equ2" ref-type="disp-formula">2</xref>).</p><disp-formula id="equ2">
+<label>(2)</label>
+<tex-math id="TM0003" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{\mathrm{Angle}}\ \theta &#x00026;=&#x00026; \frac{{360}}{{{\mathrm{Number\ of\ performance\ metrics}}}} \times \frac{\pi }{{180}}\\
+&#x00026;=&#x00026; \frac{{2\pi }}{{{\mathrm{Number\ of\ performance\ metrics}}}}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>Now, by employing trigonometry, as outlined in&#x000a0;Equation (<xref rid="equ3" ref-type="disp-formula">3</xref>), we can calculate the height (<italic toggle="yes">h</italic>) based on the known angles (<inline-formula><tex-math id="TM0004" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta $\end{document}</tex-math></inline-formula>). Therefore, the height of the triangle can be expressed as <inline-formula><tex-math id="TM0005" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$h = b\ sin\theta $\end{document}</tex-math></inline-formula>.</p><disp-formula id="equ3">
+<label>(3)</label>
+<tex-math id="TM0006" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\sin \theta \ = \frac{{\mathrm{h}}}{b}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>By substituting the new expression for the height (<italic toggle="yes">h</italic>) variable into the general formula for the area of a triangle, we obtain a new formula, as shown in&#x000a0;Equation (<xref rid="equ4" ref-type="disp-formula">4</xref>), where values for all the required variables are available.</p><disp-formula id="equ4">
+<label>(4)</label>
+<tex-math id="TM0007" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{\mathrm{Are}}{{\mathrm{a}}}_{\Delta ABC} = \frac{1}{2}ab\,\,\sin \theta \,\,{\mathrm{\ or}}\,\,\ 2{\mathrm{Are}}{{\mathrm{a}}}_{\Delta ABC} = ab\sin \theta
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>In&#x000a0;Equation (<xref rid="equ4" ref-type="disp-formula">4</xref>), the parameters <italic toggle="yes">a</italic> and <italic toggle="yes">b</italic> represent any 2 sides of a triangle, while <inline-formula><tex-math id="TM0008" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta $\end{document}</tex-math></inline-formula> denotes the included angle. It is important to note that in this context, the values <italic toggle="yes">a</italic> and <italic toggle="yes">b</italic> correspond to the actual measurements for each performance metric.</p><p>Finally, by utilizing&#x000a0;Equation (<xref rid="equ5" ref-type="disp-formula">5</xref>), derived from&#x000a0;Equation (<xref rid="equ4" ref-type="disp-formula">4</xref>), the total area of the polar plane can be determined by summing the areas of all triangles formed within the polar coordinate system.</p><disp-formula id="equ5">
+<label>(5)</label>
+<tex-math id="TM0009" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+2{\mathrm{Are}}{{\mathrm{a}}}_{{\mathrm{total}}} = \sin \theta \mathop \sum \limits_{i = 1}^n {d}_i{d}_{i + 1}\ \to \ {\mathrm{Are}}{{\mathrm{a}}}_{{\mathrm{total}}} = \frac{1}{2}\sin \theta \mathop \sum \limits_{i = 1}^n {d}_i{d}_{i + 1}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where</p><list list-type="simple"><list-item><p>
+<inline-formula>
+<tex-math id="TM0010" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${d}_i$\end{document}</tex-math>
+</inline-formula> = length of the <italic toggle="yes">i</italic>th ray (the value of <italic toggle="yes">i</italic>th metric score) (<xref rid="fig3" ref-type="fig">Fig. 3L</xref>), and</p></list-item><list-item><p>
+<italic toggle="yes">n</italic> = number of triangles point of collapse (<xref rid="fig3" ref-type="fig">Fig. 3M</xref>).</p></list-item></list></sec><sec id="sec4-3"><title>Weighted MLcps</title><p>In specific situations, certain metrics hold more significance than others. For instance, when dealing with an imbalanced dataset, achieving a high F1 score may be prioritized over higher accuracy [<xref rid="bib19" ref-type="bibr">19</xref>, <xref rid="bib20" ref-type="bibr">20</xref>]. In such cases, users have the option to assign weight variables to the metrics of interest during the calculation of MLcps. A weight variable assigns a value (referred to as the weight) to each precomputed metric, and the respective metric scores are adjusted using these weights in the following manner:</p><disp-formula id="equ6">
+<label>(6)</label>
+<tex-math id="TM0011" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{{\mathrm{S}}}_{{\mathrm{weightedmetric}}}{\mathrm{\ }} = {\mathrm{\ }}{{\mathrm{S}}}_{{\mathrm{metric}}}{\mathrm{\ }} \times {\mathrm{\ }}{{\mathrm{W}}}_{{\mathrm{metric}}}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where</p><list list-type="simple"><list-item><p>
+<inline-formula>
+<tex-math id="TM0012" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{S}}}_{{\mathrm{weightedmetric}}}$\end{document}</tex-math>
+</inline-formula> = weighted metric score,</p></list-item><list-item><p>
+<inline-formula>
+<tex-math id="TM0013" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{S}}}_{{\mathrm{metric}}}$\end{document}</tex-math>
+</inline-formula> = raw metric score, and</p></list-item><list-item><p>
+<inline-formula>
+<tex-math id="TM0014" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{W}}}_{{\mathrm{metric}}}$\end{document}</tex-math>
+</inline-formula> = weight.</p></list-item></list><p>It is essential to note that the assigned weight for a metric must always be greater than or equal to zero. A weight of zero indicates that the user intends to exclude that metric from the MLcps calculation. Metrics with higher weights have a more significant contribution to the MLcps compared to metrics with lower weights. In the case where no weights are assigned (unweighted MLcps), it is equivalent to conducting a weighted analysis where all weights are set to 1.</p></sec><sec id="sec4-4"><title>Datasets</title><p>In this study, 4 distinct datasets were employed to evaluate MLcps (Table&#x000a0;<xref rid="tbl1" ref-type="table">1</xref>). The initial dataset comprises mRNA data (<italic toggle="yes">n</italic> = 136) derived from a CLL study, which examined transcriptome profiles in individuals affected by blood cancer [<xref rid="bib21" ref-type="bibr">21</xref>]. Our objective was to develop a model capable of distinguishing between male and female patients using their transcriptomic profiles. To achieve this, we focused on the top 5,000 most variably expressed mRNAs, excluding genes from the Y chromosome.</p><p>The second set of data was obtained from a study on cervical cancer, where the expression levels of 714 miRNAs were measured in human samples (<italic toggle="yes">n</italic> = 58) [<xref rid="bib22" ref-type="bibr">22</xref>]. The third and fourth datasets were collected from TCGA and involved mRNA (<italic toggle="yes">n</italic> = 1,219) and miRNA (<italic toggle="yes">n</italic> = 1,207) sequencing of BRCA. The TCGAbiolinks package in R was used to retrieve these datasets [<xref rid="bib23" ref-type="bibr">23</xref>]. For the BRCA mRNA dataset, we focused on genes that showed differential expression according to edgeR analysis (False discovery rate (FDR) &#x021d0; 0.001 and Fold Change log(FC) &#x0003e; &#x000b1;2) [<xref rid="bib24" ref-type="bibr">24</xref>]. Our objective was to develop a model capable of distinguishing between normal and tumor samples for both the cervical cancer and TCGA-BRCA datasets.</p><p>The fifth dataset in our study comprises body signal data collected from 100,000 individuals through the National Health Insurance Service in Korea [<xref rid="bib25" ref-type="bibr">25</xref>]. This dataset includes 21 essential biological signals related to health, such as measurements of systolic blood pressure and total cholesterol levels. Our main goal with this dataset was to determine whether individuals consume alcohol based on the available biological signal information.</p><p>Among these datasets, 2 were relatively small (CLL and the cervical cancer study), while the other 2 (TCGA datasets) were imbalanced (Table&#x000a0;<xref rid="tbl1" ref-type="table">1</xref>). We utilized an in-house ML pipeline (<xref rid="sup9" ref-type="supplementary-material">Supplementary Fig. S5</xref>) to train and evaluate 8 different models (<xref rid="sup9" ref-type="supplementary-material">Supplementary Table S1</xref>) to identify the best-performing model for CLL, cervical cancer, and the TCGA datasets. For the biological signal dataset, we utilized the &#x0201c;customML&#x0201d; feature from the Machine Learning Made Easy [<xref rid="bib26" ref-type="bibr">26</xref>] tool to train and evaluate 6 different models and identify the best-performing one for classifying alcohol consumers and nonconsumers.</p></sec><sec id="sec4-5"><title>Implementation</title><p>MLcps is developed using Python [<xref rid="bib27" ref-type="bibr">27</xref>] and R [<xref rid="bib28" ref-type="bibr">28</xref>] programming languages. Pandas [<xref rid="bib29" ref-type="bibr">29</xref>, <xref rid="bib30" ref-type="bibr">30</xref>] is used to store and process the data. Plotly [<xref rid="bib31" ref-type="bibr">31</xref>] is used to generate the figures. The radarchart [<xref rid="bib32" ref-type="bibr">32</xref>] package in R was used for surface area calculation of the polar plane. The R packages tibble [<xref rid="bib33" ref-type="bibr">33</xref>] and dplyr [<xref rid="bib34" ref-type="bibr">34</xref>] were utilized for data wrangling in the computation of MLcps during the analysis.</p></sec></sec><sec sec-type="conclusions" id="sec5"><title>Conclusions</title><p>Our article introduces MLcps, a novel evaluation metric implemented as a Python package. MLcps is a robust evaluation metric designed specifically for classification problems. Its ability to integrate multiple evaluation metrics into a single score makes it an efficient and reliable approach for evaluating model performance and selecting the most successful model. This is especially valuable when multiple evaluation metrics are necessary to fully comprehend a model&#x02019;s strengths and weaknesses.</p><p>However, it is essential to understand that the reliability of MLcps depends on the quality of the metrics used in its calculation. Therefore, it is of utmost importance to employ appropriate evaluation metrics, which depend on various factors such as the specific domain, stakeholder preferences, and data characteristics. Similarly, assigning weights to evaluation metrics in machine learning offers a valuable technique for prioritizing specific aspects of model performance, but it comes with potential drawbacks and complexities. For example, heavily weighting one metric can overshadow the overall evaluation, possibly resulting in suboptimal models. Additionally, the assignment of metric weights often depends on subjective judgments regarding their relative significance. Various stakeholders may hold differing perspectives on how much weight to allocate to each metric, potentially leading to evaluation bias.</p><p>While the allocation of weights to evaluation metrics can enhance the customization of the evaluation process for specific objectives, it must be executed judiciously, considering the possible downsides and challenges associated with this approach. Striking a balance between highlighting key metrics and maintaining a comprehensive view of model performance is paramount. Therefore, we strongly discourage relying on MLcps without considering the context in which it is applied.</p></sec><sec id="sec6"><title>Availability of Supporting Source Code and Requirements</title><p>Project name: Machine Learning Cumulative Performance Score (MLcps)</p><p>Project homepage: <ext-link xlink:href="https://github.com/FunctionalUrology/MLcps" ext-link-type="uri">https://github.com/FunctionalUrology/MLcps</ext-link></p><p>Operating system(s): Platform independent</p><p>Programming language: Python &#x02265;3.8 and R &#x02265;4.0</p><p>Other requirements: radarchart, tibble, and dplyr R packages</p><p>License: GNU GPL</p><p>BioTool ID: mlcps</p><p>
+<ext-link xlink:href="https://scicrunch.org/resolver/RRID:" ext-link-type="uri">RRID:</ext-link> SCR_024716</p></sec><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material id="sup1" position="float" content-type="local-data"><label>giad108_GIGA-D-23-00187_Original_Submission</label><media xlink:href="giad108_giga-d-23-00187_original_submission.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup2" position="float" content-type="local-data"><label>giad108_GIGA-D-23-00187_Revision_1</label><media xlink:href="giad108_giga-d-23-00187_revision_1.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup3" position="float" content-type="local-data"><label>giad108_GIGA-D-23-00187_Revision_2</label><media xlink:href="giad108_giga-d-23-00187_revision_2.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup4" position="float" content-type="local-data"><label>giad108_Response_to_Reviewer_Comments_Original_Submission</label><media xlink:href="giad108_response_to_reviewer_comments_original_submission.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup5" position="float" content-type="local-data"><label>giad108_Response_to_Reviewer_Comments_Revision_1</label><media xlink:href="giad108_response_to_reviewer_comments_revision_1.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup6" position="float" content-type="local-data"><label>giad108_Reviewer_1_Report_Original_Submission</label><caption><p>Ryan J. Urbanowicz -- 7/24/2023 Reviewed</p></caption><media xlink:href="giad108_reviewer_1_report_original_submission.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup7" position="float" content-type="local-data"><label>giad108_Reviewer_1_Report_Revision_1</label><caption><p>Ryan J. Urbanowicz -- 10/9/2023 Reviewed</p></caption><media xlink:href="giad108_reviewer_1_report_revision_1.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup8" position="float" content-type="local-data"><label>giad108_Reviewer_2_Report_Original_Submission</label><caption><p>Kamil Dimililer -- 9/4/2023 Reviewed</p></caption><media xlink:href="giad108_reviewer_2_report_original_submission.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup9" position="float" content-type="local-data"><label>giad108_Supplemental_Files</label><media xlink:href="giad108_supplemental_files.zip"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="ack1"><title>Acknowledgement</title><p>We express our sincere gratitude to Dr. Nezhla Aghaei for their invaluable inspiration, assistance in guiding us through the mathematical formulation, and providing expert consultation in the calculation of the planar surface area.</p></ack><sec sec-type="supplementary-material" id="sec7"><title>Additional Files</title><p>
+<bold>Supplementary Fig. S1</bold>. Projection of metric scores onto a two-dimensional (2D) polar coordinate system for each ML algorithm trained on different example datasets. The plots represent A) CLL dataset, B) TCGA miRNA Training dataset, C) TCGA miRNA test dataset.</p><p>
+<bold>Supplementary Fig. S2</bold>. Projection of metric scores onto a two-dimensional (2D) polar coordinate system for each ML algorithm trained on different example datasets. The plots represent A) Cervical cancer dataset, B) TCGA mRNA Training dataset, C) TCGA mRNA test dataset.</p><p>
+<bold>Supplementary Fig. S3</bold>. Projection of metric scores onto a two-dimensional (2D) polar coordinate system for each ML algorithm trained on Body SIgnal dataset. The plots represent model performance on A) Training Data, and B) Test Data.</p><p>
+<bold>Supplementary Fig. S4</bold>. Body Signal Dataset Results. A) Standard deviation (SD) in ML Algorithm Performance. This plot displays the SD of performance metric scores for ML algorithms trained on body signal datasets. Bars represent the SD of performance metric scores, as shown on the left y-axis. The bars are arranged from left to right, with smaller SD on the left and larger SD on the right. A red dot on the plot represents MLcps, displayed on the right y-axis. B) MLcps Comparison for Training and Test Data. This bar charts represents MLcps obtained from the training and test data of the body signal dataset. Each bar is color-coded, and the numerical MLcps values are shown within each bar. Rankings, enclosed in brackets, reflect model performance based on MLcps, whether computed from the training or test data within the body signal dataset.</p><p>
+<bold>Supplementary Fig. S5</bold>. Flowchart describing ML Pipeline:&#x000a0; Firstly, the dataset is divided into k (3) equal-sized bins in a stratified manner, with k-1 bins used for training and the remaining bin for testing. Next, the pipeline applies the univariate feature selection method to select relevant features from the dataset. Data resampling is then performed using the SMOTETomek method, which combines synthetic data generation for the minority class and removal of majority class samples identified as Tomek links. Eight ML algorithms are trained on the pre-processed dataset. The model performance is evaluated using k-fold cross-validation (CV) and nested CV (k=3), calculating seven different performance metrics. This process is repeated for each unique bin within the k-fold CV method, ensuring comprehensive evaluation across subsets of the dataset. The entire pipeline is repeated ten times, and the average performance is considered the final model performance. Finally, the pipeline provides a list of selected features, derived from the intersection of features chosen by the top 10 best-performing models based on the F1 score.</p><p>
+<bold>Supplementary Table S1</bold>. ML algorithms used in this study.</p></sec><sec sec-type="data-availability" id="sec8"><title>Data Availability</title><p>An archival copy of the code and supporting data is available via the <italic toggle="yes">GigaScience</italic> repository, GigaDB [<xref rid="bib35" ref-type="bibr">35</xref>]. DOME-ML (Data, Optimisation, Model, and Evaluation in Machine Learning) annotations, supporting the current study, are available via the supporting data in GigaDB.</p></sec><sec id="sec9"><title>Abbreviations</title><p>BRCA: breast invasive carcinoma; CLL: chronic lymphocytic leukemia; ETC: extra trees classifier; IR: information retrieval; KNN: k-nearest neighbors; LDA: linear discriminant analysis; ML: machine learning; MLcps: Machine Learning Cumulative Performance Score; RF: random forest classifier; SD: standard deviation; SVM: support vector machine; TCGA: The Cancer Genome Atlas.</p></sec><sec sec-type="COI-statement" id="sec10"><title>Competing Interests</title><p>The authors have declared no competing interests.</p></sec><sec id="sec11"><title>Funding</title><p>We gratefully acknowledge the financial support of the Swiss National Science Foundation(SNF Grant 310030_175773 to F.C.B. and K.M., 212298 to F.C.B. and A.H.G.) and the Wings for Life Spinal Cord Research Foundation (WFL-AT-06/19 to K.M.). A.H.G. and R.M.A. are supported by R01 DK 077195 and R01 DK127673. M.K. is supported by the Else Kr&#x000f6;ner-Fresenius-Stiftung (EKFS 2021_EKeA.33). The authors acknowledge the financial support from the Federal Ministry of Education and Research of Germany and by the S&#x000e4;chsische Staatsministerium f&#x000fc;r Wissenschaft Kultur und Tourismus in the program Center of Excellence for AI-research &#x0201c;Center for Scalable Data Analytics and Artificial Intelligence Dresden/Leipzig&#x0201d; (project identification number: ScaDS.AI).</p></sec><sec id="sec12"><title>Authors&#x02019; Contributions</title><p>K.M., A.H.G., and A.A. conceived the idea for the manuscript. A.A. and M.K. wrote the source code in addition to carrying out testing and debugging of the MLcps. K.M., F.C.B., and A.H.G. tested the MLcps and provided scientific inputs throughout the development phase. F.C.B., R.M.A., and A.B.A. provided the feedback on biological application of the tool. N.S. and M.A. provided the mathematical support and did the testing and debugging. All authors contributed to writing, proofreading, and correcting the manuscript.</p></sec><ref-list id="ref1"><title>References</title><ref id="bib1"><label>1.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Sun</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Wong</surname><given-names>AKC</given-names></string-name>, <string-name><surname>Kamel</surname><given-names>MS</given-names></string-name></person-group>. <article-title>Classification of imbalanced data: a review</article-title>. <source>Int J Patt Recogn Artif Intell</source>. <year>2009</year>;<volume>23</volume>:<fpage>687</fpage>&#x02013;<lpage>719</lpage>. <pub-id pub-id-type="doi">10.1142/S0218001409007326</pub-id>.</mixed-citation></ref><ref id="bib2"><label>2.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Russo</surname>
+<given-names>DP</given-names>
+</string-name>, <string-name><surname>Zorn</surname><given-names>KM</given-names></string-name>, <string-name><surname>Clark</surname><given-names>AM</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Comparing multiple machine learning algorithms and metrics for estrogen receptor binding prediction</article-title>. <source>Mol Pharmaceutics</source>. <year>2018</year>;<volume>15</volume>:<fpage>4361</fpage>&#x02013;<lpage>70</lpage>. <pub-id pub-id-type="doi">10.1021/acs.molpharmaceut.8b00546</pub-id>.</mixed-citation></ref><ref id="bib3"><label>3.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Stevens</surname>
+<given-names>LM</given-names>
+</string-name>, <string-name><surname>Mortazavi</surname><given-names>BJ</given-names></string-name>, <string-name><surname>Deo</surname><given-names>RC</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Recommendations for reporting machine learning analyses in clinical research</article-title>. <source>Circ Cardiovasc Qual and Outcomes</source>. <year>2020</year>;<volume>13</volume>:<fpage>e006556</fpage>. <pub-id pub-id-type="doi">10.1161/CIRCOUTCOMES.120.006556</pub-id>.</mixed-citation></ref><ref id="bib4"><label>4.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Biswas</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Saran</surname><given-names>I</given-names></string-name>, <string-name><surname>Wilson</surname><given-names>FP</given-names></string-name></person-group>. <article-title>Introduction to supervised machine learning</article-title>. <source>Kidney360</source>. <year>2021</year>;<volume>2</volume>:<fpage>878</fpage>. <pub-id pub-id-type="doi">10.34067/KID.0000182021</pub-id>.<pub-id pub-id-type="pmid">35373058</pub-id>
+</mixed-citation></ref><ref id="bib5"><label>5.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Rashidi</surname>
+<given-names>HH</given-names>
+</string-name>, <string-name><surname>Albahra</surname><given-names>S</given-names></string-name>, <string-name><surname>Robertson</surname><given-names>S</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Common statistical concepts in the supervised machine learning arena</article-title>. <source>Front Oncol</source>. <year>2023</year>;<volume>13</volume>:<fpage>1130229</fpage>. <pub-id pub-id-type="doi">10.3389/fonc.2023.1130229</pub-id>.<pub-id pub-id-type="pmid">36845729</pub-id>
+</mixed-citation></ref><ref id="bib6"><label>6.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Hicks</surname>
+<given-names>SA</given-names>
+</string-name>, <string-name><surname>Str&#x000fc;mke</surname><given-names>I</given-names></string-name>, <string-name><surname>Thambawita</surname><given-names>V</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>On evaluation metrics for medical applications of artificial intelligence</article-title>. <source>Sci Rep</source>. <year>2022</year>;<volume>12</volume>:<fpage>5979</fpage>. <pub-id pub-id-type="doi">10.1038/s41598-022-09954-8</pub-id>.<pub-id pub-id-type="pmid">35395867</pub-id>
+</mixed-citation></ref><ref id="bib7"><label>7.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Ahmadzadeh</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Kempton</surname><given-names>DJ</given-names></string-name>, <string-name><surname>Martens</surname><given-names>PC</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Contingency space: a semimetric space for classification evaluation</article-title>. <source>IEEE Trans Pattern Anal Mach Intell</source>. <year>2023</year>;<volume>45</volume>:<fpage>1501</fpage>&#x02013;<lpage>13</lpage>. <pub-id pub-id-type="doi">10.1109/TPAMI.2022.3167007</pub-id>.<pub-id pub-id-type="pmid">35417345</pub-id>
+</mixed-citation></ref><ref id="bib8"><label>8.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Huang</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Lu</surname><given-names>J</given-names></string-name>, <string-name><surname>Ling</surname><given-names>CX</given-names></string-name></person-group>. <article-title>Comparing naive bayes, decision trees, and SVM with AUC and accuracy</article-title>. In: <source>Third IEEE International Conference on Data Mining</source>. <publisher-name>Melbourne</publisher-name><publisher-loc>FL, USA</publisher-loc>, <year>2003</year>:<fpage>553</fpage>&#x02013;<lpage>6</lpage>. <pub-id pub-id-type="doi">10.1109/ICDM.2003.1250975</pub-id>.</mixed-citation></ref><ref id="bib9"><label>9.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Provost</surname>
+<given-names>F</given-names>
+</string-name>, <string-name><surname>Domingos</surname><given-names>P</given-names></string-name></person-group>. <article-title>Tree induction for probability-based ranking</article-title>. <source>Machine Learning</source>. <year>2003</year>;<volume>52</volume>:<fpage>199</fpage>&#x02013;<lpage>215</lpage>. <pub-id pub-id-type="doi">10.1023/A:1024099825458</pub-id>.</mixed-citation></ref><ref id="bib10"><label>10.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Huang</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Ling</surname><given-names>CX</given-names></string-name></person-group>. <article-title>Using AUC and accuracy in evaluating learning algorithms</article-title>. <source>IEEE Trans Knowl Data Eng</source>. <year>2005</year>;<volume>17</volume>:<fpage>299</fpage>&#x02013;<lpage>310</lpage>. <pub-id pub-id-type="doi">10.1109/TKDE.2005.50</pub-id>.</mixed-citation></ref><ref id="bib11"><label>11.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Jeni</surname>
+<given-names>LA</given-names>
+</string-name>, <string-name><surname>Cohn</surname><given-names>JF</given-names></string-name>, <string-name><surname>De&#x000a0;La&#x000a0;Torre</surname><given-names>F</given-names></string-name></person-group>. <article-title>Facing imbalanced data&#x02014;recommendations for the use of performance metrics</article-title>. In: <source>2013 Humaine Association Conference on Affective Computing and Intelligent Interaction</source>. <publisher-loc>Geneva, Switzerland</publisher-loc><year>2013</year>:<fpage>245</fpage>&#x02013;<lpage>51</lpage>. <pub-id pub-id-type="doi">10.1109/ACII.2013.47</pub-id>.</mixed-citation></ref><ref id="bib12"><label>12.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Stafford</surname>
+<given-names>IS</given-names>
+</string-name>, <string-name><surname>Kellermann</surname><given-names>M</given-names></string-name>, <string-name><surname>Mossotto</surname><given-names>E</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>A systematic review of the applications of artificial intelligence and machine learning in autoimmune diseases</article-title>. <source>NPJ Digit Med</source>. <year>2020</year>;<volume>3</volume>:<fpage>30</fpage>. <pub-id pub-id-type="doi">10.1038/s41746-020-0229-3</pub-id>.<pub-id pub-id-type="pmid">32195365</pub-id>
+</mixed-citation></ref><ref id="bib13"><label>13.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhou</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Gandomi</surname><given-names>AH</given-names></string-name>, <string-name><surname>Chen</surname><given-names>F</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Evaluating the quality of machine learning explanations: a survey on methods and metrics</article-title>. <source>Electronics</source>. <year>2021</year>;<volume>10</volume>:<fpage>593</fpage>. <pub-id pub-id-type="doi">10.3390/electronics10050593</pub-id>.</mixed-citation></ref><ref id="bib14"><label>14.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Adhikari</surname>
+<given-names>S</given-names>
+</string-name>, <string-name><surname>Normand</surname><given-names>S-L</given-names></string-name>, <string-name><surname>Bloom</surname><given-names>J</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Revisiting performance metrics for prediction with rare outcomes</article-title>. <source>Stat Methods Med Res</source>. <year>2021</year>;<volume>30</volume>:<fpage>2352</fpage>&#x02013;<lpage>66</lpage>. <pub-id pub-id-type="doi">10.1177/09622802211038754</pub-id>.<pub-id pub-id-type="pmid">34468239</pub-id>
+</mixed-citation></ref><ref id="bib15"><label>15.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>R&#x000e1;cz</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Bajusz</surname><given-names>D</given-names></string-name>, <string-name><surname>H&#x000e9;berger</surname><given-names>K</given-names></string-name></person-group>. <article-title>Multi-level comparison of machine learning classifiers and their performance metrics</article-title>. <source>Molecules</source>. <year>2019</year>;<volume>24</volume>:<fpage>2811</fpage>. <pub-id pub-id-type="doi">10.3390/molecules24152811</pub-id>.<pub-id pub-id-type="pmid">31374986</pub-id>
+</mixed-citation></ref><ref id="bib16"><label>16.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Branco</surname>
+<given-names>P</given-names>
+</string-name>, <string-name><surname>Torgo</surname><given-names>L</given-names></string-name>, <string-name><surname>Ribeiro</surname><given-names>RP</given-names></string-name></person-group>. <article-title>A survey of predictive modeling on imbalanced domains</article-title>. <source>ACM Comput Surv</source>. <year>2016</year>;<volume>49</volume>;<issue>2</issue>:<fpage>1</fpage>&#x02013;<lpage>50</lpage>.. <pub-id pub-id-type="doi">10.1145/2907070</pub-id>.</mixed-citation></ref><ref id="bib17"><label>17.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Chakrabarti</surname>
+<given-names>S</given-names>
+</string-name>, <string-name><surname>Khanna</surname><given-names>R</given-names></string-name>, <string-name><surname>Sawant</surname><given-names>U</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Structured learning for non-smooth ranking losses</article-title>. In: <source>Proceedings of the 14th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining&#x000a0;(KDD '08)</source>. <publisher-name>Association&#x000a0;for&#x000a0;Computing&#x000a0;Machinery</publisher-name>: <publisher-loc>New York, NY, USA</publisher-loc>. <year>2008</year>, <fpage>88</fpage>&#x02013;<lpage>96</lpage>. <pub-id pub-id-type="doi">10.1145/1401890.1401906</pub-id>.</mixed-citation></ref><ref id="bib18"><label>18.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Geng</surname>
+<given-names>X</given-names>
+</string-name>, <string-name><surname>Cheng</surname><given-names>X-Q</given-names></string-name></person-group>. <article-title>Learning multiple metrics for ranking</article-title>. <source>Front Comput Sci China</source>. <year>2011</year>;<volume>5</volume>:<fpage>259</fpage>&#x02013;<lpage>67</lpage>. <pub-id pub-id-type="doi">10.1007/s11704-011-0152-5</pub-id>.</mixed-citation></ref><ref id="bib19"><label>19.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Galar</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Fernandez</surname><given-names>A</given-names></string-name>, <string-name><surname>Barrenechea</surname><given-names>E</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>A review on ensembles for the class imbalance problem: bagging-, boosting-, and hybrid-based approaches</article-title>. <source>IEEE Trans Syst Man Cybern</source>. <year>2012</year>;<volume>42</volume>:<fpage>463</fpage>&#x02013;<lpage>84</lpage>. <pub-id pub-id-type="doi">10.1109/TSMCC.2011.2161285</pub-id>.</mixed-citation></ref><ref id="bib20"><label>20.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Uzun&#x000a0;Ozsahin</surname>
+<given-names>D</given-names>
+</string-name>, <string-name><surname>Onakpojeruo</surname><given-names>EP</given-names></string-name>, <string-name><surname>Uzun</surname><given-names>B</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Mathematical assessment of machine learning models used for brain tumor diagnosis</article-title>. <source>Diagnostics (Basel)</source>. <year>2023</year>;<volume>13</volume>:<fpage>618</fpage>. <pub-id pub-id-type="doi">10.3390/diagnostics13040618</pub-id>.<pub-id pub-id-type="pmid">36832106</pub-id>
+</mixed-citation></ref><ref id="bib21"><label>21.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Dietrich</surname>
+<given-names>S</given-names>
+</string-name>, <string-name><surname>Ole&#x0015b;</surname><given-names>M</given-names></string-name>, <string-name><surname>Lu</surname><given-names>J</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Drug-perturbation-based stratification of blood cancer</article-title>. <source>J Clin Invest</source>. <year>2018</year>;<volume>128</volume>:<fpage>427</fpage>&#x02013;<lpage>45</lpage>. <pub-id pub-id-type="doi">10.1172/JCI93801</pub-id>.<pub-id pub-id-type="pmid">29227286</pub-id>
+</mixed-citation></ref><ref id="bib22"><label>22.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Witten</surname>
+<given-names>D</given-names>
+</string-name>, <string-name><surname>Tibshirani</surname><given-names>R</given-names></string-name>, <string-name><surname>Gu</surname><given-names>SG</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Ultra-high throughput sequencing-based small RNA discovery and discrete statistical biomarker analysis in a collection of cervical tumours and matched controls</article-title>. <source>BMC Biol</source>. <year>2010</year>;<volume>8</volume>:<fpage>58</fpage>. <pub-id pub-id-type="doi">10.1186/1741-7007-8-58</pub-id>.<pub-id pub-id-type="pmid">20459774</pub-id>
+</mixed-citation></ref><ref id="bib23"><label>23.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Colaprico</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Silva</surname><given-names>TC</given-names></string-name>, <string-name><surname>Olsen</surname><given-names>C</given-names></string-name></person-group>, et al. <article-title>TCGAbiolinks: an R/bioconductor package for integrative analysis of TCGA data</article-title>. <source>Nucleic Acids Res</source>. <year>2016</year>;<volume>44</volume>:<fpage>e71</fpage>. <pub-id pub-id-type="doi">10.1093/nar/gkv1507</pub-id>.<pub-id pub-id-type="pmid">26704973</pub-id>
+</mixed-citation></ref><ref id="bib24"><label>24.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Robinson</surname>
+<given-names>MD</given-names>
+</string-name>, <string-name><surname>McCarthy</surname><given-names>DJ</given-names></string-name>, <string-name><surname>Smyth</surname><given-names>GK</given-names></string-name></person-group>. <article-title>edgeR: a bioconductor package for differential expression analysis of digital gene expression data</article-title>. <source>Bioinformatics</source>. <year>2010</year>;<volume>26</volume>:<fpage>139</fpage>&#x02013;<lpage>40</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btp616</pub-id>.<pub-id pub-id-type="pmid">19910308</pub-id>
+</mixed-citation></ref><ref id="bib25"><label>25.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Her</surname>
+<given-names>S</given-names>
+</string-name>
+</person-group>. <article-title>Smoking and drinking dataset with body signal</article-title>. <source>Kaggle.</source><comment>Accessed on 15 September 2023, <ext-link xlink:href="https://www.kaggle.com/datasets/sooyoungher/smoking-drinking-dataset" ext-link-type="uri">https://www.kaggle.com/datasets/sooyoungher/smoking-drinking-dataset</ext-link></comment></mixed-citation></ref><ref id="bib26"><label>26.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<string-name>
+<surname>Akshay</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Katoch</surname><given-names>M</given-names></string-name>, <string-name><surname>Shekarchizadeh</surname><given-names>N</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Machine learning made easy (MLme): a comprehensive toolkit for machine learning-driven data analysis</article-title>. bioRxiv. <year>2023</year>.; <pub-id pub-id-type="doi">10.1101/2023.07.04.546825</pub-id>.</mixed-citation></ref><ref id="bib27"><label>27.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>van&#x000a0;Rossum</surname>
+<given-names>G</given-names>
+</string-name>
+</person-group>. <article-title>Python reference manual</article-title>. <year>1995</year>. <source>Technical Report</source>. <publisher-name>CWI (Centre for Mathematics and Computer Science)</publisher-name>: <publisher-loc>Netherlands</publisher-loc>. <ext-link xlink:href="https://docs.python.org/3/reference/index.html" ext-link-type="uri">https://docs.python.org/3/reference/index.html</ext-link>.</mixed-citation></ref><ref id="bib28"><label>28.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>R Core Team</collab>
+</person-group>. <source>R: A Language and Environment for Statistical Computing</source>. <publisher-loc>Vienna, Austria</publisher-loc>: <publisher-name>R Foundation for Statistical Computing</publisher-name>. <year>2022</year>. <ext-link xlink:href="https://www.r-project.org/" ext-link-type="uri">https://www.r-project.org/</ext-link>.</mixed-citation></ref><ref id="bib29"><label>29.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>McKinney</surname>
+<given-names>W</given-names>
+</string-name>
+</person-group>. <article-title>Data structures for statistical computing in Python</article-title>. In: <source>Proceedings of the 9th Python in Science Conference</source>. <year>2010</year>:<fpage>56</fpage>&#x02013;<lpage>61</lpage>. <pub-id pub-id-type="doi">10.25080/Majora-92bf1922-00a</pub-id>.</mixed-citation></ref><ref id="bib30"><label>30.</label><mixed-citation publication-type="other">
+<article-title>The Pandas development team. Pandas-dev/pandas: pandas</article-title>. <source>Zenodo</source>. <year>2020</year>. <pub-id pub-id-type="doi">10.5281/zenodo.3509134</pub-id>.</mixed-citation></ref><ref id="bib31"><label>31.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<collab>plotly</collab>
+</person-group>. <article-title>Collaborative data science</article-title>. <year>2015</year>. <comment><ext-link xlink:href="https://plot.ly" ext-link-type="uri">https://plot.ly</ext-link></comment>.</mixed-citation></ref><ref id="bib32"><label>32.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<collab>Porter, D. A. S</collab>
+</person-group>. <article-title>radarchart: radar chart from &#x02018;Chart.Js&#x02019;</article-title>. <comment>R Package 0.3.1</comment>. <year>2016</year>. <comment>Accessed on&#x000a0;14 August 2023</comment>, <ext-link xlink:href="https://www.chartjs.org/docs/latest/charts/radar.html" ext-link-type="uri">https://www.chartjs.org/docs/latest/charts/radar.html</ext-link>.</mixed-citation></ref><ref id="bib33"><label>33.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>M&#x000fc;ller</surname>
+<given-names>K</given-names>
+</string-name>, <string-name><surname>Wickham</surname><given-names>H</given-names></string-name></person-group>. <source>tibble: simple data frames</source>. <year>2023</year>. <comment>Accessed on&#x000a0;14 August 2023</comment>, <ext-link xlink:href="https://tibble.tidyverse.org/" ext-link-type="uri">https://tibble.tidyverse.org/</ext-link>.</mixed-citation></ref><ref id="bib34"><label>34.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wickham</surname>
+<given-names>H</given-names>
+</string-name>, <string-name><surname>Fran&#x000e7;ois</surname><given-names>R</given-names></string-name>, <string-name><surname>Henry</surname><given-names>L</given-names></string-name>, <etal>et al.</etal></person-group>
+<source>dplyr: a grammar of data manipulation</source>. <year>2023</year>. <comment>Accessed on&#x000a0;14 August 2023</comment>. <ext-link xlink:href="https://dplyr.tidyverse.org/" ext-link-type="uri">https://dplyr.tidyverse.org/</ext-link>.</mixed-citation></ref><ref id="bib35"><label>35.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Akshay</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Abedi</surname><given-names>M</given-names></string-name>, <string-name><surname>Shekarchizadeh</surname><given-names>N</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Supporting data for &#x0201c;MLcps: Machine Learning Cumulative Performance Score for Classification Problems.&#x0201d;</article-title>. <source>GigaScience Database.</source><year>2023</year>. <pub-id pub-id-type="doi">10.5524/102471</pub-id>.</mixed-citation></ref></ref-list></back></article>

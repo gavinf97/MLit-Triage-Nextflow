@@ -1,0 +1,1168 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.3 20210610//EN" "JATS-archivearticle1-3-mathml3.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.3" xml:lang="en" article-type="research-article"><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.2?><?ConverterInfo.XSLTName jats2jats3.xsl?><?ConverterInfo.Version 1?><?properties open_access?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Gigascience</journal-id><journal-id journal-id-type="iso-abbrev">Gigascience</journal-id><journal-id journal-id-type="publisher-id">gigascience</journal-id><journal-title-group><journal-title>GigaScience</journal-title></journal-title-group><issn pub-type="epub">2047-217X</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta>
+<article-meta><article-id pub-id-type="pmcid">11258913</article-id><article-id pub-id-type="pmid">39028588</article-id>
+<article-id pub-id-type="doi">10.1093/gigascience/giae042</article-id><article-id pub-id-type="publisher-id">giae042</article-id><article-categories><subj-group subj-group-type="heading"><subject>Technical Note</subject></subj-group><subj-group subj-group-type="category-taxonomy-collection"><subject>AcademicSubjects/SCI00960</subject><subject>AcademicSubjects/SCI02254</subject></subj-group></article-categories><title-group><article-title>spatiAlign: an unsupervised contrastive learning model for data integration of spatially resolved transcriptomics</article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5162-9568</contrib-id><name><surname>Zhang</surname><given-names>Chao</given-names></name><aff>
+<institution>BGI Research</institution>, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff><xref rid="afn1" ref-type="author-notes"/></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0004-5093-2516</contrib-id><name><surname>Liu</surname><given-names>Lin</given-names></name><aff>
+<institution>BGI Research</institution>, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff><xref rid="afn1" ref-type="author-notes"/></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-3830-1338</contrib-id><name><surname>Zhang</surname><given-names>Ying</given-names></name><aff>
+<institution>BGI Research</institution>, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff><xref rid="afn1" ref-type="author-notes"/></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-3310-2911</contrib-id><name><surname>Li</surname><given-names>Mei</given-names></name><aff>
+<institution>BGI Research</institution>, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-4126-0074</contrib-id><name><surname>Fang</surname><given-names>Shuangsang</given-names></name><aff>
+<institution>BGI Research</institution>, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff><aff>
+<institution>BGI Research</institution>, <addr-line>Beijing 102601</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-6579-7944</contrib-id><name><surname>Kang</surname><given-names>Qiang</given-names></name><aff>
+<institution>BGI Research</institution>, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-9699-8340</contrib-id><name><surname>Chen</surname><given-names>Ao</given-names></name><aff>
+<institution>BGI Research</institution>, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff><aff>
+<institution>BGI Research</institution>, <addr-line>Chongqing 401329</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5338-5173</contrib-id><name><surname>Xu</surname><given-names>Xun</given-names></name><aff>
+<institution>BGI Research</institution>, <addr-line>Wuhan 430074</addr-line>, <country country="CN">China</country></aff><xref rid="afn2" ref-type="author-notes"/></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-9950-1793</contrib-id><name><surname>Zhang</surname><given-names>Yong</given-names></name><!--zhangyong2@genomics.cn--><aff>
+<institution>BGI Research</institution>, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff><aff>
+<institution>BGI Research</institution>, <addr-line>Wuhan 430074</addr-line>, <country country="CN">China</country></aff><aff>
+<institution>Guangdong Bigdata Engineering Technology Research Center for Life Sciences</institution>, BGI Research, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff><xref rid="cor1" ref-type="corresp"/></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-1575-3692</contrib-id><name><surname>Li</surname><given-names>Yuxiang</given-names></name><!--liyuxiang@genomics.cn--><aff>
+<institution>BGI Research</institution>, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff><aff>
+<institution>BGI Research</institution>, <addr-line>Wuhan 430074</addr-line>, <country country="CN">China</country></aff><aff>
+<institution>Guangdong Bigdata Engineering Technology Research Center for Life Sciences</institution>, BGI Research, <addr-line>Shenzhen 518083</addr-line>, <country country="CN">China</country></aff><xref rid="cor2" ref-type="corresp"/></contrib></contrib-group><author-notes><corresp id="cor1">Correspondence address. Yong Zhang, Building 11, Beishan Industrial Zone, Yantian District, Shenzhen (518083); E-mail: <email>zhangyong2@genomics.cn</email></corresp><corresp id="cor2">Correspondence address. Yuxiang Li, Building 11, Beishan Industrial Zone, Yantian District, Shenzhen (518083); E-mail: <email>liyuxiang@genomics.cn</email></corresp><fn id="afn1"><p>These authors contributed equally to this work.</p></fn><fn id="afn2"><p>Senior author.</p></fn></author-notes><pub-date pub-type="collection"><year>2024</year></pub-date><pub-date pub-type="epub" iso-8601-date="2024-07-19"><day>19</day><month>7</month><year>2024</year></pub-date><pub-date pub-type="pmc-release"><day>19</day><month>7</month><year>2024</year></pub-date><volume>13</volume><elocation-id>giae042</elocation-id><history><date date-type="received"><day>30</day><month>8</month><year>2023</year></date><date date-type="rev-recd"><day>08</day><month>1</month><year>2024</year></date><date date-type="accepted"><day>21</day><month>6</month><year>2024</year></date></history><permissions><copyright-statement>&#x000a9; The Author(s) 2024. Published by Oxford University Press GigaScience.</copyright-statement><copyright-year>2024</copyright-year><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xlink:href="giae042.pdf"/><abstract><title>Abstract</title><sec id="abs1"><title>Background</title><p>Integrative analysis of spatially resolved transcriptomics datasets empowers a deeper understanding of complex biological systems. However, integrating multiple tissue sections presents challenges for batch effect removal, particularly when the sections are measured by various technologies or collected at different times.</p></sec><sec id="abs2"><title>Findings</title><p>We propose spatiAlign, an unsupervised contrastive learning model that employs the expression of all measured genes and the spatial location of cells, to integrate multiple tissue sections. It enables the joint downstream analysis of multiple datasets not only in low-dimensional embeddings but also in the reconstructed full expression space.</p></sec><sec id="abs3"><title>Conclusions</title><p>In benchmarking analysis, spatiAlign outperforms state-of-the-art methods in learning joint and discriminative representations for tissue sections, each potentially characterized by complex batch effects or distinct biological characteristics. Furthermore, we demonstrate the benefits of spatiAlign for the integrative analysis of time-series brain sections, including spatial clustering, differential expression analysis, and particularly trajectory inference that requires a corrected gene expression matrix.</p></sec></abstract><kwd-group><kwd>spatial transcriptomics</kwd><kwd>batch effect</kwd><kwd>data integration</kwd><kwd>domain adaptation</kwd><kwd>contrastive learning</kwd></kwd-group><funding-group><award-group award-type="grant"><funding-source>
+<institution-wrap><institution>National Key Research and Development Program of China</institution><institution-id institution-id-type="DOI">10.13039/501100012166</institution-id></institution-wrap>
+</funding-source><award-id>2022YFC3400400</award-id></award-group></funding-group><counts><page-count count="16"/></counts></article-meta></front><body><sec sec-type="intro" id="sec1"><title>Introduction</title><p>The rapid advancements of spatially resolved transcriptomics (SRT) have revolutionized our understanding of the spatial organization and heterogeneity of cells within complex tissues and developmental processes [<xref rid="bib1" ref-type="bibr">1</xref>]. Cutting-edge <italic toggle="yes">in situ</italic> capturing technologies (e.g., 10x Genomics Visium [<xref rid="bib2" ref-type="bibr">2</xref>], Slide-seq [<xref rid="bib3" ref-type="bibr">3</xref>], Stereo-seq [<xref rid="bib4" ref-type="bibr">4</xref>], and Seq-scope [<xref rid="bib5" ref-type="bibr">5</xref>]) have facilitated the simultaneous measurement of tens of thousands of genes in their spatial context, achieving unprecedented cellular or even subcellular resolution. The SRT datasets are typically acquired from different tissue sections, each potentially representing a fragmented profiling of the targeted biological system. Hence, integrating multiple datasets for joint analysis is imperative to decipher the whole biological system. However, integrative analysis presents significant challenges due to the inherent biological variability and batch effects caused by nonbiological factors such as technology differences and different experimental batches.</p><p>Prior efforts to tackle this task have conventionally focused on single-cell RNA sequencing (scRNA-seq) technologies [<xref rid="bib6" ref-type="bibr">6</xref>, <xref rid="bib7" ref-type="bibr">7</xref>], which can be roughly classified into 2 main categories: methods that (i) generate a joint embedding space [<xref rid="bib8" ref-type="bibr">8&#x02013;13</xref>] and (ii) calculate a corrected feature matrix [<xref rid="bib14" ref-type="bibr">14&#x02013;17</xref>]. For example, Harmony [<xref rid="bib8" ref-type="bibr">8</xref>] projects cells into a shared embedding by maximum diversity clustering and iteratively learning a cell-specific linear correction function that regresses out biological effects within clusters. SCALEX [<xref rid="bib13" ref-type="bibr">13</xref>], a deep learning method, provides a truly online tool to project cells into a batch-invariant, common cell-embedding space. Although these methods prove valuable for capturing the overall characteristics of cells, such as combined clustering, they are not applicable to downstream gene-level analysis tasks, such as differentially expressed gene (DEG) analysis. In contrast, popular MNN-based methods such as Seurat v3 [<xref rid="bib16" ref-type="bibr">16</xref>] efficiently address batch effects in gene expression, but their limitation lies in the ability to align only 2 batches at a time, and they become impractical when dealing with many batches. However, it is worth noting that these scRNA-seq data integration tools have focused on harmonizing gene expression profiles across different experimental batches and do not consider the spatial context of spots/cells.</p><p>In the field of SRT studies, embedding spatial information has proven beneficial for downstream analysis, such as spatial domain identification [<xref rid="bib18" ref-type="bibr">18</xref>, <xref rid="bib19" ref-type="bibr">19</xref>], imputation [<xref rid="bib20" ref-type="bibr">20</xref>, <xref rid="bib21" ref-type="bibr">21</xref>], clustering [<xref rid="bib22" ref-type="bibr">22</xref>], and cell-type annotation [<xref rid="bib23" ref-type="bibr">23</xref>]. More recently, works have been published to improve the integration of SRT datasets by exploiting spatial information. PRECAST leverages spatial smoothness in both the cluster label and lower-dimensional representations to estimate aligned embeddings for multiple tissue sections, effectively capturing the spatial relationship between cells/spots [<xref rid="bib24" ref-type="bibr">24</xref>]. GraphST introduces a graph self-supervised contrastive learning model to reconstruct gene expression by minimizing the embedding distance between spatially adjacent spots [<xref rid="bib25" ref-type="bibr">25</xref>]. However, PRECAST primarily focuses on generating a low-dimensional aligned embedding, and GraphST requires registering the spatial coordinates of samples first to ensure its integration performance; thus, their applications are limited in certain scenarios.</p><p>To address these challenges, we propose spatiAlign, an unsupervised method that leverages spatial embedding and across-domain adaptation strategies for aligning SRT datasets. spatiAlign offers 3 key advantages as follows. First, it effectively captures the underlying relationships between spots/cells in both the spatial neighborhoods and gene expression to learn latent representations with a deep graph infomax (DGI) [<xref rid="bib26" ref-type="bibr">26</xref>] framework. Second, spatiAlign aligns biological effects by adapting the semantic similarities between spots/cells and/or pseudoclusters from one section to another without relying on external labeled data, resulting in a joint batch-corrected embedding. Third, benefiting from a symmetric decoder in DGI, spatiAlign outputs the reconstructed spatial gene expression matrices, in which gene expression is adjusted and batch effects are corrected. We validate the 3 advantages of spatiAlign with 4 applications on publicly available 10x Genomics Visium, Slide-seq, and Stereo-seq datasets of human and mouse tissues. The benchmarking analysis demonstrates spatiAlign&#x02019;s superiority in learning low-dimensional representations compared with 8 established methods, including GraphST and PRECAST, which were recently developed for SRT datasets. Compared with the original spatial expression of brain region-specific markers, the counts reconstructed using spatiAlign more accurately represent their laminar organization, exhibiting distinctly clear boundaries between regions. We also validate the capability of spatiAlign to capture the unique characteristics of 3 Slide-seq mouse hippocampus slices, which contain regions with different structures. The comprehensive integrated analysis of developing mouse brain slices indicates that the aligned joint representations, which embed cellular neighborhoods, improve the identification of cell clusters. In addition, the reconstructed features from our proposed spatiAlign method facilitate the identification of DEGs under different developmental stages and the recovery of cellular trajectories.</p></sec><sec sec-type="results" id="sec2"><title>Results</title><sec id="sec2-1"><title>Overview of spatiAlign</title><p>spatiAlign takes as inputs multiple SRT datasets, comprising the expression of all measured genes and spatial locations of spots/cells, to achieve 2 objectives: low-dimensional semantic alignment and high-dimensional gene expression reconstruction (Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1A</xref>). In low-dimensional alignment, the primary strategy underlying spatiAlign is to implement a self-supervised contrastive learning architecture (DGI-based framework) to reduce dimensions while simultaneously propagating neighboring spatial context between spots/cells (Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1C</xref>). Furthermore, it employs an across-domain adaptation technique to align joint embeddings, effectively accounting for batch effects across multiple tissue sections (Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1B</xref>). In high-dimensional gene expression reconstruction, we utilize a decoder included in the DGI to reverse aligned representations back into the raw gene expression space, thereby reconstructing the gene expression counts.</p><fig position="float" id="fig1"><label>Figure 1:</label><caption><p>Overview of spatiAlign. (A) spatiAlign takes as inputs multiple spatially resolved transcriptomics (SRT) datasets that consist of gene expression profiles for all measured genes and spatial locations of spots/cells. Using semantic alignment, spatiAlign generates a shared batch-corrected embedding, where biological effects are aligned. Moreover, spatiAlign reconstructs the full high-dimensional expression space, enhancing and correcting gene expression counts. In addition to SRT dataset integration and gene feature correction, spatiAlign returns a final joint embedding and enhanced gene expression matrices to facilitate downstream analysis, such as joint spatial clustering, joint differential expression analysis, and joint trajectory inference. (B) spatiAlign takes multiple SRT datasets as inputs. Latent embeddings are first generated using deep graph infomax (DGI) as feature extractors. Then, with the utilization of across-domain adaptation and memory bank strategies, spatiAlign brings similar semantic spots/cells closer together and pushes dissimilar spots/cells farther apart, irrespective of their original datasets. These self-batch and across-batch contrastive learning processes align biological effects while correcting batch effects. (C) A DGI framework takes as inputs the normalized gene expression matrix and corresponding spatial coordinates from an SRT dataset. A spatial neighboring graph (i.e., adjacent matrix <italic toggle="yes">A</italic>) is built to represent the spatial relationships between adjacent spots/cells. To create an augmented gene expression matrix <italic toggle="yes">X&#x02032;</italic>, a random perturbation is applied to shuffle the original gene expression <italic toggle="yes">X</italic> while maintaining the spatial neighboring graph unchanged. Deep neural network (DNN)&#x02013;based autoencoders are used to learn gene representations <italic toggle="yes">Z</italic> and <italic toggle="yes">Z&#x02032;</italic> by reducing the dimension of gene expression matrix <italic toggle="yes">X</italic> and the augmented expression matrix <italic toggle="yes">X&#x02032;</italic>. These representations are individually fed into a variational graph autoencoder (VGAE), along with the spatial neighboring graph, which performs spatial embedding for the gene representations and outputs the final latent representations <italic toggle="yes">S</italic> and <italic toggle="yes">S&#x02032;</italic> that capture the rich information in original/augmented gene expression profiles and spatial information. Afterward, embeddings <italic toggle="yes">S</italic> are optimized using our self-supervised contrastive learning strategy, which ensures that spatially adjacent cells have similar embeddings while nonadjacent cells have dissimilar embeddings. Finally, the final embeddings <italic toggle="yes">S</italic> can be reversed back to the original feature space, resulting in a reconstructed gene expression matrix.</p></caption><graphic xlink:href="giae042fig1" position="float"/></fig><p>Formally, given a series of SRT datasets, gene expression profiles are transformed into cell/spot-gene matrices (e.g., gene expression matrix <italic toggle="yes">X</italic>) and spatial neighboring graphs between cells/spots (e.g., cell&#x02012;cell adjacent matrix <italic toggle="yes">A</italic>), where the connective relationships of cells/spots are negatively associated with Euclidean distance. We design a deep neural network (DNN)&#x02013;based autoencoder to learn the low-dimensional gene representations <italic toggle="yes">Z</italic> from the original gene expression matrix. The adjacency matrix <italic toggle="yes">A</italic> and the reduced gene representations <italic toggle="yes">Z</italic> are fed into a variational graph autoencoder (VGAE) [<xref rid="bib27" ref-type="bibr">27</xref>] that propagates spatial neighboring context for the gene representations, resulting in a final joint representation <italic toggle="yes">S</italic> (positive samples) that captures comprehensive characteristics of the gene expression profile and cellular neighborhoods. Thereafter, the adjusted gene expression matrices can be reconstructed using a symmetric decoder architecture, which reverses the joint representations <italic toggle="yes">S</italic> back to the original space.</p><p>To improve spatiAlign&#x02019;s ability to exploit potential information in SRT datasets, augmentation-based contrastive learning is adopted [<xref rid="bib25" ref-type="bibr">25</xref>, <xref rid="bib28" ref-type="bibr">28</xref>, <xref rid="bib29" ref-type="bibr">29</xref>]. Technically, a gene expression matrix <italic toggle="yes">X</italic> is augmented by randomly shuffling the gene expression vector of spots/cells to create a corrupted gene expression matrix <inline-formula><tex-math id="TM0001" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$X^{\prime}$\end{document}</tex-math></inline-formula> while keeping the spatial neighboring graph unchanged. Then, the corrupted gene expression matrix <inline-formula><tex-math id="TM0002" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$X^{\prime}$\end{document}</tex-math></inline-formula> and adjacency matrix <italic toggle="yes">A</italic> are fed into the aforementioned model, which utilizes the shared model weights to generate corrupted joint representations <inline-formula><tex-math id="TM0003" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$S^{\prime}$\end{document}</tex-math></inline-formula> (negative samples). We then use self-supervised contrastive learning to bring the positive samples closer within the spatial neighboring context while pushing the negative samples far apart within the same neighboring context (Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1C</xref>).</p><p>Using an across-domain adaptation [<xref rid="bib28" ref-type="bibr">28</xref>, <xref rid="bib30" ref-type="bibr">30</xref>, <xref rid="bib31" ref-type="bibr">31</xref>] and deep clustering [<xref rid="bib32" ref-type="bibr">32</xref>] strategy, spatiAlign aims to align biological effects while maximizing the preservation of biological variances in the latent embedding of spots/cells. Specifically, we use a memory bank to store the final latent representations for each dataset that will be used to measure the similarity between spots/cells or pseudoclusters for self-batch/across-batch contrastive learning. For each tissue section, spatiAlign minimizes the similarity distance between the current latent representations and the corresponding memory bank entries to bring similar semantic spots/cells closer together and push dissimilar semantic spots/cells far apart. In parallel, inspired by the idea of &#x0201c;label as representation,&#x0201d; we assume that the dimension of the final latent embedding is equal to the number of pseudoprototypical clusters, and the spots/cells vector denotes its soft label accordingly. Thus, each spot/cell is assigned to a different pseudo-cluster, and all pseudo-clusters should differ from each other. Identically, spatiAlign employs &#x0201c;current pseudo-cluster representation&#x0201d; (transposition latent representation) and &#x0201c;cached pseudo-cluster representation&#x0201d; (transposition corresponding memory bank) to bring the same pseudo-cluster spots/cells closer together and push dissimilar pseudo-cluster spots/cells far apart. In across-batch contrastive learning, cross-similarity between spots/cells, measured by the current latent representation and memory bank of other sections, is minimized to align biological effects across sections, ensuring similar semantic spots/cells closer together, regardless of which sections they are from.</p></sec><sec id="sec2-2"><title>spatiAlign outperforms the control methods in integrating dorsolateral prefrontal cortex datasets</title><p>We evaluated the effectiveness of spatiAlign in analyzing a series of 10x Genomics Visium datasets from the human dorsolateral prefrontal cortex (DLPFC). This dataset includes 12 tissue sections, which are organized into 3 groups. Each group (approximately 14,000 spots and 14,000 genes) consists of 4 sections that are manually annotated in the original study to 6 tissue layers (Layer_1 to Layer_6) and white matter (WM) (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2A</xref>, <xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S1a</xref>) [<xref rid="bib33" ref-type="bibr">33</xref>]. We first performed graph-based clustering (Leiden) on the latent representations of spatiAlign and the other 8 benchmarked methods to assess their capability in aligning embedding space. Before comparison, we merged the Leiden clusters of each method with the ground truth using a maximum matching strategy for certain categories to produce final clustering results (<xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S1b</xref>&#x02013;<xref rid="sup14" ref-type="supplementary-material">f</xref>). spatiAlign achieved the highest adjusted Rand index (ARI) [<xref rid="bib34" ref-type="bibr">34</xref>] score with a mean of 0.5967 on all 4 sections and outperformed all the control methods (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2B</xref>). In addition, spatiAlign achieved the highest mean weighted F1 score of the local inverse Simpson&#x02019;s index (LISI) [<xref rid="bib8" ref-type="bibr">8</xref>] of 0.8402 (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2C</xref>), where sufficient mixing and variation preservation were equally evaluated. In comparison, MNN showed ineffectiveness in fusing the sections together and obtained the lowest weighted F1 score of LISI. The uniform manifold approximation and projection (UMAP) visualization for each method revealed that spatiAlign outperformed other control methods in separating clusters while simultaneously integrating slices (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2D</xref>). In particular, methods such as GraphST, SCALEX, Harmony, and Combat did not clearly separate spots belonging to distinct layers, and the batches did not mix well when using MNN. Although PRECAST appeared to separate clusters and integrate batches well, it resulted in Layer_1 being split into 2 groups.</p><fig position="float" id="fig2"><label>Figure 2:</label><caption><p>spatiAlign outperforms the control methods in integrating the human dorsolateral prefrontal cortex (DLPFC) datasets. (A) Manual annotation of sample ID 151673 from the original study. (B) Bar plots of the mean scores of the adjusted Rand index (ARI) for the combined clusters from spatiAlign and other control methods. (C) Bar plots of the weighted F1 scores of the local inverse Simpson&#x02019;s index (LISI), assessing both batch mixing and cell-type separation, for the integration results from different data integration methods. (D) UMAP plots for the integrated batches and identified cell types from spatiAlign and other control methods. For the integration result of each method, dots in the right panel are colored by batch, and dots in the left panel are colored by cell type. (E) PAGA graphs of spatiAlign and other control methods. (F) Spatial visualization of spatiAlign-adjusted (top panel) and unadjusted normalized (bottom panel) expression of layer-marker genes. (G) Violin plots of the raw (left panel) and spatiAlign-adjusted (right panel) expression of layer-marker genes. The cortical layers corresponding to the layer-marker genes are highlighted with red boxes.</p></caption><graphic xlink:href="giae042fig2" position="float"/></fig><p>Furthermore, we validated the latent embeddings with the inferred trajectory from PAGA [<xref rid="bib35" ref-type="bibr">35</xref>] (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2E</xref>). The PAGA path derived from spatiAlign embeddings exhibited a clear and nearly linear spatial trajectory from Layer_1 to Layer_6, with significant similarities observed between adjacent layers, in accordance with the developmental process of the neurons [<xref rid="bib36" ref-type="bibr">36</xref>]. In contrast, the PAGA results of the other benchmarked methods were intermixed. Finally, we compared the spatial expression patterns of layer marker genes before and after spatiAlign (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2F</xref>). The results revealed that the expression of layer-marker genes, as reconstructed by spatiAlign, exhibited improved laminar enrichment and more refined distributions compared with the original data. For example, <italic toggle="yes">CXCL14</italic> in Layer_1 and Layer_2, <italic toggle="yes">ETV1</italic> in Layer_5 and Layer_6, and <italic toggle="yes">VAT1L</italic> in Layer_5 were consistent with previous studies [<xref rid="bib37" ref-type="bibr">37</xref>], whereas their raw gene expression did not show discernible spatial laminar patterns. In addition, violin plots illustrating gene expression both pre- and post-spatiAlign processing highlighted the expression adjustment achieved by spatiAlign (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2G</xref>). For example, the reconstructed expression of <italic toggle="yes">SEMA3C</italic> significantly populated Layer 6 compared with the original data. Such expression adjustment was also observed in other sections (e.g., in sample ID 151674), thereby further validating the reliability of the reconstructed expressions (<xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S2c</xref>).</p></sec><sec id="sec2-3"><title>spatiAlign enables the alignment of multiple olfactory bulb datasets from different SRT platforms</title><p>To demonstrate the efficiency of spatiAlign in integrating datasets from different sequencing platforms, we used 3 mouse olfactory bulb datasets. One slice was profiled by 10x Genomics Visium (1,184 spots and 13,956 genes), while the other 2 slices were obtained from Stereo-seq (Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3A</xref>) (1,123 spots, 20,317 genes and 812 spots, 16,370 genes), respectively. Before integration, we manually annotated each dataset (Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3C</xref>) by leveraging unsupervised clustering (<xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S3a</xref>, <xref rid="sup14" ref-type="supplementary-material">b</xref>), reported marker genes (<xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S3c</xref>&#x02013;<xref rid="sup14" ref-type="supplementary-material">f</xref>), and the ssDNA image (Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3B</xref>). This provided a ground truth for calculating the weighted F1 score of LISI, which quantified the performance of the methods in aligning batches and separating cells from different clusters. As a result, spatiAlign achieved the highest score of 0.7935, outperforming other methods such as PRECAST (0.6863) and SCALEX (0.6099), while MNN was the poorest, with a score of 0.0485 (Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3D</xref>). Next, on the UMAP plots, we illustrated the batch effects present before alignment (Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3E</xref>). After integration, spatiAlign demonstrated successful batch merging, in contrast to the outputs of PRECAST, GraphST, Harmony, Combat, and other control methods, where prominent batch effects remained observable. In addition, spatiAlign found separate clusters that aligned well across the 3 sections (Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3F</xref>). Even though BBKNN and SCALEX also generated separate clusters, batch effects were still visible after their integration. Hence, compared with combined clustering results produced by the control methods, those detected using spatiAlign embeddings better corresponded to the annotated ground truth and showed a higher consistency across different sections.</p><fig position="float" id="fig3"><label>Figure 3:</label><caption><p>spatiAlign integrates 3 mouse olfactory bulb datasets from Stereo-seq and 10x Genomics Visium sequencing platforms. (A) The mouse olfactory bulb datasets consisted of 3 sections, with 2 sections sequenced using Stereo-seq and the third section generated from 10x Genomics Visium. The 2 Stereo-seq datasets were sequenced on different types of chips, with spots having center-to-center distances of 500 and 715&#x000a0;nm, respectively (middle panel). Hence, the 2 Stereo-seq datasets were individually binned at Bin140 and Bin200 to ensure that the center-to-center distances of spots across the 3 sections were uniformly sized at 100&#x000a0;&#x000b5;m (right panel). (B) Organization of mouse olfactory bulb annotated by ssDNA image. (C) Manual annotation as a ground truth for benchmarking analysis. Spots are colored by cell type. (D) Bar plots of the weighted F1 scores of LISI for the integration results from spatiAlign and the other control methods. (E) Visualization of batch effects present in batches and cell types before integration. (F) UMAP plots for the integrated batches and identified cell types from spatiAlign and other control methods. For the integration result of each method, dots in the right panel are colored by batch, and dots in the left panel are colored by cell type. (G) Spatial visualization of spatiAlign-adjusted (top panel) and raw (middle panel) expression of marker genes, together with the associated cell types (bottom panel). spatiAlign denoised and adjusted the spatial expression pattern of marker genes compared with unadjusted normalized data.</p></caption><graphic xlink:href="giae042fig3" position="float"/></fig><p>Furthermore, we showed that the reconstructed gene expression from spatiAlign (Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3G</xref>, <xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S4d</xref>, <xref rid="sup14" ref-type="supplementary-material">e</xref>, top panel) was adjusted compared with the raw gene expression (Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3G</xref>, <xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S4d</xref>, <xref rid="sup14" ref-type="supplementary-material">e</xref>, middle panel). For some marker genes [<xref rid="bib38" ref-type="bibr">38</xref>] (e.g., <italic toggle="yes">Cmtm5, Cdhr1, Doc2g</italic>, and <italic toggle="yes">Pcp4</italic>), the spatial expression pattern was clearly adjusted and more consistent with the spatial locations of the corresponding cell types (Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3G</xref>, <xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S4d</xref>, <xref rid="sup14" ref-type="supplementary-material">e</xref>, bottom panel).</p></sec><sec id="sec2-4"><title>spatiAlign preserves heterogeneous characteristics among slices while aligning datasets</title><p>We utilized 3 mouse hippocampal slices from Slide-seq (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4A</xref> and <xref rid="sup14" ref-type="supplementary-material">Supplementary Table S1</xref>) to assess the performance of spatiAlign and the benchmarked methods in integrating datasets with different biological characteristics. These mouse hippocampus slices were collected from different regions in the mouse brain [<xref rid="bib3" ref-type="bibr">3</xref>, <xref rid="bib39" ref-type="bibr">39</xref>, <xref rid="bib40" ref-type="bibr">40</xref>], which included a total of 69,528 cells and 11,376 genes in the merged dataset. As shown on the UMAP plots, spatiAlign accurately integrated disparate datasets and revealed diverse clusters of structural heterogeneity (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4B</xref>, <xref rid="fig4" ref-type="fig">D</xref>, <xref rid="fig4" ref-type="fig">G</xref>). Quantitatively, spatiAlign excelled over other control methods with an integrated LISI (iLISI) index of 0.6230, except for SCALEX. However, despite achieving the highest iLISI index, SCALEX was unable to preserve the biological difference among slices (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4C</xref>, <xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S5a, d</xref>).</p><fig position="float" id="fig4"><label>Figure 4:</label><caption><p>spatiAlign identifies distinct brain structures specific to each slice while integrating 3 mouse hippocampus datasets. (A) Spatial heatmap of total transcripts in the 3 mouse hippocampal slices measured by Slide-seq. (B) UMAP plot for the integrated slices from spatiAlign. (C) Bar plots of the integration LISI (iLISI) scores, evaluating batch mixing, for the integration results from spatiAlign and other control methods. (D) Spatial visualization (left) and UMAP plot (right) for the joint clustering results from spatiAlign. (E) Boxplots of global Moran&#x02019;s <italic toggle="yes">I</italic> index for the joint clusters from spatiAlign and other control methods. (F) Boxplots of local join counts for the joint clusters from spatiAlign and other control methods. (G). The expression matrix plot of markers of the CA1, CA3, and DG regions. (H) Spatial visualization (left) and UMAP plot (right) of CA1, CA3, and DG regions that were only identified by spatiAlign. (I) Spatial visualization (left) and UMAP plot (right) of V3 and the habenula that are specific to slice 1 and slice 2. (J) Spatial expression of the marker genes Enpp2 in V3 and Tac2 in the habenula. (K) Volcano plot of differentially expressed genes (DEGs) between the habenula and rest. (L) Top 10 highly enriched Gene Ontology terms for the top 100 ranked DEGs.</p></caption><graphic xlink:href="giae042fig4" position="float"/></fig><p>Furthermore, we adopted hierarchical clustering to validate the effectiveness of each method in identifying the brain regions. The resulting cell clusters after spatiAlign displayed strong spatial aggregation with clear boundaries and higher consistency with the anatomical structures of the Allen Brain Atlas [<xref rid="bib41" ref-type="bibr">41</xref>] (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4D</xref> and <xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S5b</xref>). Such observation was further evidenced by the global Moran&#x02019;s <italic toggle="yes">I</italic> index and the local join counts, which measures spatial autocorrelation (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4E</xref>, <xref rid="fig4" ref-type="fig">F</xref>). Regarding finding the substructural regions, our proposed spatiAlign was the only method that identified the substructures of the hippocampus, including CA1, CA2, and dentate gyrus (DG), on all 3 slices (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4G</xref>). The successful hippocampus-related-region identification of spatiAlign had higher consistency across 3 slices than others (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4H</xref>), while GraphST detected incorrect regions due to a lack of registering spatial coordinates (<xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S5d</xref>). For preserving heterogeneous characteristics, we observed that the identified habenula and third ventricle (V3) regions were barely enriched on slice 3 but highly populated on the other 2 slices, as expected (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4H</xref>). Such results were in high concordance with the expression spatial pattern of the associated marker genes [<xref rid="bib42" ref-type="bibr">42</xref>] <italic toggle="yes">Enpp2</italic> for V3 and <italic toggle="yes">Tac2</italic> for habenula (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4J</xref>). To validate the biological traits of heterogeneous embedding, we implemented DEG and Gene Ontology (GO) analyses on the detected habenular cell groups. We found key marker genes [<xref rid="bib42" ref-type="bibr">42</xref>] for habenula among the highly expressed genes of the merged dataset (e.g., <italic toggle="yes">Gm5741, Nwd2, Gng8</italic>, and <italic toggle="yes">Lrrc55</italic>) (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4K</xref>). In addition, the GO enrichment analysis showed that the habenula is actively involved in the production and synthesis of ATP (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4L</xref>). This finding was in accordance with biological understandings that ATP not only plays a crucial role in energy metabolism for habenular cells but also acts as a neurotransmitter to modulate neuronal activity and synaptic transmission [<xref rid="bib43" ref-type="bibr">43</xref>].</p></sec><sec id="sec2-5"><title>spatiAlign facilitates joint gene-level analysis of time-series mouse embryonic brain</title><p>Finally, we utilized a series of mouse brain datasets [<xref rid="bib4" ref-type="bibr">4</xref>] extracted from multiple developing mouse embryos (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5A</xref>), measured by Stereo-seq, to demonstrate the benefits of spatiAlign for downstream gene-level analysis. These brain sections were collected at different embryonic days from E9.5 to E16.5, which included a total of 104,974 cells and 22,864 genes in the merged dataset. Herein, we initially evaluated the inherent batch effects present prior to alignment. Before applying spatiAlign, cells were primarily grouped by batch (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5B</xref>). In comparison, spatiAlign well aligned these datasets within its lower-dimensional representations, where the batch effects were adjusted. The cells were then clustered into coherent groups in an unsupervised manner, and we next manually labeled them by referring to the expression of marker genes reported by the atlas of the developing mouse brain [<xref rid="bib44" ref-type="bibr">44</xref>] (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5B</xref>). These marker genes (e.g., <italic toggle="yes">Ccnd2</italic> of NeuB, <italic toggle="yes">Col4a1</italic> of fibroblast, <italic toggle="yes">Sncg</italic> of FMN, <italic toggle="yes">Slc1a3</italic> of Hb VZ, and <italic toggle="yes">Hcrtr2</italic> of Spall VZ) exhibited the highest expression levels in their corresponding cell types that had a relatively high fraction (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5C</xref>). In particular, we found 2 subtypes of GABAergic interneurons in the subpallial region that were characterized by the <italic toggle="yes">Dlx5</italic> and <italic toggle="yes">Gpm6a</italic> genes, which we named SPall Gpm6a and SPall Dlx5, respectively (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5C</xref>). The validity of these annotations was also confirmed by the strong correspondence observed in the spatial distributions between cell types and relevant marker genes (<xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S6a</xref>).</p><fig position="float" id="fig5"><label>Figure 5:</label><caption><p>spatiAlign facilitates joint analysis of time-series mouse embryonic brain sections. (A) Unsupervised clustering of time-series brain sections extracted from the mouse embryos across E9.5 to E16.5 (E9.5, E12.5, E13.5, E14.5, E15.5, and E16.5) after integration using spatiAlign. Spots are colored by their annotation (right panel). Astro, astrocyte; Cere, cerebellum; Chor, choroid plexus; Die, diencephalon; Ery, erythrocyte; FMN, facial motor nucleus; Hb, hindbrain; Hy, hypothalamus; Mb, dorsal midbrain; NeuB, neuroblast; OB, olfactory bulb; OPC, oligodendrocyte precursor cell; SPall, subpallium; SpC, spinal cord; VZ, ventricular zone. (B) UMAP plots for batch mixing before spatiAlign (left) and after spatiAlign (middle) and the labeled combined clusters from spatiAlign (right). (C) Expression dot plots showing the gene expression specificity of typical marker genes for identified cell types. Dot size represents the proportion of expressing cells, and color indicates the average expression level in each identified cell type. (D) Top 3 highly enriched GO terms for differentially expressed genes from E9.5 to E16.5. (E) PAGA graph of spatiAlign embeddings. Each node represents a batch that is connected by weighted edges that quantify the connectivity between batches. (F) Age-specific genes traced along the PAGA graph paths. (G) Cellular trajectory across different time points inferred by the spatiAlign-corrected feature matrix (left) and raw expression (right), with black arrows representing transition trends. (H) Cellular state transitions across cell types (middle panel) and expression of reported driver genes for neuronal (top panel) and nonneuronal cells (bottom panel).</p></caption><graphic xlink:href="giae042fig5" position="float"/></fig><p>A key benefit of our proposed spatiAlign is its ability to obtain aligned gene expression with batch effects removed, thereby enabling downstream gene-level analysis. Based on the reconstructed expression features, we identified DEGs across E9.5 to E16.5 using the Wilcoxon test in SCANPY. A heatmap of the expression of the top 5 ranked DEGs (<xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S6b</xref>) illustrated high specificity across different developmental stages. In our observations, the detected DEGs (e.g., <italic toggle="yes">Id2, Lbx1, Id3, Cdh8</italic>, and <italic toggle="yes">Nlgn1</italic>) have been reported to play crucial roles in neuronal differentiation and maturation processes, such as neurogenesis and synaptic plasticity. Specifically, <italic toggle="yes">Id2</italic>, with differential expression at E9.5, has been extensively studied for its involvement in balancing neuronal proliferation and differentiation [<xref rid="bib45" ref-type="bibr">45</xref>]. Similarly, <italic toggle="yes">Id3</italic>, showing specificity to E13.5, was widely recognized for its function in controlling the timing of neurogenesis in the embryo [<xref rid="bib46" ref-type="bibr">46</xref>]. Conversely, the top-ranked DEGs identified at E16.5, such as <italic toggle="yes">Nlgn1, Cadm2, Nrg1</italic>, and <italic toggle="yes">Ccser1</italic>, have been well studied for their contributions to synapse formation, myelination, synaptic plasticity, and connectivity [<xref rid="bib47" ref-type="bibr">47&#x02013;49</xref>], suggesting the final stage of neurogenesis with synaptogenesis and the formation of synaptic connections between neurons at E16.5. The subsequent GO-based enrichment analysis (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5D</xref>) revealed distinct functional enrichments during different developmental stages in the mouse embryonic brain. Negative regulation of haemopoiesis was observed at E9.5, followed by dendrite morphogenesis at E12.5, early endosome at E13.5, synaptic cleft at E14.5, long-term synaptic potentiation at E15.5, and synaptic membrane adhesion at E16.5. These findings were in line with the major developmental events observed at different embryonic stages, encompassing the initiation of neurogenesis (E9.5) [<xref rid="bib50" ref-type="bibr">50</xref>], early neuronal connection (E12.5) [<xref rid="bib51" ref-type="bibr">51</xref>], increased neurogenesis (E13.5, E14.5, and E15.5) [<xref rid="bib52" ref-type="bibr">52</xref>, <xref rid="bib53" ref-type="bibr">53</xref>], and the refinement of synaptic plasticity (E16.5).</p><p>We further demonstrated the effectiveness of spatiAlign for combined trajectory analysis by employing 2 distinct approaches: PAGA, a graph abstraction technique based on low-dimensional embedding space [<xref rid="bib35" ref-type="bibr">35</xref>], and CellRank [<xref rid="bib54" ref-type="bibr">54</xref>], a state-of-the-art cell fate mapping algorithm using a high-dimensional count matrix as input. The PAGA graph of spatiAlign embeddings (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5E</xref>) exhibited a nearly linear development trajectory from E9.5 to E16.5, as well as a high similarity between adjacent time points. Furthermore, the age-specific genes that were identified could be traced along the PAGA path (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5F</xref>). We proceeded to compare the reconstructed trajectory obtained from CellRank using 2 different inputs: the raw and spatiAlign-reconstructed feature matrices. The recovered trajectory, derived from reconstructed features (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5G</xref>, <xref rid="fig5" ref-type="fig">H</xref>), illustrated a clear transition path across cell types and a similar distribution across different time points, consistent with previous observations [<xref rid="bib55" ref-type="bibr">55</xref>]. In contrast, the batch effects present in the raw count matrix may lead to infeasible and chaotic fate potentials across different batches (<xref rid="sup14" ref-type="supplementary-material">Supplementary Fig. S6c</xref>). Additionally, the expression patterns of reported driver genes associated with neuronal (i.e., <italic toggle="yes">Tuba1a</italic> [<xref rid="bib56" ref-type="bibr">56</xref>], <italic toggle="yes">Tenm2</italic> [<xref rid="bib57" ref-type="bibr">57</xref>], <italic toggle="yes">Rbfox1</italic>) as well as nonneuronal (<italic toggle="yes">Dcn, Col1a1, Col1a2</italic>) development [<xref rid="bib58" ref-type="bibr">58</xref>] (Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5H</xref>) were consistent with the predicted cell fate, thereby validating the feasibility of the estimated pseudotime and affirming the reliability of our analysis.</p></sec></sec><sec sec-type="discussion" id="sec3"><title>Discussion</title><p>In this article, we develop spatiAlign, an advanced deep learning methodology that tackles the challenge of integrating multiple SRT datasets. spatiAlign first transforms spatial information into a neighboring adjacency matrix to perform spatial embedding that aggregates gene expression profiles together with spatial neighboring context for spot/cell representations. The obtained representations are subsequently fine-tuned through augmentation-based contrastive learning, which incorporates spatial context information to improve their informativeness and distinguishability. Next, regarding aligning biological effects, spatiAlign adopts across-domain adaptation and deep clustering strategies to bring the semantic similarity of spots/cells closer and push dissimilar spots/cells apart, regardless of which datasets they are from. Collectively, beyond SRT dataset integration and batch effect correction, spatiAlign-integrated datasets can be used for downstream analysis, such as identifying combined clusters and DEGs and trajectory inference.</p><p>Naturally, one might be concerned that achieving a sufficient mix of serial tissue sections could result in the inability to distinguish spots/cells from different clusters. Therefore, in this study, we introduce a weighted F1 score of LISI, which evaluates the integration mixing and separation of each cluster, to perform comparison analysis. We presented a series of benchmarking analyses on 4 publicly available SRT datasets with different characteristics. On the human DLPFC datasets, with the manual annotation as ground truth, spatiAlign achieves the highest ARI and weighted F1 score of LISI compared with other control methods. This quantitative assessment highlights its superiority in integrating different samples while also identifying separate clusters. Furthermore, the superior performance of spatiAlign on aggregated datasets of olfactory bulbs sequenced by different platforms demonstrates its efficacy in integrating multiple datasets with complex technical variations. In addition, the reconstructed expression of region-specific marker genes exhibits a greater spatial specificity compared with the original data. However, we point out here that our effort was not intended to develop a new imputation method over existing methods but to demonstrate that spatiAlign-reconstructed matrices denoise gene counts.</p><p>Moreover, there is concern regarding the potential loss of distinct biological characteristics during the batch alignment process. Herein, we unequivocally affirm that spatiAlign not only effectively preserves the intrinsic variation among sections but also adeptly harmonizes batches, as demonstrated through its successful application to 3 distinct brain sections characterized by heterogeneous structures. However, the benchmarked methods are unable to match the performance of spatiAlign. When applied to a time-series dataset, spatiAlign significantly facilitates downstream analysis, such as combined clustering, combined differential expression analysis, and trajectory inference. In the results, various subtypes of neurons were successfully identified, with the typical marker genes displaying the highest expression in their corresponding cell types. Upon analyzing the reconstructed full expression space, we identified DEGs and significant GO terms specific to different developmental stages that showed high consistency with previous studies on mouse brain development. Comparing the trajectories inferred from corrected expression features and the raw data, we verify that spatiAlign not only aligns multiple batches into a joint low-dimensional embedding space but also corrects the batch effects in their full expression space. This capability empowers users to perform preprocessing for methods that require a full gene expression matrix, such as CellRank.</p><p>To further explore more potentials of spatiAlign, we conducted benchmarking analyses on datasets involving liver tumors [<xref rid="bib63" ref-type="bibr">59</xref>], which lack a stereotypical structure, and MERFISH datasets [<xref rid="bib64" ref-type="bibr">60</xref>], which only provide profiles for a few hundred genes. As shown in <xref rid="sup14" ref-type="supplementary-material">Supplementary Figs. S7</xref> and <xref rid="sup14" ref-type="supplementary-material">S8</xref>, spatiAlign effectively corrected batch effects and identified distinct cell clusters. In contrast, the outputs of the benchmarked methods still exhibited noticeable batch effects or resulted in fragmented cell clusters. Moreover, spatiAlign achieved the highest F1 score among all the control methods. These findings highlight the tremendous potential of spatiAlign in applications involving a wider range of SRT datasets. To unleash more potentials of spatiAlign in clinical studies, we plan to collect and integrate additional case/control datasets to investigate the comprehensive molecular mechanisms between disease and healthy conditions.</p><p>We have developed spatiAlign, a user-friendly tool designed to seamlessly integrate SRT datasets, offering a novel and effective solution. As an unsupervised domain adaptation method, spatiAlign is inherently influenced by various dataset characteristics, such as phenotypical differences and cell heterogeneity. The selection of hyperparameters during the construction of spatial neighborhood graphs also affects the performance of spatiAlign. Looking ahead, our vision is to extend spatiAlign&#x02019;s capabilities to support integrative and multimodal spatial molecular dataset analysis, including epigenetics, proteomics, and microbiomics, and facilitate deeper exploration of biological phenomena and significantly contribute to scientific discoveries.</p></sec><sec sec-type="materials|methods" id="sec4"><title>Methods</title><sec id="sec4-1"><title>Motivation for the use of across-domain adaptation contrastive learning</title><p>As genomic sequencing technology continues to advance, an increasing number of SRT datasets are being generated from various platforms. Joint analysis of multiple datasets can be used to facilitate the extraction of maximum reliable information, but inconsistent data distributions between different sections due to batch effects may affect the reliability of downstream analysis results. To address this issue and maximize the preservation of biological variations, it is desirable to amalgamate disparate datasets and bring similar cell types closer together while keeping dissimilar cell types far apart. Across-domain adaptation contrastive learning, an unsupervised domain adaptation method, can be used for this purpose. This method can align data distributions, preserve biological variations, and remove batch effects while also incorporating spatial information of the SRT dataset into the newly generated latent embedding and reconstructed matrix.</p></sec><sec id="sec4-2"><title>Data preprocessing</title><p>spatiAlign utilizes a series of gene expression matrices and associated spatial coordinates as inputs. The gene expression profiles are stored in a <inline-formula><tex-math id="TM0004" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${X^{N \times D}}$\end{document}</tex-math></inline-formula> matrix of unique molecular identifier (UMI) counts, where <italic toggle="yes">N</italic> is the number of spots/cells and <italic toggle="yes">D</italic> is the number of genes, and it also includes <inline-formula><tex-math id="TM0005" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathrm{(}}x,y{\mathrm{)}}$\end{document}</tex-math></inline-formula> 2-dimensional spatial coordinates for each spot/cell. The raw gene expression matrices were first filtered according to criteria <inline-formula><tex-math id="TM0006" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$min\_genes = {\mathrm{20}}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0007" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$min\_cells = {\mathrm{20}}$\end{document}</tex-math></inline-formula> for each dataset using SCANPY (version: 1.9.1), followed by normalization and log transformation of individual spots.</p></sec><sec id="sec4-3"><title>Spatial neighbor graph construction for the SRT dataset</title><p>To fully exploit the spatial local neighboring context, we convert the spatial coordinates into an undirected neighborhood graph <inline-formula><tex-math id="TM0008" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$G = (V,E)$\end{document}</tex-math></inline-formula> by Euclidean distance with a predefined neighbor parameter <italic toggle="yes">k</italic>, where <italic toggle="yes">V</italic> represents the SRT dataset spots/cells and <italic toggle="yes">E</italic> represents the connected edges between the current spot/cell and neighboring spots/cells. The adjacency matrix of graph <italic toggle="yes">G</italic> is denoted by <italic toggle="yes">A</italic>, in which spot/cell <inline-formula><tex-math id="TM0009" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$u \in V$\end{document}</tex-math></inline-formula> with <italic toggle="yes">k</italic> nearest-neighbor spots/cells; if spot/cell <inline-formula><tex-math id="TM0010" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$v \in V$\end{document}</tex-math></inline-formula> is the neighbor of spot/cell <italic toggle="yes">u</italic>, <inline-formula><tex-math id="TM0011" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${a_{uv}}{\mathrm{ = 1}}$\end{document}</tex-math></inline-formula>; otherwise, it is 0. Specifically, we selected the top 15 nearest neighbors for each spot/cell in the SRT gene expression spatial coordinates.</p></sec><sec id="sec4-4"><title>Batch-specific variations to separate using domain-specific batch normalization</title><p>Batch normalization (BN) [<xref rid="bib59" ref-type="bibr">61</xref>] is widely used to solve the problem of internal covariate shift during DNN training. It can reduce the problems of vanishing gradients and overfitting. For a mini-batch of data <inline-formula><tex-math id="TM0012" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathrm{\mathcal{B}}} = \{ {{x_{1...m}}} \}$\end{document}</tex-math></inline-formula>, the BN layer can be calculated using the following parameterization:</p><disp-formula id="equ1">
+<label>(1)</label>
+<tex-math id="TM0013" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{\mu _{\mathrm{\mathcal{B}}}} &#x00026;=&#x00026; \frac{1}{m}\sum\limits_{i = 1}^m {{x_i}} \\ \sigma _{\mathrm{\mathcal{B}}}^2 &#x00026;=&#x00026; \frac{1}{m}\sum\limits_{i = 1}^m {{{({x_i} - {\mu _{\mathrm{\mathcal{B}}}})}^2}} \\ {{\hat x}_i} &#x00026;=&#x00026; \frac{{{x_i} - {\mu _{\mathrm{\mathcal{B}}}}}}{{\sqrt {\sigma _{\mathrm{\mathcal{B}}}^2 + \varepsilon } }} \\ {y_i} &#x00026;=&#x00026; \gamma {{\hat x}_i} + \xi \equiv B{N_{\gamma ,\xi }}({x_i}) \end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0014" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mu _{\mathrm{\mathcal{B}}}}$\end{document}</tex-math></inline-formula> is the mean of the mini-batch, <inline-formula><tex-math id="TM0015" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\sigma _{\mathrm{\mathcal{B}}}^2$\end{document}</tex-math></inline-formula> is the variance of the mini-batch, <inline-formula><tex-math id="TM0016" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\hat x_i}$\end{document}</tex-math></inline-formula> is the normalized output by the mean and variance of the mini-batch, <inline-formula><tex-math id="TM0017" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\varepsilon $\end{document}</tex-math></inline-formula> is a small constant to avoid dividing by zero, and <inline-formula><tex-math id="TM0018" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${y_i}$\end{document}</tex-math></inline-formula> is the output of the BN layer, which is obtained by scaling and shifting <inline-formula><tex-math id="TM0019" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\hat x_i}$\end{document}</tex-math></inline-formula> with learned parameters <inline-formula><tex-math id="TM0020" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\gamma $\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0021" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\xi $\end{document}</tex-math></inline-formula>.</p><p>Domain-specific batch normalization (DSBN) [<xref rid="bib60" ref-type="bibr">62</xref>] is used in unsupervised domain adaptation with multiple source datasets to separate domain-specific variations from different datasets. In spatiAlign, DSBN consists of multiple sets of BN layers that select the corresponding BN with the batch label <italic toggle="yes">b</italic>. DSBN can be represented as follows:</p><disp-formula id="equ2">
+<label>(2)</label>
+<tex-math id="TM0022" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{y_b} = {\gamma _b}{\hat x_b} + {\xi _b} \equiv DSB{N_{{\gamma _b},{\xi _b}}}({x_b},b) \end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0023" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\gamma _b}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0024" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\xi _b}$\end{document}</tex-math></inline-formula> are batch-specific affine parameters for batch <italic toggle="yes">b</italic>.</p><p>DSBN has been proposed to capture and utilize the batch-specific information in datasets by learning affine parameters for each dataset, which enables the model to learn the batch-specific variations that exist within the datasets [<xref rid="bib13" ref-type="bibr">13</xref>, <xref rid="bib60" ref-type="bibr">62</xref>].</p></sec><sec id="sec4-5"><title>DGI-based feature extractor for reducing dimensions and propagating spatial neighboring context</title><p>spatiAlign leverages the DGI framework to project a gene expression matrix into a latent space while simultaneously performing dimension reduction and propagating spatial neighboring spots/cells context. To reduce the dimension of higher-dimensional SRT data, we employed a DNN-based autoencoder mapping model <inline-formula><tex-math id="TM0025" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${f_\theta }:X \to Z$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math id="TM0026" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta $\end{document}</tex-math></inline-formula> represents the parameters of the mapping model, <inline-formula><tex-math id="TM0027" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Z^{N \times d}}$\end{document}</tex-math></inline-formula> is a latent embedding with dimensions<italic toggle="yes">d</italic>, and <inline-formula><tex-math id="TM0028" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$d \ll D$\end{document}</tex-math></inline-formula>. The DNN-based mapping model, a feature embedding block, consists of a fully connected block and 2 stacked residual bottleneck blocks. Specifically, the fully connected block comprises a linear connected layer, a DSBN layer, an exponential linear unit (ELU) as a nonlinear activation function, and a dropout layer in sequence. Each residual bottleneck block consists of 2 stacked fully connected blocks, and the output of the residual bottleneck block is passed through an ELU layer (Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1B</xref>). Notably, the feature embedding block only takes the gene expression matrix as input.</p><p>To propagate the spatial neighboring context in the reduced dimensionality space, we employ a VGAE framework. The VGAE framework takes the latent embedding <italic toggle="yes">Z</italic> obtained from the feature embedding model and the adjacency matrix <italic toggle="yes">A</italic> as input and generates <italic toggle="yes">Y</italic> as output. The VGAE encoder includes 2 stacked graph convolutional network (GCN) layers and uses the rectified linear unit (ReLU) as a nonlinear activation function. The first GCN layer generates a lower-dimensional spatial embedding and aggregates the spatial neighboring context, while the second GCN layer generates the mean <inline-formula><tex-math id="TM0029" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mu $\end{document}</tex-math></inline-formula> and variance <inline-formula><tex-math id="TM0030" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\delta ^2}$\end{document}</tex-math></inline-formula>. The spatial embedding <italic toggle="yes">Y</italic> is then reparametrized from <inline-formula><tex-math id="TM0031" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$Y = \mu + \tau * {\delta ^2}$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math id="TM0032" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\tau \sim N({\mathrm{0,1}})$\end{document}</tex-math></inline-formula>. The final latent representation <italic toggle="yes">S</italic> is generated from the feature fusion block, which includes 2 stacked fully connected layers, as well as a DSBN layer followed by each connected layer in sequence, and takes concatenated feature embedding as input, which is obtained by concatenating the reduction dimensionality embedding <italic toggle="yes">Z</italic> and the spatial embedding <italic toggle="yes">Y</italic>. The final latent embedding <italic toggle="yes">S</italic> is then used to reconstruct the original gene expression matrix <inline-formula><tex-math id="TM0033" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$X^{\prime}$\end{document}</tex-math></inline-formula> in the DNN-based autoencoder and the spatial neighboring adjacency matrix <inline-formula><tex-math id="TM0034" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$A^{\prime}$\end{document}</tex-math></inline-formula> in the VGAE network.</p><p>Training the DNN-based autoencoder and VGAE network minimizes the loss of the reconstructed gene expression matrix and maximizes the log-likelihood of the observed SRT sequencing latent representation <italic toggle="yes">S</italic>. We first employed the scale-invariant mean squared error (MSE) [<xref rid="bib61" ref-type="bibr">63</xref>] to measure the DNN-based loss. In addition, the loss function of the VGAE includes a binary cross-entropy loss to minimize the difference between the input spatial neighboring adjacency matrix <italic toggle="yes">A</italic> and the reconstructed adjacency matrix <inline-formula><tex-math id="TM0035" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$A^{\prime}$\end{document}</tex-math></inline-formula>. Additionally, a Kullback&#x02012;Leibler divergence loss was used to optimize the log-likelihood between the posterior distribution <inline-formula><tex-math id="TM0036" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${q_\theta }(Y|S,A)$\end{document}</tex-math></inline-formula> and prior distribution <inline-formula><tex-math id="TM0037" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$p(Y)$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math id="TM0038" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$p(Y) \sim N{\mathrm{(0,1)}}$\end{document}</tex-math></inline-formula>. The dimension reduction and spatial neighboring context propagation loss can be calculated as follows:</p><disp-formula id="equ3">
+<label>(3)</label>
+<tex-math id="TM0039" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{L_{ENC}} = {L_{mse}} + \alpha \times BCE(A,A^{\prime}) + \beta \times KL({q_\theta }(Y|S,A),p(Y)) \end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0040" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$BCE( \cdot )$\end{document}</tex-math></inline-formula> is the binary cross-entropy, <inline-formula><tex-math id="TM0041" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$KL( \cdot )$\end{document}</tex-math></inline-formula> is the Kullback&#x02012;Leibler divergence, <inline-formula><tex-math id="TM0042" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${L_{sim\_mse}}$\end{document}</tex-math></inline-formula> is the scale-invariant MSE, and <inline-formula><tex-math id="TM0043" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\alpha ,\beta \in [ {0,1} ]$\end{document}</tex-math></inline-formula> are hyperparameters.</p><disp-formula id="equ4">
+<label>(4)</label>
+<tex-math id="TM0044" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{L_{mse}} = \frac{1}{k}\left\| {x - x^{\prime}} \right\|_2^2 - \lambda \frac{1}{{{k^2}}}{([x - x^{\prime}] \cdot {1_k})^2}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <italic toggle="yes">k</italic> is the number of spots/cells in the input gene expression matrix, <inline-formula><tex-math id="TM0045" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{1}}_k}$\end{document}</tex-math></inline-formula> is a vector of ones of length <italic toggle="yes">k</italic>, <inline-formula><tex-math id="TM0046" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\| \cdot \|_2^2$\end{document}</tex-math></inline-formula> is the squared <inline-formula><tex-math id="TM0047" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${L_2}$\end{document}</tex-math></inline-formula> norm, and <inline-formula><tex-math id="TM0048" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\lambda \in [ {0,1} ]$\end{document}</tex-math></inline-formula> is a hyperparameter.</p></sec><sec id="sec4-6"><title>Self-supervised contrastive learning for representation enhancement</title><p>DGI is a self-supervised learning architecture that maximizes mutual information between local neighbors of a graph to learn representations of nodes. spatiAlign takes original and corrupted gene expression matrices as inputs and generates latent representation matrices <italic toggle="yes">S</italic> and <inline-formula><tex-math id="TM0049" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$S^{\prime}$\end{document}</tex-math></inline-formula>, respectively. The corrupted matrix is a rowwise random perturbation of the original matrix, and we assume that the corrupted gene expression profiles have the same neighboring adjacency matrix as the original profiles. Formally, given a spot <italic toggle="yes">i</italic>, we form a positive pair consisting of its representation <inline-formula><tex-math id="TM0050" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${s_i}$\end{document}</tex-math></inline-formula> and the neighboring graph spot vector <italic toggle="yes">g</italic>, while the corresponding corrupted representation <inline-formula><tex-math id="TM0051" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${s^{\prime}_i}$\end{document}</tex-math></inline-formula> from the corrupted matrix and the same neighboring graph spot vector <italic toggle="yes">g</italic> form a negative pair. A self-supervised contrastive learning method was used to train the DGI framework, and the loss function was designed to maximize the mutual information of positive pairs while minimizing the mutual information of negative pairs:</p><disp-formula id="equ5">
+<label>(5)</label>
+<tex-math id="TM0052" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{L_{SSL}} = - \frac{1}{{2N}}\left(\sum\limits_{i = 1}^N {{{\mathbb{E}}_{(Z,A)}}[\log \phi ({s_i},{g_i})] + {{\mathbb{E}}_{(Z^{\prime},A)}}[\log (1 - \phi ({s_i}^\prime ,{g_i}))]} \right) \end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0053" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\phi ( \cdot )$\end{document}</tex-math></inline-formula> is a discriminator, a bilinear layer, and follows a sigmoid layer, to distinguish the positive pairs from negative pairs.</p></sec><sec id="sec4-7"><title>Biological effects alignment using across-domain adaptation contrastive learning</title><p>To align biological effects using across-domain adaptation contrastive learning, we propose a criterion for forming pairs based on the assumption that datasets from multiple tissue sections share at least 1 common cell type in the current alignment setting. To achieve this, we perform in-batch instance-level contrastive learning and across-batch instance-level contrastive learning for each tissue section separately. Specifically, we maintain a memory bank <inline-formula><tex-math id="TM0054" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${V^b}$\end{document}</tex-math></inline-formula> for each tissue section, which is used to store the latent embedding and prototype spot/cell type representations within the batch.</p><disp-formula id="equ6">
+<label>(6)</label>
+<tex-math id="TM0055" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{V^1} = \left[ {v_1^1, \cdots ,v_N^1} \right], \cdots ,{V^b} = \left[ {v_1^b, \cdots ,v_N^b} \right]
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0056" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${v_i}$\end{document}</tex-math></inline-formula> is the stored feature vector of <inline-formula><tex-math id="TM0057" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${x_i}$\end{document}</tex-math></inline-formula>, initialized with final latent representation <italic toggle="yes">S</italic>, and updated with a momentum <italic toggle="yes">m</italic> after each iteration for each dataset:</p><disp-formula id="equ7">
+<label>(7)</label>
+<tex-math id="TM0058" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{v_i} \leftarrow m{v_i} + (1 - m){s_i}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula></sec><sec id="sec4-8"><title>In-batch instance level contrastive learning</title><p>The pairwise similarity distributions <inline-formula><tex-math id="TM0059" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$P_i^b$\end{document}</tex-math></inline-formula> are measured by the cosine distance between latent embedding <inline-formula><tex-math id="TM0060" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${S^b}$\end{document}</tex-math></inline-formula> and the corresponding memory bank <inline-formula><tex-math id="TM0061" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${V^b}$\end{document}</tex-math></inline-formula> to perform in-batch instance discrimination,</p><disp-formula id="equ8">
+<label>(8)</label>
+<tex-math id="TM0062" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*} \begin{array}{@{}c@{}} P_i^b = \frac{{\exp (sim(v_i^b,s_i^b)/\tau )}}{{\sum\limits_{k = 1}^{{N_b}} {\exp (sim(v_k^b,s_i^b)/\tau )} }}\\ \textit{simv}_i^b,s_j^b = \frac{{(v_i^b){{(s_j^b)}^T}}}{{\left\| {v_i^b} \right\|\left\| {s_j^b} \right\|}} \end{array}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0063" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\tau $\end{document}</tex-math></inline-formula> is the temperature parameter, which can determine the concentration level of the similarity distribution. Finally, cross-entropy was employed to minimize the in-batch instance discrimination.</p><disp-formula id="equ9">
+<label>(9)</label>
+<tex-math id="TM0064" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{L_{\textit{instCL}}} = \textit{CrossEntropy}(P_i^b,i) \end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <italic toggle="yes">i</italic> denotes the unique index of the spot of <inline-formula><tex-math id="TM0065" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${x_i}$\end{document}</tex-math></inline-formula>.</p></sec><sec id="sec4-9"><title>Pseudoprototypical cluster-level contrastive learning</title><p>Inspired by unsupervised contrastive clustering [<xref rid="bib32" ref-type="bibr">32</xref>], we map each spot/cell <italic toggle="yes">i</italic> into an embedding space with <italic toggle="yes">d</italic> dimensions, where <italic toggle="yes">d</italic> is equal to the number of pseudoprototypical clusters. Since each spot belongs to only 1 cluster, ideally, the row of the latent embedding <inline-formula><tex-math id="TM0066" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${S^{N \times d}}$\end{document}</tex-math></inline-formula> tends to be one-hot, meaning that the <inline-formula><tex-math id="TM0067" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$j{\mathrm{ - th}}$\end{document}</tex-math></inline-formula> column of <inline-formula><tex-math id="TM0068" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${S^{N \times d}}$\end{document}</tex-math></inline-formula> represents the <inline-formula><tex-math id="TM0069" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$j{\mathrm{ - th}}$\end{document}</tex-math></inline-formula> cluster. Similar to in-batch instance-level contrastive learning, our method uses cosine distance to measure the similarity between latent embedding and the corresponding memory bank and maximize the pseudo cluster pair similarity using cross-entropy. Specifically, the loss function can be expressed as</p><disp-formula id="equ10">
+<label>(10)</label>
+<tex-math id="TM0070" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*} \begin{array}{@{}c@{}} sim({(v_i^b)^T},{(s_j^b)^T}) = \frac{{{{(v_i^b)}^T}s_j^b}}{{\left\| {{{(v_i^b)}^T}} \right\|\left\| {{{(s_j^b)}^T}} \right\|}}\\ P_{\textit{cluster}}^b = \frac{{\exp (sim({{(v_i^b)}^T},{{(s_i^b)}^T})/\tau )}}{{\sum\limits_{k = 1}^d {\exp (sim({{(v_k^b)}^T},{{(s_i^b)}^T})/\tau )} }}\\ {L_{\textit{clstCL}}} = \textit{CrossEntropy}(P_{\textit{cluster}}^b,j) - H(S) \end{array}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0071" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$H(Z) = - \sum\nolimits_{i = 1}^N {[P(s_i^b)\log P(s_i^b)]} $\end{document}</tex-math></inline-formula> is the entropy of the pseudo-cluster assignment probabilities <inline-formula><tex-math id="TM0072" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$P(s_i^b) = \sum\nolimits_{t = 1}^d {s_{ti}^b} /{\| {s_i^b} \|_1}$\end{document}</tex-math></inline-formula>, which can help to avoid the trivial solution in which most spots are assigned to the same cluster [<xref rid="bib32" ref-type="bibr">32</xref>].</p></sec><sec id="sec4-10"><title>Across-batch instance self-supervised learning</title><p>To explicitly align biological effects and ensure that spatiAlign learns discriminative representations of dissimilar cell types between different batches, we perform across-batch feature matching. Specifically, we minimize the entropy of the pairwise similarity distribution between latent embeddings in one batch and the latent embeddings stored in the memory bank of another batch. The loss function for across-batch spot/cell pair matching can be formalized as</p><disp-formula id="equ11">
+<label>(11)</label>
+<tex-math id="TM0073" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*} \begin{array}{@{}c@{}} sim({S^s},{V^b}) = \frac{{{S^s}{{({V^b})}^T}}}{{\left\| {{S^s}} \right\|\left\| {{V^b}} \right\|}}\\ P_i^{s \to b} = \frac{{\exp (sim({s_i}^s,{v_i}^b)/\tau )}}{{\sum\nolimits_{j = 1}^N {\exp (sim({s_i}^s,{v_j}^b)/\tau )} }}\\ {L_{\textit{crossSSL}}}({S^s},V) = \sum\limits_{b = 1,b \ne s}^m {H(P_{i^{\prime},i}^{s \to b}({S^s},{V^b}))} \end{array}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>The overall objective for spatiAlign is to minimize:</p><disp-formula id="equ12">
+<label>(12)</label>
+<tex-math id="TM0074" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\textit{Loss} = {L_{ENC}} + {L_{SSL}} + {L_{\textit{instCL}}} + {L_{\textit{clutCL}}} + {L_{\textit{crossSSL}}}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula></sec><sec id="sec4-11"><title>Comparisons of methods</title><p>We conducted a comparative analysis between spatiAlign and other state-of-the-art methods of data integration using 4 comprehensive representative SRT datasets that exhibit diverse characteristics.</p><p>We applied the following integration methods: (1) Harmony [<xref rid="bib8" ref-type="bibr">8</xref>] implemented in the SCANPY package external module <italic toggle="yes">harmony_integrate</italic>, (2) Combat [<xref rid="bib62" ref-type="bibr">64</xref>] implemented in the SCANPY package module <italic toggle="yes">combat</italic>, (3) Scanorama [<xref rid="bib11" ref-type="bibr">11</xref>] implemented in the SCANPY package external module <italic toggle="yes">scanorama_integrate</italic>, (4) BBKNN [<xref rid="bib12" ref-type="bibr">12</xref>] implemented in the SCANPY package external module <italic toggle="yes">bbknn</italic>, (5) MNN [<xref rid="bib15" ref-type="bibr">15</xref>] implemented in the SCANPY package external module <italic toggle="yes">mnn_correct</italic>, (6) SCALEX [<xref rid="bib13" ref-type="bibr">13</xref>] implemented in the Python package <italic toggle="yes">scalex</italic>, and spatial-base methods: (7) PRECAST [<xref rid="bib24" ref-type="bibr">24</xref>] implemented in the R package <italic toggle="yes">PRECAST</italic> and (8) GraphST [<xref rid="bib25" ref-type="bibr">25</xref>] implemented in the Python package <italic toggle="yes">GraphST</italic>. We input the preprocessed datasets into spatiAlign and several other tested methods. The first 6 methods were developed for scRNA-seq datasets, whereas PRECAST and GraphST were specifically designed for SRT datasets.</p></sec><sec id="sec4-12"><title>Evaluation metrics</title><p>We evaluate the performance of spatiAlign and other control methods in both data integration and the preservation of biological variation using the following metric.</p><sec id="sec4-12-1"><title>F1 score of local inverse Simpson&#x02019;s index</title><p>To simultaneously evaluate the separation of same-cell-type aggregation and across-batch fusion in the data integration, we calculated the LISI [<xref rid="bib8" ref-type="bibr">8</xref>] using 2 different groupings: (i) grouping using different datasets as the batch <inline-formula><tex-math id="TM0075" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$iLISI$\end{document}</tex-math></inline-formula> and (ii) grouping using known cell types as the spot <inline-formula><tex-math id="TM0076" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$cLISI$\end{document}</tex-math></inline-formula>. In the data integration, a larger value of <inline-formula><tex-math id="TM0077" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$iLISI$\end{document}</tex-math></inline-formula> indicates sufficient mixing of the different batch datasets, while a smaller value of <inline-formula><tex-math id="TM0078" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$cLISI$\end{document}</tex-math></inline-formula> suggests better preservation of the biological variations between spot types. The 2 metrics can be summarized using the <inline-formula><tex-math id="TM0079" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F{\mathrm{1}}$\end{document}</tex-math></inline-formula> score as follows:</p><disp-formula id="equ13">
+<label>(13)</label>
+<tex-math id="TM0080" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\left\{ \begin{array}{@{}c@{}} F{\mathrm{1 score}} = \frac{{2 \times \textit{iLIS}{I_{\textit{norm}}} \times (1 - \textit{cLIS}{I_{\textit{norm}}})}}{{\textit{iLIS}{I_{\textit{norm}}} + (1 - \textit{cLIS}{I_{\textit{norm}}})}} \in [0,1]\\ \textit{iLIS}{I_{\textit{norm}}} = \frac{{\textit{iLISI} - min(\textit{iLISI})}}{{max(\textit{iLISI}) - min(\textit{iLISI}) + \varepsilon }} \in [0,1]\\ \textit{cLIS}{I_{\textit{norm}}} = \frac{{\textit{cLISI} - min(\textit{cLISI})}}{{max(\textit{cLISI}) - min(\textit{cLISI}) + \varepsilon }} \in [0,1] \end{array} \right. \end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0081" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\varepsilon $\end{document}</tex-math></inline-formula> is a smaller constant. A higher <inline-formula><tex-math id="TM0082" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F{\mathrm{1}}$\end{document}</tex-math></inline-formula> score indicates superior data integration, which effectively retains the biological variations between spot types while eliminating other noncellular biological variations across multiple batches, thereby enhancing the fidelity of the biological information.</p></sec><sec id="sec4-12-2"><title>Adjusted Rand index</title><p>To evaluate the efficacy of merge clustering when utilizing lower-dimensional gene expression representations, we utilized the ARI [<xref rid="bib34" ref-type="bibr">34</xref>] as a performance metric. ARI represents an enhanced version of the Rand index (RI), which overcomes several of its limitations. By measuring the degree of similarity between 2 partitions, ARI provides a numerical value that ranges between &#x02212;1 and 1, with a higher value indicating a higher degree of similarity between the 2 partitions being compared. Moreover, ARI attains a value of 1 when the 2 partitions under comparison are equivalent up to a permutation. Hence, ARI serves as a reliable and robust tool for evaluating the performance of merge clustering approaches.</p></sec><sec id="sec4-12-3"><title>Hierarchical clustering, Moran&#x02019;s I, and the join counts index calculation</title><p>The spatial regions were identified by a hierarchical clustering algorithm with a lower-dimensional representation from different methods. The <italic toggle="yes">agglomerative clustering</italic> function in the scikit-learn package was implemented with 16 clusters (<italic toggle="yes">n_cluster =</italic> 16). Then, we calculate the global <italic toggle="yes">Moran&#x02019;s I index</italic> for each region on each slice. First, the batch labels were encoded to one-hot vectors, and spatial coordinates were used to calculate spatial neighbors (edge weights = 1). Then, the Moran function and the join counts function in the ESDA (2.4.3) Python package was applied to calculate <italic toggle="yes">Moran&#x02019;s I index</italic> and <italic toggle="yes">&#x0201c;black-black&#x0201d; statistic</italic>.</p></sec><sec id="sec4-12-4"><title>Differential expression analysis and GO enrichment analysis</title><p>We employed the <italic toggle="yes">FindMarkers</italic>() function of the Scanpy package to identify DEGs for the spatial domain using &#x0201c;<italic toggle="yes">T test</italic>&#x0201d; implementation and cutting of the adjusted <italic toggle="yes">P</italic> value at 0.05. To perform GO enrichment analysis for the DEGs, we utilized the <italic toggle="yes">ClusterProfiler</italic> (v4.8.1) R package.</p></sec><sec id="sec4-12-5"><title>Trajectory inference analysis</title><p>We used the joint low-dimensional embeddings that were generated from spatiAlign and the control methods to infer the PAGA [<xref rid="bib35" ref-type="bibr">35</xref>] path by the <italic toggle="yes">scanpy.tl.paga</italic> function in SCANPY. CellRank [<xref rid="bib54" ref-type="bibr">54</xref>] was implemented to estimate pseudotime using the <italic toggle="yes">CytoTraceKernel</italic> algorithm and <italic toggle="yes">compute_transition_matrix</italic> beyond RNA velocity because the spliced and unspliced counts were not available in the mouse embryonic brain datasets. Before applying the CytoTRACE kernel on the raw expression matrix, we performed some basic preprocessing of the data using <italic toggle="yes">sc.pp.normalize_per_cell</italic> and <italic toggle="yes">sc.pp.log1p</italic>. However, since the expression counts were already normalized before being inputted into spatiAlign, we did not perform additional normalization on the spatiAlign-adjusted expression matrix. We visualized the directed transition matrix CellRank calculated with the same sort of arrows that are used for RNA velocity. There is no RNA velocity in this study.</p></sec></sec></sec><sec id="sec5"><title>Availability of Source Code and Requirements</title><p>Project name: spatiAlign</p><p>Project homepage: <ext-link xlink:href="https://github.com/STOmics/Spatialign.git" ext-link-type="uri">https://github.com/STOmics/Spatialign.git</ext-link></p><p>Tutorials: <ext-link xlink:href="https://spatialign-tutorials.readthedocs.io/en/latest/index.html" ext-link-type="uri">https://spatialign-tutorials.readthedocs.io/en/latest/index.html</ext-link></p><p>Operating system(s): Platform independent</p><p>Programming language: Python 3.8 or higher</p><p>License: MIT License</p><p>
+<ext-link xlink:href="https://scicrunch.org/resolver/RRID:" ext-link-type="uri">RRID:</ext-link> SCR_024828</p><p>BiotoolsID: spatiAlign</p></sec><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material id="sup1" position="float" content-type="local-data"><label>giae042_GIGA-D-23-00259_Original_Submission</label><media xlink:href="giae042_giga-d-23-00259_original_submission.pdf"/></supplementary-material><supplementary-material id="sup2" position="float" content-type="local-data"><label>giae042_GIGA-D-23-00259_Revision_1</label><media xlink:href="giae042_giga-d-23-00259_revision_1.pdf"/></supplementary-material><supplementary-material id="sup3" position="float" content-type="local-data"><label>giae042_GIGA-D-23-00259_Revision_2</label><media xlink:href="giae042_giga-d-23-00259_revision_2.pdf"/></supplementary-material><supplementary-material id="sup4" position="float" content-type="local-data"><label>giae042_GIGA-D-23-00259_Revision_3</label><media xlink:href="giae042_giga-d-23-00259_revision_3.pdf"/></supplementary-material><supplementary-material id="sup5" position="float" content-type="local-data"><label>giae042_Response_to_Reviewer_Comments_Original_Submission</label><media xlink:href="giae042_response_to_reviewer_comments_original_submission.pdf"/></supplementary-material><supplementary-material id="sup6" position="float" content-type="local-data"><label>giae042_Response_to_Reviewer_Comments_Revision_1</label><media xlink:href="giae042_response_to_reviewer_comments_revision_1.pdf"/></supplementary-material><supplementary-material id="sup7" position="float" content-type="local-data"><label>giae042_Response_to_Reviewer_Comments_Revision_2</label><media xlink:href="giae042_response_to_reviewer_comments_revision_2.pdf"/></supplementary-material><supplementary-material id="sup8" position="float" content-type="local-data"><label>giae042_Reviewer_1_Report_Original_Submission</label><caption><p>Lambda Moses -- 10/15/2023 Reviewed</p></caption><media xlink:href="giae042_reviewer_1_report_original_submission.pdf"/></supplementary-material><supplementary-material id="sup9" position="float" content-type="local-data"><label>giae042_Reviewer_1_Report_Revision_1</label><caption><p>Lambda Moses -- 1/13/2024 Reviewed</p></caption><media xlink:href="giae042_reviewer_1_report_revision_1.pdf"/></supplementary-material><supplementary-material id="sup10" position="float" content-type="local-data"><label>giae042_Reviewer_2_Report_Original_Submission</label><caption><p>Stefano Monti -- 10/30/2023 Reviewed</p></caption><media xlink:href="giae042_reviewer_2_report_original_submission.pdf"/></supplementary-material><supplementary-material id="sup11" position="float" content-type="local-data"><label>giae042_Reviewer_3_Report_Original_Submission</label><caption><p>Jose Fernandez Navarro, PhD -- 10/31/2023 Reviewed</p></caption><media xlink:href="giae042_reviewer_3_report_original_submission.pdf"/></supplementary-material><supplementary-material id="sup12" position="float" content-type="local-data"><label>giae042_Reviewer_3_Report_Revision_1</label><caption><p>Jose Fernandez Navarro, PhD -- 1/18/2024 Reviewed</p></caption><media xlink:href="giae042_reviewer_3_report_revision_1.pdf"/></supplementary-material><supplementary-material id="sup13" position="float" content-type="local-data"><label>giae042_Reviewer_3_Report_Revision_2</label><caption><p>Jose Fernandez Navarro, PhD -- 3/25/2024 Reviewed</p></caption><media xlink:href="giae042_reviewer_3_report_revision_2.pdf"/></supplementary-material><supplementary-material id="sup14" position="float" content-type="local-data"><label>giae042_Supplemental_Figures_and_Tables</label><media xlink:href="giae042_supplemental_figures_and_tables.zip"/></supplementary-material></sec></body><back><ack id="ack1"><title>Acknowledgement</title><p>We thank China National GeneBank for providing data support for this study, Guangdong Bigdata Engineering Technology Research Center for Life Sciences for supporting this study, and Prof. Dr. Junjun Jiang, Dr. Jian Zhang, Dr. Ke Fan, and Dr. Min Xie for their help.</p></ack><sec id="sec6"><title>Additional Files</title><p>
+<bold>Supplementary Fig. S1</bold>. Manual annotation of human DLPFC datasets and joint clustering results from spatiAlign and other control methods, related to Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2</xref>. (a) Manual annotation of 4 DLPFC sections from the original study. (b) UMAP plots for joint Leiden clusters (Leiden) from spatiAlign and the control methods, together with the final clusters (Mapping) that merged Leiden clusters with the ground truth using a maximum matching strategy. (c&#x02013;f) Spatial visualization of the Leiden clusters and the mapping clusters of sample ID 151673 (c), sample ID 151674 (d), sample ID 151675 (e), and sample ID 151676 (f).</p><p>
+<bold>Supplementary Fig. S2</bold>. Benchmarking analysis on human DLPFC datasets, related to Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2</xref>. (a, b) Bar plots of integration LISI (iLISI) (a) and cell-type LISI (cLISI) (b) scores for integration results from different methods. (c) Visualization of spatiAlign-denoised (top panel) and unadjusted normalized (bottom panel) spatial expression of layer-marker genes in sample 151674.</p><p>
+<bold>Supplementary Fig. S3</bold>. Manual annotation of olfactory bulb datasets, related to Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3</xref>. (a) UMAP plot for the left clusters of a Stereo-seq olfactory bulb dataset and its spatial visualization (b). (c) Heatmap of marker genes associated with their cell types. (d&#x02013;f) Spatial pattern of marker genes and the corresponding cell types on the 3 olfactory bulb slices.</p><p>
+<bold>Supplementary Fig. S4</bold>. Benchmarking analysis on olfactory bulb datasets, related to Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3</xref>. (a&#x02013;c) Bar plots of integration LISI (iLISI) (a), cell-type LISI (cLISI) (b), and ARI (c) scores for integration results from different methods. (d, e) Spatial visualization of spatiAlign-enhanced (top panel) and raw (middle panel) spatial expression of marker genes, together with their corresponding cell types (bottom panel), on 2 olfactory bulb sections.</p><p>
+<bold>Supplementary Fig. S5</bold>. Integration results of 3 mouse hippocampus slices from the control methods, related to Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4</xref>. (a) UMAP plots for the joint clustering result from the control methods, colored by slices (top panel) and cluster labels (bottom panel). (b) Spatial visualization of the joint clustering results from the control methods on the 3 slices. (c) Expression heatmaps of marker genes for the CA1, CA3, and DG regions in joint clusters from spatiAlign and the control methods. Clusters with high expression specificity are highlighted by red boxes. (d) Spatial visualization of the hippocampus-related regions on 3 slices identified by the control methods.</p><p>
+<bold>Supplementary Fig. S6</bold>. Application to time-series mouse embryonic brain, related to Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5</xref>. (a) Spatial visualization of the labeled clusters and the corresponding marker genes. (b) Expression heatmap of the top 5 differentially expressed genes from E9.5 to E16.5. (c) CellRank trajectory of cell types reconstructed using the raw expression counts. (d) Estimated pseudotime scores by spatiAlign-corrected gene expression matrices.</p><p>
+<bold>Supplementary Fig. S7</bold>. Application to liver cancer datasets. (a) Spatial visualization of the Stereo-seq datasets from the tumor margin area of 2 liver cancer patients. On the left, the color scheme represents total UMI counts, which provide information on gene expression levels. In the middle, the color scheme represents cell types annotated in the original study. Given the extensive size of the original data, we cropped each subslice of these 2 datasets (right panel) to do the integration benchmark analysis. (b) UMAP plots for the spatiAlign and control methods, colored by slices (top panel) and cell types (bottom panel). (c&#x02013;e) Bar plots of LISI. (c) Integration LISI (iLISI). (d) Category LISI (cLISI). (e) F1 score of LISI. (f) Top: Visualization of tumor boundary using Leiden clustering on spatiAlign embedding, colored by cluster types. Bottom: Manual mapping of tumor boundary area, colored by proximity to tumor (darker color indicates closer proximity).</p><p>
+<bold>Supplementary Fig. S8</bold>. Application to MERFISH datasets. (a, b) Spatial visualization of the 2 MERFISH datasets, colored by cell type. (c) UMAP plots for the spatiAlign and control methods, colored by slices (top panel) and cell types (bottom panel). (d&#x02013;f) Bar plots of LISI. (d) F1 score of LISI. (e) Integration LISI (iLISI). (f) Category LISI (cLISI).</p><p>
+<bold>Supplementary Table S1</bold>. Source of mouse hippocampal slices.</p></sec><sec id="h1content1719944587568"><title>Abbreviations</title><p>ARI: adjusted Rand index; BN: batch normalization; DEG: differentially expressed gene; DG: dentate gyrus; DGI: deep graph infomax; DLPFC: dorsolateral prefrontal cortex; DNN: deep neural network; DSBN: domain-specific batch normalization; ELU: exponential linear unit; GCN: graph convolutional network; GO: Gene Ontology; iLISI: integrated LISI; LISI: local inverse Simpson&#x02019;s index; MSE: mean squared error; ReLU: rectified linear unit; RI: Rand index; scRNA-seq: single-cell RNA sequencing; SRT: spatially resolved transcriptomics; UMAP: uniform manifold approximation and projection; UMI: unique molecular identifier; VGAE: variational graph autoencoder; WM: white matter.</p></sec><sec id="sec8"><title>Author Contributions</title><p>Conceptualization: Chao Zhang. Project administration and supervision: Xun Xu, Ao Chen, Yong Zhang, and Yuxiang Li. Algorithm development and implementation: Chao Zhang. Public datasets collection, processing, and application: Chao Zhang, Lin Liu, Ying Zhang, Mei Li, and Shuangsang Fang. Methods comparisons: Chao Zhang, Lin Liu, and Ying Zhang. Biological interpretation: Chao Zhang, Lin Liu, and Ying Zhang. Manuscript writing and figure generation: Chao Zhang, Lin Liu, and Ying Zhang. Manuscript reviewing: Shuangsang Fang, Qiang Kang. All authors approved the manuscript.</p></sec><sec id="sec9"><title>Funding</title><p>This study was funded by National Key R&#x00026;D Program of China (2022YFC3400400).</p></sec><sec sec-type="data-availability" id="sec7"><title>Data Availability</title><p>The public datasets are freely available as follows: the Stereo-seq data have been deposited into the CNGB Sequence Archive (CNSA) of the China National GenBank DataBase (CNGBdb) with accession number <ext-link xlink:href="CNP0001543" ext-link-type="DDBJ/EMBL/GenBank">CNP0001543</ext-link>. The spatiotemporal dataset of the mouse embryonic brain can be download from MOSTA [<xref rid="bib4" ref-type="bibr">4</xref>], and the 10x Genomics Visium mouse olfactory bulb data can be download from the 10x Genomics website [<xref rid="bib70" ref-type="bibr">65</xref>]. The LIBD human dorsolateral prefrontal cortex (DLPFC) dataset and mouse breast datasets can be download from Zenodo [<xref rid="bib65" ref-type="bibr">66</xref>]. Mouse hippocampus data can be downloaded from the slide-seq website [<xref rid="bib3" ref-type="bibr">3, 38, 39</xref>]. All processed data are available in Zenodo [<xref rid="bib71" ref-type="bibr">67</xref>]. Additional supporting data, also including a link to DOME-ML (Data, Optimization, Model and Evaluation in Machine Learning) annotations, are available via the <italic toggle="yes">GigaScience</italic> database, GigaDB [<xref rid="bib72" ref-type="bibr">68</xref>].</p></sec><sec sec-type="COI-statement" id="sec10"><title>Competing Interests</title><p>The authors declare no competing interests.</p></sec><ref-list id="ref1"><title>References</title><ref id="bib1"><label>1.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Marx</surname> &#x000a0;<given-names>V</given-names></string-name>
+</person-group>. <article-title>Method of the Year: spatially resolved transcriptomics</article-title>. <source>Nat Methods</source>. <year>2021</year>;<volume>18</volume>(<issue>1</issue>):<fpage>9</fpage>&#x02013;<lpage>14</lpage>. <pub-id pub-id-type="doi">10.1038/s41592-020-01033-y</pub-id>.<pub-id pub-id-type="pmid">33408395</pub-id>
+</mixed-citation></ref><ref id="bib2"><label>2.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Stahl</surname> &#x000a0;<given-names>PL</given-names></string-name>, <string-name><surname>Salmen</surname> &#x000a0;<given-names>F</given-names></string-name>, <string-name><surname>Vickovic</surname> &#x000a0;<given-names>S</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Visualization and analysis of gene expression in tissue sections by spatial transcriptomics</article-title>. <source>Science</source>. <year>2016</year>;<volume>353</volume>(<issue>6294</issue>):<fpage>78</fpage>&#x02013;<lpage>82</lpage>. <pub-id pub-id-type="doi">10.1126/science.aaf2403</pub-id>.<pub-id pub-id-type="pmid">27365449</pub-id>
+</mixed-citation></ref><ref id="bib3"><label>3.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Rodriques</surname> &#x000a0;<given-names>SG</given-names></string-name>, <string-name><surname>Stickels</surname> &#x000a0;<given-names>RR</given-names></string-name>, <string-name><surname>Goeva</surname> &#x000a0;<given-names>A</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Slide-seq: a scalable technology for measuring genome-wide expression at high spatial resolution</article-title>. <source>Science</source>. <year>2019</year>;<volume>363</volume>(<issue>6434</issue>):<fpage>1463</fpage>&#x02013;<lpage>67</lpage>. <pub-id pub-id-type="doi">10.1126/science.aaw1219</pub-id>.<pub-id pub-id-type="pmid">30923225</pub-id>
+</mixed-citation></ref><ref id="bib4"><label>4.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Chen</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Liao</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>Cheng</surname> &#x000a0;<given-names>M</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Spatiotemporal transcriptomic atlas of mouse organogenesis using DNA nanoball-patterned arrays</article-title>. <source>Cell</source>. <year>2022</year>;<volume>185</volume>(<issue>10</issue>):<fpage>1777</fpage>&#x02013;<lpage>92</lpage>. <comment>e1721. </comment><pub-id pub-id-type="doi">10.1016/j.cell.2022.04.003</pub-id>.<pub-id pub-id-type="pmid">35512705</pub-id>
+</mixed-citation></ref><ref id="bib5"><label>5.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Cho</surname> &#x000a0;<given-names>CS</given-names></string-name>, <string-name><surname>Xi</surname> &#x000a0;<given-names>J</given-names></string-name>, <string-name><surname>Si</surname> &#x000a0;<given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Microscopic examination of spatial transcriptome using Seq-Scope</article-title>. <source>Cell</source>. <year>2021</year>;<volume>184</volume>(<issue>13</issue>):<fpage>3559</fpage>&#x02013;<lpage>72</lpage>. <comment>e3522. </comment><pub-id pub-id-type="doi">10.1016/j.cell.2021.05.010</pub-id>.<pub-id pub-id-type="pmid">34115981</pub-id>
+</mixed-citation></ref><ref id="bib6"><label>6.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Luecken</surname> &#x000a0;<given-names>MD</given-names></string-name>, <string-name><surname>Buttner</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Chaichoompu</surname> &#x000a0;<given-names>K</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Benchmarking atlas-level data integration in single-cell genomics</article-title>. <source>Nat Methods</source>. <year>2022</year>;<volume>19</volume>(<issue>1</issue>):<fpage>41</fpage>&#x02013;<lpage>50</lpage>. <pub-id pub-id-type="doi">10.1038/s41592-021-01336-8</pub-id>.<pub-id pub-id-type="pmid">34949812</pub-id>
+</mixed-citation></ref><ref id="bib7"><label>7.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Tran</surname> &#x000a0;<given-names>HTN</given-names></string-name>, <string-name><surname>Ang</surname> &#x000a0;<given-names>KS</given-names></string-name>, <string-name><surname>Chevrier</surname> &#x000a0;<given-names>M</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>A benchmark of batch-effect correction methods for single-cell RNA sequencing data</article-title>. <source>Genome Biol</source>. <year>2020</year>;<volume>21</volume>(<issue>1</issue>):<fpage>12</fpage>. <pub-id pub-id-type="doi">10.1186/s13059-019-1850-9</pub-id>.<pub-id pub-id-type="pmid">31948481</pub-id>
+</mixed-citation></ref><ref id="bib8"><label>8.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Korsunsky</surname> &#x000a0;<given-names>I</given-names></string-name>, <string-name><surname>Millard</surname> &#x000a0;<given-names>N</given-names></string-name>, <string-name><surname>Fan</surname> &#x000a0;<given-names>J</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Fast, sensitive and accurate integration of single-cell data with Harmony</article-title>. <source>Nat Methods</source>. <year>2019</year>;<volume>16</volume>(<issue>12</issue>):<fpage>1289</fpage>&#x02013;<lpage>96</lpage>. <pub-id pub-id-type="doi">10.1038/s41592-019-0619-0</pub-id>.<pub-id pub-id-type="pmid">31740819</pub-id>
+</mixed-citation></ref><ref id="bib9"><label>9.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Welch</surname> &#x000a0;<given-names>JD</given-names></string-name>, <string-name><surname>Kozareva</surname> &#x000a0;<given-names>V</given-names></string-name>, <string-name><surname>Ferreira</surname> &#x000a0;<given-names>A</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Single-cell multi-omic integration compares and contrasts features of brain cell identity</article-title>. <source>Cell</source>. <year>2019</year>;<volume>177</volume>(<issue>7</issue>):<fpage>1873</fpage>&#x02013;<lpage>87</lpage>..<comment>e1817. </comment><pub-id pub-id-type="doi">10.1016/j.cell.2019.05.006</pub-id>.<pub-id pub-id-type="pmid">31178122</pub-id>
+</mixed-citation></ref><ref id="bib10"><label>10.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Li</surname> &#x000a0;<given-names>X</given-names></string-name>, <string-name><surname>Wang</surname> &#x000a0;<given-names>K</given-names></string-name>, <string-name><surname>Lyu</surname> &#x000a0;<given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Deep learning enables accurate clustering with batch effect removal in single-cell RNA-seq analysis</article-title>. <source>Nat Commun</source>. <year>2020</year>;<volume>11</volume>(<issue>1</issue>):<fpage>2338</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-020-15851-3</pub-id>.<pub-id pub-id-type="pmid">32393754</pub-id>
+</mixed-citation></ref><ref id="bib11"><label>11.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Hie</surname> &#x000a0;<given-names>B</given-names></string-name>, <string-name><surname>Bryson</surname> &#x000a0;<given-names>B</given-names></string-name>, <string-name><surname>Berger</surname> &#x000a0;<given-names>B</given-names></string-name></person-group>. <article-title>Efficient integration of heterogeneous single-cell transcriptomes using Scanorama</article-title>. <source>Nat Biotechnol</source>. <year>2019</year>;<volume>37</volume>(<issue>6</issue>):<fpage>685</fpage>&#x02013;<lpage>91</lpage>. <pub-id pub-id-type="doi">10.1038/s41587-019-0113-3</pub-id>.<pub-id pub-id-type="pmid">31061482</pub-id>
+</mixed-citation></ref><ref id="bib12"><label>12.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Pola&#x00144;ski</surname> &#x000a0;<given-names>K</given-names></string-name>, <string-name><surname>Young</surname> &#x000a0;<given-names>MD</given-names></string-name>, <string-name><surname>Miao</surname> &#x000a0;<given-names>Z</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>BBKNN: fast batch alignment of single cell transcriptomes</article-title>. <source>Bioinformatics</source>. <year>2020</year>;<volume>36</volume>(<issue>3</issue>):<fpage>964</fpage>&#x02013;<lpage>65</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btz625</pub-id>.<pub-id pub-id-type="pmid">31400197</pub-id>
+</mixed-citation></ref><ref id="bib13"><label>13.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Xiong</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Tian</surname> &#x000a0;<given-names>K</given-names></string-name>, <string-name><surname>Li</surname> &#x000a0;<given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Online single-cell data integration through projecting heterogeneous datasets into a common cell-embedding space</article-title>. <source>Nat Commun</source>. <year>2022</year>;<volume>13</volume>(<issue>1</issue>):<fpage>6118</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-022-33758-z</pub-id>.<pub-id pub-id-type="pmid">36253379</pub-id>
+</mixed-citation></ref><ref id="bib14"><label>14.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Johnson</surname> &#x000a0;<given-names>WE</given-names></string-name>, <string-name><surname>Li</surname> &#x000a0;<given-names>C</given-names></string-name>, <string-name><surname>Rabinovic</surname> &#x000a0;<given-names>A.</given-names></string-name></person-group> &#x000a0;<article-title>Adjusting batch effects in microarray expression data using empirical Bayes methods</article-title>. <source>Biostatistics</source>. <year>2007</year>;<volume>8</volume>(<issue>1</issue>):<fpage>118</fpage>&#x02013;<lpage>27</lpage>. <pub-id pub-id-type="doi">10.1093/biostatistics/kxj037</pub-id>.<pub-id pub-id-type="pmid">16632515</pub-id>
+</mixed-citation></ref><ref id="bib15"><label>15.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Haghverdi</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Lun</surname> &#x000a0;<given-names>AT</given-names></string-name>, <string-name><surname>Morgan</surname> &#x000a0;<given-names>MD</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Batch effects in single-cell RNA-sequencing data are corrected by matching mutual nearest neighbors</article-title>. <source>Nat Biotechnol</source>. <year>2018</year>;<volume>36</volume>(<issue>5</issue>):<fpage>421</fpage>&#x02013;<lpage>27</lpage>. <pub-id pub-id-type="doi">10.1038/nbt.4091</pub-id>.<pub-id pub-id-type="pmid">29608177</pub-id>
+</mixed-citation></ref><ref id="bib16"><label>16.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Stuart</surname> &#x000a0;<given-names>T</given-names></string-name>, <string-name><surname>Butler</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Hoffman</surname> &#x000a0;<given-names>P</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Comprehensive integration of single-cell data</article-title>. <source>Cell</source>. <year>2019</year>;<volume>177</volume>(<issue>7</issue>):<fpage>1888</fpage>&#x02013;<lpage>902</lpage>. <comment>e1821. </comment><pub-id pub-id-type="doi">10.1016/j.cell.2019.05.031</pub-id>.<pub-id pub-id-type="pmid">31178118</pub-id>
+</mixed-citation></ref><ref id="bib17"><label>17.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lotfollahi</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Wolf</surname> &#x000a0;<given-names>FA</given-names></string-name></person-group>, <article-title>Theis FJ: scGen predicts single-cell perturbation responses</article-title>. <source>Nat Methods</source>. <year>2019</year>;<volume>16</volume>(<issue>8</issue>):<fpage>715</fpage>&#x02013;<lpage>21</lpage>. <pub-id pub-id-type="doi">10.1038/s41592-019-0494-8</pub-id>.<pub-id pub-id-type="pmid">31363220</pub-id>
+</mixed-citation></ref><ref id="bib18"><label>18.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Hu</surname> &#x000a0;<given-names>J</given-names></string-name>, <string-name><surname>Li</surname> &#x000a0;<given-names>X</given-names></string-name>, <string-name><surname>Coleman</surname> &#x000a0;<given-names>K</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>SpaGCN: integrating gene expression, spatial location and histology to identify spatial domains and spatially variable genes by graph convolutional network</article-title>. <source>Nat Methods</source>. <year>2021</year>;<volume>18</volume>(<issue>11</issue>):<fpage>1342</fpage>&#x02013;<lpage>51</lpage>. <pub-id pub-id-type="doi">10.1038/s41592-021-01255-8</pub-id>.<pub-id pub-id-type="pmid">34711970</pub-id>
+</mixed-citation></ref><ref id="bib19"><label>19.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Dong</surname> &#x000a0;<given-names>K</given-names></string-name>, <string-name><surname>Zhang</surname> &#x000a0;<given-names>S</given-names></string-name></person-group>. <article-title>Deciphering spatial domains from spatially resolved transcriptomics with an adaptive graph attention auto-encoder</article-title>. <source>Nat Commun</source>. <year>2022</year>;<volume>13</volume>(<issue>1</issue>):<fpage>1739</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-022-29439-6</pub-id>.<pub-id pub-id-type="pmid">35365632</pub-id>
+</mixed-citation></ref><ref id="bib20"><label>20.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhao</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Wang</surname> &#x000a0;<given-names>K</given-names></string-name>, <string-name><surname>Hu</surname> &#x000a0;<given-names>G</given-names></string-name></person-group>. <article-title>DIST: spatial transcriptomics enhancement using deep learning</article-title>. <source>Brief Bioinform</source>. <year>2023</year>;<volume>24</volume>:<issue>(2)</issue>:<fpage>bbad013</fpage>. <pub-id pub-id-type="doi">10.1093/bib/bbad013</pub-id>.<pub-id pub-id-type="pmid">36653906</pub-id>
+</mixed-citation></ref><ref id="bib21"><label>21.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wang</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Song</surname> &#x000a0;<given-names>B</given-names></string-name>, <string-name><surname>Wang</surname> &#x000a0;<given-names>S</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Sprod for de-noising spatially resolved transcriptomics data based on position and image information</article-title>. <source>Nat Methods</source>. <year>2022</year>;<volume>19</volume>(<issue>8</issue>):<fpage>950</fpage>&#x02013;<lpage>58</lpage>. <pub-id pub-id-type="doi">10.1038/s41592-022-01560-w</pub-id>.<pub-id pub-id-type="pmid">35927477</pub-id>
+</mixed-citation></ref><ref id="bib22"><label>22.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhao</surname> &#x000a0;<given-names>E</given-names></string-name>, <string-name><surname>Stone</surname> &#x000a0;<given-names>MR</given-names></string-name>, <string-name><surname>Ren</surname> &#x000a0;<given-names>X</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Spatial transcriptomics at subspot resolution with BayesSpace</article-title>. <source>Nat Biotechnol</source>. <year>2021</year>;<volume>39</volume>(<issue>11</issue>):<fpage>1375</fpage>&#x02013;<lpage>84</lpage>. <pub-id pub-id-type="doi">10.1038/s41587-021-00935-2</pub-id>.<pub-id pub-id-type="pmid">34083791</pub-id>
+</mixed-citation></ref><ref id="bib23"><label>23.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Shen</surname> &#x000a0;<given-names>R</given-names></string-name>, <string-name><surname>Liu</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Wu</surname> &#x000a0;<given-names>Z</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Spatial-ID: a cell typing method for spatially resolved transcriptomics via transfer learning and spatial embedding</article-title>. <source>Nat Commun</source>. <year>2022</year>;<volume>13</volume>(<issue>1</issue>):<fpage>7640</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-022-35288-0</pub-id>.<pub-id pub-id-type="pmid">36496406</pub-id>
+</mixed-citation></ref><ref id="bib24"><label>24.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Liu</surname> &#x000a0;<given-names>W</given-names></string-name>, <string-name><surname>Liao</surname> &#x000a0;<given-names>X</given-names></string-name>, <string-name><surname>Luo</surname> &#x000a0;<given-names>Z</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Probabilistic embedding, clustering, and alignment for integrating spatial transcriptomics data with PRECAST</article-title>. <source>Nat Commun</source>. <year>2023</year>;<volume>14</volume>(<issue>1</issue>):<fpage>296</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-023-35947-w</pub-id>.<pub-id pub-id-type="pmid">36653349</pub-id>
+</mixed-citation></ref><ref id="bib25"><label>25.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Long</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Ang</surname> &#x000a0;<given-names>KS</given-names></string-name>, <string-name><surname>Li</surname> &#x000a0;<given-names>M</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Spatially informed clustering, integration, and deconvolution of spatial transcriptomics with GraphST</article-title>. <source>Nat Commun</source>. <year>2023</year>;<volume>14</volume>(<issue>1</issue>):<fpage>1155</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-023-36796-3</pub-id>.<pub-id pub-id-type="pmid">36859400</pub-id>
+</mixed-citation></ref><ref id="bib26"><label>26.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Velickovic</surname> &#x000a0;<given-names>P</given-names></string-name>, <string-name><surname>Fedus</surname> &#x000a0;<given-names>W</given-names></string-name>, <string-name><surname>Hamilton</surname> &#x000a0;<given-names>WL</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Deep graph infomax</article-title>. <source>ICLR (Poster)</source>. <year>2019</year>;<volume>2</volume>(<issue>3</issue>):<fpage>4</fpage>. <ext-link xlink:href="https://arxiv.org/pdf/1809.10341" ext-link-type="uri">https://arxiv.org/pdf/1809.10341</ext-link>.</mixed-citation></ref><ref id="bib27"><label>27.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<string-name>
+<surname>Kipf</surname> &#x000a0;<given-names>TN</given-names></string-name>, <string-name><surname>Welling</surname> &#x000a0;<given-names>M</given-names></string-name></person-group>. <article-title>Variational graph auto-encoders</article-title>. <comment>arXiv preprint arXiv:1611.07308</comment> &#x000a0;<year>2016</year>. <ext-link xlink:href="https://arxiv.org/abs/1611.07308" ext-link-type="uri">https://arxiv.org/abs/1611.07308</ext-link>.</mixed-citation></ref><ref id="bib28"><label>28.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wang</surname> &#x000a0;<given-names>R</given-names></string-name>, <string-name><surname>Wu</surname> &#x000a0;<given-names>Z</given-names></string-name>, <string-name><surname>Weng</surname> &#x000a0;<given-names>Z</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Cross-domain contrastive learning for unsupervised domain adaptation</article-title>. <source>IEEE Trans Multimedia</source>. <year>2022</year>;<volume>25</volume>:<fpage>1665</fpage>&#x02013;<lpage>73</lpage>.. <pub-id pub-id-type="doi">10.1109/TMM.2022.3146744</pub-id>.</mixed-citation></ref><ref id="bib29"><label>29.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>You</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Chen</surname> &#x000a0;<given-names>T</given-names></string-name>, <string-name><surname>Sui</surname> &#x000a0;<given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Graph contrastive learning with augmentations</article-title>. <source>Adv Neural Inform Process Syst</source>. <year>2020</year>;<volume>33</volume>:<fpage>5812</fpage>&#x02013;<lpage>23</lpage>.. <ext-link xlink:href="https://proceedings.neurips.cc/paper_files/paper/2020/file/3fe230348e9a12c13120749e3f9fa4cd-Paper.pdf" ext-link-type="uri">https://proceedings.neurips.cc/paper_files/paper/2020/file/3fe230348e9a12c13120749e3f9fa4cd-Paper.pdf</ext-link>.</mixed-citation></ref><ref id="bib30"><label>30.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Xie</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>Zheng</surname> &#x000a0;<given-names>Z</given-names></string-name>, <string-name><surname>Chen</surname> &#x000a0;<given-names>L</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Learning semantic representations for unsupervised domain adaptation</article-title>. <source>International Conference on Machine Learning</source>. <publisher-name>PMLR</publisher-name>; <year>2018</year>:<fpage>5423</fpage>&#x02013;<lpage>32</lpage>.. <ext-link xlink:href="https://proceedings.mlr.press/v80/xie18c/xie18c.pdf" ext-link-type="uri">https://proceedings.mlr.press/v80/xie18c/xie18c.pdf</ext-link>.</mixed-citation></ref><ref id="bib31"><label>31.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Yue</surname> &#x000a0;<given-names>X</given-names></string-name>, <string-name><surname>Zheng</surname> &#x000a0;<given-names>Z</given-names></string-name>, <string-name><surname>Zhang</surname> &#x000a0;<given-names>S</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Prototypical cross-domain self-supervised learning for few-shot unsupervised domain adaptation</article-title>. <source>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</source>. <year>2021</year>:<fpage>13834</fpage>&#x02013;<lpage>44</lpage>.. <ext-link xlink:href="https://arxiv.org/pdf/2103.16765" ext-link-type="uri">https://arxiv.org/pdf/2103.16765</ext-link>.</mixed-citation></ref><ref id="bib32"><label>32.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Li</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Hu</surname> &#x000a0;<given-names>P</given-names></string-name>, <string-name><surname>Liu</surname> &#x000a0;<given-names>Z</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Contrastive clustering</article-title>. <source>Proceedings of the AAAI Conference on Artificial Intelligence</source>. <year>2021</year>:<fpage>8547</fpage>&#x02013;<lpage>55</lpage>.. <ext-link xlink:href="https://arxiv.org/pdf/2009.09687" ext-link-type="uri">https://arxiv.org/pdf/2009.09687</ext-link>.</mixed-citation></ref><ref id="bib33"><label>33.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Maynard</surname> &#x000a0;<given-names>KR</given-names></string-name>, <string-name><surname>Collado-Torres</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Weber</surname> &#x000a0;<given-names>LM</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex</article-title>. <source>Nat Neurosci</source>. <year>2021</year>;<volume>24</volume>(<issue>3</issue>):<fpage>425</fpage>&#x02013;<lpage>36</lpage>. <pub-id pub-id-type="doi">10.1038/s41593-020-00787-0</pub-id>.<pub-id pub-id-type="pmid">33558695</pub-id>
+</mixed-citation></ref><ref id="bib34"><label>34.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Hubert</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Arabie</surname> &#x000a0;<given-names>P</given-names></string-name></person-group>. <article-title>Comparing partitions</article-title>. <source>J Classification</source>. <year>1985</year>;<volume>2</volume>:<fpage>193</fpage>&#x02013;<lpage>218</lpage>. <pub-id pub-id-type="doi">10.1007/BF01908075</pub-id>.</mixed-citation></ref><ref id="bib35"><label>35.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wolf</surname> &#x000a0;<given-names>FA</given-names></string-name>, <string-name><surname>Hamey</surname> &#x000a0;<given-names>FK</given-names></string-name>, <string-name><surname>Plass</surname> &#x000a0;<given-names>M</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>PAGA: graph abstraction reconciles clustering with trajectory inference through a topology preserving map of single cells</article-title>. <source>Genome Biol</source>. <year>2019</year>;<volume>20</volume>:<fpage>1</fpage>&#x02013;<lpage>9</lpage>. <pub-id pub-id-type="doi">10.1186/s13059-019-1663-x</pub-id>.<pub-id pub-id-type="pmid">30606230</pub-id>
+</mixed-citation></ref><ref id="bib36"><label>36.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Gilmore</surname> &#x000a0;<given-names>EC</given-names></string-name>, <string-name><surname>Herrup</surname> &#x000a0;<given-names>K</given-names></string-name></person-group>. <article-title>Cortical development: layers of complexity</article-title>. <source>Curr Biol</source>. <year>1997</year>;<volume>7</volume>(<issue>4</issue>):<fpage>R231</fpage>&#x02013;<lpage>34</lpage>. <pub-id pub-id-type="doi">10.1016/S0960-9822(06)00108-4</pub-id>.<pub-id pub-id-type="pmid">9162498</pub-id>
+</mixed-citation></ref><ref id="bib37"><label>37.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zeng</surname> &#x000a0;<given-names>H</given-names></string-name>, <string-name><surname>Shen</surname> &#x000a0;<given-names>EH</given-names></string-name>, <string-name><surname>Hohmann</surname> &#x000a0;<given-names>JG</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Large-scale cellular-resolution gene profiling in human neocortex reveals species-specific molecular signatures</article-title>. <source>Cell</source>. <year>2012</year>;<volume>149</volume>(<issue>2</issue>):<fpage>483</fpage>&#x02013;<lpage>96</lpage>. <pub-id pub-id-type="doi">10.1016/j.cell.2012.02.052</pub-id>.<pub-id pub-id-type="pmid">22500809</pub-id>
+</mixed-citation></ref><ref id="bib38"><label>38.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wang</surname> &#x000a0;<given-names>I-H</given-names></string-name>, <string-name><surname>Murray</surname> &#x000a0;<given-names>E</given-names></string-name>, <string-name><surname>Andrews</surname> &#x000a0;<given-names>G</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Spatial transcriptomic reconstruction of the mouse olfactory glomerular map suggests principles of odor processing</article-title>. <source>Nat Neurosci</source>. <year>2022</year>;<volume>25</volume>(<issue>4</issue>):<fpage>484</fpage>&#x02013;<lpage>92</lpage>. <pub-id pub-id-type="doi">10.1038/s41593-022-01030-8</pub-id>.<pub-id pub-id-type="pmid">35314823</pub-id>
+</mixed-citation></ref><ref id="bib39"><label>39.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Cable</surname> &#x000a0;<given-names>DM</given-names></string-name>, <string-name><surname>Murray</surname> &#x000a0;<given-names>E</given-names></string-name>, <string-name><surname>Zou</surname> &#x000a0;<given-names>LS</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Robust decomposition of cell type mixtures in spatial transcriptomics</article-title>. <source>Nat Biotechnol</source>. <year>2022</year>;<volume>40</volume>(<issue>4</issue>):<fpage>517</fpage>&#x02013;<lpage>26</lpage>. <pub-id pub-id-type="doi">10.1038/s41587-021-00830-w</pub-id>.<pub-id pub-id-type="pmid">33603203</pub-id>
+</mixed-citation></ref><ref id="bib40"><label>40.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Stickels</surname> &#x000a0;<given-names>RR</given-names></string-name>, <string-name><surname>Murray</surname> &#x000a0;<given-names>E</given-names></string-name>, <string-name><surname>Kumar</surname> &#x000a0;<given-names>P</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Highly sensitive spatial transcriptomics at near-cellular resolution with Slide-seqV2</article-title>. <source>Nat Biotechnol</source>. <year>2021</year>;<volume>39</volume>(<issue>3</issue>):<fpage>313</fpage>&#x02013;<lpage>19</lpage>. <pub-id pub-id-type="doi">10.1038/s41587-020-0739-1</pub-id>.<pub-id pub-id-type="pmid">33288904</pub-id>
+</mixed-citation></ref><ref id="bib41"><label>41.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Sunkin</surname> &#x000a0;<given-names>SM</given-names></string-name>, <string-name><surname>Ng</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Lau</surname> &#x000a0;<given-names>C</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Allen Brain Atlas: an integrated spatio-temporal portal for exploring the central nervous system</article-title>. <source>Nucleic Acids Res</source>. <year>2013</year>;<volume>41</volume>(<issue>D1</issue>):<fpage>D996</fpage>&#x02013;<lpage>D1008</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gks1042</pub-id>.<pub-id pub-id-type="pmid">23193282</pub-id>
+</mixed-citation></ref><ref id="bib42"><label>42.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zeisel</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Hochgerner</surname> &#x000a0;<given-names>H</given-names></string-name>, <string-name><surname>L&#x000f6;nnerberg</surname> &#x000a0;<given-names>P</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Molecular architecture of the mouse nervous system</article-title>. <source>Cell</source>. <year>2018</year>;<volume>174</volume>(<issue>4</issue>):<fpage>999</fpage>&#x02013;<lpage>1014</lpage>. <comment>e1022. </comment><pub-id pub-id-type="doi">10.1016/j.cell.2018.06.021</pub-id>.<pub-id pub-id-type="pmid">30096314</pub-id>
+</mixed-citation></ref><ref id="bib43"><label>43.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Robertson</surname> &#x000a0;<given-names>SJ</given-names></string-name>, <string-name><surname>Edwards</surname> &#x000a0;<given-names>FA</given-names></string-name></person-group>. <article-title>ATP and glutamate are released from separate neurones in the rat medial habenula nucleus: frequency dependence and adenosine-mediated inhibition of release</article-title>. <source>J Physiol</source>. <year>1998</year>;<volume>508</volume>(<issue>Pt 3</issue>):<fpage>691</fpage>. <pub-id pub-id-type="doi">10.1111/j.1469-7793.1998.691bp.x</pub-id>.<pub-id pub-id-type="pmid">9518726</pub-id>
+</mixed-citation></ref><ref id="bib44"><label>44.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>La&#x000a0;Manno</surname> &#x000a0;<given-names>G</given-names></string-name>, <string-name><surname>Siletti</surname> &#x000a0;<given-names>K</given-names></string-name>, <string-name><surname>Furlan</surname> &#x000a0;<given-names>A</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Molecular architecture of the developing mouse brain</article-title>. <source>Nature</source>. <year>2021</year>;<volume>596</volume>(<issue>7870</issue>):<fpage>92</fpage>&#x02013;<lpage>96</lpage>. <pub-id pub-id-type="doi">10.1038/s41586-021-03775-x</pub-id>.<pub-id pub-id-type="pmid">34321664</pub-id>
+</mixed-citation></ref><ref id="bib45"><label>45.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Yokota</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Mori</surname> &#x000a0;<given-names>S</given-names></string-name></person-group>. <article-title>Role of Id family proteins in growth control</article-title>. <source>J Cell Physiol</source>. <year>2002</year>;<volume>190</volume>(<issue>1</issue>):<fpage>21</fpage>&#x02013;<lpage>28</lpage>. <pub-id pub-id-type="doi">10.1002/jcp.10042</pub-id>.<pub-id pub-id-type="pmid">11807807</pub-id>
+</mixed-citation></ref><ref id="bib46"><label>46.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lyden</surname> &#x000a0;<given-names>D</given-names></string-name>, <string-name><surname>Young</surname> &#x000a0;<given-names>AZ</given-names></string-name>, <string-name><surname>Zagzag</surname> &#x000a0;<given-names>D</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Id1 and Id3 are required for neurogenesis, angiogenesis and vascularization of tumour xenografts</article-title>. <source>Nature</source>. <year>1999</year>;<volume>401</volume>(<issue>6754</issue>):<fpage>670</fpage>&#x02013;<lpage>77</lpage>. <pub-id pub-id-type="doi">10.1038/44334</pub-id>.<pub-id pub-id-type="pmid">10537105</pub-id>
+</mixed-citation></ref><ref id="bib47"><label>47.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Sudhof</surname> &#x000a0;<given-names>TC</given-names></string-name>
+</person-group>. <article-title>Neuroligins and neurexins link synaptic function to cognitive disease</article-title>. <source>Nature</source>. <year>2008</year>;<volume>455</volume>(<issue>7215</issue>):<fpage>903</fpage>&#x02013;<lpage>11</lpage>. <pub-id pub-id-type="doi">10.1038/nature07456</pub-id>.<pub-id pub-id-type="pmid">18923512</pub-id>
+</mixed-citation></ref><ref id="bib48"><label>48.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Mei</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Nave</surname> &#x000a0;<given-names>KA</given-names></string-name></person-group>. <article-title>Neuregulin-ERBB signaling in the nervous system and neuropsychiatric diseases</article-title>. <source>Neuron</source>. <year>2014</year>;<volume>83</volume>(<issue>1</issue>):<fpage>27</fpage>&#x02013;<lpage>49</lpage>. <pub-id pub-id-type="doi">10.1016/j.neuron.2014.06.007</pub-id>.<pub-id pub-id-type="pmid">24991953</pub-id>
+</mixed-citation></ref><ref id="bib49"><label>49.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Jun</surname> &#x000a0;<given-names>H</given-names></string-name>, <string-name><surname>Mohammed&#x000a0;Qasim&#x000a0;Hussaini</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>Rigby</surname> &#x000a0;<given-names>MJ</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Functional role of adult hippocampal neurogenesis as a therapeutic strategy for mental disorders</article-title>. <source>Neural Plast</source>. <year>2012</year>;<volume>2012</volume>:<fpage>854285</fpage>. <pub-id pub-id-type="doi">10.1155/2012/854285</pub-id>.<pub-id pub-id-type="pmid">23346419</pub-id>
+</mixed-citation></ref><ref id="bib50"><label>50.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Guillemot</surname> &#x000a0;<given-names>F</given-names></string-name>, <string-name><surname>Zimmer</surname> &#x000a0;<given-names>C</given-names></string-name></person-group>. <article-title>From cradle to grave: the multiple roles of fibroblast growth factors in neural development</article-title>. <source>Neuron</source>. <year>2011</year>;<volume>71</volume>(<issue>4</issue>):<fpage>574</fpage>&#x02013;<lpage>88</lpage>. <pub-id pub-id-type="doi">10.1016/j.neuron.2011.08.002</pub-id>.<pub-id pub-id-type="pmid">21867876</pub-id>
+</mixed-citation></ref><ref id="bib51"><label>51.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Kriegstein</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Alvarez-Buylla</surname> &#x000a0;<given-names>A</given-names></string-name></person-group>. <article-title>The glial nature of embryonic and adult neural stem cells</article-title>. <source>Annu Rev Neurosci</source>. <year>2009</year>;<volume>32</volume>:<fpage>149</fpage>&#x02013;<lpage>84</lpage>. <pub-id pub-id-type="doi">10.1146/annurev.neuro.051508.135600</pub-id>.<pub-id pub-id-type="pmid">19555289</pub-id>
+</mixed-citation></ref><ref id="bib52"><label>52.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Hatten</surname> &#x000a0;<given-names>ME</given-names></string-name>, <string-name><surname>Heintz</surname> &#x000a0;<given-names>N.</given-names></string-name></person-group> &#x000a0;<article-title>Mechanisms of neural patterning and specification in the developing cerebellum</article-title>. <source>Annu Rev Neurosci</source>. <year>1995</year>;<volume>18</volume>:<fpage>385</fpage>&#x02013;<lpage>408</lpage>. <pub-id pub-id-type="doi">10.1146/annurev.ne.18.030195.002125</pub-id>.<pub-id pub-id-type="pmid">7605067</pub-id>
+</mixed-citation></ref><ref id="bib53"><label>53.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Rakic</surname> &#x000a0;<given-names>P.</given-names></string-name>
+</person-group> &#x000a0;<article-title>Evolution of the neocortex: a perspective from developmental biology</article-title>. <source>Nat Rev Neurosci</source>. <year>2009</year>;<volume>10</volume>(<issue>10</issue>):<fpage>724</fpage>&#x02013;<lpage>35</lpage>. <pub-id pub-id-type="doi">10.1038/nrn2719</pub-id>.<pub-id pub-id-type="pmid">19763105</pub-id>
+</mixed-citation></ref><ref id="bib54"><label>54.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lange</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Bergen</surname> &#x000a0;<given-names>V</given-names></string-name>, <string-name><surname>Klein</surname> &#x000a0;<given-names>M</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>CellRank for directed single-cell fate mapping</article-title>. <source>Nat Methods</source>. <year>2022</year>;<volume>19</volume>(<issue>2</issue>):<fpage>159</fpage>&#x02013;<lpage>70</lpage>. <pub-id pub-id-type="doi">10.1038/s41592-021-01346-6</pub-id>.<pub-id pub-id-type="pmid">35027767</pub-id>
+</mixed-citation></ref><ref id="bib55"><label>55.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Qiu</surname> &#x000a0;<given-names>C</given-names></string-name>, <string-name><surname>Cao</surname> &#x000a0;<given-names>J</given-names></string-name>, <string-name><surname>Martin</surname> &#x000a0;<given-names>BK</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Systematic reconstruction of cellular trajectories across mouse embryogenesis</article-title>. <source>Nat Genet</source>. <year>2022</year>;<volume>54</volume>(<issue>3</issue>):<fpage>328</fpage>&#x02013;<lpage>41</lpage>. <pub-id pub-id-type="doi">10.1038/s41588-022-01018-x</pub-id>.<pub-id pub-id-type="pmid">35288709</pub-id>
+</mixed-citation></ref><ref id="bib56"><label>56.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Vayer</surname> &#x000a0;<given-names>T</given-names></string-name>, <string-name><surname>Chapel</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Flamary</surname> &#x000a0;<given-names>R</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Fused Gromov-Wasserstein distance for structured objects</article-title>. <source>Algorithms</source>. <year>2020</year>;<volume>13</volume>(<issue>9</issue>):<fpage>212</fpage>. <pub-id pub-id-type="doi">10.3390/a13090212</pub-id>.</mixed-citation></ref><ref id="bib57"><label>57.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Peterson</surname> &#x000a0;<given-names>VM</given-names></string-name>, <string-name><surname>Zhang</surname> &#x000a0;<given-names>KX</given-names></string-name>, <string-name><surname>Kumar</surname> &#x000a0;<given-names>N</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Multiplexed quantification of proteins and transcripts in single cells</article-title>. <source>Nat Biotechnol</source>. <year>2017</year>;<volume>35</volume>(<issue>10</issue>):<fpage>936</fpage>&#x02013;<lpage>39</lpage>. <pub-id pub-id-type="doi">10.1038/nbt.3973</pub-id>.<pub-id pub-id-type="pmid">28854175</pub-id>
+</mixed-citation></ref><ref id="bib58"><label>58.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Maynard</surname> &#x000a0;<given-names>KR</given-names></string-name>, <string-name><surname>Collado-Torres</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Weber</surname> &#x000a0;<given-names>LM</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex</article-title>. <source>Nat Neurosci</source>. <year>2021</year>;<volume>24</volume>:<fpage>425</fpage>&#x02013;<lpage>36</lpage>. <pub-id pub-id-type="doi">10.1038/s41593-020-00787-0</pub-id>.<pub-id pub-id-type="pmid">33558695</pub-id>
+</mixed-citation></ref><ref id="bib63"><label>59.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wu</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Yan</surname> &#x000a0;<given-names>J</given-names></string-name>, <string-name><surname>Bai</surname> &#x000a0;<given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>An invasive zone in human liver cancer identified by Stereo-seq promotes hepatocyte&#x02013;tumor cell crosstalk, local immunosuppression and tumor progression</article-title>. <source>Cell Res</source>. <year>2023</year>;<volume>33</volume>:<fpage>585</fpage>&#x02013;<lpage>603</lpage>. <pub-id pub-id-type="doi">10.1038/s41422-023-00831-1</pub-id>.<pub-id pub-id-type="pmid">37337030</pub-id>
+</mixed-citation></ref><ref id="bib64"><label>60.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Allen</surname> &#x000a0;<given-names>WE</given-names></string-name>, <string-name><surname>Blosser</surname> &#x000a0;<given-names>TR</given-names></string-name>, <string-name><surname>Sullivan</surname> &#x000a0;<given-names>ZA</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Molecular and spatial signatures of mouse brain aging at single-cell resolution</article-title>. <source>Cell</source>. <year>2023</year>;<volume>186</volume>(<issue>1</issue>):<fpage>194</fpage>&#x02013;<lpage>208</lpage>. <comment>e18. </comment><pub-id pub-id-type="doi">10.1016/j.cell.2022.12.010</pub-id>.<pub-id pub-id-type="pmid">36580914</pub-id>
+</mixed-citation></ref><ref id="bib59"><label>61.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Ioffe</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>Szegedy</surname> &#x000a0;<given-names>C.</given-names></string-name></person-group> &#x000a0;<article-title>Batch normalization: accelerating deep network training by reducing internal covariate shift</article-title>. <source>International Conference on Machine Learning</source>.<publisher-name>PMLR</publisher-name>,<year>2015</year>:<fpage>448</fpage>&#x02013;<lpage>56</lpage>.. <ext-link xlink:href="https://arxiv.org/pdf/1502.03167" ext-link-type="uri">https://arxiv.org/pdf/1502.03167</ext-link>.</mixed-citation></ref><ref id="bib60"><label>62.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Chang</surname> &#x000a0;<given-names>W-G</given-names></string-name>, <string-name><surname>You</surname> &#x000a0;<given-names>T</given-names></string-name>, <string-name><surname>Seo</surname> &#x000a0;<given-names>S</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Domain-specific batch normalization for unsupervised domain adaptation</article-title>. <source>Proceedings of the IEEE/CVF conference on Computer Vision and Pattern Recognition</source>.<year>2019</year>:<fpage>7354</fpage>&#x02013;<lpage>62</lpage>.. <ext-link xlink:href="https://arxiv.org/pdf/1906.03950" ext-link-type="uri">https://arxiv.org/pdf/1906.03950</ext-link>.</mixed-citation></ref><ref id="bib61"><label>63.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Bousmalis</surname> &#x000a0;<given-names>K</given-names></string-name>, <string-name><surname>Trigeorgis</surname> &#x000a0;<given-names>G</given-names></string-name>, <string-name><surname>Silberman</surname> &#x000a0;<given-names>N</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Domain separation networks</article-title>. <source>Adv Neural Inform Process Syst</source>. <year>2016</year>;<fpage>29</fpage>. <ext-link xlink:href="https://proceedings.neurips.cc/paper_files/paper/2016/file/45fbc6d3e05ebd93369ce542e8f2322d-Paper.pdf" ext-link-type="uri">https://proceedings.neurips.cc/paper_files/paper/2016/file/45fbc6d3e05ebd93369ce542e8f2322d-Paper.pdf</ext-link>.</mixed-citation></ref><ref id="bib62"><label>64.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Kim</surname> &#x000a0;<given-names>K-Y</given-names></string-name>, <string-name><surname>Kim</surname> &#x000a0;<given-names>SH</given-names></string-name>, <string-name><surname>Ki</surname> &#x000a0;<given-names>DH</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>An attempt for combining microarray data sets by adjusting gene expressions</article-title>. <source>Cancer Res Treat</source>. <year>2007</year>;<volume>39</volume>(<issue>2</issue>):<fpage>74</fpage>&#x02013;<lpage>81</lpage>. <pub-id pub-id-type="doi">10.4143/crt.2007.39.2.74</pub-id>.<pub-id pub-id-type="pmid">19746210</pub-id>
+</mixed-citation></ref><ref id="bib70"><label>65.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<collab>10X Genomics</collab>
+</person-group>, <comment>Adult Mouse Olfactory Bulb</comment>, <year>2022</year>. <ext-link xlink:href="https://www.10xgenomics.com/datasets/adult-mouse-olfactory-bulb-1-standard" ext-link-type="uri">https://www.10xgenomics.com/datasets/adult-mouse-olfactory-bulb-1-standard</ext-link>.</mixed-citation></ref><ref id="bib65"><label>66.</label><mixed-citation publication-type="data">
+<person-group person-group-type="curator">
+<string-name>
+<surname>Long</surname> &#x000a0;<given-names>Y</given-names></string-name>
+</person-group>. <data-title>DeepST: a versatile graph contrastive learning framework for spatially informed clustering, integration and deconvolution of spatial transcriptomics (Version 1) [Data set]</data-title>. <source>Zenodo</source>.<year>2022</year>. <pub-id pub-id-type="doi">10.5281/zenodo.6925603</pub-id>.</mixed-citation></ref><ref id="bib71"><label>67.</label><mixed-citation publication-type="data">
+<person-group person-group-type="curator">
+<string-name>
+<surname>Zhang</surname> &#x000a0;<given-names>C</given-names></string-name>, <string-name><surname>Liu</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Zhang</surname> &#x000a0;<given-names>Y</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group>, <data-title>spatiAlign: an unsupervised contrastive learning model for data integration of spatially resolved transcriptomics (Version 1) [Data set]</data-title>. <source>Zenodo</source>. <year>2024</year>. <pub-id pub-id-type="doi">10.5281/zenodo.10453192</pub-id>.</mixed-citation></ref><ref id="bib72"><label>68.</label><mixed-citation publication-type="data">
+<person-group person-group-type="curator">
+<string-name>
+<surname>Zhang</surname> &#x000a0;<given-names>C</given-names></string-name>, <string-name><surname>Liu</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Zhang</surname> &#x000a0;<given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<data-title>Supporting data for &#x0201c;spatiAlign: An Unsupervised Contrastive Learning Model for Data Integration of Spatially Resolved Transcriptomics.&#x0201d;</data-title>. <source>GigaScience Database</source>. <year>2024</year>. <pub-id pub-id-type="doi">10.5524/102533</pub-id>.</mixed-citation></ref></ref-list></back></article>

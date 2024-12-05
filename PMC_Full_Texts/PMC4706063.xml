@@ -1,0 +1,767 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?subarticle report19459?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Publishing DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName journalpublishing3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">F1000Res</journal-id><journal-id journal-id-type="iso-abbrev">F1000Res</journal-id><journal-id journal-id-type="pmc">F1000Research</journal-id><journal-title-group><journal-title>F1000Research</journal-title></journal-title-group><issn pub-type="epub">2046-1402</issn><publisher><publisher-name>F1000Research</publisher-name><publisher-loc>London, UK</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">4706063</article-id><article-id pub-id-type="doi">10.12688/f1000research.7217.3</article-id><article-categories><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group><subj-group><subject>Articles</subject><subj-group><subject>Drug Discovery &#x00026; Design</subject></subj-group><subj-group><subject>Small Molecule Chemistry</subject></subj-group><subj-group><subject>Viral Infections (without HIV)</subject></subj-group><subj-group><subject>Virology</subject></subj-group></subj-group></article-categories><title-group><article-title>Machine learning models identify molecules active against the Ebola virus
+<italic>in vitro</italic>
+</article-title><fn-group content-type="pub-status"><fn><p>[version 3; referees: 2 approved]</p></fn></fn-group></title-group><contrib-group><contrib contrib-type="author"><name><surname>Ekins</surname><given-names>Sean</given-names></name><xref ref-type="corresp" rid="c1">a</xref><xref ref-type="aff" rid="a1">1</xref><xref ref-type="aff" rid="a2">2</xref><xref ref-type="aff" rid="a3">3</xref></contrib><contrib contrib-type="author"><name><surname>Freundlich</surname><given-names>Joel S.</given-names></name><xref ref-type="aff" rid="a4">4</xref></contrib><contrib contrib-type="author"><name><surname>Clark</surname><given-names>Alex M.</given-names></name><xref ref-type="aff" rid="a5">5</xref></contrib><contrib contrib-type="author"><name><surname>Anantpadma</surname><given-names>Manu</given-names></name><xref ref-type="aff" rid="a6">6</xref></contrib><contrib contrib-type="author"><name><surname>Davey</surname><given-names>Robert A.</given-names></name><xref ref-type="aff" rid="a6">6</xref></contrib><contrib contrib-type="author"><name><surname>Madrid</surname><given-names>Peter</given-names></name><xref ref-type="aff" rid="a7">7</xref></contrib><aff id="a1">
+<label>1</label>Collaborations in Chemistry, Fuquay-Varina, NC, 27526, USA</aff><aff id="a2">
+<label>2</label>Collaborations Pharmaceuticals Inc, Fuquay-Varina, NC, 27526, USA</aff><aff id="a3">
+<label>3</label>Collaborative Drug Discovery, Burlingame, CA, 94010, USA</aff><aff id="a4">
+<label>4</label>Departments of Pharmacology &#x00026; Physiology and Medicine, Center for Emerging and Reemerging Pathogens, UMDNJ, New Jersey Medical School, Newark, NJ, 07103, USA</aff><aff id="a5">
+<label>5</label>Molecular Materials Informatics, Inc., Montreal, 94025, Canada</aff><aff id="a6">
+<label>6</label>Texas Biomedical Research Institute, San Antonio, TX, 78227, USA</aff><aff id="a7">
+<label>7</label>SRI International, Menlo Park, CA, 94025, USA</aff></contrib-group><author-notes><corresp id="c1"><label>a</label><email xlink:href="mailto:ekinssean@yahoo.com">ekinssean@yahoo.com</email></corresp><fn fn-type="con"><p>Conceived and designed the experiments: S.E., M.A., R.A.D., P.B.M</p><p>Performed the experiments: S.E., M.A., R.A.D., P.B.M</p><p>Analyzed the data: S.E., J.S.F., M.A., R.A.D., P.B.M</p><p>Contributed reagents/materials/analysis tools: S.E., A.M.C., M.A., R.A.D., P.B.M</p><p>Wrote the manuscript: S.E., J.S.F., A.M.C., M.A., R.A.D., P.B.M</p><p>All authors have seen and agreed to the final content of the manuscript.</p></fn><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>S.E. works for Collaborations in Chemistry, and Collaborations Pharmaceuticals, Inc. and S.E. and A.M.C. consult for Collaborative Drug Discovery Inc.</p></fn></author-notes><pub-date pub-type="epub"><day>17</day><month>1</month><year>2017</year></pub-date><pub-date pub-type="collection"><year>2015</year></pub-date><volume>4</volume><elocation-id>1091</elocation-id><history><date date-type="accepted"><day>17</day><month>1</month><year>2017</year></date></history><permissions><copyright-statement>Copyright: &#x000a9; 2017 Ekins S et al.</copyright-statement><copyright-year>2017</copyright-year><license xlink:href="http://creativecommons.org/licenses/by/4.0/"><license-p>This is an open access article distributed under the terms of the Creative Commons Attribution Licence, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="f1000research-4-11510.pdf"/><abstract><p>The search for small molecule inhibitors of Ebola virus (EBOV) has led to several high throughput screens over the past 3 years. These have identified a range of FDA-approved active pharmaceutical ingredients (APIs) with anti-EBOV activity
+<italic>in vitro</italic> and several of which are also active in a mouse infection model. There are millions of additional commercially-available molecules that could be screened for potential activities as anti-EBOV compounds. One way to prioritize compounds for testing is to generate computational models based on the high throughput screening data and then virtually screen compound libraries. In the current study, we have generated Bayesian machine learning models with viral pseudotype entry assay and the EBOV replication assay data. We have validated the models internally and externally. We have also used these models to computationally score the MicroSource library of drugs to select those likely to be potential inhibitors. Three of the highest scoring molecules that were not in the model training sets, quinacrine, pyronaridine and tilorone, were tested
+<italic>in vitro</italic> and had EC
+<sub>50</sub> values of 350, 420 and 230 nM, respectively. Pyronaridine is a component of a combination therapy for malaria that was recently approved by the European Medicines Agency, which may make it more readily accessible for clinical testing. Like other known antimalarial drugs active against EBOV, it shares the 4-aminoquinoline scaffold. Tilorone, is an investigational antiviral agent that has shown a broad array of biological activities including cell growth inhibition in cancer cells, antifibrotic properties, &#x003b1;7 nicotinic receptor agonist activity, radioprotective activity and activation of hypoxia inducible factor-1. Quinacrine is an antimalarial but also has use as an anthelmintic. Our results suggest data sets with less than 1,000 molecules can produce validated machine learning models that can in turn be utilized to identify novel EBOV inhibitors
+<italic>in vitro</italic>.</p></abstract><kwd-group kwd-group-type="author"><kwd>Drug repurposing</kwd><kwd>Ebola Virus</kwd><kwd>Computational models</kwd><kwd>Machine learning</kwd><kwd>Pharmacophore</kwd><kwd>Pyronaridine</kwd><kwd>Quinacrine</kwd><kwd>Tilorone</kwd></kwd-group><funding-group><funding-statement>The author(s) declared that no grants were involved in supporting this work.</funding-statement></funding-group></article-meta><notes><sec sec-type="version-changes"><label>Revised</label><title>Amendments from Version 2</title><p>It has been brought to our attention that there was an error in the pyronaridine 2D structure drawing in Table 3 (missing a nitrogen from bottom right ring). This has now been corrected.</p></sec></notes></front><body><sec sec-type="intro"><title>Introduction</title><p>In 2014, the outbreak of the Ebola virus (EBOV) in West Africa highlighted the need for broad-spectrum antiviral drugs for this and other emerging viruses
+<sup><xref rid="ref-1" ref-type="bibr">1</xref></sup>. Several groups had previously performed high throughput screens (HTS) and identified FDA approved drugs (amodiaquine, chloroquine, clomiphene and toremifene) with
+<italic>in vitro</italic> growth inhibitory activities against EBOV
+<sup><xref rid="ref-2" ref-type="bibr">2</xref>,
+<xref rid="ref-3" ref-type="bibr">3</xref></sup>. It appears none of these molecules were tried during the epidemic in Africa
+<sup><xref rid="ref-4" ref-type="bibr">4</xref></sup>, likely due to the lack of efficacy data in higher order species. We have previously summarized the numerous small molecules described in the literature as possessing antiviral activity that could be further evaluated for their potential EBOV activity alongside the few new antivirals. We have found that there is considerable prior knowledge regarding these small molecules possessing activity against EBOV
+<italic>in vitro</italic> or in animal models
+<sup><xref rid="ref-5" ref-type="bibr">5</xref>&#x02013;
+<xref rid="ref-8" ref-type="bibr">8</xref></sup>, and this includes a number of accessible FDA-approved drugs
+<sup><xref rid="ref-2" ref-type="bibr">2</xref>,
+<xref rid="ref-3" ref-type="bibr">3</xref>,
+<xref rid="ref-9" ref-type="bibr">9</xref></sup>. Another recent study has shown three approved ion channel blockers (amiodarone, dronedarone, and verapamil) inhibited EBOV cellular entry
+<sup><xref rid="ref-9" ref-type="bibr">9</xref></sup>. The drugs were given at concentrations that would be achieved in human serum, and were effective against several of the filoviruses
+<sup><xref rid="ref-9" ref-type="bibr">9</xref></sup>. None of the FDA approved drugs described in these various studies were designed to target the Ebola virus. For example amodiaquine and chloroquine are well known antimalarials, clomiphene and toremifene are selective estrogen receptor modulators, while amiodarone, dronedarone, and verapamil are anti-arrhythmics
+<sup><xref rid="ref-4" ref-type="bibr">4</xref></sup>. It may or may not be of importance but all of these compounds have a common tertiary amine feature
+<sup><xref rid="ref-10" ref-type="bibr">10</xref>,
+<xref rid="ref-11" ref-type="bibr">11</xref></sup>. What is important is that they are all orally bioavailable and generally safe for humans at their approved doses. Some have suggested that G-protein-coupled receptors (GPCRs) may play a role in filoviral entry and receptor antagonists could be developed as anti-EBOV therapies
+<sup><xref rid="ref-12" ref-type="bibr">12</xref></sup>. The compounds which are FDA-approved drugs for other diseases
+<sup><xref rid="ref-2" ref-type="bibr">2</xref>,
+<xref rid="ref-3" ref-type="bibr">3</xref>,
+<xref rid="ref-9" ref-type="bibr">9</xref></sup> but with activity against EBOV
+<italic>in vitro</italic> or
+<italic>in vivo</italic> may represent useful starting points with the advantage that much is known regarding their absorption, distribution, metabolism and excretion (ADME) and toxicity properties. Thus, these repurposed drugs may represent a more advanced starting point for therapeutic development and approval compared with new chemical entities for preventing the spread and mortality associated with EBOV.</p><p>Beyond these early stage drugs, there are a number of other compounds that have also been identified as active against EBOV (summarized in a review
+<sup><xref rid="ref-13" ref-type="bibr">13</xref></sup>). A thorough literature search identified 55 molecules suggested to have activity against EBOV
+<italic>in vitro</italic> and/or
+<italic>in vivo</italic> which were evaluated from the perspective of an experienced medicinal chemist as well as using simple molecular properties and ultimately 16 were highlighted as desirable
+<sup><xref rid="ref-14" ref-type="bibr">14</xref></sup>. This dataset overlaps to some extent with another review that identified over 60 molecules
+<sup><xref rid="ref-15" ref-type="bibr">15</xref></sup>. Two recent repurposing screens identified 53
+<sup><xref rid="ref-16" ref-type="bibr">16</xref></sup> and 80
+<sup><xref rid="ref-17" ref-type="bibr">17</xref></sup> compounds with antiviral activity which also overlap the earlier screens. Additional studies have identified small number of inhibitors
+<sup><xref rid="ref-18" ref-type="bibr">18</xref>,
+<xref rid="ref-19" ref-type="bibr">19</xref></sup>. In total there may now be close to several hundred compounds identified with activity against EBOV
+<italic>in vitro</italic>.</p><p>Approaches with more capacity to screen compounds include using computational methods as a filter before
+<italic>in vitro</italic> testing. Computational models for anti-EBOV activity include one which used the average quasi valence number (AQVN) and the electron-ion interaction potential (EIIP), parameters determining long-range interaction between biological molecules for virtual screening of DrugBank and suggested hundreds of compounds to test
+<sup><xref rid="ref-20" ref-type="bibr">20</xref></sup>. A follow up to this study proposed ibuprofen for testing
+<sup><xref rid="ref-21" ref-type="bibr">21</xref></sup>. Others have also used computational docking studies to propose multi-target inhibitors of VP40, VP35, VP30 and VP24
+<sup><xref rid="ref-22" ref-type="bibr">22</xref></sup>, inhibitors of VP40
+<sup><xref rid="ref-23" ref-type="bibr">23</xref></sup> or have suggested molecules to test in the absence of computational approaches
+<sup><xref rid="ref-24" ref-type="bibr">24</xref>,
+<xref rid="ref-25" ref-type="bibr">25</xref></sup>. We are unaware of any validation of these compounds. A further computational approach used a pharmacophore
+<sup><xref rid="ref-26" ref-type="bibr">26</xref></sup> that was generated from four FDA approved compounds resulting from the two earliest high throughput screens against EBOV
+<sup><xref rid="ref-2" ref-type="bibr">2</xref>,
+<xref rid="ref-3" ref-type="bibr">3</xref></sup>. This pharmacophore closely matched the receptor-ligand pharmacophores for the EBOV protein 35 (VP35)
+<sup><xref rid="ref-5" ref-type="bibr">5</xref></sup>. Follow-up docking studies suggested that these compounds may also have favorable inhibitory interactions with this receptor. The pharmacophore was further used to screen several compound libraries
+<sup><xref rid="ref-27" ref-type="bibr">27</xref></sup>. We proposed that if we could learn from the many compounds already screened for anti-EBOV activity, we could more efficiently find additional compounds and perhaps understand the key molecular features needed for antiviral activity
+<sup><xref rid="ref-14" ref-type="bibr">14</xref></sup>. We speculated then that Laplacian-corrected Na&#x000ef;ve Bayesian classifier models might be useful as they have been for
+<italic>M. tuberculosis</italic>
+<sup><xref rid="ref-28" ref-type="bibr">28</xref>,
+<xref rid="ref-29" ref-type="bibr">29</xref></sup> and more recently for
+<italic>T. cruzi</italic>
+<sup><xref rid="ref-30" ref-type="bibr">30</xref></sup>. To our knowledge machine learning approaches to identify EBOV inhibitors have not been attempted elsewhere. The current study extends the machine learning approach to EBOV and uses both commercially available Bayesian, Support Vector Machines (SVM) and recursive partitioning methods and open source Bayesian software for model generation and compound scoring. We report the identification of three novel EBOV inhibitors with nanomolar EC
+<sub>50</sub> values as validation of this approach.</p></sec><sec sec-type="methods"><title>Methods</title><sec><title>Chemicals and materials</title><p>Quinacrine hydrochloride, pyronaridine tetraphosphate, and tilorone dihydrochloride (BOC Sciences, Shirley, NY), bafilomycin A1, and chloroquine diphosphate (Sigma, St. Louis, MO) were dissolved in either DMSO or water as 10 mM stock solutions and were stored at -20&#x000b0;C. The nucleus staining dye, Hoechst 33342, CellMask Deep&#x02122; Red cytoplasmic/nuclear stain, NHS-Alexa-488 dye, the Dual-Glo&#x000ae; Luciferase Assay System and CytoTox 96&#x02122; assay kit were purchased from Promega (Promega, Madison, WI). The modified MTT assay Cell Counting Kit 8 was procured from Dojindo Molecular Technologies (Dojindo Molecular Technologies, Gaithersburg, MD). The 96-well high-content imaging plates were obtained from BD (BD Biosciences, Franklin Lakes, NJ) and 96-well white-walled tissue culture plates were from Corning (Corning Life Sciences, MA). The Opera QEHS confocal imaging reader, Acapella&#x02122; and Definiens&#x02122; image analysis packages were purchased from PerkinElmer (PerkinElmer, USA). Image acquisition was done using Nikon TI eclipse high content imaging enabled microscope running NIS elements high content imaging software (version 4.30.02).</p></sec><sec><title>Machine learning</title><p>868 molecules from the viral pseudotype entry assay and the EBOV replication assay from a recent publication
+<sup><xref rid="ref-3" ref-type="bibr">3</xref>,
+<xref rid="ref-31" ref-type="bibr">31</xref></sup> were made available as an sdf file
+<sup><xref rid="ref-3" ref-type="bibr">3</xref></sup>. Salts were stripped and duplicates removed using Discovery Studio 4.1 (Biovia, San Diego, CA)
+<sup><xref rid="ref-32" ref-type="bibr">32</xref>&#x02013;
+<xref rid="ref-36" ref-type="bibr">36</xref></sup>. For each assay, compounds with IC
+<sub>50</sub> values less than 50 &#x003bc;M were selected as actives. All other compounds were classed as inactives. Models were generated using a standard protocol with the following molecular descriptors: molecular function class fingerprints of maximum diameter 6 (FCFP_6)
+<sup><xref rid="ref-37" ref-type="bibr">37</xref></sup>, AlogP
+<sup><xref rid="ref-37a" ref-type="bibr">37a</xref></sup>, molecular weight, number of rotatable bonds, number of rings, number of aromatic rings, number of hydrogen bond acceptors, number of hydrogen bond donors, and molecular fractional polar surface area. Models were validated using five-fold cross validation (leave out 20% of the database). Bayesian, Support Vector Machine and Recursive Partitioning Forest and single tree models built with the same molecular descriptors in Discovery Studio were compared. For SVM models, we calculated interpretable descriptors in Discovery Studio and then used Pipeline Pilot to generate the FCFP_6 descriptors followed by integration with R
+<sup><xref rid="ref-38" ref-type="bibr">38</xref></sup>. RP Forest and RP Single Tree models used the standard protocol in Discovery Studio. In the case of RP Forest models, ten trees were created with bagging. Bagging is short for &#x0201c;Bootstrap AGgregation&#x0201d;. For each tree, a bootstrap sample of the original data is taken, and this sample is used to grow the tree. RP Single Trees had a minimum of ten samples per node and a maximum tree depth of 20. In all cases, 5-fold cross validation or leave out 50% &#x000d7; 100 fold cross validation was used to calculate the Receiver Operator Curve (ROC) for the models generated
+<sup><xref rid="ref-28" ref-type="bibr">28</xref>,
+<xref rid="ref-29" ref-type="bibr">29</xref></sup>.</p></sec><sec><title>Open Bayesian models</title><p>Open Bayesian models for the Ebola datasets were developed using open source software
+<sup><xref rid="ref-39" ref-type="bibr">39</xref>&#x02013;
+<xref rid="ref-41" ref-type="bibr">41</xref></sup> and loaded into the Mobile Molecular Data Sheet (MMDS (
+<ext-link ext-link-type="uri" xlink:href="http://molmatinf.com/">http://molmatinf.com/</ext-link>)) and then the two models were used to score the three compounds selected by the earlier models. These two models are also openly accessible (
+<ext-link ext-link-type="uri" xlink:href="http://molsync.com/ebola/">http://molsync.com/ebola/</ext-link>) and can be uploaded into MMDS in order to score molecules of interest.</p></sec><sec><title>Pharmacophore mapping</title><p>Pyronaridine was mapped to the recently published pharmacophore
+<sup><xref rid="ref-26" ref-type="bibr">26</xref></sup> derived from Ebola
+<italic>in vitro</italic> inhibitors amodiaquine, chloroquine, clomiphene and toremifene in Discovery Studio Vers 4.1 and a fit score was generated.</p></sec><sec><title>
+<italic>In vitro</italic> testing</title><p>Recombinant, infectious Ebola virus encoding green fluorescent protein (GFP) was used for testing efficacy of compounds and was originally provided by Dr. Heinz Feldmann, Rocky Mountain Laboratories. The strain that was used has the GFP gene inserted between the VP30 and VP24 genes. All viral infections were done in the BSL-4 lab at Texas Biomedical Research Institute. Briefly, 4,000 HeLa cells per well were grown overnight in 384-well tissue culture plates, the volume of DMEM (Fisher scientific, Cat#MT10017CV) culture medium supplemented with 10% fetal bovine serum (Gemini Bio-Products, Cat#100106) was 25 &#x000b5;L. On the day of assay, test drugs were diluted to 1 mM concentration in complete medium. 25 &#x000b5;L of this mixture was added to the cells already containing 25 &#x000b5;L medium to achieve a concentration of 500 &#x000b5;M. All treatments were done in triplicates. 25 &#x000b5;L of medium was removed from the first wells and added to the next well. This type of serial dilution was done 12 times and treated cells were then incubated at 37&#x000b0;C in a humidified CO
+<sub>2</sub> incubator for 1 hour. Final concentrations of 250, 125, 62.5, 31.25, 15.62, 7.81, 3.9, 1.9, 0.97, 0.48, 0.24 and 0.12 &#x000b5;M were achieved upon addition of 25 &#x000b5;L of infection mix containing Ebola-GFP virus, Bafilomycin at a final concentration of 10 nM was used as a positive control drug. Infections were done to achieve a MOI of 0.05 to 0.15. Infected cells were incubated for 24 hours. 24 hours post-infection cells were fixed by immersing the plates in formalin for 24 hours at 4&#x000b0;C. Fixed plates were decontaminated and brought out of the BSL-4. Formalin from fixed plates was decanted and plates were washed thrice with PBS. EBOV-infected cells were stained for nuclei using Hoechst at 1:50,000 dilution and plates were imaged. Nuclei (blue) and infected cells (green) were counted using CellProfiler software (Broad Institute)- Version 2.1.1. Total number of nuclei (blue) was used as a proxy for cell numbers and a loss of cell number was assumed to reflect cytotoxicity. Concentrations where total cell numbers were 20% less than the control were rejected from the analysis.</p></sec></sec><sec sec-type="results"><title>Results</title><sec><title>Machine learning</title><p>Using 5-fold cross validation the Bayesian approach (
+<xref ref-type="other" rid="SM1">Data S1</xref> and
+<xref ref-type="other" rid="SM1">Data S2</xref>) performed the best for the EBOV replication data and was equivalent for the RP Forest approach (
+<xref ref-type="table" rid="T1">Table 1</xref>) and was better than SVM (
+<xref ref-type="other" rid="SM1">Data S3</xref> and
+<xref ref-type="other" rid="SM1">Data S4</xref>) for the pseudotype data. The Open Bayesian models had ROC scores slightly lower than the Bayesian models built with Discovery Studio. A more exhaustive cross validation for the Bayesian models is the &#x02018;leave out 50% repeated randomly 100 times&#x02019; which produced ROC values greater than 0.8 and were comparable to the 5-fold cross validation data. This indicated the models are stable. For the EBOV pseudotype assay, alkoxyethylamino was a common feature amongst active compounds in the training set, as were 1,3-diaminopropyl and saturated six-member heterocycles with an oxygen and perhaps an additional heteroatom in the ring (
+<xref ref-type="fig" rid="f1">Figure 1A</xref>). Training set inactives commonly featured carboxylic acids, N,N'-disubstituted ureas, secondary and tertiary amides, pyrazoles, aromatic sulfonamides, tertiary cyclopentanols, 1,2-mercaptoethanol, and penams (
+<xref ref-type="fig" rid="f1">Figure 1B</xref>). For the replication assay training set, active features included piperazine, phenothiazine, tertiary amines, and alkoxyethylamino (
+<xref ref-type="fig" rid="f2">Figure 2A</xref>). Inactive features included secondary amides, disubstituted amines, cyclopropylmethyl, carboxylic acids, 1,3-oxathiolanes, tertiary alcohols, phenethyl, and penams (
+<xref ref-type="fig" rid="f2">Figure 2B</xref>). An actives feature common between both assays/models was alkoxyethylamino. Inactives features in common between both were carboxylic acids, secondary amides, penams and tertiary alcohols, which may relate to properties which prevent the molecules from accessing cellular sites of viral activity.</p><table-wrap id="T1" orientation="portrait" position="anchor"><label>Table 1. </label><caption><title>Machine learning model cross validation Receiver Operator Curve (ROC) statistics.</title></caption><table frame="hsides" rules="groups" content-type="article-table"><thead><tr><th align="left" rowspan="1" colspan="1">Models
+<break/>(training set 868
+<break/>compounds)</th><th align="left" rowspan="1" colspan="1">RP Forest
+<break/>(Out of bag ROC)</th><th align="left" rowspan="1" colspan="1">RP Single Tree
+<break/>(With 5 fold cross
+<break/>validation ROC)</th><th align="left" rowspan="1" colspan="1">SVM
+<break/>(with 5 fold cross
+<break/>validation ROC)</th><th align="left" rowspan="1" colspan="1">Bayesian
+<break/>(with 5 fold cross
+<break/>validation ROC)</th><th align="left" rowspan="1" colspan="1">Bayesian
+<break/>(leave out 50% &#x000d7;
+<break/>100 ROC)</th><th align="left" rowspan="1" colspan="1">Open Bayesian
+<break/>(with 5 fold cross
+<break/> validation ROC)</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">Ebola replication
+<break/>(actives = 20)</td><td rowspan="1" colspan="1">0.70</td><td rowspan="1" colspan="1">0.78</td><td rowspan="1" colspan="1">0.73</td><td rowspan="1" colspan="1">0.86</td><td rowspan="1" colspan="1">0.86</td><td rowspan="1" colspan="1">0.82</td></tr><tr><td rowspan="1" colspan="1">Ebola Pseudotype
+<break/>(actives = 41)</td><td rowspan="1" colspan="1">0.85</td><td rowspan="1" colspan="1">0.81</td><td rowspan="1" colspan="1">0.76</td><td rowspan="1" colspan="1">0.85</td><td rowspan="1" colspan="1">0.82</td><td rowspan="1" colspan="1">0.82</td></tr></tbody></table></table-wrap><fig fig-type="figure" id="f1" orientation="portrait" position="anchor"><label>Figure 1. </label><caption><p>
+<bold>A</bold>. Active and
+<bold>B</bold>. Inactive features for the Discovery Studio pseudotype Bayesian model.</p></caption><graphic xlink:href="f1000research-4-11510-g0000"/></fig><fig fig-type="figure" id="f2" orientation="portrait" position="anchor"><label>Figure 2. </label><caption><p>
+<bold>A</bold>. Active and
+<bold>B</bold>. Inactive features for the Discovery Studio EBOV replication model.</p></caption><graphic xlink:href="f1000research-4-11510-g0001"/></fig><p>The MicroSource Spectrum set of 2320 compounds was then scored with both Bayesian models (
+<xref ref-type="other" rid="SM1">Data S5</xref>). Predicted actives were quantified as to their chemical similarity, or distance, from molecules in the training set. When excluding compounds in the training set (as well as antipsychotics and other less desirable CNS active compounds), those scoring highly were considered most interesting and included the antiviral tilorone, the antimalarials quinacrine and pyronaridine (
+<xref ref-type="fig" rid="f3">Figure 3</xref>). Perhaps not surprisingly, tertiary amines scored particularly well. These molecules were also scored with the open Bayesian models (
+<xref ref-type="other" rid="SM1">Data S6</xref>) and all replication models scored the compounds highly (values close to or greater than 1). None of these three compounds has been described in recent reviews of small molecules with activity against EBOV
+<sup><xref rid="ref-14" ref-type="bibr">14</xref>&#x02013;
+<xref rid="ref-16" ref-type="bibr">16</xref></sup>, to our knowledge.</p><fig fig-type="figure" id="f3" orientation="portrait" position="anchor"><label>Figure 3. </label><caption><title>Molecules scoring well with the Ebola Bayesian models.</title><p>For comparison, chloroquine scored 31.38 in the replication Discovery Studio Bayesian model, 24.55 in the Discovery Studio Pseudovirus Bayesian model, 1.63 in the Open Bayesian Replication model and 0.51 in the Open Bayesian Pseudovirus model.</p></caption><graphic xlink:href="f1000research-4-11510-g0002"/></fig></sec><sec><title>Pharmacophore</title><p>The MicroSource set had previously been screened with the published Ebola common feature pharmacophore
+<sup><xref rid="ref-26" ref-type="bibr">26</xref>,
+<xref rid="ref-27" ref-type="bibr">27</xref></sup>, using the van der Waals surface of amodiaquine (which was more potent than chloroquine
+<sup><xref rid="ref-3" ref-type="bibr">3</xref></sup>) to limit the number of hits retrieved
+<sup><xref rid="ref-42" ref-type="bibr">42</xref>&#x02013;
+<xref rid="ref-44" ref-type="bibr">44</xref></sup>. Two of the three selected &#x02013; compounds quinacrine (fit score 2.59) and tilorone (fit score 3.65) &#x02013; were retrieved previously. We therefore used the ligand pharmacophore mapping to map pyronaridine to the pharmacophore without the van der Waals surface (
+<xref ref-type="fig" rid="f4">Figure 4</xref>, Fit score of 3.60 suggested this was a good match to pharmacophore features).</p><fig fig-type="figure" id="f4" orientation="portrait" position="anchor"><label>Figure 4. </label><caption><title>Pyronaridine mapped to a previously published pharmacophore based on compounds active against Ebola virus
+<italic>in vitro</italic>.</title><p>Fit score of 3.60 (Chloroquine (yellow) = 4.21).</p></caption><graphic xlink:href="f1000research-4-11510-g0003"/></fig></sec><sec><title>
+<italic>In vitro</italic> testing</title><p>The three selected compounds were tested
+<italic>in vitro</italic> alongside the positive control chloroquine which gave an expected dose response curve (
+<xref ref-type="fig" rid="f5">Figure 5</xref>,
+<xref ref-type="table" rid="T2">Table 2</xref>). Quinacrine, pyronaridine and tilorone, were tested
+<italic>in vitro</italic> and had EC
+<sub>50</sub> values of 350, 420 and 230 nM, respectively which were lower than for chloroquine 4.0 &#x003bc;M. Several images created in this study illustrate the results of this high content screen (
+<xref ref-type="other" rid="SM1">Data S7</xref>).</p><fig fig-type="figure" id="f5" orientation="portrait" position="anchor"><label>Figure 5. </label><caption><title>Effect of drug treatment on infection with Ebola-GFP.</title><p>Cells were treated and then challenged with Ebola virus encoding GFP. Infection efficiency was calculated as infected cells (expressing GFP)/total cells and normalized to infection efficiency seen in the untreated control. Shown is one representative experiment where each point is the average of 3 independent measurements of infection +/- standard deviation. Dose response curves were fitted by non-linear regression.</p></caption><graphic xlink:href="f1000research-4-11510-g0004"/></fig><table-wrap id="T2" orientation="portrait" position="anchor"><label>Table 2. </label><caption><title>Effect of drug treatment on infection with Ebola-GFP (n=3 per compound).</title><p> The cytotoxicity of compounds are represented as a 50% cytotoxicity concentration (CC
+<sub>50</sub>) estimated by the lowest concentration of drug that produced &#x02265; 50% loss in cell number by nuclei counting.</p></caption><table frame="hsides" rules="groups" content-type="article-table"><thead><tr><th align="left" rowspan="1" colspan="1">Compound</th><th align="left" rowspan="1" colspan="1">EC
+<sub>50</sub> (&#x003bc;M) [95% CI]</th><th align="left" rowspan="1" colspan="1">Cytotoxicity
+<break/>CC
+<sub>50</sub> (&#x000b5;M)</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">Chloroquine</td><td rowspan="1" colspan="1">4.0 [1.0&#x02013;15]</td><td rowspan="1" colspan="1">250</td></tr><tr><td rowspan="1" colspan="1">Pyronaridine</td><td rowspan="1" colspan="1">0.42 [0.31&#x02013;0.56]</td><td rowspan="1" colspan="1">3.1</td></tr><tr><td rowspan="1" colspan="1">Quinacrine</td><td rowspan="1" colspan="1">0.35 [0.28&#x02013;0.44]</td><td rowspan="1" colspan="1">6.2</td></tr><tr><td rowspan="1" colspan="1">Tilorone</td><td rowspan="1" colspan="1">0.23 [0.09&#x02013;0.62]</td><td rowspan="1" colspan="1">6.2</td></tr></tbody></table></table-wrap></sec></sec><sec sec-type="discussion"><title>Discussion</title><p>Our recent work on neglected diseases has shown that we can learn from existing assay datasets. Specifically we have previously analyzed large datasets for
+<italic>Mycobacterium tuberculosis</italic> to build machine learning models that use single point data, dose-response data
+<sup><xref rid="ref-43" ref-type="bibr">43</xref>,
+<xref rid="ref-45" ref-type="bibr">45</xref></sup>, combine bioactivity and cytotoxicity data (e.g. Vero, HepG2 or other model mammalian cells)
+<sup><xref rid="ref-28" ref-type="bibr">28</xref>,
+<xref rid="ref-29" ref-type="bibr">29</xref>,
+<xref rid="ref-46" ref-type="bibr">46</xref></sup> or combinations of these sets
+<sup><xref rid="ref-47" ref-type="bibr">47</xref>,
+<xref rid="ref-48" ref-type="bibr">48</xref></sup>. These models in turn have been validated with additional non-overlapping datasets, demonstrating that it is possible to use publically accessible data to find novel
+<italic>in vitro</italic> active antituberculars. We have also applied the same approach recently to identify a molecule with
+<italic>in vitro</italic> and
+<italic>in vivo</italic> activity against
+<italic>T. cruzi</italic>
+<sup><xref rid="ref-30" ref-type="bibr">30</xref></sup>. In the current study we found that different machine learning methods produced similar 5-fold cross validation data, although the Bayesian models had ROC values consistently above 0.80, which is preferable. One of the issues with computational models is that they are rarely accessible to others due to the commercial software licensing requirements. We have previously showed that models built with open source tools can produce validation statistics comparable to commercial modeling tools
+<sup><xref rid="ref-49" ref-type="bibr">49</xref></sup>. We recently made &#x0201c;function class fingerprints of maximum diameter 6&#x0201d; (FCFP6) and &#x0201c;extended connectivity (ECFP6) fingerprints,&#x0201d; open source and have described their implementation with the Chemistry Development Kit (CDK)
+<sup><xref rid="ref-50" ref-type="bibr">50</xref></sup> components
+<sup><xref rid="ref-41" ref-type="bibr">41</xref></sup>. In addition we described an open source Bayesian algorithm that can be used with these descriptors
+<sup><xref rid="ref-39" ref-type="bibr">39</xref>,
+<xref rid="ref-40" ref-type="bibr">40</xref></sup>. One way to make such models more accessible is to use mobile devices for their delivery and we have developed cheminformatics mobile apps
+<sup><xref rid="ref-41" ref-type="bibr">41</xref>,
+<xref rid="ref-51" ref-type="bibr">51</xref>&#x02013;
+<xref rid="ref-55" ref-type="bibr">55</xref></sup>. Several of these apps combine Bayesian models and open source fingerprint descriptors to enable models that can be used within a mobile app (TB Mobile, MMDS, Approved Drugs and MolPrime). This enables a scientist to select a molecule and score it with models. In the current study we used the same training sets for the anti-EBOV activity using replication and pseudotype screening data to build open source models that we can share with the community (
+<ext-link ext-link-type="uri" xlink:href="http://molsync.com/ebola/">http://molsync.com/ebola/</ext-link>).</p><p>The Bayesian models allowed us to select three compounds from the MicroSource compound library that scored highly and were not in the model training sets. The Open Bayesian models also scored the three hits favorably, which bodes well for screening other compounds of interest. Two of these molecules had also been identified with our earlier pharmacophore model which may be indicative of binding to VP35
+<sup><xref rid="ref-26" ref-type="bibr">26</xref></sup>. When tested
+<italic>in vitro</italic> the three compounds possessed EC
+<sub>50</sub> values 230&#x02013;420 nM, much lower than the positive control chloroquine (EC
+<sub>50</sub> 4.0 &#x003bc;M) used in this study and identified previously
+<sup><xref rid="ref-3" ref-type="bibr">3</xref></sup>. Tilorone is an investigational agent that has been known for over 40 years as an antiviral
+<sup><xref rid="ref-56" ref-type="bibr">56</xref></sup> and is an inducer of interferon in mice
+<sup><xref rid="ref-57" ref-type="bibr">57</xref></sup>. It has been shown to possess a broad array of biological activities including cell growth inhibition in PC3 CDK5dn prostate cancer cells (IC
+<sub>50</sub> 8&#x02013;12 &#x003bc;M)
+<sup><xref rid="ref-58" ref-type="bibr">58</xref></sup>, inhibition of Primase DnaG from
+<italic>Bacillus anthracis</italic> (IC
+<sub>50</sub> 7.1 &#x003bc;M)
+<sup><xref rid="ref-59" ref-type="bibr">59</xref></sup>, in a mouse model of pulmonary fibrosis it decreased lung hydroxyproline content and the expression of collagen genes
+<sup><xref rid="ref-60" ref-type="bibr">60</xref></sup>, &#x003b1;7 nicotinic receptor (nAChR) agonist activity (K
+<sub>i</sub> 56 nM)
+<sup><xref rid="ref-61" ref-type="bibr">61</xref></sup>, activated human alpha7 nAChR with an EC
+<sub>50</sub> value of 2.5 &#x003bc;M
+<sup><xref rid="ref-62" ref-type="bibr">62</xref></sup>, radioprotective activity
+<sup><xref rid="ref-63" ref-type="bibr">63</xref></sup>, potent modulation of HIF-mediated gene expression in neurons with neuroprotective properties
+<sup><xref rid="ref-64" ref-type="bibr">64</xref></sup> and induction of the accumulation of glycosaminoglycans, delay infectious prion clearance, and prolong prion disease incubation time
+<sup><xref rid="ref-65" ref-type="bibr">65</xref></sup>. Quinacrine is an old antimalarial drug now more widely used as an antiprotozoal for the treatment of giardiasis
+<sup><xref rid="ref-66" ref-type="bibr">66</xref></sup> and as an anthelmintic. Pyronaridine is a potent antimalarial (IC
+<sub>50</sub> 13.5 nM)
+<sup><xref rid="ref-67" ref-type="bibr">67</xref></sup>, has activity against
+<italic>Babesi</italic>a spp.
+<sup><xref rid="ref-68" ref-type="bibr">68</xref></sup>, is active
+<italic>in vitro</italic> (EC
+<sub>50</sub> 225 nM) and
+<italic>in vivo</italic> (85.2% efficacy 4 days treatment at 50 mg/kg) against
+<italic>T. cruzi</italic>
+<sup><xref rid="ref-30" ref-type="bibr">30</xref></sup> and is a P-glycoprotein inhibitor
+<sup><xref rid="ref-69" ref-type="bibr">69</xref></sup>. Pyronaridine is used in combination with artesunate in the European Medicines Agency approved Pyramax
+<sup><xref rid="ref-70" ref-type="bibr">70</xref></sup> which has performed well in clinical trials for malaria
+<sup><xref rid="ref-71" ref-type="bibr">71</xref></sup>. As this molecule has already been approved this may have a more direct path to clinical testing if it is found to be active in standard animal models infected with the Ebola Virus.</p><p>As stated before in perspectives by us
+<sup><xref rid="ref-72" ref-type="bibr">72</xref></sup> and others
+<sup><xref rid="ref-2" ref-type="bibr">2</xref>,
+<xref rid="ref-16" ref-type="bibr">16</xref>,
+<xref rid="ref-20" ref-type="bibr">20</xref>,
+<xref rid="ref-73" ref-type="bibr">73</xref></sup>, the fact that approved drugs may be repurposed for other diseases should not be viewed as a negative aspect of the small molecules, belying undesirable target promiscuity
+<sup><xref rid="ref-74" ref-type="bibr">74</xref></sup>. Instead, we prefer to reference recently published crystallographic analyses
+<sup><xref rid="ref-75" ref-type="bibr">75</xref></sup> demonstrating that small molecules may bind multiple proteins in different types of binding sites and with distinct conformations to ultimately facilitate molecular repurposing. While it would be most desirable to repurpose an approved drug and, thus, catapult a discovery effort into a Phase II trial, one should not ignore the significance of utilizing the discovery of a new use for an old drug to seed efforts in the lead optimization phase
+<sup><xref rid="ref-76" ref-type="bibr">76</xref></sup>. Such an expedited program would be expected to have a high probability of producing novel small molecules, closely related to or inspired by the drug, with the opportunity to translate quickly to clinical trials.</p><p>In summary, this study has added to the previous work that identified several FDA approved compounds active against EBOV
+<italic>in vitro</italic>. Future work may include identification of targets using computational or experimental approaches. We propose that these three molecules may warrant further evaluation
+<italic>in vivo</italic> as they are significantly more active than chloroquine. Larger scale virtual screening could be performed on the millions of commercially available molecules or more complete sets of approved and older no longer used drugs than have already been screened. These computational efforts can then prioritize molecules for testing. Such an approach may be a useful way to leverage the HTS data that has already been developed at great cost. In this study we have focused on just the data from a single group
+<sup><xref rid="ref-3" ref-type="bibr">3</xref>,
+<xref rid="ref-31" ref-type="bibr">31</xref></sup> but it may also be possible to combine this with the data from the other high throughput screens
+<sup><xref rid="ref-2" ref-type="bibr">2</xref>,
+<xref rid="ref-16" ref-type="bibr">16</xref>,
+<xref rid="ref-17" ref-type="bibr">17</xref></sup> to provide a much larger training set. There is also the opportunity to apply many different computational approaches beyond those described here to identify whole cell active compounds against EBOV. Ultimately, we should be able to identify additional compounds that could be immediately useful to treat patients with the disease while we await the approval of a vaccine.</p></sec><sec><title>Data availability</title><p>The data referenced by this article are under copyright with the following copyright statement: Copyright: &#x000a9; 2017 Ekins S et al.</p><p>Data associated with the article are available under the terms of the Creative Commons Zero "No rights reserved" data waiver (CC0 1.0 Public domain dedication).
+<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/publicdomain/zero/1.0/"/>
+</p><p>Supplemental data contains results from Bayesian models and SVM models as well as the output of predictions with Bayesian models and open Bayesian models.</p><p>The training sets used in the models are available as SDF files (
+<ext-link ext-link-type="uri" xlink:href="http://molsync.com/ebola/">http://molsync.com/ebola/</ext-link>).</p></sec></body><back><ack><title>Acknowledgments</title><p>SE kindly acknowledges Biovia for kindly providing Discovery Studio and Dr. Megan Coffee and Dr. Christopher Southan for initially stimulating interest in this topic.</p></ack><sec id="SM1" sec-type="supplementary-material"><title>Supplementary materials</title><p>
+<bold>Supplemental data S1&#x02013;S4 and S6, S7.</bold>
+</p><p>Supplemental data S1. Pseudotype Bayesian model, Supplemental data S2. EBOV replication Bayesian, Supplemental Data 3. SVM output file for Pseudotype model, Supplemental Data S4. SVM output file for EBOV replication model, Supplemental Data S6. Predictions for Ebola activity using Open Bayesian models in the MMDS app, Supplemental Data S7. High content screening images illustrating inhibition of Ebola and cytotoxic concentration.</p><p>
+<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5256/f1000research.7217.s110159">http://dx.doi.org/10.5256/f1000research.7217.s110159</ext-link>
+</p><p>
+<supplementary-material content-type="local-data" id="S1"><media xlink:href="f1000research-4-11510-s0001.tgz"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></p><p>
+<bold>Supplemental data S5.</bold>
+</p><p>MicroSource predictions with Bayesian models xl file.</p><p>
+<supplementary-material content-type="local-data" id="S0"><media xlink:href="f1000research-4-11510-s0000.tgz"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></p></sec><ref-list><ref id="ref-1"><label>1</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Southan</surname><given-names>C</given-names></name><name><surname>Coffee</surname><given-names>M</given-names></name></person-group>:
+<article-title>Finding small molecules for the 'next Ebola' [version 2; referees: 2 approved].</article-title>
+<source><italic>F1000Res.</italic></source>
+<year>2015</year>;<volume>4</volume>:<fpage>58</fpage>.
+<pub-id pub-id-type="doi">10.12688/f1000research.6181.2</pub-id>
+<!--<pub-id pub-id-type="pmcid">4406187</pub-id>-->
+<?supplied-pmid 25949804?><pub-id pub-id-type="pmid">25949804</pub-id></mixed-citation></ref><ref id="ref-2"><label>2</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Johansen</surname><given-names>LM</given-names></name><name><surname>Brannan</surname><given-names>JM</given-names></name><name><surname>Delos</surname><given-names>SE</given-names></name><etal/></person-group>:
+<article-title>FDA-approved selective estrogen receptor modulators inhibit Ebola virus infection.</article-title>
+<source><italic>Sci Transl Med.</italic></source>
+<year>2013</year>;<volume>5</volume>(<issue>190</issue>):<fpage>190ra79</fpage>.
+<pub-id pub-id-type="doi">10.1126/scitranslmed.3005471</pub-id>
+<!--<pub-id pub-id-type="pmcid">3955358</pub-id>-->
+<?supplied-pmid 23785035?><pub-id pub-id-type="pmid">23785035</pub-id></mixed-citation></ref><ref id="ref-3"><label>3</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Madrid</surname><given-names>PB</given-names></name><name><surname>Chopra</surname><given-names>S</given-names></name><name><surname>Manger</surname><given-names>ID</given-names></name><etal/></person-group>:
+<article-title>A systematic screen of FDA-approved drugs for inhibitors of biological threat agents.</article-title>
+<source><italic>PLoS One.</italic></source>
+<year>2013</year>;<volume>8</volume>(<issue>4</issue>):<fpage>e60579</fpage>.
+<pub-id pub-id-type="doi">10.1371/journal.pone.0060579</pub-id>
+<!--<pub-id pub-id-type="pmcid">3618516</pub-id>-->
+<?supplied-pmid 23577127?><pub-id pub-id-type="pmid">23577127</pub-id></mixed-citation></ref><ref id="ref-4"><label>4</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Coffee</surname><given-names>M</given-names></name></person-group>:
+<article-title>FDA approved drugs as potential Ebola treatments [version 2; referees: 2 approved].</article-title>
+<source><italic>F1000Res.</italic></source>
+<year>2015</year>;<volume>4</volume>:<fpage>48</fpage>.
+<pub-id pub-id-type="doi">10.12688/f1000research.6164.2</pub-id>
+<!--<pub-id pub-id-type="pmcid">4358410</pub-id>-->
+<?supplied-pmid 25789163?><pub-id pub-id-type="pmid">25789163</pub-id></mixed-citation></ref><ref id="ref-5"><label>5</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Brown</surname><given-names>CS</given-names></name><name><surname>Lee</surname><given-names>MS</given-names></name><name><surname>Leung</surname><given-names>DW</given-names></name><etal/></person-group>:
+<article-title>
+<italic>In silico</italic> derived small molecules bind the filovirus VP35 protein and inhibit its polymerase cofactor activity.</article-title>
+<source><italic>J Mol Biol.</italic></source>
+<year>2014</year>;<volume>426</volume>(<issue>10</issue>):<fpage>2045</fpage>&#x02013;<lpage>58</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.jmb.2014.01.010</pub-id>
+<!--<pub-id pub-id-type="pmcid">4163021</pub-id>-->
+<?supplied-pmid 24495995?><pub-id pub-id-type="pmid">24495995</pub-id></mixed-citation></ref><ref id="ref-6"><label>6</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Han</surname><given-names>Z</given-names></name><name><surname>Lu</surname><given-names>J</given-names></name><name><surname>Liu</surname><given-names>Y</given-names></name><etal/></person-group>:
+<article-title>Small-molecule probes targeting the viral PPxY-host Nedd4 interface block egress of a broad range of RNA viruses.</article-title>
+<source><italic>J Virol.</italic></source>
+<year>2014</year>;<volume>88</volume>(<issue>13</issue>):<fpage>7294</fpage>&#x02013;<lpage>306</lpage>.
+<pub-id pub-id-type="doi">10.1128/JVI.00591-14</pub-id>
+<!--<pub-id pub-id-type="pmcid">4054416</pub-id>-->
+<?supplied-pmid 24741084?><pub-id pub-id-type="pmid">24741084</pub-id></mixed-citation></ref><ref id="ref-7"><label>7</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Opsenica</surname><given-names>I</given-names></name><name><surname>Burnett</surname><given-names>JC</given-names></name><name><surname>Gussio</surname><given-names>R</given-names></name><etal/></person-group>:
+<article-title>A chemotype that inhibits three unrelated pathogenic targets: the botulinum neurotoxin serotype A light chain,
+<italic>P. falciparum</italic> malaria, and the Ebola filovirus.</article-title>
+<source><italic>J Med Chem.</italic></source>
+<year>2011</year>;<volume>54</volume>(<issue>5</issue>):<fpage>1157</fpage>&#x02013;<lpage>69</lpage>.
+<pub-id pub-id-type="doi">10.1021/jm100938u</pub-id>
+<!--<pub-id pub-id-type="pmcid">3056319</pub-id>-->
+<?supplied-pmid 21265542?><pub-id pub-id-type="pmid">21265542</pub-id></mixed-citation></ref><ref id="ref-8"><label>8</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Johnson</surname><given-names>JC</given-names></name><name><surname>Martinez</surname><given-names>O</given-names></name><name><surname>Honko</surname><given-names>AN</given-names></name><etal/></person-group>:
+<article-title>Pyridinyl imidazole inhibitors of p38 MAP kinase impair viral entry and reduce cytokine induction by
+<italic>Zaire ebolavirus</italic> in human dendritic cells.</article-title>
+<source><italic>Antiviral Res.</italic></source>
+<year>2014</year>;<volume>107</volume>:<fpage>102</fpage>&#x02013;<lpage>9</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.antiviral.2014.04.014</pub-id>
+<!--<pub-id pub-id-type="pmcid">4103912</pub-id>-->
+<?supplied-pmid 24815087?><pub-id pub-id-type="pmid">24815087</pub-id></mixed-citation></ref><ref id="ref-9"><label>9</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gehring</surname><given-names>G</given-names></name><name><surname>Rohrmann</surname><given-names>K</given-names></name><name><surname>Atenchong</surname><given-names>N</given-names></name><etal/></person-group>:
+<article-title>The clinically approved drugs amiodarone, dronedarone and verapamil inhibit filovirus cell entry.</article-title>
+<source><italic>J Antimicrob Chemother.</italic></source>
+<year>2014</year>;<volume>69</volume>(<issue>8</issue>):<fpage>2123</fpage>&#x02013;<lpage>31</lpage>.
+<pub-id pub-id-type="doi">10.1093/jac/dku091</pub-id>
+<?supplied-pmid 24710028?><pub-id pub-id-type="pmid">24710028</pub-id></mixed-citation></ref><ref id="ref-10"><label>10</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kazmi</surname><given-names>F</given-names></name><name><surname>Hensley</surname><given-names>T</given-names></name><name><surname>Pope</surname><given-names>C</given-names></name><etal/></person-group>:
+<article-title>Lysosomal sequestration (trapping) of lipophilic amine (cationic amphiphilic) drugs in immortalized human hepatocytes (Fa2N-4 cells).</article-title>
+<source><italic>Drug Metab Dispos.</italic></source>
+<year>2013</year>;<volume>41</volume>(<issue>4</issue>):<fpage>897</fpage>&#x02013;<lpage>905</lpage>.
+<pub-id pub-id-type="doi">10.1124/dmd.112.050054</pub-id>
+<!--<pub-id pub-id-type="pmcid">3608459</pub-id>-->
+<?supplied-pmid 23378628?><pub-id pub-id-type="pmid">23378628</pub-id></mixed-citation></ref><ref id="ref-11"><label>11</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nadanaciva</surname><given-names>S</given-names></name><name><surname>Lu</surname><given-names>S</given-names></name><name><surname>Gebhard</surname><given-names>DF</given-names></name><etal/></person-group>:
+<article-title>A high content screening assay for identifying lysosomotropic compounds.</article-title>
+<source><italic>Toxicol In Vitro.</italic></source>
+<year>2011</year>;<volume>25</volume>(<issue>3</issue>):<fpage>715</fpage>&#x02013;<lpage>23</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.tiv.2010.12.010</pub-id>
+<?supplied-pmid 21184822?><pub-id pub-id-type="pmid">21184822</pub-id></mixed-citation></ref><ref id="ref-12"><label>12</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Cheng</surname><given-names>H</given-names></name><name><surname>Lear-Rooney</surname><given-names>CM</given-names></name><name><surname>Johansen</surname><given-names>L</given-names></name><etal/></person-group>:
+<article-title>Inhibition of Ebola and Marburg Virus Entry by G Protein-Coupled Receptor Antagonists.</article-title>
+<source><italic>J Virol.</italic></source>
+<year>2015</year>;<volume>89</volume>(<issue>19</issue>):<fpage>9932</fpage>&#x02013;<lpage>8</lpage>.
+<pub-id pub-id-type="doi">10.1128/JVI.01337-15</pub-id>
+<!--<pub-id pub-id-type="pmcid">4577884</pub-id>-->
+<?supplied-pmid 26202243?><pub-id pub-id-type="pmid">26202243</pub-id></mixed-citation></ref><ref id="ref-13"><label>13</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>De Clercq</surname><given-names>E</given-names></name></person-group>:
+<article-title>Ebola virus (EBOV) infection: Therapeutic strategies.</article-title>
+<source><italic>Biochem Pharmacol.</italic></source>
+<year>2015</year>;<volume>93</volume>(<issue>1</issue>):<fpage>1</fpage>&#x02013;<lpage>10</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.bcp.2014.11.008</pub-id>
+<?supplied-pmid 25481298?><pub-id pub-id-type="pmid">25481298</pub-id></mixed-citation></ref><ref id="ref-14"><label>14</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Litterman</surname><given-names>N</given-names></name><name><surname>Lipinski</surname><given-names>C</given-names></name><name><surname>Ekins</surname><given-names>S</given-names></name></person-group>:
+<article-title>Small molecules with antiviral activity against the Ebola virus [version 1; referees: 2 approved].</article-title>
+<source><italic>F1000Res.</italic></source>
+<year>2015</year>;<volume>4</volume>:<fpage>38</fpage>.
+<pub-id pub-id-type="doi">10.12688/f1000research.6120.1</pub-id>
+<!--<pub-id pub-id-type="pmcid">4335594</pub-id>-->
+<?supplied-pmid 25713700?><pub-id pub-id-type="pmid">25713700</pub-id></mixed-citation></ref><ref id="ref-15"><label>15</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Picazo</surname><given-names>E</given-names></name><name><surname>Giordanetto</surname><given-names>F</given-names></name></person-group>:
+<article-title>Small molecule inhibitors of ebola virus infection.</article-title>
+<source><italic>Drug Discov Today.</italic></source>
+<year>2014</year>;<volume>20</volume>(<issue>2</issue>):<fpage>277</fpage>&#x02013;<lpage>86</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.drudis.2014.12.010</pub-id>
+<?supplied-pmid 25532798?><pub-id pub-id-type="pmid">25532798</pub-id></mixed-citation></ref><ref id="ref-16"><label>16</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kouznetsova</surname><given-names>J</given-names></name><name><surname>Sun</surname><given-names>W</given-names></name><name><surname>Mart&#x000ed;nez-Romero</surname><given-names>C</given-names></name><etal/></person-group>:
+<article-title>Identification of 53 compounds that block Ebola virus-like particle entry via a repurposing screen of approved drugs.</article-title>
+<source><italic>Emerg Microbes Infect.</italic></source>
+<year>2014</year>;<volume>3</volume>(<issue>12</issue>):<fpage>e84</fpage>.
+<pub-id pub-id-type="doi">10.1038/emi.2014.88</pub-id>
+<!--<pub-id pub-id-type="pmcid">4317638</pub-id>-->
+<?supplied-pmid 26038505?><pub-id pub-id-type="pmid">26038505</pub-id></mixed-citation></ref><ref id="ref-17"><label>17</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Johansen</surname><given-names>LM</given-names></name><name><surname>DeWald</surname><given-names>LE</given-names></name><name><surname>Shoemaker</surname><given-names>CJ</given-names></name><etal/></person-group>:
+<article-title>A screen of approved drugs and molecular probes identifies therapeutics with anti-Ebola virus activity.</article-title>
+<source><italic>Sci Transl Med.</italic></source>
+<year>2015</year>;<volume>7</volume>(<issue>290</issue>):<fpage>290ra89</fpage>.
+<pub-id pub-id-type="doi">10.1126/scitranslmed.aaa5597</pub-id>
+<?supplied-pmid 26041706?><pub-id pub-id-type="pmid">26041706</pub-id></mixed-citation></ref><ref id="ref-18"><label>18</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Basu</surname><given-names>A</given-names></name><name><surname>Mills</surname><given-names>DM</given-names></name><name><surname>Mitchell</surname><given-names>D</given-names></name><etal/></person-group>:
+<article-title>Novel Small Molecule Entry Inhibitors of Ebola Virus.</article-title>
+<source><italic>J Infect Dis.</italic></source>
+<year>2015</year>;<volume>212</volume>(<issue>Suppl 2</issue>):<fpage>S425</fpage>&#x02013;<lpage>34</lpage>.
+<pub-id pub-id-type="doi">10.1093/infdis/jiv223</pub-id>
+<!--<pub-id pub-id-type="pmcid">4564548</pub-id>-->
+<?supplied-pmid 26206510?><pub-id pub-id-type="pmid">26206510</pub-id></mixed-citation></ref><ref id="ref-19"><label>19</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Long</surname><given-names>J</given-names></name><name><surname>Wright</surname><given-names>E</given-names></name><name><surname>Molesti</surname><given-names> E</given-names></name><etal/></person-group>:
+<article-title>Antiviral therapies against Ebola and other emerging viral diseases using existing medicines that block virus entry [version 2; referees: 2 approved].</article-title>
+<source><italic>F1000Res.</italic></source>
+<year>2015</year>;<volume>4</volume>:<fpage>30</fpage>.
+<pub-id pub-id-type="doi">10.12688/f1000research.6085.2</pub-id>
+<!--<pub-id pub-id-type="pmcid">4431382</pub-id>-->
+<?supplied-pmid 26069727?><pub-id pub-id-type="pmid">26069727</pub-id></mixed-citation></ref><ref id="ref-20"><label>20</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Veljkovic</surname><given-names>V</given-names></name><name><surname>Loiseau</surname><given-names>PM</given-names></name><name><surname>Figadere</surname><given-names>B</given-names></name><etal/></person-group>:
+<article-title>Virtual screen for repurposing approved and experimental drugs for candidate inhibitors of EBOLA virus infection [version 1; referees: 2 approved].</article-title>
+<source><italic>F1000Res.</italic></source>
+<year>2015</year>;<volume>4</volume>:<fpage>34</fpage>.
+<pub-id pub-id-type="doi">10.12688/f1000research.6110.1</pub-id>
+<!--<pub-id pub-id-type="pmcid">4329668</pub-id>-->
+<?supplied-pmid 25717373?><pub-id pub-id-type="pmid">25717373</pub-id></mixed-citation></ref><ref id="ref-21"><label>21</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Veljkovic</surname><given-names>V</given-names></name><name><surname>Goeijenbier</surname><given-names> M</given-names></name><name><surname>Glisic</surname><given-names>S</given-names></name><etal/></person-group>:
+<article-title>
+<italic>In silico</italic> analysis suggests repurposing of ibuprofen for prevention and treatment of EBOLA virus disease [version 1; referees: 2 approved].</article-title>
+<source><italic>F1000Res.</italic></source>
+<year>2015</year>;<volume>4</volume>:<fpage>104</fpage>.
+<pub-id pub-id-type="doi">10.12688/f1000research.6436.1</pub-id>
+<!--<pub-id pub-id-type="pmcid">4482208</pub-id>-->
+<?supplied-pmid 26167272?><pub-id pub-id-type="pmid">26167272</pub-id></mixed-citation></ref><ref id="ref-22"><label>22</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Raj</surname><given-names>U</given-names></name><name><surname>Varadwaj</surname><given-names>PK</given-names></name></person-group>:
+<article-title>Flavonoids as Multi-target Inhibitors for Proteins Associated with Ebola Virus:
+<italic>In Silico</italic> Discovery Using Virtual Screening and Molecular Docking Studies.</article-title>
+<source><italic>Interdiscip Sci.</italic></source>
+<year>2015</year>;<fpage>1</fpage>&#x02013;<lpage>10</lpage>.
+<pub-id pub-id-type="doi">10.1007/s12539-015-0109-8</pub-id>
+<?supplied-pmid 26286008?><pub-id pub-id-type="pmid">26286008</pub-id></mixed-citation></ref><ref id="ref-23"><label>23</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Abazari</surname><given-names>D</given-names></name><name><surname>Moghtadaei</surname><given-names>M</given-names></name><name><surname>Behvarmanesh</surname><given-names>A</given-names></name><etal/></person-group>:
+<article-title>Molecular docking based screening of predicted potential inhibitors for VP40 from Ebola virus.</article-title>
+<source><italic>Bioinformation.</italic></source>
+<year>2015</year>;<volume>11</volume>(<issue>5</issue>):<fpage>243</fpage>&#x02013;<lpage>7</lpage>.
+<pub-id pub-id-type="doi">10.6026/97320630011243</pub-id>
+<!--<pub-id pub-id-type="pmcid">4464540</pub-id>-->
+<?supplied-pmid 26124568?><pub-id pub-id-type="pmid">26124568</pub-id></mixed-citation></ref><ref id="ref-24"><label>24</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Nishimura</surname><given-names>H</given-names></name><name><surname>Yamaya</surname><given-names>M</given-names></name></person-group>:
+<article-title>A Synthetic Serine Protease Inhibitor, Nafamostat Mesilate, Is a Drug Potentially Applicable to the Treatment of Ebola Virus Disease.</article-title>
+<source><italic>Tohoku J Exp Med.</italic></source>
+<year>2015</year>;<volume>237</volume>(<issue>1</issue>):<fpage>45</fpage>&#x02013;<lpage>50</lpage>.
+<pub-id pub-id-type="doi">10.1620/tjem.237.45</pub-id>
+<?supplied-pmid 26346967?><pub-id pub-id-type="pmid">26346967</pub-id></mixed-citation></ref><ref id="ref-25"><label>25</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>De Clercq</surname><given-names>E</given-names></name></person-group>:
+<article-title>Curious (Old and New) Antiviral Nucleoside Analogues with Intriguing Therapeutic Potential.</article-title>
+<source><italic>Curr Med Chem.</italic></source>
+<year>2015</year>;<volume>22</volume>(<issue>34</issue>):<fpage>3866</fpage>&#x02013;<lpage>80</lpage>.
+<pub-id pub-id-type="doi">10.2174/0929867322666150625094705</pub-id>
+<?supplied-pmid 26112146?><pub-id pub-id-type="pmid">26112146</pub-id></mixed-citation></ref><ref id="ref-26"><label>26</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Freundlich</surname><given-names>JS</given-names></name><name><surname>Coffee</surname><given-names>M</given-names></name></person-group>:
+<article-title>A common feature pharmacophore for FDA-approved drugs inhibiting the Ebola virus [version 2; referees: 2 approved].</article-title>
+<source><italic>F1000Res.</italic></source>
+<year>2014</year>;<volume>3</volume>:<fpage>277</fpage>.
+<pub-id pub-id-type="doi">10.12688/f1000research.5741.2</pub-id>
+<!--<pub-id pub-id-type="pmcid">4304229</pub-id>-->
+<?supplied-pmid 25653841?><pub-id pub-id-type="pmid">25653841</pub-id></mixed-citation></ref><ref id="ref-27"><label>27</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name></person-group>:
+<article-title>A pharmacophore for of Ebola active compounds - predictions searching Microsource library.</article-title>
+<source><italic>Figshare.</italic></source>
+<year>2014</year>
+<pub-id pub-id-type="doi">10.6084/m9.figshare.1190796</pub-id>
+</mixed-citation></ref><ref id="ref-28"><label>28</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Reynolds</surname><given-names>RC</given-names></name><name><surname>Franzblau</surname><given-names>SG</given-names></name><etal/></person-group>:
+<article-title>Enhancing hit identification in
+<italic>Mycobacterium tuberculosis</italic> drug discovery using validated dual-event Bayesian models.</article-title>
+<source><italic>PLoS One.</italic></source>
+<year>2013</year>;<volume>8</volume>(<issue>5</issue>):<fpage>e63240</fpage>.
+<pub-id pub-id-type="doi">10.1371/journal.pone.0063240</pub-id>
+<!--<pub-id pub-id-type="pmcid">3647004</pub-id>-->
+<?supplied-pmid 23667592?><pub-id pub-id-type="pmid">23667592</pub-id></mixed-citation></ref><ref id="ref-29"><label>29</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Reynolds</surname><given-names>RC</given-names></name><name><surname>Kim</surname><given-names>H</given-names></name><etal/></person-group>:
+<article-title>Bayesian models leveraging bioactivity and cytotoxicity information for drug discovery.</article-title>
+<source><italic>Chem Biol.</italic></source>
+<year>2013</year>;<volume>20</volume>(<issue>3</issue>):<fpage>370</fpage>&#x02013;<lpage>378</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.chembiol.2013.01.011</pub-id>
+<!--<pub-id pub-id-type="pmcid">3607962</pub-id>-->
+<?supplied-pmid 23521795?><pub-id pub-id-type="pmid">23521795</pub-id></mixed-citation></ref><ref id="ref-30"><label>30</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>de Siqueira-Neto</surname><given-names>JL</given-names></name><name><surname>McCall</surname><given-names>LI</given-names></name><etal/></person-group>:
+<article-title>Machine Learning Models and Pathway Genome Data Base for
+<italic>Trypanosoma cruzi</italic> Drug Discovery.</article-title>
+<source><italic>PLoS Negl Trop Dis.</italic></source>
+<year>2015</year>;<volume>9</volume>(<issue>6</issue>):<fpage>e0003878</fpage>.
+<pub-id pub-id-type="doi">10.1371/journal.pntd.0003878</pub-id>
+<!--<pub-id pub-id-type="pmcid">4482694</pub-id>-->
+<?supplied-pmid 26114876?><pub-id pub-id-type="pmid">26114876</pub-id></mixed-citation></ref><ref id="ref-31"><label>31</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Madrid</surname><given-names>PB</given-names></name><name><surname>Panchal</surname><given-names>RG</given-names></name><name><surname>Warren</surname><given-names>TK</given-names></name><etal/></person-group>:
+<article-title>Evaluation of Ebola Virus Inhibitors for Drug repurposing.</article-title>
+<source><italic> ACS Infect Dis.</italic></source>
+<year>2015</year>;<volume>1</volume>(<issue>7</issue>):<fpage>317</fpage>&#x02013;<lpage>326</lpage>.
+<pub-id pub-id-type="doi">10.1021/acsinfecdis.5b00030</pub-id>
+<pub-id pub-id-type="pmid">27622822</pub-id></mixed-citation></ref><ref id="ref-32"><label>32</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Prathipati</surname><given-names>P</given-names></name><name><surname>Ma</surname><given-names>NL</given-names></name><name><surname>Keller</surname><given-names>TH</given-names></name></person-group>:
+<article-title>Global Bayesian models for the prioritization of antitubercular agents.</article-title>
+<source><italic>J Chem Inf Model.</italic></source>
+<year>2008</year>;<volume>48</volume>(<issue>12</issue>):<fpage>2362</fpage>&#x02013;<lpage>70</lpage>.
+<pub-id pub-id-type="doi">10.1021/ci800143n</pub-id>
+<?supplied-pmid 19053518?><pub-id pub-id-type="pmid">19053518</pub-id></mixed-citation></ref><ref id="ref-33"><label>33</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Bender</surname><given-names>A</given-names></name><name><surname>Scheiber</surname><given-names>J</given-names></name><name><surname>Glick</surname><given-names>M</given-names></name><etal/></person-group>:
+<article-title>Analysis of pharmacology data and the prediction of adverse drug reactions and off-target effects from chemical structure.</article-title>
+<source><italic>ChemMedChem.</italic></source>
+<year>2007</year>;<volume>2</volume>(<issue>6</issue>):<fpage>861</fpage>&#x02013;<lpage>873</lpage>.
+<pub-id pub-id-type="doi">10.1002/cmdc.200700026</pub-id>
+<?supplied-pmid 17477341?><pub-id pub-id-type="pmid">17477341</pub-id></mixed-citation></ref><ref id="ref-34"><label>34</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Klon</surname><given-names>AE</given-names></name><name><surname>Lowrie</surname><given-names>JF</given-names></name><name><surname>Diller</surname><given-names>DJ</given-names></name></person-group>:
+<article-title>Improved na&#x000ef;ve Bayesian modeling of numerical data for absorption, distribution, metabolism and excretion (ADME) property prediction.</article-title>
+<source><italic>J Chem Inf Model.</italic></source>
+<year>2006</year>;<volume>46</volume>(<issue>5</issue>):<fpage>1945</fpage>&#x02013;<lpage>56</lpage>.
+<pub-id pub-id-type="doi">10.1021/ci0601315</pub-id>
+<?supplied-pmid 16995725?><pub-id pub-id-type="pmid">16995725</pub-id></mixed-citation></ref><ref id="ref-35"><label>35</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Hassan</surname><given-names>M</given-names></name><name><surname>Brown</surname><given-names>RD</given-names></name><name><surname>Varma-O'brien</surname><given-names>S</given-names></name><etal/></person-group>:
+<article-title>Cheminformatics analysis and learning in a data pipelining environment.</article-title>
+<source><italic>Mol Divers.</italic></source>
+<year>2006</year>;<volume>10</volume>(<issue>3</issue>):<fpage>283</fpage>&#x02013;<lpage>99</lpage>.
+<pub-id pub-id-type="doi">10.1007/s11030-006-9041-5</pub-id>
+<?supplied-pmid 17031533?><pub-id pub-id-type="pmid">17031533</pub-id></mixed-citation></ref><ref id="ref-36"><label>36</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rogers</surname><given-names>D</given-names></name><name><surname>Brown</surname><given-names>RD</given-names></name><name><surname>Hahn</surname><given-names>M</given-names></name></person-group>:
+<article-title>Using extended-connectivity fingerprints with Laplacian-modified Bayesian analysis in high-throughput screening follow-up.</article-title>
+<source><italic>J Biomol Screen.</italic></source>
+<year>2005</year>;<volume>10</volume>(<issue>7</issue>):<fpage>682</fpage>&#x02013;<lpage>6</lpage>.
+<pub-id pub-id-type="doi">10.1177/1087057105281365</pub-id>
+<?supplied-pmid 16170046?><pub-id pub-id-type="pmid">16170046</pub-id></mixed-citation></ref><ref id="ref-37"><label>37</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Jones</surname><given-names>DR</given-names></name><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Li</surname><given-names>L</given-names></name><etal/></person-group>:
+<article-title>Computational approaches that predict metabolic intermediate complex formation with CYP3A4 (+
+<italic>b</italic>
+<sub>5</sub>).</article-title>
+<source><italic>Drug Metab Dispos.</italic></source>
+<year>2007</year>;<volume>35</volume>(<issue>9</issue>):<fpage>1466</fpage>&#x02013;<lpage>75</lpage>.
+<pub-id pub-id-type="doi">10.1124/dmd.106.014613</pub-id>
+<?supplied-pmid 17537872?><pub-id pub-id-type="pmid">17537872</pub-id></mixed-citation></ref><ref id="ref-37a"><label>37a</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ghose</surname><given-names>AK</given-names></name><name><surname>Viswanadhan</surname><given-names>VN</given-names></name><name><surname>Wendoloski</surname><given-names>JJ</given-names></name><etal/></person-group>:
+<article-title>Prediction of hydrophobic (lipophilic) properties of small organic molecules using fragmental methods: an analysis of ALOGP and CLOGP methods.</article-title>
+<source><italic>J Phys Chem.</italic></source>
+<year>1998</year>;<volume>102</volume>(<issue>21</issue>):<fpage>3762</fpage>&#x02013;<lpage>3772</lpage>.
+<pub-id pub-id-type="doi">10.1021/jp980230o</pub-id>
+</mixed-citation></ref><ref id="ref-38"><label>38</label><mixed-citation publication-type="book">Anon.
+<article-title>R</article-title>. Available from:
+<ext-link ext-link-type="uri" xlink:href="http://www.r-project.org/">http://www.r-project.org/</ext-link>&#x000a0;
+<ext-link ext-link-type="uri" xlink:href="http://www.r-project.org/">Reference Source</ext-link>
+</mixed-citation></ref><ref id="ref-39"><label>39</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Clark</surname><given-names>AM</given-names></name><name><surname>Ekins</surname><given-names>S</given-names></name></person-group>:
+<article-title>Open Source Bayesian Models. 2. Mining a "Big Dataset" To Create and Validate Models with ChEMBL.</article-title>
+<source><italic>J Chem Inf Model.</italic></source>
+<year>2015</year>;<volume>55</volume>(<issue>6</issue>):<fpage>1246</fpage>&#x02013;<lpage>1260</lpage>.
+<pub-id pub-id-type="doi">10.1021/acs.jcim.5b00144</pub-id>
+<?supplied-pmid 25995041?><pub-id pub-id-type="pmid">25995041</pub-id></mixed-citation></ref><ref id="ref-40"><label>40</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Clark</surname><given-names>AM</given-names></name><name><surname>Dole</surname><given-names>K</given-names></name><name><surname>Coulon-Spektor</surname><given-names>A</given-names></name><etal/></person-group>:
+<article-title>Open Source Bayesian Models. 1. Application to ADME/Tox and Drug Discovery Datasets.</article-title>
+<source><italic>J Chem Inf Model.</italic></source>
+<year>2015</year>;<volume>55</volume>(<issue>6</issue>):<fpage>1231</fpage>&#x02013;<lpage>1245</lpage>.
+<pub-id pub-id-type="doi">10.1021/acs.jcim.5b00143</pub-id>
+<!--<pub-id pub-id-type="pmcid">4478615</pub-id>-->
+<?supplied-pmid 25994950?><pub-id pub-id-type="pmid">25994950</pub-id></mixed-citation></ref><ref id="ref-41"><label>41</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Clark</surname><given-names>AM</given-names></name><name><surname>Sarker</surname><given-names>M</given-names></name><name><surname>Ekins</surname><given-names>S</given-names></name></person-group>:
+<article-title>New target prediction and visualization tools incorporating open source molecular fingerprints for TB Mobile 2.0.</article-title>
+<source><italic>J Cheminform.</italic></source>
+<year>2014</year>;<volume>6</volume>:<fpage>38</fpage>.
+<pub-id pub-id-type="doi">10.1186/s13321-014-0038-2</pub-id>
+<!--<pub-id pub-id-type="pmcid">4190048</pub-id>-->
+<?supplied-pmid 25302078?><pub-id pub-id-type="pmid">25302078</pub-id></mixed-citation></ref><ref id="ref-42"><label>42</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lamichhane</surname><given-names>G</given-names></name><name><surname>Freundlich</surname><given-names>JS</given-names></name><name><surname>Ekins</surname><given-names>S</given-names></name><etal/></person-group>:
+<article-title>Essential metabolites of
+<italic>Mycobacterium tuberculosis</italic> and their mimics.</article-title>
+<source><italic>MBio.</italic></source>
+<year>2011</year>;<volume>2</volume>(<issue>1</issue>):<fpage>e00301</fpage>&#x02013;<lpage>10</lpage>.
+<pub-id pub-id-type="doi">10.1128/mBio.00301-10</pub-id>
+<!--<pub-id pub-id-type="pmcid">3031304</pub-id>-->
+<?supplied-pmid 21285434?><pub-id pub-id-type="pmid">21285434</pub-id></mixed-citation></ref><ref id="ref-43"><label>43</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Bradford</surname><given-names>J</given-names></name><name><surname>Dole</surname><given-names>K</given-names></name><etal/></person-group>:
+<article-title>A collaborative database and computational models for tuberculosis drug discovery.</article-title>
+<source><italic>Mol Biosyst.</italic></source>
+<year>2010</year>;<volume>6</volume>(<issue>5</issue>):<fpage>840</fpage>&#x02013;<lpage>851</lpage>.
+<pub-id pub-id-type="doi">10.1039/b917766c</pub-id>
+<?supplied-pmid 20567770?><pub-id pub-id-type="pmid">20567770</pub-id></mixed-citation></ref><ref id="ref-44"><label>44</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Zheng</surname><given-names>X</given-names></name><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Raufman</surname><given-names>JP</given-names></name><etal/></person-group>:
+<article-title>Computational models for drug inhibition of the human apical sodium-dependent bile acid transporter.</article-title>
+<source><italic>Mol Pharm.</italic></source>
+<year>2009</year>;<volume>6</volume>(<issue>5</issue>):<fpage>1591</fpage>&#x02013;<lpage>1603</lpage>.
+<pub-id pub-id-type="doi">10.1021/mp900163d</pub-id>
+<!--<pub-id pub-id-type="pmcid">2757534</pub-id>-->
+<?supplied-pmid 19673539?><pub-id pub-id-type="pmid">19673539</pub-id></mixed-citation></ref><ref id="ref-45"><label>45</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Kaneko</surname><given-names>T</given-names></name><name><surname>Lipinski</surname><given-names>CA</given-names></name><etal/></person-group>:
+<article-title>Analysis and hit filtering of a very large library of compounds screened against
+<italic>Mycobacterium tuberculosis</italic>.</article-title>
+<source><italic>Mol Biosyst.</italic></source>
+<year>2010</year>;<volume>6</volume>(<issue>11</issue>):<fpage>2316</fpage>&#x02013;<lpage>2324</lpage>.
+<?supplied-pmid 20835433?><pub-id pub-id-type="pmid">20835433</pub-id></mixed-citation></ref><ref id="ref-46"><label>46</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Casey</surname><given-names>AC</given-names></name><name><surname>Roberts</surname><given-names>D</given-names></name><etal/></person-group>:
+<article-title>Bayesian models for screening and TB Mobile for target inference with
+<italic>Mycobacterium tuberculosis</italic>.</article-title>
+<source><italic>Tuberculosis</italic> (
+<italic>Edinb</italic>).
+</source>
+<year>2014</year>;<volume>94</volume>(<issue>2</issue>):<fpage>162</fpage>&#x02013;<lpage>9</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.tube.2013.12.001</pub-id>
+<!--<pub-id pub-id-type="pmcid">4394018</pub-id>-->
+<?supplied-pmid 24440548?><pub-id pub-id-type="pmid">24440548</pub-id></mixed-citation></ref><ref id="ref-47"><label>47</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Freundlich</surname><given-names>JS</given-names></name><name><surname>Reynolds</surname><given-names>RC</given-names></name></person-group>:
+<article-title>Are bigger data sets better for machine learning? Fusing single-point and dual-event dose response data for
+<italic>Mycobacterium tuberculosis</italic>.</article-title>
+<source><italic>J Chem Inf Model.</italic></source>
+<year>2014</year>;<volume>54</volume>(<issue>7</issue>):<fpage>2157</fpage>&#x02013;<lpage>65</lpage>.
+<pub-id pub-id-type="doi">10.1021/ci500264r</pub-id>
+<?supplied-pmid 24968215?><pub-id pub-id-type="pmid">24968215</pub-id></mixed-citation></ref><ref id="ref-48"><label>48</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Freundlich</surname><given-names>JS</given-names></name><name><surname>Hobrath</surname><given-names>JV</given-names></name><etal/></person-group>:
+<article-title>Combining computational methods for hit to lead optimization in
+<italic>Mycobacterium tuberculosis</italic> drug discovery.</article-title>
+<source><italic>Pharm Res.</italic></source>
+<year>2014</year>;<volume>31</volume>(<issue>2</issue>):<fpage>414</fpage>&#x02013;<lpage>35</lpage>.
+<pub-id pub-id-type="doi">10.1007/s11095-013-1172-7</pub-id>
+<!--<pub-id pub-id-type="pmcid">3946937</pub-id>-->
+<?supplied-pmid 24132686?><pub-id pub-id-type="pmid">24132686</pub-id></mixed-citation></ref><ref id="ref-49"><label>49</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Gupta</surname><given-names>RR</given-names></name><name><surname>Gifford</surname><given-names>EM</given-names></name><name><surname>Liston</surname><given-names>T</given-names></name><etal/></person-group>:
+<article-title>Using open source computational tools for predicting human metabolic stability and additional absorption, distribution, metabolism, excretion, and toxicity properties.</article-title>
+<source><italic>Drug Metab Dispos.</italic></source>
+<year>2010</year>;<volume>38</volume>(<issue>11</issue>):<fpage>2083</fpage>&#x02013;<lpage>2090</lpage>.
+<pub-id pub-id-type="doi">10.1124/dmd.110.034918</pub-id>
+<?supplied-pmid 20693417?><pub-id pub-id-type="pmid">20693417</pub-id></mixed-citation></ref><ref id="ref-50"><label>50</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Steinbeck</surname><given-names>C</given-names></name><name><surname>Han</surname><given-names>Y</given-names></name><name><surname>Kuhn</surname><given-names>S</given-names></name><etal/></person-group>:
+<article-title>The Chemistry Development Kit (CDK): an open-source Java library for Chemo- and Bioinformatics.</article-title>
+<source><italic>J Chem Inf Comput Sci.</italic></source>
+<year>2003</year>;<volume>43</volume>(<issue>2</issue>):<fpage>493</fpage>&#x02013;<lpage>500</lpage>.
+<pub-id pub-id-type="doi">10.1021/ci025584y</pub-id>
+<?supplied-pmid 12653513?><pub-id pub-id-type="pmid">12653513</pub-id></mixed-citation></ref><ref id="ref-51"><label>51</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Clark</surname><given-names>AM</given-names></name><name><surname>Williams</surname><given-names>AJ</given-names></name></person-group>:
+<article-title>Incorporating Green Chemistry Concepts into Mobile Chemistry Applications and Their Potential Uses.</article-title>
+<source><italic>ACS Sustain Chem Eng.</italic></source>
+<year>2013</year>;<volume>1</volume>(<issue>1</issue>):<fpage>8</fpage>&#x02013;<lpage>13</lpage>.
+<pub-id pub-id-type="doi">10.1021/sc3000509</pub-id>
+</mixed-citation></ref><ref id="ref-52"><label>52</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Clark</surname><given-names>AM</given-names></name><name><surname>Sarker</surname><given-names>M</given-names></name></person-group>:
+<article-title>TB Mobile: a mobile app for anti-tuberculosis molecules with known targets.</article-title>
+<source><italic>J Cheminform.</italic></source>
+<year>2013</year>;<volume>5</volume>(<issue>1</issue>):<fpage>13</fpage>.
+<pub-id pub-id-type="doi">10.1186/1758-2946-5-13</pub-id>
+<!--<pub-id pub-id-type="pmcid">3616884</pub-id>-->
+<?supplied-pmid 23497706?><pub-id pub-id-type="pmid">23497706</pub-id></mixed-citation></ref><ref id="ref-53"><label>53</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Clark</surname><given-names>AM</given-names></name><name><surname>Williams</surname><given-names>AJ</given-names></name><name><surname>Ekins</surname><given-names>S</given-names></name></person-group>:
+<article-title>Cheminformatics workflows using mobile apps.</article-title>
+<source><italic>Chem-Bio Informatics J.</italic></source>
+<year>2013</year>;<volume>13</volume>:<fpage>1</fpage>&#x02013;<lpage>18</lpage>.
+<pub-id pub-id-type="doi">10.1273/cbij.13.1</pub-id>
+</mixed-citation></ref><ref id="ref-54"><label>54</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Clark</surname><given-names>AM</given-names></name><name><surname>Williams</surname><given-names>AJ</given-names></name></person-group>:
+<article-title>Open Drug Discovery Teams: A Chemistry Mobile App for Collaboration.</article-title>
+<source><italic>Mol Inform.</italic></source>
+<year>2012</year>;<volume>31</volume>(<issue>8</issue>):<fpage>585</fpage>&#x02013;<lpage>597</lpage>.
+<pub-id pub-id-type="doi">10.1002/minf.201200034</pub-id>
+<!--<pub-id pub-id-type="pmcid">3503260</pub-id>-->
+<?supplied-pmid 23198003?><pub-id pub-id-type="pmid">23198003</pub-id></mixed-citation></ref><ref id="ref-55"><label>55</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Williams</surname><given-names>AJ</given-names></name><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Clark</surname><given-names>AM</given-names></name><etal/></person-group>:
+<article-title>Mobile apps for chemistry in the world of drug discovery.</article-title>
+<source><italic>Drug Discov Today.</italic></source>
+<year>2011</year>;<volume>16</volume>(<issue>21&#x02013;22</issue>):<fpage>928</fpage>&#x02013;<lpage>39</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.drudis.2011.09.002</pub-id>
+<?supplied-pmid 21924376?><pub-id pub-id-type="pmid">21924376</pub-id></mixed-citation></ref><ref id="ref-56"><label>56</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Krueger</surname><given-names>RE</given-names></name><name><surname>Mayer</surname><given-names>GD</given-names></name></person-group>:
+<article-title>Tilorone hydrochloride: an orally active antiviral agent.</article-title>
+<source><italic>Science.</italic></source>
+<year>1970</year>;<volume>169</volume>(<issue>3951</issue>):<fpage>1213</fpage>&#x02013;<lpage>4</lpage>.
+<pub-id pub-id-type="doi">10.1126/science.169.3951.1213</pub-id>
+<?supplied-pmid 4317923?><pub-id pub-id-type="pmid">4317923</pub-id></mixed-citation></ref><ref id="ref-57"><label>57</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Stringfellow</surname><given-names>DA</given-names></name></person-group>:
+<article-title>Comparation interferon- inducing and antiviral properties of 2-amino-5-bromo-6-methyl-4-pyrimidinol (U-25,166), tilorone hydrochloride, and polyinosinic-polycytidylic acid.</article-title>
+<source><italic>Antimicrob Agents Chemother.</italic></source>
+<year>1977</year>;<volume>11</volume>(<issue>6</issue>):<fpage>984</fpage>&#x02013;<lpage>92</lpage>.
+<pub-id pub-id-type="doi">10.1128/AAC.11.6.984</pub-id>
+<!--<pub-id pub-id-type="pmcid">352115</pub-id>-->
+<?supplied-pmid 879763?><pub-id pub-id-type="pmid">879763</pub-id></mixed-citation></ref><ref id="ref-58"><label>58</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wissing</surname><given-names>MD</given-names></name><name><surname>Dadon</surname><given-names>T</given-names></name><name><surname>Kim</surname><given-names>E</given-names></name><etal/></person-group>:
+<article-title>Small-molecule screening of PC3 prostate cancer cells identifies tilorone dihydrochloride to selectively inhibit cell growth based on cyclin-dependent kinase 5 expression.</article-title>
+<source><italic>Oncol Rep.</italic></source>
+<year>2014</year>;<volume>32</volume>(<issue>1</issue>):<fpage>419</fpage>&#x02013;<lpage>24</lpage>.
+<pub-id pub-id-type="doi">10.3892/or.2014.3174</pub-id>
+<!--<pub-id pub-id-type="pmcid">4067428</pub-id>-->
+<?supplied-pmid 24841903?><pub-id pub-id-type="pmid">24841903</pub-id></mixed-citation></ref><ref id="ref-59"><label>59</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Biswas</surname><given-names>T</given-names></name><name><surname>Green</surname><given-names>KD</given-names></name><name><surname>Garneau-Tsodikova</surname><given-names>S</given-names></name><etal/></person-group>:
+<article-title>Discovery of inhibitors of
+<italic>Bacillus anthracis</italic> primase DnaG.</article-title>
+<source><italic>Biochemistry.</italic></source>
+<year>2013</year>;<volume>52</volume>(<issue>39</issue>):<fpage>6905</fpage>&#x02013;<lpage>10</lpage>.
+<pub-id pub-id-type="doi">10.1021/bi4011286</pub-id>
+<?supplied-pmid 24004110?><pub-id pub-id-type="pmid">24004110</pub-id></mixed-citation></ref><ref id="ref-60"><label>60</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Lepp&#x000e4;ranta</surname><given-names>O</given-names></name><name><surname>Tikkanen</surname><given-names>JM</given-names></name><name><surname>Bespalov</surname><given-names>MM</given-names></name><etal/></person-group>:
+<article-title>Bone morphogenetic protein-inducer tilorone identified by high-throughput screening is antifibrotic
+<italic>in vivo</italic>.</article-title>
+<source><italic>Am J Respir Cell Mol Biol.</italic></source>
+<year>2013</year>;<volume>48</volume>(<issue>4</issue>):<fpage>448</fpage>&#x02013;<lpage>55</lpage>.
+<pub-id pub-id-type="doi">10.1165/rcmb.2012-0201OC</pub-id>
+<?supplied-pmid 23258233?><pub-id pub-id-type="pmid">23258233</pub-id></mixed-citation></ref><ref id="ref-61"><label>61</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Schrimpf</surname><given-names>MR</given-names></name><name><surname>Sippy</surname><given-names>KB</given-names></name><name><surname>Briggs</surname><given-names>CA</given-names></name><etal/></person-group>:
+<article-title>SAR of &#x003b1;7 nicotinic receptor agonists derived from tilorone: exploration of a novel nicotinic pharmacophore.</article-title>
+<source><italic>Bioorg Med Chem Lett.</italic></source>
+<year>2012</year>;<volume>22</volume>(<issue>4</issue>):<fpage>1633</fpage>&#x02013;<lpage>8</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.bmcl.2011.12.126</pub-id>
+<?supplied-pmid 22281189?><pub-id pub-id-type="pmid">22281189</pub-id></mixed-citation></ref><ref id="ref-62"><label>62</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Briggs</surname><given-names>CA</given-names></name><name><surname>Schrimpf</surname><given-names>MR</given-names></name><name><surname>Anderson</surname><given-names>DJ</given-names></name><etal/></person-group>:
+<article-title>alpha7 nicotinic acetylcholine receptor agonist properties of tilorone and related tricyclic analogues.</article-title>
+<source><italic>Br J Pharmacol.</italic></source>
+<year>2008</year>;<volume>153</volume>(<issue>5</issue>):<fpage>1054</fpage>&#x02013;<lpage>61</lpage>.
+<pub-id pub-id-type="doi">10.1038/sj.bjp.0707649</pub-id>
+<!--<pub-id pub-id-type="pmcid">2267268</pub-id>-->
+<?supplied-pmid 18157163?><pub-id pub-id-type="pmid">18157163</pub-id></mixed-citation></ref><ref id="ref-63"><label>63</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Kim</surname><given-names>K</given-names></name><name><surname>Damoiseaux</surname><given-names>R</given-names></name><name><surname>Norris</surname><given-names>AJ</given-names></name><etal/></person-group>:
+<article-title>High throughput screening of small molecule libraries for modifiers of radiation responses.</article-title>
+<source><italic>Int J Radiat Biol.</italic></source>
+<year>2011</year>;<volume>87</volume>(<issue>8</issue>):<fpage>839</fpage>&#x02013;<lpage>45</lpage>.
+<pub-id pub-id-type="doi">10.3109/09553002.2011.560994</pub-id>
+<!--<pub-id pub-id-type="pmcid">3203687</pub-id>-->
+<?supplied-pmid 21401317?><pub-id pub-id-type="pmid">21401317</pub-id></mixed-citation></ref><ref id="ref-64"><label>64</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ratan</surname><given-names>RR</given-names></name><name><surname>Siddiq</surname><given-names>A</given-names></name><name><surname>Aminova</surname><given-names>L</given-names></name><etal/></person-group>:
+<article-title>Small molecule activation of adaptive gene expression: tilorone or its analogs are novel potent activators of hypoxia inducible factor-1 that provide prophylaxis against stroke and spinal cord injury.</article-title>
+<source><italic>Ann N Y Acad Sci.</italic></source>
+<year>2008</year>;<volume>1147</volume>:<fpage>383</fpage>&#x02013;<lpage>94</lpage>.
+<pub-id pub-id-type="doi">10.1196/annals.1427.033</pub-id>
+<!--<pub-id pub-id-type="pmcid">2921907</pub-id>-->
+<?supplied-pmid 19076458?><pub-id pub-id-type="pmid">19076458</pub-id></mixed-citation></ref><ref id="ref-65"><label>65</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mayer-Sonnenfeld</surname><given-names>T</given-names></name><name><surname>Avrahami</surname><given-names>D</given-names></name><name><surname>Friedman-Levi</surname><given-names>Y</given-names></name><etal/></person-group>:
+<article-title>Chemically induced accumulation of GAGs delays PrP
+<sup>Sc</sup> clearance but prolongs prion disease incubation time.</article-title>
+<source><italic>Cell Mol Neurobiol.</italic></source>
+<year>2008</year>;<volume>28</volume>(<issue>7</issue>):<fpage>1005</fpage>&#x02013;<lpage>15</lpage>.
+<pub-id pub-id-type="doi">10.1007/s10571-008-9274-1</pub-id>
+<?supplied-pmid 18350378?><pub-id pub-id-type="pmid">18350378</pub-id></mixed-citation></ref><ref id="ref-66"><label>66</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Wolfe</surname><given-names>MS</given-names></name></person-group>:
+<article-title>Giardiasis.</article-title>
+<source><italic>Clin Microbiol Rev.</italic></source>
+<year>1992</year>;<volume>5</volume>(<issue>1</issue>):<fpage>93</fpage>&#x02013;<lpage>100</lpage>.
+<!--<pub-id pub-id-type="pmcid">358225</pub-id>-->
+<?supplied-pmid 1735095?><pub-id pub-id-type="pmid">1735095</pub-id></mixed-citation></ref><ref id="ref-67"><label>67</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Okombo</surname><given-names>J</given-names></name><name><surname>Kiara</surname><given-names>SM</given-names></name><name><surname>Mwai</surname><given-names>L</given-names></name><etal/></person-group>:
+<article-title>Baseline
+<italic>in vitro</italic> activities of the antimalarials pyronaridine and methylene blue against
+<italic>Plasmodium falciparum</italic> isolates from Kenya.</article-title>
+<source><italic>Antimicrob Agents Chemother.</italic></source>
+<year>2012</year>;<volume>56</volume>(<issue>2</issue>):<fpage>1105</fpage>&#x02013;<lpage>7</lpage>.
+<pub-id pub-id-type="doi">10.1128/AAC.05454-11</pub-id>
+<!--<pub-id pub-id-type="pmcid">3264213</pub-id>-->
+<?supplied-pmid 22123687?><pub-id pub-id-type="pmid">22123687</pub-id></mixed-citation></ref><ref id="ref-68"><label>68</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Rizk</surname><given-names>MA</given-names></name><name><surname>El-Sayed</surname><given-names>SA</given-names></name><name><surname>Terkawi</surname><given-names>MA</given-names></name><etal/></person-group>:
+<article-title>Optimization of a Fluorescence-Based Assay for Large-Scale Drug Screening against
+<italic>Babesia</italic> and
+<italic>Theileria</italic> Parasites.</article-title>
+<source><italic>PLoS One.</italic></source>
+<year>2015</year>;<volume>10</volume>(<issue>4</issue>):<fpage>e0125276</fpage>.
+<pub-id pub-id-type="doi">10.1371/journal.pone.0125276</pub-id>
+<!--<pub-id pub-id-type="pmcid">4411034</pub-id>-->
+<?supplied-pmid 25915529?><pub-id pub-id-type="pmid">25915529</pub-id></mixed-citation></ref><ref id="ref-69"><label>69</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Qi</surname><given-names>J</given-names></name><name><surname>Wang</surname><given-names>S</given-names></name><name><surname>Liu</surname><given-names>G</given-names></name><etal/></person-group>:
+<article-title>Pyronaridine, a novel modulator of P-glycoprotein-mediated multidrug resistance in tumor cells
+<italic>in vitro</italic> and
+<italic>in vivo</italic>.</article-title>
+<source><italic>Biochem Biophys Res Commun.</italic></source>
+<year>2004</year>;<volume>319</volume>(<issue>4</issue>):<fpage>1124</fpage>&#x02013;<lpage>31</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.bbrc.2004.05.099</pub-id>
+<?supplied-pmid 15194484?><pub-id pub-id-type="pmid">15194484</pub-id></mixed-citation></ref><ref id="ref-70"><label>70</label><mixed-citation publication-type="book">Anon.
+<article-title>Pyramax
+<sup>&#x000ae;</sup> (
+<italic>pyronaridine artesunate</italic>)</article-title>. Available from:
+<ext-link ext-link-type="uri" xlink:href="http://www.mmv.org/access-delivery/access-portfolio/pyramax&#x000ae;-pyronaridine-artesunate">http://www.mmv.org/access-delivery/access-portfolio/pyramax&#x000ae;-pyronaridine-artesunate</ext-link>&#x000a0;
+<ext-link ext-link-type="uri" xlink:href="http://www.mmv.org/access-delivery/access-portfolio/pyramax&#x000ae;-pyronaridine-artesunate">Reference Source</ext-link>
+</mixed-citation></ref><ref id="ref-71"><label>71</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Poravuth</surname><given-names>Y</given-names></name><name><surname>Socheat</surname><given-names>D</given-names></name><name><surname>Rueangweerayut</surname><given-names>R</given-names></name><etal/></person-group>:
+<article-title>Pyronaridine-artesunate versus chloroquine in patients with acute
+<italic>Plasmodium vivax</italic> malaria: a randomized, double-blind, non-inferiority trial.</article-title>
+<source><italic>PLoS One.</italic></source>
+<year>2011</year>;<volume>6</volume>(<issue>1</issue>):<fpage>e14501</fpage>.
+<pub-id pub-id-type="doi">10.1371/journal.pone.0014501</pub-id>
+<!--<pub-id pub-id-type="pmcid">3022577</pub-id>-->
+<?supplied-pmid 21267072?><pub-id pub-id-type="pmid">21267072</pub-id></mixed-citation></ref><ref id="ref-72"><label>72</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Williams</surname><given-names>AJ</given-names></name><name><surname>Krasowski</surname><given-names>MD</given-names></name><etal/></person-group>:
+<article-title>
+<italic>In silico</italic> repositioning of approved drugs for rare and neglected diseases.</article-title>
+<source><italic>Drug Discov Today.</italic></source>
+<year>2011</year>;<volume>16</volume>(<issue>7&#x02013;8</issue>):<fpage>298</fpage>&#x02013;<lpage>310</lpage>.
+<pub-id pub-id-type="doi">10.1016/j.drudis.2011.02.016</pub-id>
+<?supplied-pmid 21376136?><pub-id pub-id-type="pmid">21376136</pub-id></mixed-citation></ref><ref id="ref-73"><label>73</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Mart&#x000ed;nez-Romero</surname><given-names>C</given-names></name><name><surname>Garc&#x000ed;a-Sastre</surname><given-names>A</given-names></name></person-group>:
+<article-title>Against the clock towards new Ebola virus therapies.</article-title>
+<source><italic>Virus Res.</italic></source>
+<year>2015</year>; pii: S0168-1702(15)00236-1.
+<pub-id pub-id-type="doi">10.1016/j.virusres.2015.05.025</pub-id>
+<?supplied-pmid 26057711?><pub-id pub-id-type="pmid">26057711</pub-id></mixed-citation></ref><ref id="ref-74"><label>74</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Seidler</surname><given-names>J</given-names></name><name><surname>McGovern</surname><given-names>SL</given-names></name><name><surname>Doman</surname><given-names>TN</given-names></name><etal/></person-group>:
+<article-title>Identification and prediction of promiscuous aggregating inhibitors among known drugs.</article-title>
+<source><italic>J Med Chem.</italic></source>
+<year>2003</year>;<volume>46</volume>(<issue>21</issue>):<fpage>4477</fpage>&#x02013;<lpage>4486</lpage>.
+<pub-id pub-id-type="doi">10.1021/jm030191r</pub-id>
+<?supplied-pmid 14521410?><pub-id pub-id-type="pmid">14521410</pub-id></mixed-citation></ref><ref id="ref-75"><label>75</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Barelier</surname><given-names>S</given-names></name><name><surname>Sterling</surname><given-names>T</given-names></name><name><surname>O'Meara</surname><given-names>MJ</given-names></name><etal/></person-group>:
+<article-title>The recognition of identical ligands by unrelated proteins.</article-title>
+<source><italic>ACS Chem Biol.</italic></source>
+<year>2015</year>.
+<pub-id pub-id-type="doi">10.1021/acschembio.5b00683</pub-id>
+<?supplied-pmid 26421501?><pub-id pub-id-type="pmid">26421501</pub-id></mixed-citation></ref><ref id="ref-76"><label>76</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><name><surname>Ekins</surname><given-names>S</given-names></name><name><surname>Williams</surname><given-names>AJ</given-names></name></person-group>:
+<article-title>Finding promiscuous old drugs for new uses.</article-title>
+<source><italic>Pharm Res.</italic></source>
+<year>2011</year>;<volume>28</volume>(<issue>8</issue>):<fpage>1785</fpage>&#x02013;<lpage>1791</lpage>.
+<pub-id pub-id-type="doi">10.1007/s11095-011-0486-6</pub-id>
+<?supplied-pmid 21607776?><pub-id pub-id-type="pmid">21607776</pub-id></mixed-citation></ref></ref-list></back><sub-article id="report19459" article-type="peer-review"><front-stub><article-id pub-id-type="doi">10.5256/f1000research.11510.r19459</article-id><title-group><article-title>Referee response for version 3</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Glisic</surname><given-names>Sanja</given-names></name><xref ref-type="aff" rid="r19459a1">1</xref><role>Referee</role></contrib><aff id="r19459a1">
+<label>1</label>Center for Multidisciplinary Research, Vin&#x0010d;a Institute of Nuclear Sciences, University of Belgrade, Belgrade, Serbia</aff></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>18</day><month>1</month><year>2017</year></pub-date><related-article id="d35e5056" related-article-type="peer-reviewed-article" ext-link-type="doi" xlink:href="10.12688/f1000research.7217.3">Version 3</related-article><custom-meta-group><custom-meta><meta-name>recommendation</meta-name><meta-value>approve</meta-value></custom-meta></custom-meta-group></front-stub><body><p>I have read this submission. I believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard.</p></body></sub-article><sub-article id="report11173" article-type="peer-review"><front-stub><article-id pub-id-type="doi">10.5256/f1000research.7773.r11173</article-id><title-group><article-title>Referee response for version 1</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Chakraborty</surname><given-names>Sandeep</given-names></name><xref ref-type="aff" rid="r11173a1">1</xref><role>Referee</role></contrib><aff id="r11173a1">
+<label>1</label>Plant Sciences Department, University of California, Davis, CA, USA</aff></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>3</day><month>12</month><year>2015</year></pub-date><related-article id="d35e5103" related-article-type="peer-reviewed-article" ext-link-type="doi" xlink:href="10.12688/f1000research.7217.1">Version 1</related-article><custom-meta-group><custom-meta><meta-name>recommendation</meta-name><meta-value>approve</meta-value></custom-meta></custom-meta-group></front-stub><body><p>Ekins
+<italic>et al. </italic>have presented a crisp and lucid manuscript on a very relevant topic. They have presented a methodology that implements machine learning techniques to learn from known active and inactive compounds (an ever increasing set, that will tend to provide improved results as time goes by), and score a larger set of compounds (MicroSource Spectrum set of 2320 compounds). The
+<italic>in silico </italic>methodology described here provides an excellent method to quickly screen known compounds for possible therapies (against Ebola in particular), and other viruses in general. Finally, they demonstrate (
+<italic>in vitro</italic>) the increased effectiveness of three compounds - the antiviral tilorone and the antimalarials quinacrine and pyronaridine - in comparison to the known active chloroquine (albeit at a higher cytotoxicity) in inhibiting viral infection of HeLa cells. Further, their efforts in ensuring open-access to such tools is commendable as the next pathogen caused humanitarian crisis looms in some nations.</p><p>The biggest open question is how good are the molecular descriptors, and how much of this is serendipitous. For example, I find it hard to believe that molecular weight and the number of rotatable bonds can be good predictors of drug-protein interactions (although I may be wrong). I have been investigating promiscuous ligand protein interactions for a couple of years on a molecular basis (
+<ext-link ext-link-type="uri" xlink:href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0032011">http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0032011</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="http://f1000research.com/articles/2-286/v3">http://f1000research.com/articles/2-286/v3</ext-link>). One interesting example (unpublished) is suramin used in the treatment of African sleeping sickness (African trypanosomiasis) and river blindness (onchocerciasis), infections caused by parasites. Suramin binds eight non-homologous proteins in the PDB database, through different parts of the molecule and in binding sites that share little similarity in residues involved. Also, the molecule (in addition to the protein) undergoes conformational changes, underscoring the difficulty of computational methods to model such interactions. In the face of such data, the m/c learning models appear too simplistic.</p><p>Also, it is not completely clear why the 23, 31 and 34th compound was chosen from the Table S5, which is ordered on column H (all three have amines, don't the previous ones have it?).</p><p>Some minor comments:
+<list list-type="order"><list-item><p>It would be an interesting case study to evaluate how favipiravir (which I understand is yet to be clinically approved in the US, but approved in Japan) and BCX4430 would rank through the m/c learning methodology.</p></list-item><list-item><p>It would be good to have a set of images, and the corresponding nuclei counts obtained from CellProfiler. Is there a way to quantify the color green as a measure of viral infection?</p></list-item><list-item><p>AlogP as a molecular descriptor has not been explained (page 3).</p></list-item></list>
+</p><p>I have read this submission. I believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard.</p></body><sub-article id="comment1737" article-type="response"><front-stub><contrib-group><contrib contrib-type="author"><name><surname>Ekins</surname><given-names>Sean</given-names></name><aff>Collaborations in Chemistry, USA</aff></contrib></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>19</day><month>12</month><year>2015</year></pub-date></front-stub><body><p>
+<italic>We thank the reviewer for their constructive feedback.</italic>
+</p><p>The approach we have taken uses FCFP_6 fingerprints as well as 8 interpretable descriptors, and therefore the models do not depend on molecular weight and rotatable bond number. On the whole this approach has been remarkable useful for predicting whole cell activity as we described for
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/23521795">mycobacterium tuberculosis</ext-link>,
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/26114876">T. Cruzi</ext-link> and now Ebola. In all cases we are not considering a single target. This suggests the machine learning approach and descriptors used can discern active molecule features from those that are inactive and identify new molecules.</p><p>The three compounds were chosen as those above them in the list were either compounds in the training set or antipsychotics and other CNS acting compounds etc. which were deemed less desirable.</p><p>The model could certainly be used to predict additional molecules. These two suggested by the reviewer are structurally distinct from any of the actives in our current training set. We didn&#x02019;t identify any of the classical antiviral polymerase-looking compounds in our screening against Ebola. However
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/25713700">we have previously collated and described many other diverse compounds active against Ebola
+<italic> in vitro</italic></ext-link> as described in this manuscript. Perhaps the next step would be to utilize all of the different HTS screening data to build a combined model that considers this structural diversity and may overcome limitations in the current models.</p><p>Response: we have now added a new figure with cell images (S7).</p><p>Response: AlogP is a widely used measure of hydrophobicity and we have refered to its use along with the other descriptors in the previous machine learning papers.</p></body></sub-article></sub-article><sub-article id="report10995" article-type="peer-review"><front-stub><article-id pub-id-type="doi">10.5256/f1000research.7773.r10995</article-id><title-group><article-title>Referee response for version 1</article-title></title-group><contrib-group><contrib contrib-type="author"><name><surname>Glisic</surname><given-names>Sanja</given-names></name><xref ref-type="aff" rid="r10995a1">1</xref><role>Referee</role></contrib><aff id="r10995a1">
+<label>1</label>Center for Multidisciplinary Research, Vin&#x0010d;a Institute of Nuclear Sciences, University of Belgrade, Belgrade, Serbia</aff></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>10</day><month>11</month><year>2015</year></pub-date><related-article id="d35e5236" related-article-type="peer-reviewed-article" ext-link-type="doi" xlink:href="10.12688/f1000research.7217.1">Version 1</related-article><custom-meta-group><custom-meta><meta-name>recommendation</meta-name><meta-value>approve</meta-value></custom-meta></custom-meta-group></front-stub><body><p>Ekins and his colleagues by using machine learning models and molecular modeling have successfully identified from collection of 2320 compounds 3 promising anti Ebola compounds with
+<italic>in vitro</italic> nanomolar activity. It is a perfect example which confirms suitability of
+<italic>in silico</italic> approaches in selection of molecules against Ebola virus.</p><p>This result will be strengthened with suggestion of possible therapeutic target(s) of selected</p><p>candidate drugs by using resources of curated chemistry-to-protein relationships. Such information could help in further improvement of proposed therapeutic molecules, as well as for selection of some other candidates for Ebola drugs.</p><p>I have read this submission. I believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard.</p></body><sub-article id="comment1738" article-type="response"><front-stub><contrib-group><contrib contrib-type="author"><name><surname>Ekins</surname><given-names>Sean</given-names></name><aff>Collaborations in Chemistry, USA</aff></contrib></contrib-group><author-notes><fn fn-type="COI-statement"><p>
+<bold>Competing interests: </bold>No competing interests were disclosed.</p></fn></author-notes><pub-date pub-type="epub"><day>19</day><month>12</month><year>2015</year></pub-date></front-stub><body><p>
+<italic>We thank the reviewer for their constructive feedback</italic>
+</p><p>Response: We are unsure which resources the reviewer is referring to and how these would help identify the antiviral target. We have tried to extensively describe the known activities of the three compounds against various targets outside of viruses. In addition we have previously suggested such
+<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/pubmed/25653841.2">antimalarials with Ebola activity may dock into VP35</ext-link>. Preliminary docking results suggest pyronaridine may dock into the same site which is also indicated by the pharmacophore provided already (fig 4). We have added the statement &#x0201c;Future work may include identification of targets using computational or experimental approaches.&#x0201d; to the discussion.</p></body></sub-article></sub-article></article>

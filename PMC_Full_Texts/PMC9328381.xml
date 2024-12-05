@@ -1,0 +1,647 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.3 20210610//EN" "JATS-archivearticle1-3-mathml3.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.3" id="art40810" xml:lang="en" article-type="research-article"><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.1 20151215//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-archive-oasis-article1-mathml3.dtd?><?SourceDTD.Version 1.1?><?ConverterInfo.XSLTName jats-oasis2jats3.xsl?><?ConverterInfo.Version 1?><?properties open_access?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Arthritis Rheumatol</journal-id><journal-id journal-id-type="iso-abbrev">Arthritis Rheumatol</journal-id><journal-id journal-id-type="doi">10.1002/(ISSN)2326-5205</journal-id><journal-id journal-id-type="publisher-id">ART</journal-id><journal-title-group><journal-title>Arthritis &#x00026; Rheumatology (Hoboken, N.j.)</journal-title></journal-title-group><issn pub-type="ppub">2326-5191</issn><issn pub-type="epub">2326-5205</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">9328381</article-id><article-id pub-id-type="pmid">30615300</article-id><article-id pub-id-type="doi">10.1002/art.40810</article-id><article-id pub-id-type="publisher-id">ART40810</article-id><article-categories><subj-group subj-group-type="overline"><subject>Original Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Rheumatoid Arthritis</subject></subj-group></article-categories><title-group><article-title>Profiling of Gene Expression Biomarkers as a Classifier of Methotrexate Nonresponse in Patients With Rheumatoid Arthritis</article-title></title-group><contrib-group><contrib id="art40810-cr-0001" contrib-type="author"><name><surname>Plant</surname><given-names>Darren</given-names></name><degrees>PhD</degrees><xref rid="art40810-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="art40810-cr-0002" contrib-type="author"><name><surname>Maciejewski</surname><given-names>Mateusz</given-names></name><degrees>PhD</degrees><xref rid="art40810-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="art40810-cr-0003" contrib-type="author"><name><surname>Smith</surname><given-names>Samantha</given-names></name><degrees>PhD</degrees><xref rid="art40810-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="art40810-cr-0004" contrib-type="author"><name><surname>Nair</surname><given-names>Nisha</given-names></name><degrees>PhD</degrees><xref rid="art40810-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="art40810-cr-0005" contrib-type="author"><collab collab-type="authors">the Maximising Therapeutic Utility in Rheumatoid Arthritis Consortium, the RAMS Study Group</collab></contrib><contrib id="art40810-cr-0006" contrib-type="author"><name><surname>Hyrich</surname><given-names>Kimme</given-names></name><degrees>MD, PhD, FRCPC</degrees><xref rid="art40810-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="art40810-cr-0007" contrib-type="author"><name><surname>Ziemek</surname><given-names>Daniel</given-names></name><degrees>PhD</degrees><xref rid="art40810-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="art40810-cr-0008" contrib-type="author" corresp="yes"><name><surname>Barton</surname><given-names>Anne</given-names></name><degrees>FRCP, PhD</degrees><xref rid="art40810-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>anne.barton@manchester.ac.uk</email></address></contrib><contrib id="art40810-cr-0009" contrib-type="author"><name><surname>Verstappen</surname><given-names>Suzanne</given-names></name><degrees>PhD</degrees><xref rid="art40810-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="art40810-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<institution>Manchester University NHS Foundation Trust</institution>
+<city>Manchester</city>
+<country country="GB">UK</country>
+</aff><aff id="art40810-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<institution>Pfizer</institution>
+<city>Cambridge</city>
+<named-content content-type="country-part">Massachusetts</named-content>
+</aff><aff id="art40810-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<institution>University of Manchester</institution>
+<city>Manchester</city>
+<country country="GB">UK</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>Address correspondence to Anne Barton, FRCP, PhD, Division of Musculoskeletal and Dermatological Sciences, University of Manchester,Manchester, M13 9PT, UK. E&#x02010;mail: <email>anne.barton@manchester.ac.uk</email>.
+</corresp></author-notes><pub-date pub-type="epub"><day>19</day><month>3</month><year>2019</year></pub-date><pub-date pub-type="ppub"><month>5</month><year>2019</year></pub-date><volume>71</volume><issue seq="80">5</issue><issue-id pub-id-type="doi">10.1002/art.2019.71.issue-5</issue-id><fpage>678</fpage><lpage>684</lpage><history>
+<date date-type="received"><day>11</day><month>7</month><year>2018</year></date>
+<date date-type="accepted"><day>04</day><month>12</month><year>2018</year></date>
+</history><permissions><!--&#x000a9; 2019, American College of Rheumatology--><copyright-statement content-type="article-copyright">&#x000a9; 2019 The Authors. <italic toggle="yes">Arthritis &#x00026; Rheumatology</italic> published by Wiley Periodicals, Inc. on behalf of American College of Rheumatology.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:href="file:ART-71-678.pdf"/><abstract id="art40810-abs-0001"><sec id="art40810-sec-0001"><title>Objective</title><p>Approximately 30&#x02013;40% of rheumatoid arthritis (RA) patients who are initially started on low&#x02010;dose methotrexate (MTX) will not benefit from the treatment. To date, no reliable biomarkers of MTX inefficacy in RA have been identified. The aim of this study was to analyze whole blood samples from RA patients at 2 time points (pretreatment and 4 weeks following initiation of MTX), to identify gene expression biomarkers of the MTX response.</p></sec><sec id="art40810-sec-0002"><title>Methods</title><p>RA patients who were about to commence treatment with MTX were selected from the Rheumatoid Arthritis Medication Study. Using European League Against Rheumatism (EULAR) response criteria, 42 patients were categorized as good responders and 43 as nonresponders at 6 months following the initation of MTX treatment. Data on whole blood transcript expression were generated, and supervised machine learning methods were used to predict a EULAR nonresponse. Models in which transcript levels were included were compared to models in which clinical covariates alone (e.g., baseline disease activity, sex) were included. Gene network and ontology analysis was also performed.</p></sec><sec id="art40810-sec-0003"><title>Results</title><p>Based on the ratio of transcript values (i.e., the difference in log<sub>2</sub>&#x02010;transformed expression values between 4 weeks of treatment and pretreatment), a highly predictive classifier of MTX nonresponse was developed using L2&#x02010;regularized logistic regression (mean &#x000b1; SEM area under the receiver operating characteristic [ROC] curve [AUC] 0.78 &#x000b1; 0.11). This classifier was superior to models that included clinical covariates (ROC AUC 0.63 &#x000b1; 0.06). Pathway analysis of gene networks revealed significant overrepresentation of type I interferon signaling pathway genes in nonresponders at pretreatment (<italic toggle="yes">P</italic> = 2.8 &#x000d7; 10<sup>&#x02212;25</sup>) and at 4 weeks after treatment initiation (<italic toggle="yes">P</italic> = 4.9 &#x000d7; 10<sup>&#x02212;28</sup>).</p></sec><sec id="art40810-sec-0004"><title>Conclusion</title><p>Testing for changes in gene expression between pretreatment and 4 weeks post&#x02013;treatment initiation may provide an early classifier of the MTX treatment response in RA patients who are unlikely to benefit from MTX over 6 months. Such patients should, therefore, have their treatment escalated more rapidly, which would thus potentially impact treatment pathways. These findings emphasize the importance of a role for early treatment biomarker monitoring in RA patients started on MTX.</p></sec></abstract><funding-group><award-group id="funding-0001"><funding-source><institution-wrap><institution>Arthritis Research UK
+</institution><institution-id institution-id-type="doi">10.13039/501100000341</institution-id></institution-wrap></funding-source><award-id>grant codes 20385, 20380 and 20670</award-id></award-group><award-group id="funding-0002"><funding-source><institution-wrap><institution>Medical Research Council
+</institution><institution-id institution-id-type="doi">10.13039/501100000265</institution-id></institution-wrap></funding-source><award-id>MR/K015346/1</award-id></award-group><award-group id="funding-0003"><funding-source><institution-wrap><institution>Pfizer
+</institution><institution-id institution-id-type="doi">10.13039/100004319</institution-id></institution-wrap></funding-source><award-id>I&#x02010;CRP</award-id></award-group></funding-group><counts><fig-count count="2"/><table-count count="1"/><page-count count="7"/><word-count count="5228"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>May 2019</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.1.7 mode:remove_FC converted:27.07.2022</meta-value></custom-meta></custom-meta-group></article-meta><notes><fn-group id="art40810-ntgp-0001"><fn id="art40810-note-1001"><p>Supported by Arthritis Research UK (grants 20385, 20380, and 20670), the Medical Research Council (MR/K015346/1), and Pfizer (I&#x02010;CRP).</p></fn><fn id="art40810-note-1002"><p>
+<sup>1</sup>Darren Plant, PhD, Kimme Hyrich, MD, PhD, FRCPC, Anne Barton, FRCP, PhD, Suzanne Verstappen, PhD: Manchester University NHS Foundation Trust, Manchester, UK; <sup>2</sup>Mateusz Maciejewski, PhD, Daniel Ziemek, PhD: Pfizer, Cambridge, Massachusetts; <sup>3</sup>Samantha Smith, PhD, Nisha Nair, PhD: University of Manchester, Manchester, UK.</p></fn><fn fn-type="equal" id="art40810-note-1003"><p>Drs. Plant and Maciejewski contributed equally to this work.</p></fn><fn fn-type="funding" id="art40810-note-1004"><p>Drs. Maciejewski and Ziemek are full&#x02010;time employees of Pfizer and own stock or stock options in Pfizer. No other disclosures relevant to this article were reported.</p></fn></fn-group></notes></front><body id="art40810-body-0001"><sec id="art40810-sec-0005"><title>Introduction</title><p>Low&#x02010;dose methotrexate (MTX) is the key therapy for the majority of patients with rheumatoid arthritis (RA). However, in ~30&#x02013;40% of patients treated with MTX, disease activity is not adequately controlled <xref rid="art40810-bib-0001" ref-type="bibr">1</xref>, but current guidelines suggest that MTX treatment be administered for 6 months before a decision is made as to its efficacy <xref rid="art40810-bib-0002" ref-type="bibr">2</xref>. It is now well&#x02010;established that early, effective therapy prevents long&#x02010;term joint damage and disability <xref rid="art40810-bib-0003" ref-type="bibr">3</xref>, and the availability of biologic agents emphasizes the importance of identifying those patients who will not do well with MTX therapy, and who should, therefore, be fast&#x02010;tracked to more targeted therapies in order to protect against progressive and irreversible joint damage.</p><p>Although MTX has been used for more than 2 decades to treat RA, our ability to predict who will experience a good response versus nonresponse remains very limited. Clinical and demographic factors are only moderately predictive of the clinical response to MTX. For example, age and seropositivity (e.g., seropositive for rheumatoid factor, anti&#x02013;cyclic citrullinated peptide antibodies [ACPAs]) are not robustly associated with MTX response <xref rid="art40810-bib-0004" ref-type="bibr">4</xref>, <xref rid="art40810-bib-0005" ref-type="bibr">5</xref>, <xref rid="art40810-bib-0006" ref-type="bibr">6</xref>, whereas male patients tend to respond better than female patients <xref rid="art40810-bib-0007" ref-type="bibr">7</xref>. Furthermore, patients with low levels of disease activity tend to respond better than those with higher disease activity. Finally, patients who take nonsteroidal antiinflammatory drugs tend to respond better to MTX than those who do not <xref rid="art40810-bib-0007" ref-type="bibr">7</xref>, while prior treatment with disease&#x02010;modifying antirheumatic drugs has been associated with MTX nonresponse <xref rid="art40810-bib-0008" ref-type="bibr">8</xref>.</p><p>Several studies have tested whether genetic and genomic factors can predict the response to MTX <xref rid="art40810-bib-0009" ref-type="bibr">9</xref>. However, many of the published studies have been small and have assessed a limited number of genes, with limited coverage. Moreover, the results of those studies have not been validated.</p><p>Expression microarrays have been investigated as a potential source of biomarkers that may be predictive of the treatment response in RA <xref rid="art40810-bib-0010" ref-type="bibr">10</xref>. The majority of studies have focused on response to biologic therapies, and not MTX <xref rid="art40810-bib-0011" ref-type="bibr">11</xref>, <xref rid="art40810-bib-0012" ref-type="bibr">12</xref>, and there has been little consistency in the findings. These inconsistencies could be attributable to differences in study design and inclusion criteria, the time point assessed, the sample sizes investigated, lack of appropriate model validation, the drugs studied, and the assessment of individual, rather than combined, groups of related transcripts <xref rid="art40810-bib-0010" ref-type="bibr">10</xref>. Nonetheless, in other diseases, gene expression has been used to stratify the underlying disease into subgroups with differing responses to treatments. For example, several markers that can predict the responsiveness to endocrine therapies in patients with breast cancer have been identified <xref rid="art40810-bib-0013" ref-type="bibr">13</xref>, <xref rid="art40810-bib-0014" ref-type="bibr">14</xref>, <xref rid="art40810-bib-0015" ref-type="bibr">15</xref>, <xref rid="art40810-bib-0016" ref-type="bibr">16</xref>, <xref rid="art40810-bib-0017" ref-type="bibr">17</xref>.</p><p>Therefore, the aim of the current study was to identify gene transcripts in patients with recent&#x02010;onset RA that could potentially be used to classify nonresponse to MTX at 6 months following the initiation of treatment, when tested either before MTX is initiated or at a time point (4 weeks) shortly after treatment initiation.</p></sec><sec id="art40810-sec-0006"><title>Patients and methods</title><sec id="art40810-sec-0007"><title>Patients and samples</title><p>Patients in this study were participants in the Rheumatoid Arthritis Medication Study (RAMS), a national multicenter, longitudinal observational study in the UK that recruits patients with RA who have commenced MTX monotherapy for the first time. MTX was prescribed according to local practice. Patients were seen by a research nurse prior to commencement of MTX and at 3, 6, and 12 months thereafter. Clinical assessments included 28&#x02010;joint counts of swollen and tender joints. Patients completed health status questionnaires, including a self&#x02010;report of current functional disability using the Health Assessment Questionnaire (HAQ) (a score of &#x02264;1 was considered low) <xref rid="art40810-bib-0018" ref-type="bibr">18</xref>. Blood samples were obtained at each visit, and serum was stored at &#x02212;80&#x000b0;C prior to measuring the C&#x02010;reactive protein (CRP) level and ACPAs. The Disease Activity Score in 28 joints using CRP level (DAS28&#x02010;CRP) was calculated at baseline and at 6 months, and established European League Against Rheumatism (EULAR) response criteria were applied <xref rid="art40810-bib-0019" ref-type="bibr">19</xref> to categorize patients as either MTX good responders or MTX nonresponders over the course of 6 months of treatment.</p><p>Samples of whole blood from the patients was drawn into Tempus blood tubes at the pretreatment and 4&#x02010;week time points, before being shipped to the central processing laboratory at the Arthritis Research UK Centre for Genetics and Genomics. The samples were logged onto a laboratory information management system and stored at &#x02212;80&#x000b0;C.</p></sec><sec id="art40810-sec-0009"><title>Expression profiling</title><p>Total RNA was extracted using a Tempus Spin RNA isolation kit, according to the manufacturer's protocol. After extraction, RNA was quantified using a Thermo Scientific Nanodrop ND&#x02010;1000 spectrophotometer, and RNA integrity was assessed using an Agilent Technologies 2100 Bioanalyzer. An optical density at 260/280 nm (OD<sub>260/280 nm</sub>) of ~2 and an OD<sub>260/230 nm</sub> of 2&#x02013;2.2 suggests that no contaminants were present within a sample, and an RNA integrity number of &#x0003e;6 was deemed to indicate sufficient RNA quality.</p><p>RNA samples were labeled with biotin and amplified using an Illumina TotalPrep RNA amplification kit. Following labeling and amplification, the RNA was re&#x02010;quantified and 750 ng was hybridized onto Illumina HumanHT&#x02010;12&#x02010;v4 Expression BeadChips (which target 47,000 probes), in accordance with the direct hybridization protocol. Scanning was performed using an Illumina iScan system, in order to collect raw intensity data from the expression BeadChips prior to export into GenomeStudio for further analysis.</p></sec><sec id="art40810-sec-0010"><title>Data quality control</title><p>GenomeStudio software was used to assess control probe summary statistics and summarize bead&#x02010;level expression data. Quality control was performed using the limma Bioconductor package <xref rid="art40810-bib-0020" ref-type="bibr">20</xref>. Probes not expressed on any array or probe sequences with undesirable properties (e.g., poor mapping) were removed, and data were quantile normalized and log<sub>2</sub> transformed. Potential batch effects were assessed by visual inspection of multidimensional scaling plots, and principal components analysis and hierarchical clustering of samples was performed to identify sample outliers.</p></sec><sec id="art40810-sec-0011"><title>Statistical analysis</title><sec id="art40810-sec-0012"><title>Classifier performance</title><p>We built statistical machine learning models to distinguish therapeutic nonresponders from responders (assessed at 6 months) using gene expression data at pretreatment and 4 weeks, and using the ratio of gene expression (i.e., the difference in log<sub>2</sub>&#x02010;transformed transcript expression intensity between 4 weeks of treatment and pretreatment [a total of 6 contrasts]). In addition, we built models based on clinical variables at pretreatment and 3 month. These models included sex, age at disease onset, HAQ score, smoking habits, ACPA positivity (titer &#x0003e;10 units/ml), number of swollen joints, number of tender joints, CRP levels, and patient's assessment of overall well&#x02010;being (on 100&#x02010;mm visual analog scale [VAS]).</p><p>For each contrast, we employed 3 state&#x02010;of&#x02010;the&#x02010;art machine learning methods with different characteristics: a linear method (regularized logistic regression), a nonlinear method (random forest), and, in the case of the contrasts using gene expression data, a pathway&#x02010;supported approach <xref rid="art40810-bib-0021" ref-type="bibr">21</xref>. Standardization was applied to all input data, and each method was run under a 10&#x02010;fold nested cross&#x02010;validation scheme (where hyperparameters were computed in each of the strata using an inner 5&#x02010;fold cross&#x02010;validation loop) to give accurate estimates of predicted performance. The performance of resulting models was reported using balanced accuracy and receiver operating characteristic (ROC) curves. Balanced accuracy and area under the ROC curves (AUCs) are reported as the mean &#x000b1; SEM. To estimate feature importance, we averaged the model regression coefficients (mean &#x000b1; SD) from across the cross&#x02010;validation runs.</p></sec><sec id="art40810-sec-0013"><title>Weighted genetic coexpression network analysis (WGCNA)</title><p>For modular analysis by WGCNA (details on the workflow are provided in ref. 22), we first calculated Pearson's correlations between all genes present in the data set. Next, an adjacency matrix was calculated by raising the absolute values of the correlation matrix to a power &#x003b2;, to penalize weak correlations and preserve stronger ones. The &#x003b2; value for the soft thresholding was chosen in each data set using the &#x0201c;scale&#x02010;free topology criterion.&#x0201d; Topologic overlap was then calculated to quantify gene coexpression relationships, considering each pair of genes in relation to all of the other genes in the coexpression network.</p><p>Hierarchical clustering was then used to construct a dendrogram with branches corresponding to genes within modules, determined using a dynamic tree&#x02010;cutting approach <xref rid="art40810-bib-0022" ref-type="bibr">22</xref>. For visualization, gene modules were given arbitrary color labels. Genes that were unassigned (i.e., not coexpressed) during network construction were arbitrarily labeled with a grey color. Gene counts in the intersection of corresponding modules between nonresponders and the consensus group of good responders and nonresponders at pretreatment and at 4 weeks were compared using the hypergeometric test <italic toggle="yes">P</italic> value for the overlap of the 2 modules.</p><p>In order to identify hub genes from the gene modules, an adjacency matrix was constructed for each gene, and connectivity was calculated as the sum of the adjacency to all other genes. Genes were then ranked by connectivity, and the top 20% of genes were selected from each module, the rationale being that only a fraction of genes in modules are likely to relate to the main biologic function <xref rid="art40810-bib-0023" ref-type="bibr">23</xref>.</p></sec></sec><sec id="art40810-sec-0014"><title>Pathway analysis</title><p>Functional analysis of hub genes derived from the modules were analyzed by hypergeometric testing on gene ontology terms <xref rid="art40810-bib-0024" ref-type="bibr">24</xref>. In addition, previous evidence of coexpression was investigated using data from Gene Expression Omnibus <xref rid="art40810-bib-0025" ref-type="bibr">25</xref>, <xref rid="art40810-bib-0026" ref-type="bibr">26</xref>.</p></sec></sec><sec sec-type="results" id="art40810-sec-0015"><title>Results</title><sec id="art40810-sec-0016"><title>Samples</title><p>Following application of data quality control, 22,771 probes were identified and available for analysis at the 2 time points in samples of whole blood from 82 RA patients. The patients were categorized as either good responders (n = 42) or poor responders/nonresponders (n = 43) following 6 months of treatment with MTX. The pretreatment demographic and clinical characteristics of the patients are shown in Table&#x000a0;<xref rid="art40810-tbl-0001" ref-type="table">1</xref>.</p><table-wrap position="float" id="art40810-tbl-0001"><label>Table 1</label><caption><p>Pretreatment characteristics of the patients with rheumatoid arthritis<xref rid="art40810-note-0005" ref-type="table-fn">a</xref>
+</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">Characteristic</th><th align="center" valign="top" rowspan="1" colspan="1">EULAR good responders (n = 42)</th><th align="center" valign="top" rowspan="1" colspan="1">EULAR nonresponders (n = 43)</th><th align="center" valign="top" rowspan="1" colspan="1">
+<italic toggle="yes">P</italic>
+</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Female, no. (%)</td><td align="center" rowspan="1" colspan="1">32 (76)</td><td align="center" rowspan="1" colspan="1">33 (77)</td><td align="char" char="." rowspan="1" colspan="1">0.95</td></tr><tr><td align="left" rowspan="1" colspan="1">Age at onset, mean &#x000b1; SD years</td><td align="center" rowspan="1" colspan="1">59 &#x000b1; 15</td><td align="center" rowspan="1" colspan="1">55 &#x000b1; 14</td><td align="char" char="." rowspan="1" colspan="1">0.28</td></tr><tr><td align="left" rowspan="1" colspan="1">HAQ score, median (IQR)</td><td align="center" rowspan="1" colspan="1">1.18 (0.9&#x02013;1.7)</td><td align="center" rowspan="1" colspan="1">1.0 (0.3&#x02013;1.6)</td><td align="char" char="." rowspan="1" colspan="1">0.07</td></tr><tr><td align="left" rowspan="1" colspan="1">MTX start dose, median (IQR) mg</td><td align="center" rowspan="1" colspan="1">12.5 (10&#x02013;15)</td><td align="center" rowspan="1" colspan="1">10 (10&#x02013;15)</td><td align="char" char="." rowspan="1" colspan="1">0.87</td></tr><tr><td align="left" rowspan="1" colspan="1">Taking oral steroids, no. (%)</td><td align="center" rowspan="1" colspan="1">5 (12)</td><td align="center" rowspan="1" colspan="1">12 (27)</td><td align="char" char="." rowspan="1" colspan="1">0.07</td></tr><tr><td align="left" rowspan="1" colspan="1">Disease duration, median (IQR) months</td><td align="center" rowspan="1" colspan="1">9.1 (4.2&#x02013;15.3)</td><td align="center" rowspan="1" colspan="1">5.8 (3.1&#x02013;21.7)</td><td align="char" char="." rowspan="1" colspan="1">0.94</td></tr><tr><td align="left" rowspan="1" colspan="1">Smoking habits, no. never/past/current </td><td align="center" rowspan="1" colspan="1">23/11/8</td><td align="center" rowspan="1" colspan="1">16/17/10</td><td align="char" char="." rowspan="1" colspan="1">0.25</td></tr><tr><td align="left" rowspan="1" colspan="1">ACPA positive, no. (%)</td><td align="center" rowspan="1" colspan="1">27 (64)</td><td align="center" rowspan="1" colspan="1">25 (58)</td><td align="char" char="." rowspan="1" colspan="1">0.56</td></tr><tr><td align="left" rowspan="1" colspan="1">DAS28, mean &#x000b1; SD</td><td align="center" rowspan="1" colspan="1">4.8 &#x000b1; 1.0</td><td align="center" rowspan="1" colspan="1">4.0 &#x000b1; 1.3</td><td align="char" char="." rowspan="1" colspan="1">0.001</td></tr><tr><td align="left" rowspan="1" colspan="1">CRP, mean &#x000b1; SD mg/liter</td><td align="center" rowspan="1" colspan="1">2.2 &#x000b1; 1</td><td align="center" rowspan="1" colspan="1">1.7 &#x000b1; 1</td><td align="char" char="." rowspan="1" colspan="1">0.01</td></tr><tr><td align="left" rowspan="1" colspan="1">28&#x02010;joint swollen joint count, median (IQR)</td><td align="center" rowspan="1" colspan="1">5 (3&#x02013;11)</td><td align="center" rowspan="1" colspan="1">3 (2&#x02013;8)</td><td align="char" char="." rowspan="1" colspan="1">0.02</td></tr><tr><td align="left" rowspan="1" colspan="1">28&#x02010;joint tender joint count, median (IQR)</td><td align="center" rowspan="1" colspan="1">8 (6&#x02013;15)</td><td align="center" rowspan="1" colspan="1">6 (1&#x02013;13)</td><td align="char" char="." rowspan="1" colspan="1">0.05</td></tr><tr><td align="left" rowspan="1" colspan="1">Patient's assessment of overall well&#x02010;being, median (IQR) VAS score</td><td align="center" rowspan="1" colspan="1">44 (25&#x02013;64)</td><td align="center" rowspan="1" colspan="1">32 (15&#x02013;59)</td><td align="char" char="." rowspan="1" colspan="1">0.07</td></tr></tbody></table><table-wrap-foot id="art40810-ntgp-0002"><fn id="art40810-note-0005"><label>a</label><p>EULAR = European League Against Rheumatism; HAQ = Health Assessment Questionnaire; IQR = interquartile range; MTX = methotrexate; ACPA = anti&#x02013;cyclic citrullinated peptide antibody; DAS28 = Disease Activity Score in 28 joints; CRP = C&#x02010;reactive protein; VAS = 100&#x02010;mm visual analog scale.</p></fn><fn id="art40810-note-0006"><p>
+<italic toggle="yes">P</italic> values were derived by <italic toggle="yes">t</italic>&#x02010;test, Mann&#x02010;Whitney U test, and chi&#x02010;square test for comparisons of variables expressed as the mean, median, and number (%), respectively.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &#x00026; Sons, Ltd</copyright-holder></permissions></table-wrap></sec><sec id="art40810-sec-0018"><title>Classifier performance</title><p>In the models based on transcriptomics data, a high level of prediction of MTX nonresponse was observed with the L2&#x02010;regularized logistic regression (linear method) model of the gene expression ratio between 4 weeks and pretreatment (Figures&#x000a0;<xref rid="art40810-fig-0001" ref-type="fig">1</xref> and <xref rid="art40810-fig-0002" ref-type="fig">2</xref>). Using this model, the balanced accuracy was a mean &#x000b1; SEM 0.61 &#x000b1; 0.10, and the ROC AUC was 0.78 &#x000b1; 0.11. A very limited predictive utility was observed at the pretreatment time point. In contrast, the network&#x02010;based models had a good degree of predictive utility at the 4&#x02010;week time point (balanced accuracy 0.68 &#x000b1; 0.06, ROC AUC 0.78 &#x000b1; 0.06).</p><fig position="float" fig-type="Figure" id="art40810-fig-0001"><label>Figure 1</label><caption><p>Performance of statistical machine learning models to distinguish therapeutic nonresponders from responders (assessed at 6 months) using gene expression data at pretreatment and 4 weeks after treatment initiation, and using the ratio of gene expression (i.e., the difference in log<sub>2</sub>&#x02010;transformed transcript expression intensity between 4 weeks of treatment and pretreatment). Area under the receiver operating characteristic (ROC) curves (AUCs) were calculated for estimating the predicted performance of a linear method (regularized logistic regression), a nonlinear method (random forest), and a network&#x02010;based approach to evaluating methotrexate nonresponse in patients with rheumatoid arthritis. Results are the mean &#x000b1; SEM. </p></caption><graphic xlink:href="ART-71-678-g001" position="anchor" id="jats-graphic-1"/></fig><fig position="float" fig-type="Figure" id="art40810-fig-0002"><label>Figure 2</label><caption><p>L2&#x02010;regularized logistic regression model performance using the gene expression ratio between 4 weeks and pretreatment. Results are the fraction of true nonresponders found versus false negative rate.</p></caption><graphic xlink:href="ART-71-678-g002" position="anchor" id="jats-graphic-3"/></fig><p>Very limited predictive utility was observed in the models based on the clinical data alone, either at baseline or at 3 months (e.g., with the linear method, at baseline, balanced accuracy 0.58 &#x000b1; 0.5, ROC AUC 0.65 &#x000b1; 0.06; at 3 months, balanced accuracy 0.62 &#x000b1; 0.04, ROC AUC 0.70 &#x000b1; 0.05) (see Supplementary Figure <xref rid="art40810-sup-0001" ref-type="supplementary-material">1</xref>, available on the <italic toggle="yes">Arthritis &#x00026; Rheumatology</italic> web site at <ext-link xlink:href="http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract" ext-link-type="uri">http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract</ext-link>). The transcripts with the largest positive impact on the performance of the models, based on the transcript ratio analysis, are presented in Supplementary Figure&#x000a0;<xref rid="art40810-sup-0001" ref-type="supplementary-material">2</xref>&#x000a0;(available on the <italic toggle="yes">Arthritis &#x00026; Rheumatology</italic> web site at <ext-link xlink:href="http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract" ext-link-type="uri">http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract</ext-link>).</p></sec><sec id="art40810-sec-0019"><title>Modular analysis using WGCNA</title><p>In samples of whole blood from RA patients at pretreatment, 9 modules (arbitrarily labeled in midnight blue, light green, royal blue, magenta, grey60, black, salmon, green&#x02010;yellow, and light&#x02010;yellow colors in Supplementary Figure <xref rid="art40810-sup-0001" ref-type="supplementary-material">3</xref>, available on the <italic toggle="yes">Arthritis &#x00026; Rheumatology</italic> web site at <ext-link xlink:href="http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract" ext-link-type="uri">http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract</ext-link>) were identified in nonresponders that had not been seen in pretreatment samples from the consensus group of good responders and nonresponders (i.e., labeled in grey [i.e., unassigned] in the consensus network; see Supplementary Figure <xref rid="art40810-sup-0001" ref-type="supplementary-material">3</xref>).</p><p>In samples at 4 weeks following initiation of treatment with MTX, 4 modules (arbitrarily labeled in salmon, light cyan, grey60, and yellow colors in Supplementary Figure <xref rid="art40810-sup-0001" ref-type="supplementary-material">4</xref>, available on the <italic toggle="yes">Arthritis &#x00026; Rheumatology</italic> web site at <ext-link xlink:href="http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract" ext-link-type="uri">http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract</ext-link>) were identified in nonresponders that were unassigned (i.e., labeled in grey) in the consensus samples.</p></sec><sec id="art40810-sec-0020"><title>Pathway analysis</title><p>Functional analysis of the gene lists derived from the identified modules (as described above) revealed a number of biologic processes relevant to inflammatory processes, such as genes involved in the response to type I interferon (<italic toggle="yes">P</italic> = 2.8 &#x000d7; 10<sup>&#x02212;25</sup>) at pretreatment, and the type I interferon signaling pathway (<italic toggle="yes">P</italic> = 4.9 &#x000d7; 10<sup>&#x02212;28</sup>) at 4 weeks (labeled in light green and light cyan, respectively; see <xref rid="art40810-sup-0002" ref-type="supplementary-material">Supplementary Tables 1, 2, and 3</xref>, available on the <italic toggle="yes">Arthritis &#x00026; Rheumatology</italic> web site at <ext-link xlink:href="http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract" ext-link-type="uri">http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract</ext-link>). Using data from the Gene Expression Omnibus database, we found that &#x0003e;90% of hub genes from within these modules had prior evidence of coexpression, thus validating the gene network approach (see <xref rid="art40810-sup-0001" ref-type="supplementary-material">Supplementary Figures 5 and 6</xref>, available on the <italic toggle="yes">Arthritis &#x00026; Rheumatology</italic> web site at <ext-link xlink:href="http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract" ext-link-type="uri">http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract</ext-link>).</p><p>We tested the interferon pathway transcripts for their predictive accuracy as a classifier of MTX nonresponse. Although we observed nonrandom performance (e.g., with the linear method at baseline, balanced accuracy 0.52 &#x000b1; 0.04, ROC AUC 0.64 &#x000b1; 0.06), this classifier performed less well than the model that included all transcripts present on the array (see Supplementary Figure <xref rid="art40810-sup-0001" ref-type="supplementary-material">7</xref>, available on the <italic toggle="yes">Arthritis &#x00026; Rheumatology</italic> web site at <ext-link xlink:href="http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract" ext-link-type="uri">http://onlinelibrary.wiley.com/doi/10.1002/art.40810/abstract</ext-link>).</p></sec></sec><sec sec-type="discussion" id="art40810-sec-0021"><title>Discussion</title><p>In this study, we performed gene expression profiling in samples of whole blood collected at pretreatment and 4 weeks following the initiation of MTX therapy from patients with RA who had been started on MTX for the first time. By assessing a number of cutting edge model&#x02010;building approaches, we developed a gene expression classifier that could potentially provide an early&#x02010;response biomarker of MTX inefficacy. The classifier was found to be stable in cross&#x02010;validation (SEM of 0.11 for the ROC AUC) and performed better than models that included the clinical covariates alone.</p><p>Pathway analysis revealed that genes involved in the response to type I interferon (<italic toggle="yes">P</italic> = 2.8 &#x000d7; 10<sup>&#x02212;25</sup>) and the type I interferon signaling pathway (<italic toggle="yes">P</italic> = 4.9 &#x000d7; 10<sup>&#x02212;28</sup>) were enriched in coexpressed gene modules identified in nonresponsive patients at pretreatment and at 4 weeks post&#x02013;treatment initiation, respectively. Importantly, type I IFN signaling activates the JAK/STAT pathway and influences the development of innate and adaptive immune responses <xref rid="art40810-bib-0027" ref-type="bibr">27</xref>. Type I interferon gene responses are known to be increased in RA, to be correlated with autoantibody production <xref rid="art40810-bib-0028" ref-type="bibr">28</xref>, and to potentially be correlated with the response to tumor necrosis factor inhibitor therapy <xref rid="art40810-bib-0028" ref-type="bibr">28</xref>, <xref rid="art40810-bib-0029" ref-type="bibr">29</xref>, <xref rid="art40810-bib-0030" ref-type="bibr">30</xref>, <xref rid="art40810-bib-0031" ref-type="bibr">31</xref>, <xref rid="art40810-bib-0032" ref-type="bibr">32</xref>, <xref rid="art40810-bib-0033" ref-type="bibr">33</xref>, <xref rid="art40810-bib-0034" ref-type="bibr">34</xref>. It is important to note that the coexpressed genes were not differentially expressed between responder groups or between time points (data not shown).</p><p>The results of this study highlight the potential of early treatment biomarker monitoring in RA, and raise important questions regarding acceptable levels of performance for complementary diagnostic testing. To address this, decisions by key stakeholders (e.g., patient groups, clinicians) need to be made. Acceptable classifier performance must also be viewed in context, since ~46% of RA patients started on MTX therapy will discontinue the treatment by 3 years, due to intolerance/safety and inefficacy <xref rid="art40810-bib-0035" ref-type="bibr">35</xref>. Therefore, we believe that high recall (correctly identifying nonresponders) is preferable even at the expense of misclassifying a fraction of good responders. For example, the current model was able to detect ~50% of nonresponders at the expense of a false negative rate of ~20% (Figure&#x000a0;<xref rid="art40810-fig-0002" ref-type="fig">2</xref>).</p><p>The strengths of the current study include a large sample size, the availability of genome&#x02010;wide transcript data at pretreatment and also during early treatment, rigorous internal model validation, and a focus on one drug (i.e., MTX). Furthermore, a comparison with external data confirmed that the gene expression networks identified in the current data have previous evidence of coexpression, providing external validity.</p><p>A limitation in investigating MTX nonresponse is the semiquantitative nature of the methods used to approximate disease activity, for example, the DAS28 <xref rid="art40810-bib-0036" ref-type="bibr">36</xref> and related EULAR response classification. The DAS28 score is composed of both objective (e.g., swollen joint count) and subjective (e.g., tender joint count) measures. As a result of it being made up of several components, it can be difficult to interpret, particularly because the subjective measures receive more weighting in the score calculation, and tend to correlate more strongly with psychological variables, such as anxiety <xref rid="art40810-bib-0037" ref-type="bibr">37</xref> and fibromyalgia tender points <xref rid="art40810-bib-0038" ref-type="bibr">38</xref>. Improved classifier performance might therefore be achieved if a biologic measure of disease activity, particularly one that might be more strongly reflective of synovitis levels, were to be used to assess the treatment response, as opposed to the DAS28 or its components.</p><p>Another potential limitation to the current study is the use of whole blood for transcript profiling. While the purpose of the study was not to resolve mechanisms of nonresponse, model performance may have been improved by targeting enriched cell subsets within the blood.</p><p>The utility of a gene expression classifier of MTX nonresponse will now require validation, not only in independent samples but also using independent technology. For example, more mileage may be gained from RNA sequencing, as opposed to array&#x02010;based data sets. If the predictive utility of gene expression data can be confirmed, this could pave the way for a paradigm shift in treatment outcomes from clinically based treat&#x02010;to&#x02010;target approaches to biologically driven precision medicine.</p><p>In conclusion, these data reveal a potential role for early treatment biomarker monitoring in RA patients started on MTX, and highlight the utility of machine learning and network&#x02010;based approaches in investigations of treatment response in inflammatory diseases.</p></sec><sec id="art40810-sec-0023"><title>Author contributions</title><p>All authors were involved in drafting the article or revising it critically for important intellectual content, and all authors approved the final version to be published. Dr. Barton had full access to all of the data in the study and takes responsibility for the integrity of the data and the accuracy of the data analysis.</p><sec id="art40810-sec-0024"><title>Study conception and design</title><p>Plant, Maciejewski, Hyrich, Ziemek, Barton, Verstappen.</p></sec><sec id="art40810-sec-0025"><title>Acquisition of data</title><p>Smith, Nair, Barton, Verstappen.</p></sec><sec id="art40810-sec-0026"><title>Analysis and interpretation of data</title><p>Plant, Maciejewski, Hyrich, Ziemek, Barton, Verstappen.</p></sec></sec><sec id="art40810-sec-0027"><title>Role of the study sponsor</title><p>Pfizer provided support for the study but had no role in the study design or in the collection, analysis, or interpretation of the data, the writing of the manuscript, or the decision to submit the manuscript for publication. Publication of this article was not contingent upon approval by Pfizer.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="art40810-sup-0001" position="float" content-type="local-data"><caption><p>Supplementary Figures</p></caption><media xlink:href="ART-71-678-s001.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="art40810-sup-0002" position="float" content-type="local-data"><caption><p>Supplementary Tables</p></caption><media xlink:href="ART-71-678-s002.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="art40810-sec-0022"><title>Acknowledgments</title><p>We thank Pfizer I&#x02010;CRP, the Medical Research Council, and Arthritis Research UK, which jointly funded the&#x000a0;MATURA (Maximizing Therapeutic Utility in RA) collaboration and the National Institute for Health Research Manchester Biomedical Research Centre.</p></ack><ref-list content-type="cited-references" id="art40810-bibl-0001"><title>References</title><ref id="art40810-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="art40810-cit-0001">
+<string-name>
+<surname>Salliot</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>van der Heijde</surname>
+<given-names>D</given-names>
+</string-name>. <article-title>Long&#x02010;term safety of methotrexate monotherapy in patients with rheumatoid arthritis: a systematic literature research</article-title>. <source>Ann Rheum Dis</source>
+<year>2009</year>;<volume>68</volume>:<fpage>1100</fpage>&#x02013;<lpage>4</lpage>.<pub-id pub-id-type="pmid">19060002</pub-id></mixed-citation></ref><ref id="art40810-bib-0002"><label>2</label><mixed-citation publication-type="miscellaneous" id="art40810-cit-0002">
+<collab collab-type="authors">National Insitute for Health and Care Excellence</collab>
+. <article-title>Rheumatoid arthritis in adults: management</article-title>. URL: <ext-link xlink:href="https://www.nice.org.uk/guidance/cg79" ext-link-type="uri">https://www.nice.org.uk/guidance/cg79</ext-link>.</mixed-citation></ref><ref id="art40810-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="art40810-cit-0003">
+<string-name>
+<surname>Farragher</surname>
+<given-names>TM</given-names>
+</string-name>, <string-name>
+<surname>Lunt</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Fu</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Bunn</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Symmons</surname>
+<given-names>DP</given-names>
+</string-name>. <article-title>Early treatment with, and time receiving, first disease&#x02010;modifying antirheumatic drug predicts long&#x02010;term function in patients with inflammatory polyarthritis</article-title>. <source>Ann Rheum Dis</source>
+<year>2010</year>;<volume>69</volume>:<fpage>689</fpage>&#x02013;<lpage>95</lpage>.<pub-id pub-id-type="pmid">19858538</pub-id></mixed-citation></ref><ref id="art40810-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="art40810-cit-0004">
+<string-name>
+<surname>Bluett</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Sergeant</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>MacGregor</surname>
+<given-names>AJ</given-names>
+</string-name>, <string-name>
+<surname>Symmons</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Verstappen</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>Predictors of oral methotrexate failure in patients with early inflammatory arthritis: a competing risks analysis</article-title>. <source>Rheumatology (Oxford)</source>
+<year>2015</year>;<volume>54</volume>
+<issue>Suppl 1</issue>:<fpage>i71</fpage>.</mixed-citation></ref><ref id="art40810-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="art40810-cit-0005">
+<string-name>
+<surname>Wessels</surname>
+<given-names>JA</given-names>
+</string-name>, <string-name>
+<surname>van der Kooij</surname>
+<given-names>SM</given-names>
+</string-name>, <string-name>
+<surname>le Cessie</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Kievit</surname>
+<given-names>W</given-names>
+</string-name>, <string-name>
+<surname>Barerra</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Allaart</surname>
+<given-names>CF</given-names>
+</string-name>, et al. <article-title>A clinical pharmacogenetic model to predict the efficacy of methotrexate monotherapy in recent&#x02010;onset rheumatoid arthritis</article-title>. <source>Arthritis Rheum</source>
+<year>2007</year>;<volume>56</volume>:<fpage>1765</fpage>&#x02013;<lpage>75</lpage>.<pub-id pub-id-type="pmid">17530705</pub-id></mixed-citation></ref><ref id="art40810-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="art40810-cit-0006">
+<collab collab-type="authors">Rheumatoid Arthritis Clinical Trial Archive Group</collab>
+. <article-title>The effect of age and renal function on the efficacy and toxicity of methotrexate in rheumatoid arthritis</article-title>. <source>J Rheumatol</source>
+<year>1995</year>;<volume>22</volume>:<fpage>218</fpage>&#x02013;<lpage>23</lpage>.<pub-id pub-id-type="pmid">7738941</pub-id></mixed-citation></ref><ref id="art40810-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="art40810-cit-0007">
+<string-name>
+<surname>Hoekstra</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>van Ede</surname>
+<given-names>AE</given-names>
+</string-name>, <string-name>
+<surname>Haagsma</surname>
+<given-names>CJ</given-names>
+</string-name>, <string-name>
+<surname>van de Laar</surname>
+<given-names>MA</given-names>
+</string-name>, <string-name>
+<surname>Huizinga</surname>
+<given-names>TW</given-names>
+</string-name>, <string-name>
+<surname>Kruijsen</surname>
+<given-names>MW</given-names>
+</string-name>, et al. <article-title>Factors associated with toxicity, final dose, and efficacy of methotrexate in patients with rheumatoid arthritis</article-title>. <source>Ann Rheum Dis</source>
+<year>2003</year>;<volume>62</volume>:<fpage>423</fpage>&#x02013;<lpage>6</lpage>.<pub-id pub-id-type="pmid">12695153</pub-id></mixed-citation></ref><ref id="art40810-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="art40810-cit-0008">
+<string-name>
+<surname>Lie</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>van der Heijde</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Uhlig</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Heiberg</surname>
+<given-names>MS</given-names>
+</string-name>, <string-name>
+<surname>Koldingsnes</surname>
+<given-names>W</given-names>
+</string-name>, <string-name>
+<surname>R&#x000f8;devand</surname>
+<given-names>E</given-names>
+</string-name>, et al. <article-title>Effectiveness and retention rates of methotrexate in psoriatic arthritis in comparison with methotrexate&#x02010;treated patients with rheumatoid arthritis</article-title>. <source>Ann Rheum Dis</source>
+<year>2010</year>;<volume>69</volume>:<fpage>671</fpage>&#x02013;<lpage>6</lpage>.<pub-id pub-id-type="pmid">19740904</pub-id></mixed-citation></ref><ref id="art40810-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="art40810-cit-0009">
+<string-name>
+<surname>Plant</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Wilson</surname>
+<given-names>AG</given-names>
+</string-name>, <string-name>
+<surname>Barton</surname>
+<given-names>A</given-names>
+</string-name>. <article-title>Genetic and epigenetic predictors of responsiveness to treatment in RA</article-title>. <source>Nat Rev Rheumatol</source>
+<year>2014</year>;<volume>10</volume>:<fpage>329</fpage>&#x02013;<lpage>37</lpage>.<pub-id pub-id-type="pmid">24535543</pub-id></mixed-citation></ref><ref id="art40810-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="art40810-cit-0010">
+<string-name>
+<surname>Smith</surname>
+<given-names>SL</given-names>
+</string-name>, <string-name>
+<surname>Plant</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Eyre</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Barton</surname>
+<given-names>A</given-names>
+</string-name>. <article-title>The potential use of expression profiling: implications for predicting treatment response in rheumatoid arthritis</article-title>. <source>Ann Rheum Dis</source>
+<year>2013</year>;<volume>72</volume>:<fpage>1118</fpage>&#x02013;<lpage>24</lpage>.<pub-id pub-id-type="pmid">23486412</pub-id></mixed-citation></ref><ref id="art40810-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="art40810-cit-0011">
+<string-name>
+<surname>Hobl</surname>
+<given-names>EL</given-names>
+</string-name>, <string-name>
+<surname>Mader</surname>
+<given-names>RM</given-names>
+</string-name>, <string-name>
+<surname>Erlacher</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Duhm</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Mustak</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Br&#x000f6;ll</surname>
+<given-names>H</given-names>
+</string-name>, et al. <article-title>The influence of methotrexate on the gene expression of the pro&#x02010;inflammatory cytokine IL&#x02010;12A in the therapy of rheumatoid arthritis</article-title>. <source>Clin Exp Rheumatol</source>
+<year>2011</year>;<volume>29</volume>:<fpage>963</fpage>&#x02013;<lpage>9</lpage>.<pub-id pub-id-type="pmid">22133036</pub-id></mixed-citation></ref><ref id="art40810-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="art40810-cit-0012">
+<string-name>
+<surname>Parker</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Izmailova</surname>
+<given-names>ES</given-names>
+</string-name>, <string-name>
+<surname>Narang</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Badola</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Le</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Roubenoff</surname>
+<given-names>R</given-names>
+</string-name>, et al. <article-title>Peripheral blood expression of nuclear factor&#x02010;&#x003ba;b&#x02010;regulated genes is associated with rheumatoid arthritis disease activity and responds differentially to anti&#x02010;tumor necrosis factor&#x02010;&#x003b1; versus methotrexate</article-title>. <source>J Rheumatol</source>
+<year>2007</year>;<volume>34</volume>:<fpage>1817</fpage>&#x02013;<lpage>22</lpage>.<pub-id pub-id-type="pmid">17696278</pub-id></mixed-citation></ref><ref id="art40810-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="art40810-cit-0013">
+<string-name>
+<surname>Dowsett</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Smith</surname>
+<given-names>IE</given-names>
+</string-name>, <string-name>
+<surname>Ebbs</surname>
+<given-names>SR</given-names>
+</string-name>, <string-name>
+<surname>Dixon</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name>
+<surname>Skene</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>A'Hern</surname>
+<given-names>R</given-names>
+</string-name>, et al. <article-title>Prognostic value of Ki67 expression after short&#x02010;term presurgical endocrine therapy for primary breast cancer</article-title>. <source>J Natl Cancer Inst</source>
+<year>2007</year>;<volume>99</volume>:<fpage>167</fpage>&#x02013;<lpage>70</lpage>.<pub-id pub-id-type="pmid">17228000</pub-id></mixed-citation></ref><ref id="art40810-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="art40810-cit-0014">
+<string-name>
+<surname>Dowsett</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Allred</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Knox</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Quinn</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Salter</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Wale</surname>
+<given-names>C</given-names>
+</string-name>, et al. <article-title>Relationship between quantitative estrogen and progesterone receptor expression and human epidermal growth factor receptor 2 (HER&#x02010;2) status with recurrence in the arimidex, tamoxifen, alone or in combination trial</article-title>. <source>J Clin Oncol</source>
+<year>2008</year>;<volume>26</volume>:<fpage>1059</fpage>&#x02013;<lpage>65</lpage>.<pub-id pub-id-type="pmid">18227529</pub-id></mixed-citation></ref><ref id="art40810-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="art40810-cit-0015">
+<string-name>
+<surname>Harvey</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name>
+<surname>Clark</surname>
+<given-names>GM</given-names>
+</string-name>, <string-name>
+<surname>Osborne</surname>
+<given-names>CK</given-names>
+</string-name>, <string-name>
+<surname>Allred</surname>
+<given-names>DC</given-names>
+</string-name>. <article-title>Estrogen receptor status by immunohistochemistry is superior to the ligand&#x02010;binding assay for predicting response to adjuvant endocrine therapy in breast cancer</article-title>. <source>J Clin Oncol</source>
+<year>1999</year>;<volume>17</volume>:<fpage>1474</fpage>&#x02013;<lpage>81</lpage>.<pub-id pub-id-type="pmid">10334533</pub-id></mixed-citation></ref><ref id="art40810-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="art40810-cit-0016">
+<string-name>
+<surname>Houston</surname>
+<given-names>SJ</given-names>
+</string-name>, <string-name>
+<surname>Plunkett</surname>
+<given-names>TA</given-names>
+</string-name>, <string-name>
+<surname>Barnes</surname>
+<given-names>DM</given-names>
+</string-name>, <string-name>
+<surname>Smith</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Rubens</surname>
+<given-names>RD</given-names>
+</string-name>, <string-name>
+<surname>Miles</surname>
+<given-names>DW</given-names>
+</string-name>. <article-title>Overexpression of c&#x02010;erbB2 is an independent marker of resistance to endocrine therapy in advanced breast cancer</article-title>. <source>Br J Cancer</source>
+<year>1999</year>;<volume>79</volume>:<fpage>1220</fpage>&#x02013;<lpage>6</lpage>.<pub-id pub-id-type="pmid">10098763</pub-id></mixed-citation></ref><ref id="art40810-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="art40810-cit-0017">
+<string-name>
+<surname>McGuire</surname>
+<given-names>WL</given-names>
+</string-name>. <article-title>Steroid receptors in human breast cancer</article-title>. <source>Cancer Res</source>
+<year>1978</year>;<volume>38</volume>:<fpage>4289</fpage>&#x02013;<lpage>91</lpage>.<pub-id pub-id-type="pmid">698967</pub-id></mixed-citation></ref><ref id="art40810-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="art40810-cit-0018">
+<string-name>
+<surname>Fries</surname>
+<given-names>JF</given-names>
+</string-name>, <string-name>
+<surname>Spitz</surname>
+<given-names>PW</given-names>
+</string-name>, <string-name>
+<surname>Young</surname>
+<given-names>DY</given-names>
+</string-name>. <article-title>The dimensions of health outcomes: the health assessment questionnaire, disability and pain scales</article-title>. <source>J Rheumatol</source>
+<year>1982</year>;<volume>9</volume>:<fpage>789</fpage>&#x02013;<lpage>93</lpage>.<pub-id pub-id-type="pmid">7175852</pub-id></mixed-citation></ref><ref id="art40810-bib-0019"><label>19</label><mixed-citation publication-type="miscellaneous" id="art40810-cit-0019">
+<collab collab-type="authors">DAS28</collab>
+. <article-title>EULAR response criteria</article-title>. URL: <ext-link xlink:href="https://www.das-score.nl/das28/en/difference-between-the-das-and-das28/importance-of-das28-and-tight-control/eular-response-criteria.html" ext-link-type="uri">https://www.das-score.nl/das28/en/difference-between-the-das-and-das28/importance-of-das28-and-tight-control/eular-response-criteria.html</ext-link>.</mixed-citation></ref><ref id="art40810-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="art40810-cit-0020">
+<string-name>
+<surname>Ritchie</surname>
+<given-names>ME</given-names>
+</string-name>, <string-name>
+<surname>Phipson</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Wu</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Hu</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Law</surname>
+<given-names>CW</given-names>
+</string-name>, <string-name>
+<surname>Shi</surname>
+<given-names>W</given-names>
+</string-name>, et al. <article-title>Limma powers differential expression analyses for RNA&#x02010;sequencing and microarray studies</article-title>. <source>Nucleic Acids Res</source>
+<year>2015</year>;<volume>43</volume>:<fpage>e47</fpage>.<pub-id pub-id-type="pmid">25605792</pub-id></mixed-citation></ref><ref id="art40810-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="art40810-cit-0021">
+<string-name>
+<surname>Zarringhalam</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Degras</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Brockel</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Ziemek</surname>
+<given-names>D</given-names>
+</string-name>. <article-title>Robust phenotype prediction from gene expression data using differential shrinkage of co&#x02010;regulated genes</article-title>. <source>Sci Rep</source>
+<year>2018</year>;<volume>8</volume>:<fpage>1237</fpage>.<pub-id pub-id-type="pmid">29352257</pub-id></mixed-citation></ref><ref id="art40810-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="art40810-cit-0022">
+<string-name>
+<surname>Langfelder</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Horvath</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>WGCNA: an R package for weighted correlation network analysis</article-title>. <source>BMC Bioinformatics</source>
+<year>2008</year>;<volume>9</volume>:<fpage>559</fpage>.<pub-id pub-id-type="pmid">19114008</pub-id></mixed-citation></ref><ref id="art40810-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="art40810-cit-0023">
+<string-name>
+<surname>Van Dam</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>V&#x000f5;sa</surname>
+<given-names>U</given-names>
+</string-name>, <string-name>
+<surname>van der Graaf</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Franke</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>de Magalh&#x000e3;es</surname>
+<given-names>JP</given-names>
+</string-name>. <article-title>Gene co&#x02010;expression analysis for functional classification and gene&#x02013;disease predictions</article-title>. <source>Brief Bioinform</source>
+<year>2018</year>;<volume>19</volume>:<fpage>575</fpage>&#x02013;<lpage>92</lpage>.<pub-id pub-id-type="pmid">28077403</pub-id></mixed-citation></ref><ref id="art40810-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="art40810-cit-0024">
+<string-name>
+<surname>Falcon</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Gentleman</surname>
+<given-names>R</given-names>
+</string-name>. <article-title>Using GOstats to test gene lists for GO term association</article-title>. <source>Bioinformatics</source>
+<year>2007</year>;<volume>23</volume>:<fpage>257</fpage>&#x02013;<lpage>8</lpage>.<pub-id pub-id-type="pmid">17098774</pub-id></mixed-citation></ref><ref id="art40810-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="art40810-cit-0025">
+<string-name>
+<surname>Barrett</surname>
+<given-names>T</given-names>
+</string-name>, <string-name>
+<surname>Troup</surname>
+<given-names>DB</given-names>
+</string-name>, <string-name>
+<surname>Wilhite</surname>
+<given-names>SE</given-names>
+</string-name>, <string-name>
+<surname>Ledoux</surname>
+<given-names>P</given-names>
+</string-name>, <string-name>
+<surname>Rudnev</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Evangelista</surname>
+<given-names>C</given-names>
+</string-name>, et al. <article-title>NCBI GEO: archive for high&#x02010;throughput functional genomic data</article-title>. <source>Nucleic Acids Res</source>
+<year>2009</year>;<volume>37</volume>:<fpage>D885</fpage>&#x02013;<lpage>90</lpage>.<pub-id pub-id-type="pmid">18940857</pub-id></mixed-citation></ref><ref id="art40810-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="art40810-cit-0026">
+<string-name>
+<surname>Warde&#x02010;Farley</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Donaldson</surname>
+<given-names>SL</given-names>
+</string-name>, <string-name>
+<surname>Comes</surname>
+<given-names>O</given-names>
+</string-name>, <string-name>
+<surname>Zuberi</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Badrawi</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Chao</surname>
+<given-names>P</given-names>
+</string-name>, et al. <article-title>The GeneMANIA prediction server: biological network integration for gene prioritization and predicting gene function</article-title>. <source>Nucleic Acids Res</source>
+<year>2010</year>;<volume>38</volume>:<fpage>W214</fpage>&#x02013;<lpage>20</lpage>.<pub-id pub-id-type="pmid">20576703</pub-id></mixed-citation></ref><ref id="art40810-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="art40810-cit-0027">
+<string-name>
+<surname>Ivashkiv</surname>
+<given-names>LB</given-names>
+</string-name>, <string-name>
+<surname>Donlin</surname>
+<given-names>LT</given-names>
+</string-name>. <article-title>Regulation of type I interferon responses</article-title>. <source>Nat Rev Immunol</source>
+<year>2014</year>;<volume>14</volume>:<fpage>36</fpage>&#x02013;<lpage>49</lpage>.<pub-id pub-id-type="pmid">24362405</pub-id></mixed-citation></ref><ref id="art40810-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="art40810-cit-0028">
+<string-name>
+<surname>Casta&#x000f1;eda&#x02010;Delgado</surname>
+<given-names>JE</given-names>
+</string-name>, <string-name>
+<surname>Basti&#x000e1;n&#x02010;Hernandez</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Macias&#x02010;Segura</surname>
+<given-names>N</given-names>
+</string-name>, <string-name>
+<surname>Santiago&#x02010;Algarra</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Castillo&#x02010;Ortiz</surname>
+<given-names>JD</given-names>
+</string-name>, <string-name>
+<surname>Alem&#x000e1;n&#x02010;Navarro</surname>
+<given-names>AL</given-names>
+</string-name>, et al. <article-title>Type I interferon gene response is increased in early and established rheumatoid arthritis and correlates with autoantibody production</article-title>. <source>Front Immunol</source>
+<year>2017</year>;<volume>8</volume>:<fpage>285</fpage>.<pub-id pub-id-type="pmid">28373872</pub-id></mixed-citation></ref><ref id="art40810-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="art40810-cit-0029">
+<string-name>
+<surname>Wright</surname>
+<given-names>HL</given-names>
+</string-name>, <string-name>
+<surname>Thomas</surname>
+<given-names>HB</given-names>
+</string-name>, <string-name>
+<surname>Moots</surname>
+<given-names>RJ</given-names>
+</string-name>, <string-name>
+<surname>Edwards</surname>
+<given-names>SW</given-names>
+</string-name>. <article-title>Interferon gene expression signature in rheumatoid arthritis neutrophils correlates with a good response to TNFi therapy</article-title>. <source>Rheumatology (Oxford)</source>
+<year>2015</year>;<volume>54</volume>:<fpage>188</fpage>&#x02013;<lpage>93</lpage>.<pub-id pub-id-type="pmid">25125592</pub-id></mixed-citation></ref><ref id="art40810-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="art40810-cit-0030">
+<string-name>
+<surname>Vosslamber</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Raterman</surname>
+<given-names>HG</given-names>
+</string-name>, <string-name>
+<surname>van der Pouw Kraan</surname>
+<given-names>TC</given-names>
+</string-name>, <string-name>
+<surname>Schreurs</surname>
+<given-names>MW</given-names>
+</string-name>, <string-name>
+<surname>von Blomberg</surname>
+<given-names>BM</given-names>
+</string-name>, <string-name>
+<surname>Nurmohamed</surname>
+<given-names>MT</given-names>
+</string-name>, et al. <article-title>Pharmacological induction of interferon type I activity following treatment with rituximab determines clinical response in rheumatoid arthritis</article-title>. <source>Ann Rheum Dis</source>
+<year>2011</year>;<volume>70</volume>:<fpage>1153</fpage>&#x02013;<lpage>9</lpage>.<pub-id pub-id-type="pmid">21444302</pub-id></mixed-citation></ref><ref id="art40810-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="art40810-cit-0031">
+<string-name>
+<surname>Sellam</surname>
+<given-names>J</given-names>
+</string-name>, <string-name>
+<surname>Marion&#x02010;Thore</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Dumont</surname>
+<given-names>F</given-names>
+</string-name>, <string-name>
+<surname>Jacques</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Garchon</surname>
+<given-names>HJ</given-names>
+</string-name>, <string-name>
+<surname>Rouanet</surname>
+<given-names>S</given-names>
+</string-name>, et al. <article-title>Use of whole&#x02010;blood transcriptomic profiling to highlight several pathophysiologic pathways associated with response to rituximab in patients with rheumatoid arthritis: data from a randomized, controlled, open&#x02010;label trial</article-title>. <source>Arthritis Rheumatol</source>
+<year>2014</year>;<volume>66</volume>:<fpage>2015</fpage>&#x02013;<lpage>25</lpage>.<pub-id pub-id-type="pmid">24756903</pub-id></mixed-citation></ref><ref id="art40810-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="art40810-cit-0032">
+<string-name>
+<surname>Sanayama</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Ikeda</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Saito</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name>
+<surname>Kagami</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Yamagata</surname>
+<given-names>M</given-names>
+</string-name>, <string-name>
+<surname>Furuta</surname>
+<given-names>S</given-names>
+</string-name>, et al. <article-title>Prediction of therapeutic responses to tocilizumab in patients with rheumatoid arthritis: biomarkers identified by analysis of gene expression in peripheral blood mononuclear cells using genome&#x02010;wide DNA microarray</article-title>. <source>Arthritis Rheumatol</source>
+<year>2014</year>;<volume>66</volume>:<fpage>1421</fpage>&#x02013;<lpage>31</lpage>.<pub-id pub-id-type="pmid">24591094</pub-id></mixed-citation></ref><ref id="art40810-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="art40810-cit-0033">
+<string-name>
+<surname>Raterman</surname>
+<given-names>HG</given-names>
+</string-name>, <string-name>
+<surname>Vosslamber</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>de Ridder</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>Nurmohamed</surname>
+<given-names>MT</given-names>
+</string-name>, <string-name>
+<surname>Lems</surname>
+<given-names>WF</given-names>
+</string-name>, <string-name>
+<surname>Boers</surname>
+<given-names>M</given-names>
+</string-name>, et al. <article-title>Interferon type I signature may predict non response upon rituximab in rheumatoid arthritis patients</article-title>. <source>Arthritis Res Ther</source>
+<year>2012</year>;<volume>14</volume>:<fpage>R95</fpage>.<pub-id pub-id-type="pmid">22540992</pub-id></mixed-citation></ref><ref id="art40810-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="art40810-cit-0034">
+<string-name>
+<surname>Mesko</surname>
+<given-names>B</given-names>
+</string-name>, <string-name>
+<surname>Poliska</surname>
+<given-names>S</given-names>
+</string-name>, <string-name>
+<surname>V&#x000e1;ncsa</surname>
+<given-names>A</given-names>
+</string-name>, <string-name>
+<surname>Szekanecz</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name>
+<surname>Palatka</surname>
+<given-names>K</given-names>
+</string-name>, <string-name>
+<surname>Hollo</surname>
+<given-names>Z</given-names>
+</string-name>, et al. <article-title>Peripheral blood derived gene panels predict response to infliximab in rheumatoid arthritis and Crohn's disease</article-title>. <source>Genome Med</source>
+<year>2013</year>;<volume>5</volume>:<fpage>59</fpage>.<pub-id pub-id-type="pmid">23809696</pub-id></mixed-citation></ref><ref id="art40810-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="art40810-cit-0035">
+<string-name>
+<surname>Curtis</surname>
+<given-names>JR</given-names>
+</string-name>, <string-name>
+<surname>Wallenstein</surname>
+<given-names>G</given-names>
+</string-name>, <string-name>
+<surname>Takiya</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Gruben</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Chen</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Shan</surname>
+<given-names>Y</given-names>
+</string-name>, et al. <article-title>Patterns of methotrexate use and discontinuation in a U.S. rheumatoid arthritis registry [abstract]</article-title>. <source>Arthritis Rheumatol</source>
+<year>2017</year>;<volume>69</volume>
+<issue>Suppl 10</issue>. URL: <ext-link xlink:href="http://acrabstracts.org/abstract/patterns-of-methotrexate-use-and-discontinuation-in-a-u-s-rheumatoid-arthritis-registry/" ext-link-type="uri">http://acrabstracts.org/abstract/patterns-of-methotrexate-use-and-discontinuation-in-a-u-s-rheumatoid-arthritis-registry/</ext-link>.</mixed-citation></ref><ref id="art40810-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="art40810-cit-0036">
+<string-name>
+<surname>Prevoo</surname>
+<given-names>ML</given-names>
+</string-name>, <string-name>
+<surname>van't Hof</surname>
+<given-names>MA</given-names>
+</string-name>, <string-name>
+<surname>Kuper</surname>
+<given-names>HH</given-names>
+</string-name>, <string-name>
+<surname>van Leeuwen</surname>
+<given-names>MA</given-names>
+</string-name>, <string-name>
+<surname>van de Putte</surname>
+<given-names>LB</given-names>
+</string-name>, <string-name>
+<surname>van Riel</surname>
+<given-names>PL</given-names>
+</string-name>. <article-title>Modified disease activity scores that include twenty&#x02010;eight&#x02013;joint counts: development and validation in a prospective longitudinal study of patients with rheumatoid arthritis</article-title>. <source>Arthritis Rheum</source>
+<year>1995</year>;<volume>38</volume>:<fpage>44</fpage>&#x02013;<lpage>8</lpage>.<pub-id pub-id-type="pmid">7818570</pub-id></mixed-citation></ref><ref id="art40810-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="art40810-cit-0037">
+<string-name>
+<surname>Cordingley</surname>
+<given-names>L</given-names>
+</string-name>, <string-name>
+<surname>Prajapati</surname>
+<given-names>R</given-names>
+</string-name>, <string-name>
+<surname>Plant</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Maskell</surname>
+<given-names>D</given-names>
+</string-name>, <string-name>
+<surname>Morgan</surname>
+<given-names>C</given-names>
+</string-name>, <string-name>
+<surname>Ali</surname>
+<given-names>FR</given-names>
+</string-name>, et al. <article-title>Impact of psychological factors on subjective disease activity assessments in patients with severe rheumatoid arthritis</article-title>. <source>Arthritis Care Res (Hoboken)</source>
+<year>2014</year>;<volume>66</volume>:<fpage>861</fpage>&#x02013;<lpage>8</lpage>.<pub-id pub-id-type="pmid">24339425</pub-id></mixed-citation></ref><ref id="art40810-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="art40810-cit-0038">
+<string-name>
+<surname>Ton</surname>
+<given-names>E</given-names>
+</string-name>, <string-name>
+<surname>Bakker</surname>
+<given-names>MF</given-names>
+</string-name>, <string-name>
+<surname>Verstappen</surname>
+<given-names>SM</given-names>
+</string-name>, <string-name>
+<surname>Ter Borg</surname>
+<given-names>EJ</given-names>
+</string-name>, <string-name>
+<surname>van Albada&#x02010;Kuipers</surname>
+<given-names>IA</given-names>
+</string-name>, <string-name>
+<surname>Schenk</surname>
+<given-names>Y</given-names>
+</string-name>, et al. <article-title>Look beyond the Disease Activity Score of 28 Joints (DAS28): tender points influence the DAS28 in patients with rheumatoid arthritis</article-title>. <source>J Rheumatol</source>
+<year>2012</year>;<volume>39</volume>:<fpage>22</fpage>&#x02013;<lpage>7</lpage>.<pub-id pub-id-type="pmid">22002014</pub-id></mixed-citation></ref></ref-list></back></article>
