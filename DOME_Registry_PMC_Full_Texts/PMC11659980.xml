@@ -1,0 +1,1197 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.3 20210610//EN" "JATS-archivearticle1-3-mathml3.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.3" xml:lang="en" article-type="research-article"><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.2?><?ConverterInfo.XSLTName jats2jats3.xsl?><?ConverterInfo.Version 1?><?properties open_access?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Gigascience</journal-id><journal-id journal-id-type="iso-abbrev">Gigascience</journal-id><journal-id journal-id-type="publisher-id">gigascience</journal-id><journal-title-group><journal-title>GigaScience</journal-title></journal-title-group><issn pub-type="epub">2047-217X</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta>
+<article-meta><article-id pub-id-type="pmcid">11659980</article-id><article-id pub-id-type="doi">10.1093/gigascience/giae104</article-id><article-id pub-id-type="publisher-id">giae104</article-id><article-categories><subj-group subj-group-type="heading"><subject>Technical Note</subject></subj-group><subj-group subj-group-type="category-taxonomy-collection"><subject>AcademicSubjects/SCI00960</subject><subject>AcademicSubjects/SCI02254</subject></subj-group></article-categories><title-group><article-title>PlasGO: enhancing GO-based function prediction for plasmid-encoded proteins based on genetic structure</article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-3664-9608</contrib-id><name><surname>Ji</surname><given-names>Yongxin</given-names></name><aff>
+<institution>Department of Electrical Engineering, City University of Hong Kong</institution>, <addr-line>Kowloon, Hong Kong SAR (HKG)</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-5974-4985</contrib-id><name><surname>Shang</surname><given-names>Jiayu</given-names></name><aff>
+<institution>Department of Information Engineering, The Chinese University of Hong Kong</institution>, <addr-line>Shatin, NT, Hong Kong SAR (HKG)</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0005-9200-4862</contrib-id><name><surname>Guan</surname><given-names>Jiaojiao</given-names></name><aff>
+<institution>Department of Electrical Engineering, City University of Hong Kong</institution>, <addr-line>Kowloon, Hong Kong SAR (HKG)</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-2559-2519</contrib-id><name><surname>Zou</surname><given-names>Wei</given-names></name><aff>
+<institution>Department of Electrical Engineering, City University of Hong Kong</institution>, <addr-line>Kowloon, Hong Kong SAR (HKG)</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-8871-3483</contrib-id><name><surname>Liao</surname><given-names>Herui</given-names></name><aff>
+<institution>Department of Electrical Engineering, City University of Hong Kong</institution>, <addr-line>Kowloon, Hong Kong SAR (HKG)</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-1304-6983</contrib-id><name><surname>Tang</surname><given-names>Xubo</given-names></name><aff>
+<institution>Department of Electrical Engineering, City University of Hong Kong</institution>, <addr-line>Kowloon, Hong Kong SAR (HKG)</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0003-1373-8023</contrib-id><name><surname>Sun</surname><given-names>Yanni</given-names></name><!--yannisun@cityu.edu.hk--><aff>
+<institution>Department of Electrical Engineering, City University of Hong Kong</institution>, <addr-line>Kowloon, Hong Kong SAR (HKG)</addr-line>, <country country="CN">China</country></aff><xref rid="cor1" ref-type="corresp"/></contrib></contrib-group><author-notes><corresp id="cor1">Correspondence address. Yanni Sun, Department of Electrical Engineering, City University of Hong Kong, 83 Tat Chee Avenue, Kowloon, Hong Kong (SAR), China. E-mail: <email>yannisun@cityu.edu.hk</email></corresp></author-notes><pub-date pub-type="collection"><year>2024</year></pub-date><pub-date pub-type="epub" iso-8601-date="2024-12-20"><day>20</day><month>12</month><year>2024</year></pub-date><pub-date pub-type="pmc-release"><day>20</day><month>12</month><year>2024</year></pub-date><volume>13</volume><elocation-id>giae104</elocation-id><history><date date-type="received"><day>04</day><month>7</month><year>2024</year></date><date date-type="rev-recd"><day>29</day><month>10</month><year>2024</year></date><date date-type="accepted"><day>27</day><month>11</month><year>2024</year></date></history><permissions><copyright-statement>&#x000a9; The Author(s) 2024. Published by Oxford University Press GigaScience.</copyright-statement><copyright-year>2024</copyright-year><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xlink:href="giae104.pdf"/><abstract><title>Abstract</title><sec id="abs1"><title>Background</title><p>Plasmid, as a mobile genetic element, plays a pivotal role in facilitating the transfer of traits, such as antimicrobial resistance, among the bacterial community. Annotating plasmid-encoded proteins with the widely used Gene Ontology (GO) vocabulary is a fundamental step in various tasks, including plasmid mobility classification. However, GO prediction for plasmid-encoded proteins faces 2 major challenges: the high diversity of functions and the limited availability of high-quality GO annotations.</p></sec><sec id="abs2"><title>Results</title><p>In this study, we introduce PlasGO, a tool that leverages a hierarchical architecture to predict GO terms for plasmid proteins. PlasGO utilizes a powerful protein language model to learn the local context within protein sentences and a BERT model to capture the global context within plasmid sentences. Additionally, PlasGO allows users to control the precision by incorporating a self-attention confidence weighting mechanism. We rigorously evaluated PlasGO and benchmarked it against 7 state-of-the-art tools in a series of experiments. The experimental results collectively demonstrate that PlasGO has achieved commendable performance. PlasGO significantly expanded the annotations of the plasmid-encoded protein database by assigning high-confidence GO terms to over 95% of previously unannotated proteins, showcasing impressive precision of 0.8229, 0.7941, and 0.8870 for the 3 GO categories, respectively, as measured on the novel protein test set.</p></sec><sec id="abs3"><title>Conclusions</title><p>PlasGO, a hierarchical tool incorporating protein language models and BERT, significantly expanded plasmid protein annotations by predicting high-confidence GO terms. These annotations have been compiled into a database, which will serve as a valuable contribution to downstream plasmid analysis and research.</p></sec></abstract><kwd-group><kwd>GO term prediction</kwd><kwd>plasmid protein function</kwd><kwd>protein language model</kwd><kwd>BERT</kwd></kwd-group><funding-group><award-group award-type="grant"><funding-source>
+<institution-wrap><institution>University Grants Committee</institution><institution-id institution-id-type="DOI">10.13039/501100001839</institution-id></institution-wrap>
+</funding-source><award-id>11214924</award-id></award-group></funding-group><counts><page-count count="17"/></counts></article-meta></front><body><sec id="sec1"><title>Background</title><p>Plasmids are typically circular, extrachromosomal DNA molecules primarily found in bacteria. As a type of mobile genetic element (MGE), about half of them can mediate horizontal gene transfer (HGT) by transferring between different bacteria through a process known as conjugation [<xref rid="bib1" ref-type="bibr">1</xref>, <xref rid="bib2" ref-type="bibr">2</xref>]. Consequently, the advantageous traits carried by the conjugative plasmids, such as antimicrobial resistance (AMR), will be disseminated among the bacterial community, thereby promoting the evolutionary adaptation of the host bacteria [<xref rid="bib3" ref-type="bibr">3</xref>]. Plasmid-specific proteins can be classified into 2 main categories: core (backbone) proteins and accessory (payload) proteins [<xref rid="bib4" ref-type="bibr">4</xref>]. The core proteins play essential roles in plasmids&#x02019; housekeeping functions, encompassing replication, stability, and conjugation. They are instrumental in plasmid typing, such as replicon (Rep) typing, mobilization (MOB) typing, and mate&#x02013;pair formation (MPF) typing [<xref rid="bib5" ref-type="bibr">5</xref>]. Moreover, the core proteins exhibit a strong correlation with the plasmid host range, namely, the hosts to which the plasmid can be transferred or in which it can be maintained. On the other hand, the accessory proteins encode the host-beneficial traits, such as AMR and virulence. In summary, functional annotation of plasmid-encoded proteins not only helps identify the plasmid-carried traits but also provides valuable insights into predicting the transmission trajectory of these traits.</p><p>Gene Ontology (GO) is one of the most widely adopted vocabularies for describing protein functions, encompassing a collection of 42,255 GO terms by April 2024 [<xref rid="bib6" ref-type="bibr">6</xref>]. The GO terms are structured in a directed acyclic graph (DAG) format, with three root terms representing the 3 GO categories: Molecular Function (MF), Biological Process (BP), and Cellular Component (CC). Therefore, a protein can be annotated with GO terms from all 3 aspects to achieve a comprehensive description of its functionality. According to the true path rule, if a protein is annotated with a specific GO term, it is also considered to be annotated with all the ancestor terms (semantically more general) of that particular GO term. Therefore, a protein can be annotated with more than 1 GO term, leading to the formulation of GO term prediction as a multilabel classification problem.</p><p>The rapid development of deep learning (DL) offers a promising approach, leveraging its strong generalization capability to predict the functions of novel proteins. Several DL methods have been proposed for GO term prediction utilizing only protein sequences as input. Among them, DeepSeq [<xref rid="bib7" ref-type="bibr">7</xref>] and DeepGOPlus [<xref rid="bib8" ref-type="bibr">8</xref>] are designed based on convolutional neural networks (CNNs). Specifically, DeepSeq first utilizes word embedding to represent each amino acid (AA) as a 23-dimensional vector and then feeds these embeddings to two 1-dimensional convolutional (Conv1d) layers to extract meaningful features for function prediction. DeepGOPlus enhances the performance by incorporating 16 Conv1d layers with varying filter sizes, ranging from 8 to 128, in parallel. This enables the model to learn sequence motifs of different lengths, which play a crucial role in predicting protein function. The other 2 methods, TALE [<xref rid="bib9" ref-type="bibr">9</xref>] and PFresGO [<xref rid="bib10" ref-type="bibr">10</xref>], are built on the Transformer architecture and leverage the hierarchical information in the GO DAG. While using a Transformer layer to capture the dependencies among AAs within a protein, TALE also learns embeddings for the GO term labels to encode the ancestor relationship between GO terms. By multiplying the features learned by the Transformer and the label embeddings, a similarity matrix is generated for the final prediction, representing the similarity score between each AA and each label. PFresGO replaces the self-attention model in Transformer with a cross-attention mechanism, where GO terms act as the query to identify the functionally relevant AAs. Although there are a number of GO term prediction tools, they are not optimized for plasmid-encoded proteins.</p><sec id="sec1-1"><title>Challenges for plasmid protein GO prediction</title><p>The prediction of GO terms for plasmid-encoded proteins presents 2 major challenges that have not been well addressed by generic GO prediction tools. First, compared to other types of biological entities, plasmids tend to encode a smaller number of proteins, but these proteins showcase a comparable level of functional diversity to more complicated peers. For instance, the manually reviewed Swiss-Prot database includes 323,202 proteins encoded in bacterial chromosomes, associated with 9,631 GO terms. In contrast, plasmid-encoded proteins, despite only accounting for nearly 1% of the protein count (3,202), are still associated with a considerable number of GO terms (3,318). This larger ratio of GO terms to protein count can be attributed to 2 main causes: the frequent genetic exchange events occurring between chromosomes and plasmids [<xref rid="bib11" ref-type="bibr">11</xref>], as well as the gene flow between plasmids and phages mediated by phage&#x02013;plasmid elements [<xref rid="bib12" ref-type="bibr">12</xref>]. As a result, plasmids encode many proteins derived from both chromosomes and phages. Overall, the combination of a large number of GO terms (labels) and a relatively small number of proteins (training samples) increases the difficulty of the multilabel classification. The second challenge relates to the limited availability of high-quality GO annotations for plasmid-encoded proteins. For instance, considering the 678,197 nonredundant proteins encoded in 47,871 complete plasmids obtained from the RefSeq database, only 29.34% of these proteins possess annotated GO terms from at least 1 of the 3 GO categories. Alignment-based methods like the InterPro2GO pipeline [<xref rid="bib13" ref-type="bibr">13</xref>] failed to extend the protein annotation rate due to their inability to identify signatures (protein families or domains) for the remaining uncharacterized proteins.</p><p>To address these challenges, we design a method that capitalizes on the genetic structures of plasmids for better GO prediction. Like human languages that possess a linguistic structure, genes residing on plasmids also exhibit a distinct biological structure, characterized by a modularization pattern [<xref rid="bib4" ref-type="bibr">4</xref>]. This pattern often results in the division of a plasmid into functionally related segments, including areas dedicated to replication, conjugation, payload, and other plasmid-specific functions. The reason for this phenomenon is the dynamic evolution of plasmids over time, facilitated by the acquisition or loss of segments through recombination or the movement of MGEs [<xref rid="bib14" ref-type="bibr">14</xref>]. Furthermore, functionally related segments within plasmids resemble phrases in human languages, attributable to both the similarity of protein functions and specific interactions between certain proteins within the same segment (e.g., relaxases interacting with type IV coupling proteins during conjugation). As depicted in Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1</xref>, the large conjugative multidrug resistance plasmid pOLA52 [<xref rid="bib15" ref-type="bibr">15</xref>] explicitly displays a modularization pattern, wherein the coding sequences (CDSs) with similar functions are more likely to be closely positioned. Interestingly, as shown on the right side of Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1</xref>, several payload genes are interspersed with 2 transposases (a type of MGE gene), suggesting that this specific segment may have originated from HGT facilitated by transposons. Rapidly evolving language models have demonstrated significant advantages across various bioinformatics domains [<xref rid="bib16" ref-type="bibr">16</xref>], including gene expression prediction [<xref rid="bib17" ref-type="bibr">17</xref>], drug discovery [<xref rid="bib18" ref-type="bibr">18</xref>], and tumor T-cell antigen (TTCA) classification [<xref rid="bib19" ref-type="bibr">19</xref>]. Hence, as a major component of our methodology, we aim to leverage the language models to explore the modular structure of plasmids.</p><fig position="float" id="fig1"><label>Figure 1:</label><caption><p>The flattened diagram of the circular plasmid pOLA52, which illustrates the CDS region of each gene, with the color representing the function of the encoded protein. The annotated encoded proteins were manually classified into 5 functional classes based on the gene product annotation in the NCBI database. In the diagram, a reversed pentagon block indicates that the corresponding CDS is located on the complementary strand.</p></caption><graphic xlink:href="giae104fig1" position="float"/></fig><p>In addition, we will leverage protein language models (PLMs), which have demonstrated remarkable performance in various protein-related tasks by understanding the underlying semantic meaning of the language of life [<xref rid="bib20" ref-type="bibr">20</xref>]. After self-supervised pretraining on a large corpus of protein sequences without manual labeling, foundation PLMs can generate protein embeddings that encapsulate learned knowledge. An important example of such knowledge is the correlation between 1-dimensional (1D) protein sequences and their corresponding 3-dimensional (3D) structures. The acquired prior biological knowledge can be leveraged to enhance protein function prediction through transfer learning. As an example, the ESM-2 family models [<xref rid="bib21" ref-type="bibr">21</xref>] utilize a BERT-style [<xref rid="bib22" ref-type="bibr">22</xref>] encoder variant with up to 15 billion parameters, making them the largest PLMs to date. After training with an unsupervised masked language modeling (MLM) objective on a dataset comprising over 60 million protein sequences, ESM-2 demonstrates superior performance in the classification of GO terms [<xref rid="bib23" ref-type="bibr">23</xref>].</p><p>In this study, we have incorporated the above key observations and developed a dedicated tool called PlasGO for predicting GO terms of plasmid-encoded proteins. Rather than starting from scratch, we employ the state-of-the-art (SOTA) foundation PLM, ProtTrans [<xref rid="bib24" ref-type="bibr">24</xref>], to generate biologically meaningful embedding for each plasmid-encoded protein as the raw input for our models. Then, we define plasmid sequences as a language using the vocabulary of proteins and leverage the powerful BERT model [<xref rid="bib22" ref-type="bibr">22</xref>] to capture the genetic structures of plasmids. More specifically, we formulate the GO term prediction as a multilabel token classification task in natural language processing (NLP), where each protein is assigned 1 or more GO term labels. Additionally, to increase precision and filter high-confidence predictions, we integrate a self-attention confidence weighting mechanism to learn a confidence score for each predicted GO term. Thus, users can conduct automatic function annotation based on our predictions with associated confidence values. We rigorously evaluated PlasGO on the curated RefSeq dataset and a case study involving 2 well-studied conjugative plasmids. PlasGO consistently demonstrated superior performance across all experimental results, including the prediction of GO terms for novel proteins. We directly applied PlasGO to 678,197 proteins in the RefSeq plasmid sequences. PlasGO successfully extended high-confidence GO terms for over 95% of the unannotated proteins, which can provide important data for downstream plasmid research.</p></sec></sec><sec sec-type="materials|methods" id="sec2"><title>Material and Methods</title><sec id="sec2-1"><title>Design rationale</title><p>Based on the sequential features of protein sequences and the modular characteristics of plasmids, we designed a hierarchical architecture that considers both the local context within a protein sequence and the global context across different proteins. Following the language analogy in NLP, we establish 2 types of sentences: plasmid sentences (global), in which encoded proteins serve as tokens, and protein sentences (local), where individual AAs act as tokens. Given that a series of powerful PLMs [<xref rid="bib21" ref-type="bibr">21</xref>, <xref rid="bib24" ref-type="bibr">24</xref>, <xref rid="bib25" ref-type="bibr">25</xref>] have demonstrated exceptional performance in extracting biologically meaningful embeddings for protein sentences, our primary contribution lies in the global learning of plasmid sentences. As shown in Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2</xref>, we frame the GO term prediction for plasmid-encoded proteins as a token classification task in NLP, where GO term labels are assigned to individual proteins within a plasmid sentence. Correspondingly, we leverage the BERT model as the central component of PlasGO to capture the structure of plasmid sentences.</p><fig position="float" id="fig2"><label>Figure 2:</label><caption><p>The workflows of PlasGO with a toy plasmid encoding 5 proteins as input during the training and prediction phases. The figure&#x000a0;focuses on the token classification framework, emphasizing the learning of global context across different proteins, which are represented by the per-protein embeddings learned by PLM. Therefore, the toy plasmid is defined as a sentence comprising 5 protein embeddings, and the objective of PlasGO is to predict GO terms for each protein embedding within the plasmid sentence. Two of the 5 proteins (depicted in blue) have GO annotations and are included in the training set, while the remaining 3 (depicted in red) represent proteins without any GO annotation. Throughout both phases, PlasGO learns a vector (passed through sigmoid) for each protein, indicating the probabilities of its corresponding GO terms.</p></caption><graphic xlink:href="giae104fig2" position="float"/></fig><p>The method design of PlasGO incorporates 2 distinctive features. First, because a protein can be annotated with multiple GO terms, PlasGO is designed as a multiclass, multilabel token classification approach. In other words, the BERT model predicts multiple labels for each protein, which sets it apart from traditional token classification tasks such as named entity recognition (NER) [<xref rid="bib26" ref-type="bibr">26</xref>]. Second, PlasGO accepts the same plasmid as input for both supervised training and prediction while focusing on different proteins in each phase. The workflows are depicted in Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2</xref> using a toy plasmid. During training, binary cross-entropy (BCE) loss is calculated by comparing the learned GO term probability vectors of the training proteins against their actual GO annotations. Masking is exclusively applied to proteins that are not in the training set (e.g., the second, third, and fifth proteins in Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2</xref>) when computing the loss function given their lack of labels hindering their involvement in backpropagation. In the prediction phase, the trained PlasGO model generates prediction results for all unannotated proteins. Notably, throughout both training and prediction, embeddings for all proteins encoded on a plasmid will be input into the PlasGO model, ensuring no loss of informative genomic context during each phase. In essence, the central concept behind PlasGO is to enhance the function prediction of unannotated plasmid-encoded proteins by leveraging plasmid-level contextual information. On the other hand, even in scenarios where all nearby proteins of a particular protein lack annotations, PlasGO still works by directly predicting GO terms for that protein using the local PLM embeddings.</p></sec><sec id="sec2-2"><title>Overview of the PlasGO model</title><p>As shown in Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3</xref>, the PlasGO model takes as input a sentence representation of the plasmid, wherein translated proteins are arranged in the same order as their encoding in the plasmid. Consequently, the PlasGO model generates high-confidence predicted GO terms for each protein as its output. Specifically, the PlasGO model consists of 3 modules executed linearly, with the output of each module feeding into the next. The first is the preprocessing module, responsible for generating original per-protein embeddings. This is accomplished by utilizing a pretrained foundation PLM, which extracts biophysical features of the input protein sequences. The second module is a BERT model. By capturing the contextual information at the plasmid sentence level, the BERT model enhances the original embeddings, encompassing a deeper understanding of the functional characteristics of the proteins. The final is the classifier module, designed explicitly for multilabel token classification. Within this module, we employ a combination of a fully connected (FC) layer and a self-attention confidence weighting mechanism. As a result, for each protein, the classifier generates a GO term probability vector along with a confidence score vector of the same dimension. By removing predictions with low confidence scores, the PlasGO model achieves enhanced accuracy in predicting the GO terms. In the subsequent sections, we will provide a more detailed description of the 3 modules.</p><fig position="float" id="fig3"><label>Figure 3:</label><caption><p>The pipeline of the PlasGO model. The PlasGO model takes as input a series of proteins encoded in a plasmid, and its output comprises high-confidence GO term annotations in nominal format for these proteins. On the right side, the 3 main modules of the PlasGO model&#x02014;namely, preprocessing, BERT, and classifier&#x02014;are displayed in a bottom-to-top arrangement. In the preprocessing stage, the proteins (represented as multiple gray bars) are organized in the same order as their encoding in the plasmid. These proteins are then fed into the foundation PLM to extract biologically meaningful embeddings (represented by yellow bars). Next, in the BERT module, an FC layer is utilized to transform the original embeddings learned by PLM into protein embeddings (represented by light blue bars). Additionally, multiple Transformer encoders are employed to capture the global context between protein embeddings. Lastly, using the learned contextualized embeddings (represented by deep blue bars), the classifier predicts a GO term probability vector (represented by a light gray bar) for each protein. Simultaneously, a corresponding confidence score vector (represented by a red bar) of the same dimension is also generated. Only the GO terms with both high predicted probabilities and high confidence scores are retained as nominal-format GO term annotations for the respective protein.</p></caption><graphic xlink:href="giae104fig3" position="float"/></fig></sec><sec id="sec2-3"><title>Extract original per-protein embedding with foundation PLM</title><p>In this section, we utilize ProtTrans to generate embeddings for each plasmid-encoded protein. Drawing inspiration from concepts in NLP, ProtTrans considers entire proteins as sentences, where individual AAs are analogous to words (tokens). As depicted in Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4</xref>, the input toy protein sequence &#x0201c;MNPF&#x0201d; is initially tokenized into an array of individual AA tokens [M, N, P, F]. Subsequently, all the AA tokens undergo an embedding layer incorporating positional encoding. This will convert the AA tokens into high-dimensional vectors (1,024 dimensions). The resulting embedded vectors are then fed into an <italic toggle="yes">L</italic>-layer Transformer encoder, which captures the semantic meaning of individual AA tokens and their contextual relationships within the protein sequence. In the final step, the output of the last encoder layer for each AA token (per-residue embedding) is concatenated and pooled using a global average pooling (GAP) operation [<xref rid="bib27" ref-type="bibr">27</xref>]. This involves taking the average of each per-residue embedding, resulting in the final per-protein embedding.</p><fig position="float" id="fig4"><label>Figure 4:</label><caption><p>An overview on how the ProtTrans model generates the per-protein embeddings for input plasmid-encoded proteins.</p></caption><graphic xlink:href="giae104fig4" position="float"/></fig><p>ProtTrans provides several pretrained models with different parameter numbers and architectures. We selected ProtT5-XL-U50 for PlasGO due to its superior performance across various downstream prediction tasks, as demonstrated in the study by Elnaggar et&#x000a0;al. [<xref rid="bib24" ref-type="bibr">24</xref>]. ProtT5-XL-U50 is built upon the T5-3B model architecture [<xref rid="bib28" ref-type="bibr">28</xref>] and was trained using the MLM approach [<xref rid="bib22" ref-type="bibr">22</xref>] on the UniRef50 dataset, which contains 45 million protein sequences. In this work, we employ the ProtTrans model in a feature extraction manner rather than fine-tuning it, which means the per-protein embedding extraction process can be considered a preprocessing step. Prior to both training and prediction, all the involved proteins are input into ProtTrans, and the resulting per-protein embeddings are saved for later utilization.</p></sec><sec id="sec2-4"><title>Capture contextual information on plasmids with BERT</title><p>We implement our BERT module following the standard BERT architecture [<xref rid="bib22" ref-type="bibr">22</xref>] with 3 modifications to accommodate our method design. First, we exclude the 2 tokens &#x0201c;[CLS]&#x0201d; and &#x0201c;[SEP]&#x0201d; defined in standard BERT, as they are not utilized for token classification. Second, as mentioned earlier, our BERT module is primarily designed to capture functionally related segments in plasmids, similar to how phrases are learned in NLP. Thus, a limited number of layers (Transformer encoders) <italic toggle="yes">L</italic> is adequate for capturing &#x0201c;phrase&#x0201d;-level information in plasmid sentences [<xref rid="bib29" ref-type="bibr">29</xref>]. Specifically, we set <inline-formula><tex-math id="TM0001" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$L = 4$\end{document}</tex-math></inline-formula> for the MF and BP categories and <inline-formula><tex-math id="TM0002" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$L = 2$\end{document}</tex-math></inline-formula> for the CC category, considering the relatively smaller dataset size and label size for CC. Third, we remove the token embedding layer in the standard BERT, which maps token indices to vectors, as we do not represent proteins in an indexed form. Instead, in the previous module, we have preprocessed the embedding step using ProtTrans, where an original embedding is extracted for each sequential protein (AA sequence). Correspondingly, we incorporate an FC layer as the initial layer of our BERT module, which is trained to transform the original embeddings into function-related protein embeddings. Next, position embeddings are introduced and combined with the protein embeddings:</p><disp-formula id="equ1">
+<label>(1)</label>
+<tex-math id="TM0003" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\left\lbrace \begin{array}{l}E_{pro} = FC(E_o, W_{FC}) \\
+\tilde{E}_p = Embed(E_p, W_{E_p}) \\
+X = E_{pro}+\tilde{E}_p \end{array}\right.
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>In this work, we set the maximum length of proteins in a plasmid sentence to 56, as it represents the median length observed in our curated database of complete plasmids. For sentences with fewer than 56 proteins, the &#x0201c;[PAD]&#x0201d; tokens will be padded at the end of the sentences, and they will be masked during the training. In addition, we utilize a hidden size of <inline-formula><tex-math id="TM0004" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$H = 512$\end{document}</tex-math></inline-formula> and a number of self-attention heads of <inline-formula><tex-math id="TM0005" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$A = 8$\end{document}</tex-math></inline-formula> for the Transformer encoders. Therefore, <inline-formula><tex-math id="TM0006" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$E_o \in \mathbb {R}^{56\times 1024}$\end{document}</tex-math></inline-formula> is the original embeddings extracted by ProtTrans for the 56 proteins, while <inline-formula><tex-math id="TM0007" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$E_p \in \mathbb {R}^{56\times 1}$\end{document}</tex-math></inline-formula> is the position index vector. <inline-formula><tex-math id="TM0008" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$W_{FC} \in \mathbb {R}^{1024\times 512}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0009" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$W_{E_p} \in \mathbb {R}^{56\times 512}$\end{document}</tex-math></inline-formula> are learnable weight matrices used for the linear transformation of protein embeddings and position embeddings, respectively. As a result, both the protein embeddings <inline-formula><tex-math id="TM0010" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$E_{pro}$\end{document}</tex-math></inline-formula> and the position embeddings <inline-formula><tex-math id="TM0011" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\tilde{E}_p$\end{document}</tex-math></inline-formula> have a dimension of <inline-formula><tex-math id="TM0012" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathbb {R}^{56\times 512}$\end{document}</tex-math></inline-formula>, and their sum, denoted as <italic toggle="yes">X</italic>, will be fed into the subsequent Transformer encoders.</p></sec><sec id="sec2-5"><title>Learn confidence scores for multilabel token classification</title><p>In current databases, it is inevitable to encounter incomplete GO annotations because some proteins are annotated with GO terms at varying levels of specificity [<xref rid="bib30" ref-type="bibr">30</xref>]. Furthermore, accurately predicting certain GO terms poses challenges due to the inherent complexities involved in capturing functional factors such as protein domains or AAs. Consequently, learning a confidence score for each prediction is advantageous as it enables the rejection of uncertain predictions. Inspired by the self-cure network introduced by Wang et&#x000a0;al. [<xref rid="bib31" ref-type="bibr">31</xref>], we integrate a self-attention confidence weighting mechanism tailored for multilabel classification within our classifier module. The detailed architecture of the classifier module is depicted in Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5</xref>. The contextualized embeddings learned from the BERT module for each protein will be fed in parallel to the classifier module. Instead of utilizing a single FC layer for multilabel classification, our classifier module incorporates 2 branches: one for learning logits and another for learning confidence scores. Prior to the final prediction using sigmoid, the logits will undergo attention-weighting based on the learned confidence scores. Intuitively, during training, the model will inherently learn to assign smaller confidence weights to incorrect predictions in order to minimize the loss resulting from these inaccuracies. On the contrary, the true predictions tend to receive larger confidence weights for the logits. The final step involves using both the confidence scores and weighted predicted probabilities to determine the nominal-format GO term predictions, retaining only those predictions characterized by high values in both aspects. Notably, as a modification to the original architecture proposed in [<xref rid="bib31" ref-type="bibr">31</xref>], we adapt it for the multilabel classification task of GO term prediction by learning a confidence score for each prediction instead of each sample.</p><fig position="float" id="fig5"><label>Figure 5:</label><caption><p>The model architecture of the classifier module incorporating the self-attention confidence weighting mechanism. We utilize a toy label set comprising 5 GO terms for illustration. The figure&#x000a0;displays the 2 branches, with one dedicated to learning logits and the other focused on learning confidence scores, positioned on the left and right sides, respectively. The attention weighting is implemented between the outputs of the 2 branches to obtain the final multilabel prediction. Both the confidence score vector and the final predicted probability vector will be output by the classifier module to determine the high-confidence GO term predictions in nominal format.</p></caption><graphic xlink:href="giae104fig5" position="float"/></fig><p>Specifically, the input feature will be forwarded through 2 FC layers with identical sizes but distinct parameters. These layers consist of a prediction FC layer, responsible for learning logits, and a confidence FC layer, specifically designed to get confidence scores using a sigmoid function. Following that, the confidence scores will serve as the attention weights for the logits through an element-wise dot product:</p><disp-formula id="equ2">
+<label>(2)</label>
+<tex-math id="TM0013" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\left\lbrace \begin{array}{l}L = FC(F, W_{FC_{p}}) \\
+C = \sigma (FC(F, W_{FC_c})) \\
+P = \sigma (L \odot C) \end{array}\right.
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0014" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F \in \mathbb {R}^{56\times 512}$\end{document}</tex-math></inline-formula> is the input features of the 56 proteins within 1 sentence. Here, <italic toggle="yes">n</italic> represents the number of GO terms, and <inline-formula><tex-math id="TM0015" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\sigma$\end{document}</tex-math></inline-formula> is the sigmoid function. Accordingly, <inline-formula><tex-math id="TM0016" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$W_{FC_p}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0017" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$W_{FC_c}$\end{document}</tex-math></inline-formula> represent the learnable weight matrices, both having dimensions of <inline-formula><tex-math id="TM0018" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathbb {R}^{512\times n}$\end{document}</tex-math></inline-formula>, associated with the prediction FC layer and the confidence FC layer, respectively. Additionally, <italic toggle="yes">L</italic> and <italic toggle="yes">C</italic> denote the learned logits and confidence score matrix, respectively, both having dimensions of <inline-formula><tex-math id="TM0019" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathbb {R}^{56\times n}$\end{document}</tex-math></inline-formula>. The final predicted probability matrix <inline-formula><tex-math id="TM0020" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$P \in \mathbb {R}^{56\times n}$\end{document}</tex-math></inline-formula> is obtained by element-wise multiplying (<inline-formula><tex-math id="TM0021" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\odot$\end{document}</tex-math></inline-formula>) the matrices <italic toggle="yes">L</italic> and <italic toggle="yes">C</italic>, followed by normalization using the sigmoid function. For the multilabel token classification of PlasGO, we define the logit-weighted binary cross-entropy loss (WBCE Loss) as follows:</p><disp-formula id="equ3">
+<label>(3)</label>
+<tex-math id="TM0022" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\mathcal {L}_{WBCE} = -\frac{1}{N}\sum _{i=1}^{N}y_i\cdot log(\tilde{P_i})+(1-y_i)\cdot log(1-\tilde{P_i})
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <italic toggle="yes">N</italic> denotes the total number of predictions, which is equal to <inline-formula><tex-math id="TM0023" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$56\times n$\end{document}</tex-math></inline-formula> for a single sentence. <inline-formula><tex-math id="TM0024" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\tilde{P}$\end{document}</tex-math></inline-formula> represents the flattened format of the probability matrix <italic toggle="yes">P</italic>, with a dimension of <inline-formula><tex-math id="TM0025" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$1\times N$\end{document}</tex-math></inline-formula>. <inline-formula><tex-math id="TM0026" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$y_i$\end{document}</tex-math></inline-formula> represents the true label of the corresponding GO term, where it takes the value 1 if the protein is annotated with that particular GO term and 0 otherwise.</p><p>To further promote the ability of the model to distinguish low-confidence and high-confidence predictions, a rank regularization loss (RR Loss) is incorporated into the total loss function: <inline-formula><tex-math id="TM0027" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {L}_{total} = \mathcal {L}_{WBCE}+\mathcal {L}_{RR}$\end{document}</tex-math></inline-formula>. The calculation of RR Loss and the selection of high-confidence GO term predictions in nominal format are detailed in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S1</xref>.</p></sec><sec id="sec2-6"><title>Data curation and model training</title><sec id="sec2-6-1"><title>RefSeq dataset</title><p>We chose to conduct our experiments using RefSeq due to the rigorous quality assurance (QA) checks administered by NCBI staff on all data within RefSeq before its public release [<xref rid="bib32" ref-type="bibr">32</xref>]. This meticulous process results in high-quality RefSeq protein databases that significantly mitigate the occurrence of incorrect GO annotations. Moreover, the RefSeq database provides access to the genomic context information, specifically the order in which proteins are encoded in the plasmid, a key feature for PlasGO that is not available in other protein-only databases like Swiss-Prot. On the other hand, despite the long-standing issue of incompleteness in the GO annotation domain, several previous studies have demonstrated the meaningfulness and reliability of current large-scale GO evaluations [<xref rid="bib33" ref-type="bibr">33</xref>, <xref rid="bib34" ref-type="bibr">34</xref>]. As GO annotations continue to expand over time, the problem of incompleteness is expected to gradually improve. In light of these considerations, we opted for the use of the more accurate RefSeq database in developing our tool, as it allows our model to better capture the distinctive features of plasmid-encoded proteins with reduced noise and misinterpretation.</p><p>We initially downloaded all available plasmids from the NCBI RefSeq plasmid database [<xref rid="bib35" ref-type="bibr">35</xref>], along with their corresponding protein sequences translated from CDSs, excluding pseudogenes. They can be stored in a dictionary format <inline-formula><tex-math id="TM0028" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$plasmid_A:[protein_{A1}, protein_{A2}, ...]$\end{document}</tex-math></inline-formula>, where the keys are plasmids and the values are lists of proteins arranged in the order they are encoded in the respective plasmids. The focus of this work is proteins in regular plasmids. Thus, we only keep plasmids with lengths between 1K and 350K to ensure each plasmid has at least 1 encoded protein and no megaplasmids are included [<xref rid="bib36" ref-type="bibr">36</xref>]. We restricted the maximum protein length to 1 Kbp for training PlasGO because this limit is computationally efficient for the Transformer architecture, a common practice followed by many state-of-the-art protein-related methods such as ESM [<xref rid="bib37" ref-type="bibr">37</xref>] and PFresGO [<xref rid="bib10" ref-type="bibr">10</xref>]. Nonetheless, in the prediction phase or when utilizing our PlasGO tool, no length restrictions are imposed. We evaluated the generalization of PlasGO to proteins larger than 1 Kbp in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S2</xref>. Finally, the curated proteins&#x02019; associated GO terms were also retrieved from the RefSeq database, if available.</p><p>Since the GO terms provided in the database are commonly more specific (on the lower levels), we augment the original annotations by propagating all ancestors of the GO terms to their corresponding proteins. As a consequence, the resulting list describing 1 protein&#x02019;s function often includes a large number of highly redundant GO terms, which reduces interpretability for users. Several tools have been proposed to tackle this problem by clustering GO terms with high semantic similarity. The measurement of semantic similarity [<xref rid="bib38" ref-type="bibr">38</xref>] relies on the proximity of 2 GO terms within the GO DAG. When 2 GO terms exhibit greater semantic similarity, they tend to be more functionally related. Among these tools, we selected the widely adopted REVIGO [<xref rid="bib39" ref-type="bibr">39</xref>] to group 1,602 original GO terms into 487 clusters. If at least 1 GO term within a cluster is annotated to a protein, then that cluster will be assigned to the protein. Importantly, the GO term label clustering strategy is applied to the retraining processes of all benchmarked tools, ensuring a fair comparison of their performance. Afterward, we deduplicated the proteins by clustering protein sequences using MMseqs2 [<xref rid="bib40" ref-type="bibr">40</xref>], considering pairs with at least 90% identity and 80% overlap, and only keeping the longest protein from each cluster. In line with the UniRef database [<xref rid="bib41" ref-type="bibr">41</xref>], the annotations of the kept protein are determined as the intersection of the annotations of all members within the protein cluster. As a result, these 2 clustering processes have partially corrected misannotations of GO terms in the database.</p><p>Consistent with the settings commonly used in GO term prediction tools, we selected the GO term clusters associated with <inline-formula><tex-math id="TM0029" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\ge$\end{document}</tex-math></inline-formula>50 proteins (excluding the 3 root terms) as the labels for our curated dataset. This resulted in 172, 174, and 31 cluster-level labels for the MF, BP, and CC categories, respectively. Subsequently, we devised a protein-based data splitting strategy to simulate the real scenario where plasmid sequence data are available, yet a majority of the encoded proteins lack annotations. For each GO category, we allocated 10% of the most recently released proteins with GO annotations as the test set. Additionally, we ensure that the novel test set significantly differs from the training set in terms of protein sequences. Therefore, among the remaining 90% annotated proteins, those lacking significant alignments (E-value<inline-formula><tex-math id="TM0030" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$&#x0003e; $\end{document}</tex-math></inline-formula>1e-3) to the test set were assigned to the training set, while others were assigned to the validation set. This splitting strategy poses significant challenges for both PlasGO and other DL methods. The final step involves converting plasmids into sentences for PlasGO&#x02019;s training and prediction. Plasmids containing more than 56 proteins were divided into multiple segments with an overlap of 14 proteins (1/4 of the maximum length). The curated dataset will be utilized for retraining all benchmarked tools, and a comprehensive overview of its specific details can be found in Table&#x000a0;<xref rid="tbl1" ref-type="table">1</xref>. Furthermore, experiments conducted using a plasmid-based data splitting strategy, including 4 groups of leave-one-genus-out benchmarking experiments and a 5-fold cross-validation, are detailed in <xref rid="sup10" ref-type="supplementary-material">Supplementary Sections&#x000a0;S9 and S10</xref>, respectively.</p><table-wrap position="float" id="tbl1"><label>Table 1:</label><caption><p>The specific information of the curated dataset. In this table, the term &#x0201c;sentence&#x0201d; specifically refers to the plasmid sentence, which is composed of multiple proteins. Besides, the &#x0201c;# of sentences&#x0201d; item in the last 3 columns represents the count of sentences that contain at least 1 protein from the respective protein set</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">GO category</th><th align="center" rowspan="1" colspan="1"># of sentences</th><th align="center" rowspan="1" colspan="1"># of deduplicated proteins</th><th align="center" rowspan="1" colspan="1"># of annotated</th><th align="center" rowspan="1" colspan="1">Training set size</th><th align="center" rowspan="1" colspan="1">Validation set size</th><th align="center" rowspan="1" colspan="1">Test set size</th></tr><tr><th rowspan="1" colspan="1">&#x000a0;</th><th align="center" rowspan="1" colspan="1">(# of plasmids)</th><th align="center" rowspan="1" colspan="1">(# of original proteins)</th><th align="center" rowspan="1" colspan="1">proteins</th><th align="center" rowspan="1" colspan="1">(# of sentences)</th><th align="center" rowspan="1" colspan="1">(# of sentences)</th><th align="center" rowspan="1" colspan="1">(# of sentences)</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">MF</td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">173,666</td><td rowspan="1" colspan="1">99,806 (87,198)</td><td rowspan="1" colspan="1">56,491 (44,026)</td><td rowspan="1" colspan="1">17,369 (77,074)</td></tr><tr><td rowspan="1" colspan="1">BP</td><td rowspan="1" colspan="1">89,835 (47,871)</td><td rowspan="1" colspan="1">678,197 (1,103,790)</td><td rowspan="1" colspan="1">99,945</td><td rowspan="1" colspan="1">60,143 (81,068)</td><td rowspan="1" colspan="1">29,768 (72,128)</td><td rowspan="1" colspan="1">10,034 (32,751)</td></tr><tr><td rowspan="1" colspan="1">CC</td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">28,081</td><td rowspan="1" colspan="1">21,228 (77,877)</td><td rowspan="1" colspan="1">4,045 (18,226)</td><td rowspan="1" colspan="1">2,808 (8,952)</td></tr></tbody></table></table-wrap></sec><sec id="sec2-6-2"><title>PlasGO model training</title><p>We trained 3 PlasGO models, each specifically designed for 1 of the 3 GO categories. The models were trained with a batch size of 32 and a learning rate of 1e-4. Due to the smaller data size and increased susceptibility to overfitting in the CC category, we applied a dropout rate of 0.2 for CC and 0.1 for MF and BP. Additionally, we incorporated a warmup strategy by allocating 5% of the total training steps to gradually increase the learning rate from a small value to 1e-4. The methods employed to prevent overfitting in the PlasGO model, including dropout, model simplification, regularization, early stopping, and cross-validation, are outlined in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S3</xref>. Subsequently, the learning rate was linearly decayed to enhance generalization and expedite convergence. Using the NVIDIA GeForce RTX 3090 Blower 24G graphics card, each model underwent 10 epochs of training, with approximate durations of 65 minutes for MF, 59 minutes for BP, and 51 minutes for CC. A more detailed discussion of the computational costs and resource requirements for training and running PlasGO can be found in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S4</xref>. Moreover, inspired by the iterative alignment tool PSI-BLAST [<xref rid="bib42" ref-type="bibr">42</xref>], we developed a posttraining phase&#x02014;a fine-tuning strategy that iteratively refines the model with high-confidence pseudo-labeling. The methodology is elaborated in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S5</xref>.</p></sec></sec></sec><sec sec-type="results" id="sec3"><title>Results</title><sec id="sec3-1"><title>Experimental setup</title><sec id="sec3-1-1"><title>Metrics</title><p>In our benchmark experiments, we assess the performance using 2 commonly used metrics in the CAFA challenge [<xref rid="bib34" ref-type="bibr">34</xref>]: the protein-centric <inline-formula><tex-math id="TM0031" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula>, which measures the accuracy of assigning GO terms to a protein, and the term-centric area under the precision&#x02013;recall curve (AUPR), which evaluates the accuracy of predicting which proteins are associated with a given GO term. In other words, we first calculate <inline-formula><tex-math id="TM0032" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> for each protein and AUPR for each GO term separately. Subsequently, we obtain the average of these individual metrics as an overall performance evaluation. Importantly, dataset imbalance can lead to a high <inline-formula><tex-math id="TM0033" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> but a low AUPR if the tool consistently fails to predict certain low-frequency GO term labels. Therefore, utilizing both metrics ensures a more accurate and comprehensive assessment of the tools&#x02019; performance in GO term prediction.</p><p>
+<inline-formula>
+<tex-math id="TM0034" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math>
+</inline-formula> is defined as the highest <inline-formula><tex-math id="TM0035" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_1$\end{document}</tex-math></inline-formula>-score achieved among all probability cutoffs <inline-formula><tex-math id="TM0036" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta$\end{document}</tex-math></inline-formula>. To elaborate, we calculate the <inline-formula><tex-math id="TM0037" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_1$\end{document}</tex-math></inline-formula>-score for each <inline-formula><tex-math id="TM0038" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta$\end{document}</tex-math></inline-formula> value ranging from 0 to 1, using a stride of 0.01, and select the maximum score as <inline-formula><tex-math id="TM0039" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula>:</p><disp-formula id="equ4">
+<label>(4)</label>
+<tex-math id="TM0040" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+Precision_i(\theta ) = \frac{{\rm Correctly\ Predicted\ Terms}\ (i, \theta )}{{\rm Predicted\ Terms}\ (i, \theta )}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><disp-formula id="equ5">
+<label>(5)</label>
+<tex-math id="TM0041" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+Recall_i(\theta ) = \frac{{\rm Correctly\ Predicted\ Terms}\ (i, \theta )}{{\rm True\ Terms}\ (i)}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><disp-formula id="equ6">
+<label>(6)</label>
+<tex-math id="TM0042" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+AvgP(\theta ) = \frac{1}{m(\theta )}\cdot {\textstyle \sum _{i=1}^{m(\theta )}}Precision_i(\theta )
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><disp-formula id="equ7">
+<label>(7)</label>
+<tex-math id="TM0043" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+AvgR(\theta ) = \frac{1}{n} \cdot {\textstyle \sum _{i=1}^{n} Recall_i(\theta )}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><disp-formula id="equ8">
+<label>(8)</label>
+<tex-math id="TM0044" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+F_{max} = \underset{\theta }{max}\left\lbrace F_1(\theta ) \right\rbrace = \underset{\theta }{max} \left\lbrace \frac{2\cdot AvgP(\theta ) \cdot AvgR(\theta )}{AvgP(\theta )+AvgR(\theta )} \right\rbrace
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0045" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$Precision_i(\theta )$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0046" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$Recall_i(\theta )$\end{document}</tex-math></inline-formula> represent the precision and recall values for protein <italic toggle="yes">i</italic> with the cutoff <inline-formula><tex-math id="TM0047" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta$\end{document}</tex-math></inline-formula>. Correspondingly, <inline-formula><tex-math id="TM0048" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$AvgP(\theta )$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0049" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$AvgR(\theta )$\end{document}</tex-math></inline-formula> represent the average precision and recall values calculated for proteins with at least 1 predicted GO term (<inline-formula><tex-math id="TM0050" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$m(\theta )$\end{document}</tex-math></inline-formula>) and all proteins (<italic toggle="yes">n</italic>), respectively. <inline-formula><tex-math id="TM0051" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$Predicted\ Terms\ (i, \theta )$\end{document}</tex-math></inline-formula> denotes the number of GO terms for protein <italic toggle="yes">i</italic> that have a predicted probability greater than <inline-formula><tex-math id="TM0052" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta$\end{document}</tex-math></inline-formula>. <inline-formula><tex-math id="TM0053" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$True\ Terms\ (i)$\end{document}</tex-math></inline-formula> represents the number of GO terms that are truly annotated for protein <italic toggle="yes">i</italic>. Empirically, the <inline-formula><tex-math id="TM0054" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> metric reaches its peak when the cutoff <inline-formula><tex-math id="TM0055" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta$\end{document}</tex-math></inline-formula> is around 0.3, prompting many tools to utilize 0.3 as the default probability threshold for GO term prediction. We provide further elucidation on the rationale behind the <inline-formula><tex-math id="TM0056" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> metric in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S6</xref>.</p></sec><sec id="sec3-1-2"><title>SOTA tools for benchmarking</title><p>We compared PlasGO with 7 deep learning&#x02013;based tools that can be used for protein function annotation. These tools encompass DeepGOPlus [<xref rid="bib8" ref-type="bibr">8</xref>], PFresGO [<xref rid="bib10" ref-type="bibr">10</xref>], DeepSeq [<xref rid="bib7" ref-type="bibr">7</xref>], TALE [<xref rid="bib9" ref-type="bibr">9</xref>], ESM-2 [<xref rid="bib21" ref-type="bibr">21</xref>], a codon-based large language model (CodonBERT [<xref rid="bib43" ref-type="bibr">43</xref>]), and an approach trained for accurate protein structure alignments (TM-Vec [<xref rid="bib44" ref-type="bibr">44</xref>]). In particular, we selected the model <italic toggle="yes">esm2_t36_3B_UR50D</italic> with 36 Transformer layers from the ESM-2 family models to maintain consistency with the ProtT5 model employed for PlasGO, both of which consist of 3 billion parameters. Due to our dataset splitting strategy, which resulted in no significant alignment between the test set and training set, we did not include any sequence alignment tools such as Diamond [<xref rid="bib45" ref-type="bibr">45</xref>] in our comparison. Additionally, gLM [<xref rid="bib46" ref-type="bibr">46</xref>], a pretrained genomic language model that combines PLM and BERT family models, is trained on millions of metagenomic scaffolds. It was not included in the benchmarking due to the contextualized embeddings generated by gLM showing a weak correlation with GO annotations for plasmid-encoded proteins. A more in-depth discussion comparing PlasGO and gLM can be found in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S7</xref>. Notably, all 7 selected SOTA tools can be optimized for GO term prediction for plasmid-encoded proteins using the same curated RefSeq dataset as PlasGO, ensuring a fair and consistent comparison of algorithms. To be specific, we performed model retraining for the first 4 tools, and in the case of ESM-2 and CodonBERT, we trained a classifier utilizing its learned embeddings. Besides, for TM-Vec, we created a custom database using our curated training set. There are 2 main reasons for this optimization process. First, some of the labels determined by us do not exist in their default models, making them unable to predict those labels. For example, the default PFresGO can only predict 125 out of 172 (72.67%) MF labels, 141 out of 174 (81.03%) BP labels, and 21 out of 31 (67.74%) CC labels from our label set. Second, the proteins used to train their default models span across various organisms and have less emphasis on plasmids. As a result, their default models exhibit inferior performance compared to our retrained models. For instance, among the subset of labels that can be predicted by the default PFresGO, it achieved <inline-formula><tex-math id="TM0057" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> scores of 0.6514 and 0.6226 for MF and BP, respectively, while our retrained PFresGO improved significantly to 0.7039 and 0.7189, respectively.</p><p>When conducting benchmarking with ESM-2 and CodonBERT, we initially extracted the embeddings for each protein and then trained a deep neural network (DNN) as their GO term prediction classifier. In addition, TM-Vec generates structure alignments in a format similar to TM-align [<xref rid="bib47" ref-type="bibr">47</xref>], represented as a triad <inline-formula><tex-math id="TM0058" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\left\lbrace q, t, tmscore(q, t)\right\rbrace$\end{document}</tex-math></inline-formula>. Here, <italic toggle="yes">q</italic> denotes the query protein from the test set, <italic toggle="yes">t</italic> represents the target protein from the training set database, and <inline-formula><tex-math id="TM0059" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$tmscore(q, t)$\end{document}</tex-math></inline-formula> corresponds to the template modeling score (TM-score) of the alignment. Alignments with a <inline-formula><tex-math id="TM0060" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$tmscore(q, t)$\end{document}</tex-math></inline-formula> below 0.5, indicating a low structural similarity [<xref rid="bib48" ref-type="bibr">48</xref>], are excluded from further analysis. Inspired by the DiamondScore method proposed by Kulmanov et&#x000a0;al. [<xref rid="bib8" ref-type="bibr">8</xref>], we compute the GO term probability vector for TM-Vec using the following formula:</p><disp-formula id="equ9">
+<label>(9)</label>
+<tex-math id="TM0061" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+P(q, f) = \frac{ {\textstyle \sum _{t\in T}} tmscore(q, t) * I(f\in F_t)}{ {\textstyle \sum _{t\in T} tmscore(q, t)} }
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0062" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$P(q, f)$\end{document}</tex-math></inline-formula> is the predicted probability that the query protein <italic toggle="yes">q</italic> is annotated with the GO term <italic toggle="yes">f</italic>. <italic toggle="yes">T</italic> represents the set of target proteins found in the significant alignments of the query protein <italic toggle="yes">q</italic>. <inline-formula><tex-math id="TM0063" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$I(f\in F_t)$\end{document}</tex-math></inline-formula> is the identity function that returns 1 if the GO term <italic toggle="yes">f</italic> is present in the true annotations <inline-formula><tex-math id="TM0064" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_t$\end{document}</tex-math></inline-formula> of the target protein <italic toggle="yes">t</italic> and 0 otherwise.</p></sec></sec><sec id="sec3-2"><title>Ablation studies: validating PlasGO&#x02019;s design rationale</title><sec id="sec3-2-1"><title>Evaluation of BERT module in PlasGO</title><p>We first conducted an ablation study to investigate whether the BERT module effectively captures the contextual information on plasmids and improves the GO term prediction. Specifically, we compared the performance of 3 different classification methods, all utilizing protein embeddings from ProtT5 as input. The first method serves as the baseline, entailing the training of a 3-layer DNN classifier for each GO category using the identical dataset as PlasGO. This method does not leverage any plasmid-level contextual information as it predicts each protein independently. The second method involves using PlasGO for prediction by inputting a single test protein. In other words, each testing sentence has a length of 1, with 55 &#x0201c;[PAD]&#x0201d; tokens padded at the end of each test protein. In this approach, the proteins are also predicted individually. Thus, the main effective component is the embedding layer, while the attention blocks remain inactive. The third method is the standard PlasGO, which fully incorporates our design rationale. The experimental results are shown in Table&#x000a0;<xref rid="tbl2" ref-type="table">2</xref>. The standard PlasGO achieved the best performance on all the GO categories, indicating that the contextual information captured by the BERT module actively contributes to improving the GO term prediction. Additionally, the second method has a better performance compared to the DNN classifier. This suggests that despite the inactive attention blocks, the embedding layer still captured partial contextual information.</p><table-wrap position="float" id="tbl2"><label>Table 2:</label><caption><p>The performance of different classification methods using ProtT5 embeddings as input on the RefSeq test set. The first method involves training a 3-layer DNN using ProtT5 embeddings as input, utilizing the same curated RefSeq dataset aligned with PlasGO. The second method deviates from the standard PlasGO approach solely during the prediction phase. Specifically, a single test protein is treated as a test sentence with a length of 1, which is then inputted into the PlasGO model. Consequently, the attention mechanisms are disabled for the second method.</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">Method</th><th align="center" rowspan="1" colspan="1">GO category</th><th align="center" rowspan="1" colspan="1">
+<inline-formula>
+<tex-math id="TM0065" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math>
+</inline-formula>
+</th><th align="center" rowspan="1" colspan="1">AUPR</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">3-layer DNN classifier</td><td rowspan="1" colspan="1">MF</td><td rowspan="1" colspan="1">0.7662</td><td rowspan="1" colspan="1">0.4550</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">BP</td><td rowspan="1" colspan="1">0.7498</td><td rowspan="1" colspan="1">0.3903</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">CC</td><td rowspan="1" colspan="1">0.7778</td><td rowspan="1" colspan="1">0.4639</td></tr><tr><td rowspan="1" colspan="1">PlasGO (single test protein)</td><td rowspan="1" colspan="1">MF</td><td rowspan="1" colspan="1">0.7808</td><td rowspan="1" colspan="1">0.4950</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">BP</td><td rowspan="1" colspan="1">0.7512</td><td rowspan="1" colspan="1">0.4088</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">CC</td><td rowspan="1" colspan="1">0.7992</td><td rowspan="1" colspan="1">0.4406</td></tr><tr><td rowspan="1" colspan="1">PlasGO (standard)</td><td rowspan="1" colspan="1">MF</td><td rowspan="1" colspan="1">0.8070</td><td rowspan="1" colspan="1">0.5165</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">BP</td><td rowspan="1" colspan="1">0.7855</td><td rowspan="1" colspan="1">0.4638</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">CC</td><td rowspan="1" colspan="1">0.7926</td><td rowspan="1" colspan="1">0.5109</td></tr></tbody></table></table-wrap></sec><sec id="sec3-2-2"><title>Evaluation of the foundation PLMs</title><p>Given that the protein embeddings extracted by the foundation PLM are the sole input to PlasGO&#x02019;s BERT module, it is critical to ensure that the input embeddings are highly informative. To this end, we evaluated the performance of PlasGO by utilizing embeddings extracted from 4 distinct ProtTrans models, which were constructed based on 4 prominent language models in NLP: T5 [<xref rid="bib28" ref-type="bibr">28</xref>], BERT [<xref rid="bib22" ref-type="bibr">22</xref>], XLNet [<xref rid="bib49" ref-type="bibr">49</xref>], and Albert [<xref rid="bib50" ref-type="bibr">50</xref>]. The results align closely with the per-protein prediction tasks reported in ProtTrans&#x02019;s study [<xref rid="bib24" ref-type="bibr">24</xref>] (Table&#x000a0;<xref rid="tbl3" ref-type="table">3</xref>). PlasGO achieved the best results using ProtT5, while the differences in performance between PlasGO using other PLMs were minimal. This suggests that the model size of ProtT5 (3B) is optimal for learning the most informative embeddings from the vast number of training proteins (e.g., 45M in the UniRef50 database). Thus, we select ProtT5 to extract the original per-protein embeddings for PlasGO.</p><table-wrap position="float" id="tbl3"><label>Table 3:</label><caption><p>The performance of PlasGO trained with different foundation PLMs on the RefSeq test set</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">Pre-trained PLM</th><th align="center" rowspan="1" colspan="1">GO category</th><th align="center" rowspan="1" colspan="1">
+<inline-formula>
+<tex-math id="TM0066" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math>
+</inline-formula>
+</th><th align="center" rowspan="1" colspan="1">AUPR</th><th align="center" rowspan="1" colspan="1">Parameters</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">ProtT5</td><td rowspan="1" colspan="1">MF</td><td rowspan="1" colspan="1">0.8070</td><td rowspan="1" colspan="1">0.5165</td><td rowspan="1" colspan="1">3B</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">BP</td><td rowspan="1" colspan="1">0.7855</td><td rowspan="1" colspan="1">0.4638</td><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">CC</td><td rowspan="1" colspan="1">0.7926</td><td rowspan="1" colspan="1">0.5109</td><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1">ProtBert</td><td rowspan="1" colspan="1">MF</td><td rowspan="1" colspan="1">0.7462</td><td rowspan="1" colspan="1">0.4532</td><td rowspan="1" colspan="1">420M</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">BP</td><td rowspan="1" colspan="1">0.7447</td><td rowspan="1" colspan="1">0.3813</td><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">CC</td><td rowspan="1" colspan="1">0.7444</td><td rowspan="1" colspan="1">0.3915</td><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1">ProtXLNet</td><td rowspan="1" colspan="1">MF</td><td rowspan="1" colspan="1">0.7396</td><td rowspan="1" colspan="1">0.4693</td><td rowspan="1" colspan="1">409M</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">BP</td><td rowspan="1" colspan="1">0.7526</td><td rowspan="1" colspan="1">0.3622</td><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">CC</td><td rowspan="1" colspan="1">0.7673</td><td rowspan="1" colspan="1">0.4567</td><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1">ProtAlbert</td><td rowspan="1" colspan="1">MF</td><td rowspan="1" colspan="1">0.7541</td><td rowspan="1" colspan="1">0.4220</td><td rowspan="1" colspan="1">224M</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">BP</td><td rowspan="1" colspan="1">0.7396</td><td rowspan="1" colspan="1">0.3503</td><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">CC</td><td rowspan="1" colspan="1">0.7679</td><td rowspan="1" colspan="1">0.4393</td><td rowspan="1" colspan="1"/></tr></tbody></table></table-wrap></sec></sec><sec id="sec3-3"><title>Performance on the RefSeq test set</title><p>We compared PlasGO with the other 7 tools on our curated RefSeq test set. During the evaluation of PlasGO, if a protein appears in multiple testing sentences, its final probability vector is determined by averaging all its predictions across these sentences. The predicted results of all the tools are shown in Fig.&#x000a0;<xref rid="fig6" ref-type="fig">6</xref>. Additional statistical significance test (the nonparametric McNemar&#x02019;s test) results can be found in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S8</xref>. Overall, PlasGO attained the highest scores for both <inline-formula><tex-math id="TM0067" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> and AUPR on all 3 GO categories. A closer looks show that the subsequent top-performing tools (PFresGO, ESM-2, TM-Vec) all leverage the pretrained PLMs to encode protein-level or residue-level features for protein sequences. This observation suggests that the inherent relationships between AAs captured by PLMs can substantially enhance the prediction of GO terms. This aligns with the finding that many proteins execute their functions through spatially aggregated clusters of critical residues [<xref rid="bib51" ref-type="bibr">51</xref>]. Specifically, PFresGO and TM-Vec utilize residue-level features, while PlasGO leverages protein-level features, resulting in significant time and memory savings and also scalability to a higher number of proteins. This advantage is achieved by implementing the BERT model to learn from plasmid-level corpora.</p><fig position="float" id="fig6"><label>Figure 6:</label><caption><p>The performance of different tools on the RefSeq test set assessed based on two metrics, (A) <inline-formula><tex-math id="TM0068" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> and (B) AUPR, and measured across the 3 GO categories.</p></caption><graphic xlink:href="giae104fig6" position="float"/></fig><p>Although CodonBERT is also a large language model, it did not surpass the top 4 tools utilizing PLMs. This suggests that training on codon-level tokens does not offer the same enhancements as training on amino acid&#x02013;level tokens for function prediction tasks. Nevertheless, this observation does not negate the superior advantages of codon-based models in specific tasks such as protein expression prediction or protein abundance prediction [<xref rid="bib23" ref-type="bibr">23</xref>, <xref rid="bib43" ref-type="bibr">43</xref>]. Additionally, DeepGOPlus achieves the highest performance among the tools trained from scratch. However, it is still challenging for them to compete with the tools trained based on pretrained PLMs.</p><p>To further evaluate PlasGO&#x02019;s capability to generalize to novel proteins, including those from plasmid taxonomies not present in our training data, we performed 4 groups of leave-one-genus-out benchmarking experiments and a 5-fold cross-validation, all with plasmid-based data splitting. The results are included in <xref rid="sup10" ref-type="supplementary-material">Supplementary Sections&#x000a0;S9 and S10</xref>, respectively.</p></sec><sec id="sec3-4"><title>Visualization of the PlasGO embeddings</title><p>A visual comparison between the original embeddings generated by ProtTrans and the contextualized embeddings learned by the BERT module of PlasGO can provide valuable insights into how the design of the BERT module contributes to enhancing GO term prediction. Given that the multilabel GO term prediction can be considered as many individual binary classifications, we conducted visualization experiments focusing on several GO terms that are highly related to plasmid-specific functions. Specifically, we first selected a few representative plasmid-specific proteins, encompassing both core proteins and accessory proteins. Subsequently, we obtained the corresponding GO annotations for these proteins from the Swiss-Prot database. On one hand, we curated a subset of well-studied plasmid core proteins (<xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S11</xref>) from the categories of replication, partitioning, conjugative DNA transfer, exclusion, and type IV secretion system (T4SS), based on the list provided by Thomas et&#x000a0;al. [<xref rid="bib52" ref-type="bibr">52</xref>]. On the other hand, we retrieved high-quality proteins labeled as &#x0201c;plasmid&#x0201d; (<xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S12</xref>) from the Swiss-Prot database by utilizing 4 crucial plasmid accessory functions as keywords: AMR, resistance to heavy metals, new metabolic process, and virulence factors. In this section, we validated the effectiveness of PlasGO in capturing the underlying features for classifying plasmid-specific functions by selecting 4 GO terms from the 2 curated lists for each GO category.</p><p>For each selected GO term, we categorized the proteins associated with it as positive samples, while considering the remaining proteins not associated with it as negative samples. An inspection of our curated dataset revealed an imbalanced distribution of data across all 12 selected GO terms, with the majority of proteins classified as negative samples. To enhance clarity in the visualization, an equal number of negative samples were randomly sampled to match the number of positive samples for each GO term. We employed t-SNE (t-distributed stochastic neighbor embedding) [<xref rid="bib53" ref-type="bibr">53</xref>] for 2D visualization of both the original embedding from ProtTrans and the embeddings generated by PlasGO&#x02019;s BERT module. The comparison of embeddings for the 4 MF binary classifications is presented in Fig.&#x000a0;<xref rid="fig7" ref-type="fig">7</xref>, while the comparisons for BP and CC are shown in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S13</xref>. To quantitatively evaluate the separation of embeddings between the 2 classes, we consider the positive proteins and negative proteins as separate clusters. Then, we calculate the silhouette score (ranging from &#x02212;1 to 1) based on these 2 clusters. We can observe that the PlasGO embeddings exhibit a clearer separation of protein functions compared to the ambiguous ProtTrans embeddings. This suggests that PlasGO effectively captures the latent features associated with plasmid-specific functions.</p><fig position="float" id="fig7"><label>Figure 7:</label><caption><p>The visualization of protein embeddings generated by ProtTrans and PlasGO for 4 GO terms. For each GO term, the proteins associated with it and not associated with it are defined as positive and negative samples, respectively. Blue dots: positive samples; red dots: negative samples. The x-axis and y-axis represent the 2 dimensions of the embeddings reduced using t-SNE. Additionally, the silhouette score is displayed within brackets on each box.</p></caption><graphic xlink:href="giae104fig7" position="float"/></fig></sec><sec id="sec3-5"><title>Identification of elusive GO term labels</title><p>Predicting all GO terms accurately poses a significant challenge due to its complex multilabel classification. To make our tool more practically useful, we prefer to sacrifice prediction resolution for higher precision. Based on the empirical experiments, we identified a few labels that are extremely difficult to predict. Specifically, if the term-centric AUPR score on the validation set of a label falls below 0.3, then this label is considered an elusive label. As a result, a total of 16 out of 172 MF labels, 21 out of 174 BP labels, and 3 out of 31 CC labels have been identified as elusive labels. The detailed list of these elusive labels, along with their corresponding AUPR scores on the test set obtained from the top 4 tools (PlasGO, PFresGO, TM-Vec, and DeepGOPlus), is provided in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S14</xref>. It is notable that the majority of the elusive labels, with the exception of 5 of them (where PlasGO still outperforms the other tools), consistently achieve AUPR scores below 0.3 on the test set across all the top 4 tools. In summary, this suggests that current data cannot support reliable prediction of these labels.</p><p>As depicted in <xref rid="sup10" ref-type="supplementary-material">Supplementary Figure S8</xref>, the majority of elusive labels are rare classes. Thus, the presence of elusive labels can primarily be attributed to the scarcity of training samples, potentially hindering PlasGO&#x02019;s performance in 2 ways. First, the limited diversity within the training data for these elusive labels poses challenges for the model to effectively capture their distinctive features, thus impeding its ability to generalize to unseen proteins. Second, the imbalance between positive (proteins with the GO term) and negative samples (proteins without the GO term) associated with elusive labels may result in the model overfitting on negative samples and underfitting on positive samples. Consequently, the model tends to predict elusive labels in a &#x0201c;conservative&#x0201d; fashion, often refraining from positive predictions unless entirely confident. Moreover, due to our dataset-splitting strategy, the dissimilarity in protein sequences between the training set and test set is considerable (<xref rid="sup10" ref-type="supplementary-material">Supplementary Fig. S9</xref>). As a result, limited features can be used for predicting the novel functions of proteins in the test set. As shown in <xref rid="sup10" ref-type="supplementary-material">Supplementary Table S7</xref>, we filtered the results of the PlasGO module ablation study (Table&#x000a0;<xref rid="tbl2" ref-type="table">2</xref>) to specifically consider the elusive labels. The poor performance of the DNN classifier suggests that even the powerful PLM failed to capture the features necessary for predicting the elusive labels. Finally, the identified elusive labels have no overlap with the important plasmid-specific GO terms associated with both plasmid core proteins and accessory proteins, as detailed in <xref rid="sup10" ref-type="supplementary-material">Supplementary Sections&#x000a0;S11 and S12</xref>. Hence, the functions represented by these elusive labels may not adhere to a distinct modularization pattern on plasmids, and as a result, PlasGO was unable to improve the prediction of these elusive labels by leveraging contextual information (<xref rid="sup10" ref-type="supplementary-material">Supplementary Table S7</xref>).</p><p>To address this issue, we have implemented 2 strategies. First, we introduced 2 usage modes for the PlasGO tool: the alignment-based mode and the learning-based mode. In the alignment-based mode, users can leverage Diamond [<xref rid="bib45" ref-type="bibr">45</xref>] to conduct searches against our curated high-confidence protein database using a strict E-value cutoff (e.g., 1e-5). Notably, within our curated database, while we have filtered out the &#x0201c;elusive&#x0201d; PlasGO predictions, the original high-quality RefSeq annotations for the elusive labels are reserved. As a result, the alignment offers users precise annotations for these elusive labels when their query proteins exhibit homology to the corresponding target proteins. Second, the majority of the elusive labels have their ancestor terms reversed, as shown in the example DAG structure in <xref rid="sup10" ref-type="supplementary-material">Supplementary Fig. S10</xref>. As shown in <xref rid="sup10" ref-type="supplementary-material">Supplementary Fig. S11</xref>, the nearest ancestor terms of most elusive labels maintain good performance in terms of the AUPR metric. Thus, PlasGO can effectively predict the functions of elusive labels by prioritizing a broader representation of gene product attributes, albeit sacrificing some resolution.</p><p>Looking ahead, as high-quality GO annotations continue to expand rapidly, we anticipate that the PlasGO model will greatly benefit from the augmented training samples. This enhancement is expected to boost the performance of elusive labels, ultimately transforming them from &#x0201c;elusive&#x0201d; to labels that can be predicted with confidence.</p></sec><sec id="sec3-6"><title>Labels of different frequencies and confidence scores</title><p>We first conducted a more detailed evaluation of the performance comparisons on the RefSeq test set among the top 4 tools. Specifically, we focused on a few representative labels, namely, the first 10 and last 20 most frequent MF labels in the training set. In general, labels that occur more frequently tend to exhibit better performance. This can be attributed to the abundance of training samples, which allows the models to acquire richer features for effectively distinguishing these labels. This pattern aligns with the results presented in Fig.&#x000a0;<xref rid="fig8" ref-type="fig">8</xref>, which illustrates that the performance of the top 10 labels is superior and more stable compared to the performance of the last 20 labels. Despite obtaining low AUPR scores for several low-frequency labels, PlasGO consistently outperforms the other 3 tools across the majority of labels. Notably, several low-frequency labels attained a perfect AUPR score of 1, which is unusual. This anomaly is attributed to their associated limited number of test proteins. For example, the top 10 MF labels (ranging from <italic toggle="yes">MF1</italic> to <italic toggle="yes">MF10</italic>) average 4,544 associated test proteins out of a total of 17,369 test proteins. Conversely, the 5 MF labels at the end of Fig.&#x000a0;<xref rid="fig8" ref-type="fig">8</xref>, each achieving an AUPR score of 1, have an average of only 18 test proteins. As a result, low-frequency labels are more susceptible to random chance and tend to display significant fluctuations compared to high-frequency labels.</p><fig position="float" id="fig8"><label>Figure 8:</label><caption><p>The AUPR comparisons of the top 4 tools on the first 10 and last 20 MF labels sorted by occurrence frequency in the training set. The performance of all tools fluctuates significantly on low-frequency labels.</p></caption><graphic xlink:href="giae104fig8" position="float"/></fig><p>Next, we assessed the effectiveness of the learned confidence scores. As described in the Methods section, as the default setting, any prediction with a predicted probability below 0.425 and a confidence score lower than 0.95 will be excluded when calculating the AUPR for the high-confidence mode of PlasGO. To quantify this exclusion, we introduced a new metric called the &#x0201c;prediction rate,&#x0201d; which is calculated by dividing the number of reserved testing proteins by the total number of testing proteins. Fig.&#x000a0;<xref rid="fig9" ref-type="fig">9</xref> presents the performance comparison between the original PlasGO and its high-confidence mode for a subset of the MF labels, where the prediction rates are not equal to 1 in the high-confidence mode. We can observe that the high-confidence mode of PlasGO attains higher AUPR scores for the majority of the displayed labels by sacrificing a certain degree of prediction rate.</p><fig position="float" id="fig9"><label>Figure 9:</label><caption><p>The AUPR comparisons on the MF category between the original PlasGO and the high-confidence mode of PlasGO. In the high-confidence mode, PlasGO filters out some predictions with low learned confidence scores, resulting in higher AUPR scores but lower prediction rates. The gray line shows the prediction rate for the &#x0201c;high-confidence PlasGO&#x0201d; mode. The prediction rates for the original PlasGO are all equal to 1 and thus are not shown in this figure. The corresponding comparison results on the BP and CC categories are shown in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S15</xref>.</p></caption><graphic xlink:href="giae104fig9" position="float"/></fig></sec><sec id="sec3-7"><title>Application: automatic GO prediction for unannotated plasmid-encoded proteins in RefSeq</title><p>One primary contribution of PlasGO is its utilization of trained models to predict high-confidence GO term annotations for unannotated plasmid-encoded proteins that are not included in the training, validation, and test sets. As shown in Table&#x000a0;<xref rid="tbl4" ref-type="table">4</xref>, a large proportion of proteins curated from the RefSeq database (678,197) lack GO term annotations, with percentages of 74.39% for MF, 85.26% for BP, and 95.86% for CC. Hence, we employed PlasGO to predict nominal-format GO term annotations for these unannotated proteins. Consequently, we have successfully assigned high-confidence GO term annotations to most (all exceeding 95%) of the unannotated proteins. The distributions of the number of newly assigned GO terms for the 3 GO categories are presented in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S16</xref>. Lastly, the precision of the nominal-format GO term annotations was measured on the RefSeq test set, resulting in values of 0.8229, 0.7941, and 0.887 for the MF, BP, and CC categories, respectively. This confirms the high reliability of the newly added GO terms by PlasGO.</p><table-wrap position="float" id="tbl4"><label>Table 4:</label><caption><p>The percentages of newly added high-confidence annotations by PlasGO across 3 GO categories. The last 3 columns display the count of proteins that have been newly predicted as having functions related to replication, stability, and conjugation, respectively, utilizing the significant GO term indicators.</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1"># of all proteins</th><th align="center" rowspan="1" colspan="1">GO category</th><th align="center" rowspan="1" colspan="1"># of newly added annotations by PlasGO /</th><th align="center" rowspan="1" colspan="1">Replication</th><th align="center" rowspan="1" colspan="1">Stability</th><th align="center" rowspan="1" colspan="1">Conjugation</th></tr><tr><th rowspan="1" colspan="1">&#x000a0;</th><th rowspan="1" colspan="1">&#x000a0;</th><th align="center" rowspan="1" colspan="1"># of unannotated proteins</th><th rowspan="1" colspan="1">&#x000a0;</th><th rowspan="1" colspan="1">&#x000a0;</th><th rowspan="1" colspan="1">&#x000a0;</th></tr></thead><tbody><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">MF</td><td rowspan="1" colspan="1">488,696/504,531 (96.86%)</td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/></tr><tr><td rowspan="1" colspan="1">678,197</td><td rowspan="1" colspan="1">BP</td><td rowspan="1" colspan="1">551,246/578,252 (95.33%)</td><td rowspan="1" colspan="1">136,303</td><td rowspan="1" colspan="1">38,836</td><td rowspan="1" colspan="1">22,630</td></tr><tr><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1">CC</td><td rowspan="1" colspan="1">650,012/650,116 (99.98%)</td><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/><td rowspan="1" colspan="1"/></tr></tbody></table></table-wrap><p>To conduct a more detailed analysis of the newly annotated proteins, we additionally provided the count of proteins in Table&#x000a0;<xref rid="tbl4" ref-type="table">4</xref> that can be confidently classified into 1 of the 3 main core functions (replication, stability, and conjugation) using PlasGO. In order to achieve this classification, we manually identified the GO terms that exhibit strong relevance as indicators for the 3 core functions. The comprehensive list of these indicators can be found in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S18</xref>. Consequently, any protein predicted to have at least one of these GO term indicators will be classified into the corresponding core function. The results show that PlasGO successfully predicts a significant number of unannotated proteins as plasmid core proteins. Furthermore, we choose to show whether our annotated GO terms can reveal the functions related to plasmid replication. For this purpose, we applied PlasGO to proteins collected by PlasmidFinder [<xref rid="bib54" ref-type="bibr">54</xref>], which includes 481 replicon sequences obtained from the PCR-based replicon typing (PBRT) scheme. The findings are elaborated in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S17</xref>. Finally, the predicted GO terms for plasmid-encoded proteins were saved in a database alongside PlasGO. Users can first attempt sequence alignment against the database with high identity and coverage cutoffs to directly obtain annotated GO terms. If there is no significant alignment, users can then apply the PlasGO models for GO term prediction.</p></sec><sec id="sec3-8"><title>Case study: annotations for 2 well-studied plasmids</title><p>We then evaluated PlasGO&#x02019;s performance in protein function prediction for the 2 well-studied conjugative plasmids associated with AMR, namely, pSK41 from <italic toggle="yes">Staphylococcus aureus</italic> [<xref rid="bib55" ref-type="bibr">55</xref>] and pOLA52 from <italic toggle="yes">Escherichia coli</italic> [<xref rid="bib15" ref-type="bibr">15</xref>]. The 2 complete plasmids, along with their corresponding encoded proteins, were downloaded from the NCBI database using the sequence IDs <italic toggle="yes">NC_005024</italic> and <italic toggle="yes">NC_010378</italic>, respectively. For both plasmids, over half of the encoded proteins possess informative &#x0201c;gene product&#x0201d; annotations, excluding those labeled as &#x0201c;hypothetical protein&#x0201d; and &#x0201c;domain-containing protein.&#x0201d; However, only a very small portion of these proteins (4 out of 76) have GO annotations available. Therefore, the &#x0201c;gene product&#x0201d; annotations can offer a potential scope of the GO term ground truth, which aids in evaluating the predictive accuracy of PlasGO for the unannotated proteins. The detailed information on the proteins, including their protein IDs and &#x0201c;gene product&#x0201d; annotations, can be found in <xref rid="sup10" ref-type="supplementary-material">Supplementary Section&#x000a0;S19</xref>, presented in the order corresponding to their encoding in the 2 plasmids. As shown in Fig.&#x000a0;<xref rid="fig10" ref-type="fig">10</xref>, to obtain the potential ground truth scope, we first retrieved the relevant proteins from the Swiss-Prot database by using the &#x0201c;gene product&#x0201d; annotation as the keyword phrase (e.g., &#x0201c;MobA/MobL family protein&#x0201d;). Following that, the collected GO terms associated with these retrieved proteins were considered as the potential ground-truth set for the corresponding protein. We can evaluate the predictive accuracy of PlasGO for each protein by calculating the Jaccard index between the potential ground-truth set and the GO terms predicted by PlasGO.</p><fig position="float" id="fig10"><label>Figure 10:</label><caption><p>The pipeline of conducting the case study experiment. Only the proteins annotated with informative &#x0201c;gene product&#x0201d; annotations were considered in this experiment. In this figure, we present an example evaluation of a protein annotated as &#x0201c;MobA/MobL family protein.&#x0201d; The blue path illustrates the prediction process of PlasGO, wherein a set of high-confidence GO terms <italic toggle="yes">A</italic> is generated by our algorithm. The red path depicts the process of obtaining the potential scope of the GO term ground truth. Specifically, we conducted a search in the Swiss-Prot database using the phrase &#x0201c;MobA/MobL family protein&#x0201d; as the keyword. Subsequently, the proteins that matched the keyword, along with their corresponding GO annotations, were retrieved. Finally, we defined the union of the retrieved GO terms as the potential ground-truth set <italic toggle="yes">B</italic>. The predictive accuracy of PlasGO is evaluated by calculating the Jaccard index between the predicted high-confidence GO term set <italic toggle="yes">A</italic> and the potential ground-truth set <italic toggle="yes">B</italic>.</p></caption><graphic xlink:href="giae104fig10" position="float"/></fig><p>Figure&#x000a0;<xref rid="fig11" ref-type="fig">11</xref> illustrates the number comparison between the predicted GO terms (merged from the MF, BP, and CC categories) by PlasGO and the original GO terms available in the RefSeq database, along with the corresponding Jaccard index. PlasGO successfully added predicted GO terms to all the proteins and demonstrated a promising predictive accuracy for the majority of them. For enhanced clarity, the comparison of GO annotations for proteins encoded on plasmid pSK41 between the raw RefSeq database and the predictions generated by PlasGO is illustrated in <xref rid="sup10" ref-type="supplementary-material">Supplementary Figure S15</xref>. It is noteworthy that the increase in the number of GO terms for the 4 originally annotated proteins can be attributed to PlasGO assigning GO terms to previously unrepresented categories. For example, the 31st protein (<italic toggle="yes">WP_012291478</italic>) in plasmid pOLA52 had only 9 GO term labels in the MF category initially. PlasGO predicts an additional 4 BP terms and 4 CC terms for this protein, resulting in a total of 17 annotated GO terms.</p><fig position="float" id="fig11"><label>Figure 11:</label><caption><p>The comparisons between the number of GO terms predicted by PlasGO for the proteins encoded in the 2 well-studied plasmids and the number of original GO terms available in the NCBI RefSeq database. The indices on the x-axis represent the order in which proteins are encoded in the plasmids. The red lines in the figure&#x000a0;represent the Jaccard index calculated between the high-confidence GO term set predicted by PlasGO and the potential ground-truth set retrieved from the Swiss-Prot database.</p></caption><graphic xlink:href="giae104fig11" position="float"/></fig></sec></sec><sec sec-type="discussion" id="sec4"><title>Discussion</title><p>In this study, we presented a tool named PlasGO aiming to provide GO term-based functional annotation for largely uncharacterized plasmid-encoded proteins. Due to segment transfer facilitated by recombination events or the movement of MGEs, plasmids frequently demonstrate a modularization pattern, wherein proteins with similar functions tend to be positioned in close proximity to each other. To leverage this characteristic, we represented each plasmid as a sentence and functionally related segments as phrases, both composed of multiple proteins. We then formulated the GO term prediction for plasmid-encoded proteins as a multilabel token classification task, utilizing the BERT model. PlasGO is specifically designed with a hierarchical architecture. It utilizes a foundation PLM to capture the local context within a protein sequence while employing a BERT model to capture the global context across different proteins. Furthermore, a classifier module featuring a self-attention confidence weighting mechanism is incorporated to generate confidence scores during prediction, thereby ensuring more reliable results.</p><p>We rigorously evaluated PlasGO using a series of experiments and benchmarked its performance with other SOTA tools. Specifically, to mimic the real-world challenges in GO term prediction for novel proteins that cannot be characterized with homology search due to low sequence identity, we constructed a test set that lacks significant sequence alignments to the training set. In order to maintain fairness in the comparisons, we retrained models or classifiers for all the other tools by using the same training set as PlasGO. The results from all the experiments consistently demonstrate the superior performance of PlasGO compared with other SOTA tools. Besides, we conducted a careful ablation study to investigate the contribution of different components of PlasGO to performance improvement. These prove that the advantage of PlasGO is attributed to its algorithm design rather than the mere augmentation of training data. Furthermore, the benchmark results indicate that PlasGO has the potential to be extended beyond plasmid-specific applications and applied to general GO term prediction tasks. In the final phase, we utilized PlasGO to predict high-confidence GO terms for the complete set of available plasmid-encoded proteins, totaling 678,197 proteins. Remarkably, over 95% of previously unannotated proteins were successfully assigned new GO terms across all 3 GO categories. The predicted high-confidence GO terms for all plasmid-encoded proteins will be compiled into a database, which serves as a contribution to the community interested in plasmids.</p><p>Despite the notable improvement in function prediction, PlasGO does have 2 limitations. First, only 29.34% of the proteins in the current database possess GO term annotations. In the most extreme cases, only a single protein in a sentence may have training labels. This limitation restricts the model&#x02019;s ability to effectively learn plasmid patterns and hampers their generalization capabilities. Second, despite the high quality of the GO annotations, different proteins may vary in their level of annotation. In other words, some proteins may have annotations at a very detailed level, while others may be annotated to broader, higher-level GO terms. Consequently, the multilabel classification task in PlasGO is inevitably affected by the issue of missing labels, leading to the introduction of label noise. The relabeling method presents a potential approach to address both limitations. Specifically, after the model has undergone training for a specified number of epochs or has converged, labels with high predicted probabilities and confidence scores can be assigned as the ground truth for their corresponding proteins, regardless of whether these proteins were initially annotated or unannotated. Consequently, as training progresses, an increasing number of proteins will no longer be masked and will actively contribute to the loss computation. On the other hand, the model will be fully utilized to rectify the missing labels within the dataset, enhancing the accuracy of the predictions.</p><p>PlasGO is implemented as an end-to-end and user-friendly tool. It can accept both complete plasmids and plasmid-borne contigs as inputs, generating high-confidence GO annotations for the proteins they encode. Users have the flexibility to provide meticulously curated plasmids from public databases like PLSDB [<xref rid="bib56" ref-type="bibr">56</xref>] and IMG/PR [<xref rid="bib57" ref-type="bibr">57</xref>]. Conversely, they can also initiate the analysis from diverse data sources, spanning isolates, metagenomes, metatranscriptomes, and single amplified genomes. Many tools, such as PLASMe [<xref rid="bib58" ref-type="bibr">58</xref>] and MOB-recon [<xref rid="bib59" ref-type="bibr">59</xref>], support the identification of plasmid-borne contigs from sequencing data. PlasGO can then integrate with gene recognition tools like Prodigal [<xref rid="bib60" ref-type="bibr">60</xref>] to annotate protein functions for the input contigs. The predicted function annotations for plasmid-encoded proteins play a pivotal role in a range of downstream plasmid-related tasks. These tasks include plasmid mobility classification, plasmid replication mechanism prediction, and identifying accessory traits such as antibiotic resistance, virulence, and resistance to heavy metals. Furthermore, PlasGO can offer insights into more intricate aspects of plasmid research, encompassing host prediction and tracing the pathways of plasmid exchange among bacteria. A potential constraint of PlasGO in practical applications is the presence of elusive labels, which denote a few GO terms that are challenging to predict accurately. We have elaborated on the causes of these elusive labels, the current strategies implemented to address them, and potential future enhancements aimed at eliminating them with the increasing high-quality GO annotations in the &#x0201c;Identification of elusive GO term labels&#x0201d; section.</p><p>The architecture of PlasGO is flexible, enabling it to adapt to various functional annotation schemes for plasmid-encoded proteins. On one hand, instead of using GO terms, alternative training labels such as Enzyme Commission (EC) numbers [<xref rid="bib61" ref-type="bibr">61</xref>], UniProtKB keywords [<xref rid="bib62" ref-type="bibr">62</xref>], or even customized plasmid-specific protein function classes (e.g., replication and conjugation, though manual labeling efforts may be required) can be employed. On the other hand, PlasGO holds the potential to enhance the performance of the 3 principal plasmid typing schemes by predicting the classes of the associated proteins [<xref rid="bib5" ref-type="bibr">5</xref>]. Specifically, Rep typing is based on replication initiation proteins, MOB typing relies on relaxases, and MPF typing is centered on T4SS proteins.</p></sec><sec id="sec5"><title>Availability of Source Code and Requirements</title><list list-type="bullet"><list-item><p>Project name: PlasGO</p></list-item><list-item><p>Project homepage: <ext-link xlink:href="https://github.com/Orin-beep/PlasGO" ext-link-type="uri">https://github.com/Orin-beep/PlasGO</ext-link></p></list-item><list-item><p>Operating system: Linux or Ubuntu</p></list-item><list-item><p>Programming language: Python</p></list-item><list-item><p>Other requirements: Python 3.x, NumPy 1.25, PyTorch&#x0003e;1.8.0, biopython, datasets, transformers, sentencepiece, accelerate</p></list-item><list-item><p>License: MIT</p></list-item><list-item><p>RRID: SCR_025983</p></list-item><list-item><p>Bio.tools ID: PlasGO</p></list-item></list></sec><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material id="sup1" position="float" content-type="local-data"><label>giae104_GIGA-D-24-00265_Original_Submission</label><media xlink:href="giae104_giga-d-24-00265_original_submission.pdf"/></supplementary-material><supplementary-material id="sup2" position="float" content-type="local-data"><label>giae104_GIGA-D-24-00265_Revision_1</label><media xlink:href="giae104_giga-d-24-00265_revision_1.pdf"/></supplementary-material><supplementary-material id="sup3" position="float" content-type="local-data"><label>giae104_GIGA-D-24-00265_Revision_2</label><media xlink:href="giae104_giga-d-24-00265_revision_2.pdf"/></supplementary-material><supplementary-material id="sup4" position="float" content-type="local-data"><label>giae104_Response_to_Reviewer_Comments_Original_Submission</label><media xlink:href="giae104_response_to_reviewer_comments_original_submission.pdf"/></supplementary-material><supplementary-material id="sup5" position="float" content-type="local-data"><label>giae104_Response_to_Reviewer_Comments_Revision_1</label><media xlink:href="giae104_response_to_reviewer_comments_revision_1.pdf"/></supplementary-material><supplementary-material id="sup6" position="float" content-type="local-data"><label>giae104_Reviewer_1_Report_Original_Submission</label><caption><p>Nguyen Quoc Khanh Le -- 8/18/2024 Reviewed</p></caption><media xlink:href="giae104_reviewer_1_report_original_submission.pdf"/></supplementary-material><supplementary-material id="sup7" position="float" content-type="local-data"><label>giae104_Reviewer_1_Report_Revision_1</label><caption><p>Nguyen Quoc Khanh Le -- 11/5/2024 Reviewed</p></caption><media xlink:href="giae104_reviewer_1_report_revision_1.pdf"/></supplementary-material><supplementary-material id="sup8" position="float" content-type="local-data"><label>giae104_Reviewer_2_Report_Original_Submission</label><caption><p>David Burstein -- 9/16/2024 Reviewed</p></caption><media xlink:href="giae104_reviewer_2_report_original_submission.pdf"/></supplementary-material><supplementary-material id="sup9" position="float" content-type="local-data"><label>giae104_Reviewer_2_Report_Revision_1</label><caption><p>David Burstein -- 11/6/2024 Reviewed</p></caption><media xlink:href="giae104_reviewer_2_report_revision_1.pdf"/></supplementary-material><supplementary-material id="sup10" position="float" content-type="local-data"><label>giae104_Supplemental_File</label><media xlink:href="giae104_supplemental_file.pdf"/></supplementary-material></sec></body><back><sec id="sec7"><title>Additional Files</title><p>
+<bold>Supplementary Fig. S1</bold>. The visualization of contextualized embeddings learned by PlasGO for the GO term &#x0201c;response to antibiotic.&#x0201d;</p><p>
+<bold>Supplementary Fig. S2</bold>. The variations of average precision and recall, F1-score, <inline-formula><tex-math id="TM0069" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$m(\theta )$\end{document}</tex-math></inline-formula> with different cutoff <inline-formula><tex-math id="TM0070" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta$\end{document}</tex-math></inline-formula> ranging from 0 to 1.</p><p>
+<bold>Supplementary Fig. S3</bold>. The matrix illustrates the all-against-all normalized McNemar test statistics between the ground truth, PlasGO, and the 7 benchmarked tools on the Molecular Function (MF) category. Each cell displays specific values, where a value close to 1 indicates a significant difference, while a value approaching 0 signifies the opposite.</p><p>
+<bold>Supplementary Fig. S4</bold>. The performance of PlasGO and the top 3 benchmarked tools on test sets derived from the 4 leave-one-genus-out experiment groups, evaluated using 2 metrics, Fmax (left) and AUPR (right), and assessed across the 3 GO categories. The 4 rows correspond to the comparison results of proteins within the genera <italic toggle="yes">Escherichia, Klebsiella, Salmonella</italic>, and <italic toggle="yes">Enterococcus</italic>, respectively.</p><p>
+<bold>Supplementary Fig. S5</bold>. The performance of PlasGO and the top 3 benchmarked tools averaged from the 5-fold cross-validation with the plasmid-based dataset split strategy. The results are evaluated using 2 metrics, (A) Fmax and (B) AUPR, and assessed across the 3 GO categories.</p><p>
+<bold>Supplementary Fig. S6</bold>. Embedding comparisons for the BP binary classifications.</p><p>
+<bold>Supplementary Fig. S7</bold>. Embedding comparisons for the CC binary classifications.</p><p>
+<bold>Supplementary Fig. S8</bold>. Sorted occurrence frequency of GO term labels in the training set across 3 GO categories. The x-axis represents the ranks of the GO term labels based on their frequency, while the y-axis represents the frequency in exponential format (base 10). The red bars indicate the elusive labels, while the blue bars represent the remaining labels. It can be observed that most of the elusive labels are rare classes.</p><p>
+<bold>Supplementary Fig. S9</bold>. The distribution of the distance between the training set and the test set for each elusive label. The distance distribution was measured by the minimum edit distance between each testing protein and the training set, normalized by dividing by the length of the longest sequence in the corresponding protein pair. The black, blue, and green boxes represent MF, BP, and CC labels, respectively. Furthermore, within each GO category, the elusive labels are sorted by their occurrence frequency in the training set. We can observe that all the minimum distances exceed 67.5, a low sequence similarity between the training set and test set for each elusive label [8].</p><p>
+<bold>Supplementary Fig. S10</bold>. The directed acyclic graph (DAG) structure, including the 3 CC elusive labels (shown as red boxes) and their ancestor terms (shown as blue boxes).</p><p>
+<bold>Supplementary Fig. S11</bold>. The performance comparisons between the elusive labels and their nearest ancestor terms for the 3 GO categories. Notably, the 3 MF elusive labels that exhibited poor performance on the validation set but good performance on the test set, achieving AUPR scores of 0.8165, 1.0, and 0.5, respectively, are not shown. Besides, a suffix &#x0201c;(top)&#x0201d; is added to 2 of the BP elusive labels, which indicates that they do not have reserved ancestor terms.</p><p>
+<bold>Supplementary Fig. S12</bold>. The AUPR comparisons on the BP category between the original PlasGO and the high-confidence mode of PlasGO.</p><p>
+<bold>Supplementary Fig. S13</bold>. The AUPR comparisons on the CC category between the original PlasGO and the high-confidence mode of PlasGO.</p><p>
+<bold>Supplementary Fig. S14</bold>. The top 10 predicted GO terms with the highest number of associated proteins. Each bar represents the ratio of annotated proteins out of the total 451 proteins for each respective GO term.</p><p>
+<bold>Supplementary Fig. S15</bold>. Comparison of GO annotations for proteins encoded on plasmid pSK41 between the raw RefSeq database (above) and predictions generated by PlasGO (below). The proteins are classified into 5 functional classes using the respective GO term indicators. We can observe that the raw RefSeq database contains GO annotations for only 2 proteins within the payload functional class. In contrast, PlasGO effectively assigned GO annotations to all proteins encoded on plasmid pSK41, with the exception of 2 proteins (highlighted by purple pentagon blocks) that could not be categorized into the 5 functional classes using the GO term indicators.</p><p>
+<bold>Supplementary Table S1</bold>. Performance comparison between PlasGO and the other top 3 tools on proteins larger than 1 Kbp.</p><p>
+<bold>Supplementary Table S2</bold>. Comprehensive breakdown of computational resources (maximum GPU memory usage and runtime) for each phase of PlasGO tested using a single NVIDIA RTX 3090 GPU.</p><p>
+<bold>Supplementary Table S3</bold>. Performance comparison for PlasGO using different training methods on the RefSeq test set. The last column indicates the round at which early stopping occurred during iterative fine-tuning due to performance decrease on the validation set.</p><p>
+<bold>Supplementary Table S4</bold>. Performance comparison between PlasGO and the classifier based on gLM&#x02019;s embeddings on the RefSeq test set.</p><p>
+<bold>Supplementary Table S5</bold>. Performance comparison between PlasGO trained upon ProtT5 and gLM on the RefSeq test set.</p><p>
+<bold>Supplementary Table S6</bold>. Detailed list of the elusive labels identified using the validation set. The third column represents the AUPR scores on the validation set for the elusive labels obtained from PlasGO, all of which are below 0.3. Furthermore, the fourth to seventh columns indicate the AUPR scores on the test set for the elusive labels obtained from PlasGO, PFresGO, TM-Vec, and DeepGOPlus (the top 4 tools), respectively. AUPR scores on the test set that exceed 0.3 are displayed in dark red.</p><p>
+<bold>Supplementary Table S7</bold>. The performance of different classification methods on the elusive labels evaluated using the RefSeq test set.</p></sec><sec id="sec8"><title>Ethical Considerations and Potential Commercial Implications</title><p>The primary dataset we utilized in this article is the publicly available NCBI RefSeq plasmid database [<xref rid="bib35" ref-type="bibr">35</xref>]. The data included in this database are not associated with personal information or sensitive data. Therefore, there are no direct ethical considerations in the context of our work, and all the data we used comply with the terms and conditions set forth by NCBI for public use. Furthermore, the user-friendly PlasGO tool, along with the related data and code used in our experiments, is freely available on GitHub and Zenodo. As the article was submitted to <italic toggle="yes">GigaScience</italic>, an open-access journal, the tool is intended for broad, unrestricted use. Thus, we do not foresee any direct commercial implications arising from the use of PlasGO, as our focus remains on contributing to the public domain and supporting open science initiatives.</p></sec><sec id="sec9"><title>Abbreviations</title><p>AA: amino acid; AMR: antimicrobial resistance; AUPR: area under the precision&#x02013;recall curve; BCE: binary cross-entropy; BP: Biological Process; CC: Cellular Component; CDS: coding sequence; CNN: convolutional neural network; DAG: directed acyclic graph; DL: deep learning; DNN: deep neural network; EC: Enzyme Commission; FC: fully connected; GAP: global average pooling; GO: Gene Ontology; HGT: horizontal gene transfer; MF: Molecular Function; MGE: mobile genetic element; MLM: masked language modeling; MOB: mobilization; MPF: mate&#x02013;pair formation; NER: named entity recognition; NLP: natural language processing; PLM: protein language model; Rep: replicon; RR: rank regularization; SOTA: state-of-the-art; T4SS: type IV secretion system; TM: template modeling; t-SNE: t-distributed stochastic neighbor embedding; WBCE: logit-weighted binary cross-entropy.</p></sec><sec id="sec12"><title>Author Contributions</title><p>Yanni Sun (Methodology [Lead], Writing&#x02014;review &#x00026; editing [Lead]), Yongxin Ji (Data curation [Lead], Methodology [Lead], Software [Lead], Writing&#x02014;original draft [Lead], Writing&#x02014;review &#x00026; editing [Equal]), Jiayu Shang (Methodology [Lead]), Jiaojiao Guan (Methodology [Supporting]), Wei Zou (Methodology [Supporting]), Herui Liao (Data curation [Supporting], Validation [Supporting]), Xubo Tang (Data curation [Supporting], Validation [Supporting]).</p></sec><sec id="sec11"><title>Funding</title><p>This work is supported by Research Grants Council (RGC), the University Grants Committee (UGC) of Hong Kong, General Research Fund (GRF) 11214924 (Y. Sun).</p></sec><sec sec-type="data-availability" id="sec6"><title>Data Availability</title><p>All codes and relevant data have been uploaded to the Zenodo repository [14005015] [<xref rid="bib63" ref-type="bibr">63</xref>]. This encompasses all experimental data and codes utilized in the PlasGO paper, along with the scripts for preprocessing datasets, training models, and the user-friendly and end-to-end PlasGO tool implemented with Python. Snapshots of our code and other data further supporting this work are openly available in the <italic toggle="yes">GigaScience</italic> repository, GigaDB [<xref rid="bib64" ref-type="bibr">64</xref>].</p></sec><sec sec-type="COI-statement" id="sec10"><title>Competing Interests</title><p>The authors declare that they have no competing interests.</p></sec><ref-list id="ref1"><title>References</title><ref id="bib1"><label>1.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Smillie</surname>
+<given-names>C</given-names>
+</string-name>, <string-name><surname>Garcill&#x000e1;n-Barcia</surname><given-names>MP</given-names></string-name>, <string-name><surname>Francia</surname><given-names>MV</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Mobility of plasmids</article-title>. <source>Microbiol Mol Biol Rev</source>. <year>2010</year>;<volume>74</volume>(<issue>3</issue>):<fpage>434</fpage>&#x02013;<lpage>52</lpage>.. <pub-id pub-id-type="doi">10.1128/MMBR.00020-10</pub-id>.<pub-id pub-id-type="pmid">20805406</pub-id>
+</mixed-citation></ref><ref id="bib2"><label>2.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Grohmann</surname>
+<given-names>E</given-names>
+</string-name>, <string-name><surname>Muth</surname><given-names>G</given-names></string-name>, <string-name><surname>Espinosa</surname><given-names>M</given-names></string-name></person-group>. <article-title>Conjugative plasmid transfer in gram-positive bacteria</article-title>. <source>Microbiol Mol Biol Rev</source>. <year>2003</year>;<volume>67</volume>(<issue>2</issue>):<fpage>277</fpage>&#x02013;<lpage>301</lpage>.. <pub-id pub-id-type="doi">10.1128/MMBR.67.2.277-301.2003</pub-id>.<pub-id pub-id-type="pmid">12794193</pub-id>
+</mixed-citation></ref><ref id="bib3"><label>3.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Rodr&#x000ed;guez-Beltr&#x000e1;n</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>DelaFuente</surname><given-names>J</given-names></string-name>, <string-name><surname>Leon-Sampedro</surname><given-names>R</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Beyond horizontal gene transfer: the role of plasmids in bacterial evolution</article-title>. <source>Nat Rev Microbiol</source>. <year>2021</year>;<volume>19</volume>(<issue>6</issue>):<fpage>347</fpage>&#x02013;<lpage>59</lpage>.. <pub-id pub-id-type="doi">10.1038/s41579-020-00497-1</pub-id>.<pub-id pub-id-type="pmid">33469168</pub-id>
+</mixed-citation></ref><ref id="bib4"><label>4.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Dewan</surname>
+<given-names>I</given-names>
+</string-name>, <string-name><surname>Uecker</surname><given-names>H</given-names></string-name></person-group>. <article-title>A mathematician&#x02019;s guide to plasmids: an introduction to plasmid biology for modellers</article-title>. <source>Microbiology</source>. <year>2023</year>;<volume>169</volume>(<issue>7</issue>):<fpage>001362</fpage>. <pub-id pub-id-type="doi">10.1099/mic.0.001362</pub-id>.<pub-id pub-id-type="pmid">37505810</pub-id>
+</mixed-citation></ref><ref id="bib5"><label>5.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Shintani</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Sanchez</surname><given-names>ZK</given-names></string-name>, <string-name><surname>Kimbara</surname><given-names>K</given-names></string-name></person-group>. <article-title>Genomics of microbial plasmids: classification and identification based on replication and transfer systems and host taxonomy</article-title>. <source>Front Microbiol</source>. <year>2015</year>;<volume>6</volume>:<fpage>242</fpage>. <pub-id pub-id-type="doi">10.3389/fmicb.2015.00242</pub-id>.<pub-id pub-id-type="pmid">25873913</pub-id>
+</mixed-citation></ref><ref id="bib6"><label>6.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Consortium</surname>
+<given-names>GO</given-names>
+</string-name>
+</person-group>. <article-title>The Gene Ontology (GO) database and informatics resource</article-title>. <source>Nucleic Acids Res</source>. <year>2004</year>;<volume>32</volume>(<issue>suppl 1</issue>):<fpage>D258</fpage>&#x02013;<lpage>61</lpage>.<pub-id pub-id-type="pmid">14681407</pub-id>
+</mixed-citation></ref><ref id="bib7"><label>7.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Nauman</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Ur&#x000a0;Rehman</surname><given-names>H</given-names></string-name>, <string-name><surname>Politano</surname><given-names>G</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Beyond homology transfer: deep learning for automated annotation of proteins</article-title>. <source>J Grid Comput</source>. <year>2019</year>;<volume>17</volume>:<fpage>225</fpage>&#x02013;<lpage>37</lpage>.. <pub-id pub-id-type="doi">10.1007/s10723-018-9450-6</pub-id>.</mixed-citation></ref><ref id="bib8"><label>8.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Kulmanov</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Hoehndorf</surname><given-names>R</given-names></string-name></person-group>. <article-title>DeepGOPlus: improved protein function prediction from sequence</article-title>. <source>Bioinformatics</source>. <year>2020</year>;<volume>36</volume>(<issue>2</issue>):<fpage>422</fpage>&#x02013;<lpage>29</lpage>.. <pub-id pub-id-type="doi">10.1093/bioinformatics/btz595</pub-id>.<pub-id pub-id-type="pmid">31350877</pub-id>
+</mixed-citation></ref><ref id="bib9"><label>9.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Cao</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Shen</surname><given-names>Y</given-names></string-name></person-group>. <article-title>TALE: Transformer-based protein function Annotation with joint sequence&#x02013;Label Embedding</article-title>. <source>Bioinformatics</source>. <year>2021</year>;<volume>37</volume>(<issue>18</issue>):<fpage>2825</fpage>&#x02013;<lpage>33</lpage>.. <pub-id pub-id-type="doi">10.1093/bioinformatics/btab198</pub-id>.<pub-id pub-id-type="pmid">33755048</pub-id>
+</mixed-citation></ref><ref id="bib10"><label>10.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Pan</surname>
+<given-names>T</given-names>
+</string-name>, <string-name><surname>Li</surname><given-names>C</given-names></string-name>, <string-name><surname>Bi</surname><given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>PFresGO: an attention mechanism-based deep-learning approach for protein annotation by integrating gene ontology inter-relationships</article-title>. <source>Bioinformatics</source>. <year>2023</year>;<volume>39</volume>(<issue>3</issue>):<fpage>btad094</fpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btad094</pub-id>.<pub-id pub-id-type="pmid">36794913</pub-id>
+</mixed-citation></ref><ref id="bib11"><label>11.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zheng</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Guan</surname><given-names>Z</given-names></string-name>, <string-name><surname>Cao</surname><given-names>S</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Plasmids are vectors for redundant chromosomal genes in the Bacillus cereus group</article-title>. <source>BMC Genom</source>. <year>2015</year>;<volume>16</volume>:<fpage>1</fpage>&#x02013;<lpage>10</lpage>.. <pub-id pub-id-type="doi">10.1186/1471-2164-16-1</pub-id>.</mixed-citation></ref><ref id="bib12"><label>12.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Pfeifer</surname>
+<given-names>E</given-names>
+</string-name>, <string-name><surname>Rocha</surname><given-names>EP</given-names></string-name></person-group>. <article-title>Phage-plasmids promote recombination and emergence of phages and plasmids</article-title>. <source>Nat Commun</source>. <year>2024</year>;<volume>15</volume>(<issue>1</issue>):<fpage>1545</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-024-45757-3</pub-id>.<pub-id pub-id-type="pmid">38378896</pub-id>
+</mixed-citation></ref><ref id="bib13"><label>13.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Finn</surname>
+<given-names>RD</given-names>
+</string-name>, <string-name><surname>Attwood</surname><given-names>TK</given-names></string-name>, <string-name><surname>Babbitt</surname><given-names>PC</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>InterPro in 2017&#x02014;beyond protein family and domain annotations</article-title>. <source>Nucleic Acids Res</source>. <year>2017</year>;<volume>45</volume>(<issue>D1</issue>):<fpage>D190</fpage>&#x02013;<lpage>99</lpage>.. <pub-id pub-id-type="doi">10.1093/nar/gkw1107</pub-id>.<pub-id pub-id-type="pmid">27899635</pub-id>
+</mixed-citation></ref><ref id="bib14"><label>14.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>H&#x000fc;lter</surname>
+<given-names>N</given-names>
+</string-name>, <string-name><surname>Ilhan</surname><given-names>J</given-names></string-name>, <string-name><surname>Wein</surname><given-names>T</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>An evolutionary perspective on plasmid lifestyle modes</article-title>. <source>Curr Opin Microbiol</source>. <year>2017</year>;<volume>38</volume>:<fpage>74</fpage>&#x02013;<lpage>80</lpage>.. <pub-id pub-id-type="doi">10.1016/j.mib.2017.05.001</pub-id>.<pub-id pub-id-type="pmid">28538166</pub-id>
+</mixed-citation></ref><ref id="bib15"><label>15.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Norman</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Hansen</surname><given-names>LH</given-names></string-name>, <string-name><surname>She</surname><given-names>Q</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Nucleotide sequence of pOLA52: a conjugative IncX1 plasmid from Escherichia coli which enables biofilm formation and multidrug efflux</article-title>. <source>Plasmid</source>. <year>2008</year>;<volume>60</volume>(<issue>1</issue>):<fpage>59</fpage>&#x02013;<lpage>74</lpage>.. <pub-id pub-id-type="doi">10.1016/j.plasmid.2008.03.003</pub-id>.<pub-id pub-id-type="pmid">18440636</pub-id>
+</mixed-citation></ref><ref id="bib16"><label>16.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Le</surname>
+<given-names>NQK</given-names>
+</string-name>
+</person-group>. <article-title>Leveraging transformers-based language models in proteome bioinformatics</article-title>. <source>Proteomics</source>. <year>2023</year>;<volume>23</volume>(<issue>23&#x02013;24</issue>):<fpage>2300011</fpage>. <pub-id pub-id-type="doi">10.1002/pmic.202300011</pub-id>.</mixed-citation></ref><ref id="bib17"><label>17.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Khan</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Lee</surname><given-names>B</given-names></string-name></person-group>. <article-title>DeepGene transformer: transformer for the gene expression-based classification of cancer subtypes</article-title>. <source>Expert Syst Appl</source>. <year>2023</year>;<volume>226</volume>:<fpage>120047</fpage>. <pub-id pub-id-type="doi">10.1016/j.eswa.2023.120047</pub-id>.</mixed-citation></ref><ref id="bib18"><label>18.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Huang</surname>
+<given-names>K</given-names>
+</string-name>, <string-name><surname>Xiao</surname><given-names>C</given-names></string-name>, <string-name><surname>Glass</surname><given-names>LM</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>MolTrans: molecular interaction transformer for drug&#x02013;target interaction prediction</article-title>. <source>Bioinformatics</source>. <year>2021</year>;<volume>37</volume>(<issue>6</issue>):<fpage>830</fpage>&#x02013;<lpage>36</lpage>.. <pub-id pub-id-type="doi">10.1093/bioinformatics/btaa880</pub-id>.<pub-id pub-id-type="pmid">33070179</pub-id>
+</mixed-citation></ref><ref id="bib19"><label>19.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Tran</surname>
+<given-names>TO</given-names>
+</string-name>, <string-name><surname>Le</surname><given-names>NQK</given-names></string-name></person-group>. <article-title>Sa-ttca: an svm-based approach for tumor t-cell antigen classification using features extracted from biological sequencing and natural language processing</article-title>. <source>Comput Biol Med</source>. <year>2024</year>;<volume>174</volume>:<fpage>108408</fpage>. <pub-id pub-id-type="doi">10.1016/j.compbiomed.2024.108408</pub-id>.<pub-id pub-id-type="pmid">38636332</pub-id>
+</mixed-citation></ref><ref id="bib20"><label>20.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Bepler</surname>
+<given-names>T</given-names>
+</string-name>, <string-name><surname>Berger</surname><given-names>B</given-names></string-name></person-group>. <article-title>Learning the protein language: evolution, structure, and function</article-title>. <source>Cell Syst</source>. <year>2021</year>;<volume>12</volume>(<issue>6</issue>):<fpage>654</fpage>&#x02013;<lpage>69</lpage>.. <pub-id pub-id-type="doi">10.1016/j.cels.2021.05.017</pub-id>.<pub-id pub-id-type="pmid">34139171</pub-id>
+</mixed-citation></ref><ref id="bib21"><label>21.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lin</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name><surname>Akin</surname><given-names>H</given-names></string-name>, <string-name><surname>Rao</surname><given-names>R</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Language models of protein sequences at the scale of evolution enable accurate structure prediction</article-title>. <source>bioRxiv</source>. <year>2022</year>. <pub-id pub-id-type="doi">10.1101/2022.07.20.500902</pub-id>. <comment>Accessed 6 December 2024.</comment></mixed-citation></ref><ref id="bib22"><label>22.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<string-name>
+<surname>Devlin</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Chang</surname><given-names>MW</given-names></string-name>, <string-name><surname>Lee</surname><given-names>K</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Bert: pre-training of deep bidirectional transformers for language understanding</article-title>. <comment>arXiv preprint arXiv:181004805</comment>. <year>2018</year>. <pub-id pub-id-type="doi">10.48550/arXiv.1810.04805</pub-id>. <comment>Accessed 6 December 2024.</comment></mixed-citation></ref><ref id="bib23"><label>23.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Outeiral</surname>
+<given-names>C</given-names>
+</string-name>, <string-name><surname>Deane</surname><given-names>CM</given-names></string-name></person-group>. <article-title>Codon language embeddings provide strong signals for use in protein engineering</article-title>. <source>Nat Mach Intel</source>. <year>2024</year>;<volume>6</volume>(<issue>2</issue>):<fpage>170</fpage>&#x02013;<lpage>79</lpage>.. <pub-id pub-id-type="doi">10.1038/s42256-024-00791-0</pub-id>.</mixed-citation></ref><ref id="bib24"><label>24.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Elnaggar</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Heinzinger</surname><given-names>M</given-names></string-name>, <string-name><surname>Dallago</surname><given-names>C</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Prottrans: toward understanding the language of life through self-supervised learning</article-title>. <source>IEEE Trans Pattern Anal Mach Intel</source>. <year>2021</year>;<volume>44</volume>(<issue>10</issue>):<fpage>7112</fpage>&#x02013;<lpage>27</lpage>.. <pub-id pub-id-type="doi">10.1109/TPAMI.2021.3095381</pub-id>.</mixed-citation></ref><ref id="bib25"><label>25.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Brandes</surname>
+<given-names>N</given-names>
+</string-name>, <string-name><surname>Ofer</surname><given-names>D</given-names></string-name>, <string-name><surname>Peleg</surname><given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>ProteinBERT: a universal deep-learning model of protein sequence and function</article-title>. <source>Bioinformatics</source>. <year>2022</year>;<volume>38</volume>(<issue>8</issue>):<fpage>2102</fpage>&#x02013;<lpage>10</lpage>.. <pub-id pub-id-type="doi">10.1093/bioinformatics/btac020</pub-id>.<pub-id pub-id-type="pmid">35020807</pub-id>
+</mixed-citation></ref><ref id="bib26"><label>26.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Li</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Sun</surname><given-names>A</given-names></string-name>, <string-name><surname>Han</surname><given-names>J</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>A survey on deep learning for named entity recognition</article-title>. <source>IEEE Trans Knowl Data Eng</source>. <year>2020</year>;<volume>34</volume>(<issue>1</issue>):<fpage>50</fpage>&#x02013;<lpage>70</lpage>.. <pub-id pub-id-type="doi">10.1109/TKDE.2020.2981314</pub-id>.</mixed-citation></ref><ref id="bib27"><label>27.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lin</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Chen</surname><given-names>Q</given-names></string-name>, <string-name><surname>Yan</surname><given-names>S</given-names></string-name></person-group>. <article-title>Network in network</article-title>. <comment>arXiv preprint arXiv:13124400</comment>. <year>2013</year>. <pub-id pub-id-type="doi">10.48550/arXiv.1312.4400</pub-id>. <comment>Accessed 6 December 2024.</comment></mixed-citation></ref><ref id="bib28"><label>28.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Raffel</surname>
+<given-names>C</given-names>
+</string-name>, <string-name><surname>Shazeer</surname><given-names>N</given-names></string-name>, <string-name><surname>Roberts</surname><given-names>A</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Exploring the limits of transfer learning with a unified text-to-text transformer</article-title>. <source>J Mach Learn Res</source>. <year>2020</year>;<volume>21</volume>(<issue>140</issue>):<fpage>1</fpage>&#x02013;<lpage>67</lpage>.<pub-id pub-id-type="pmid">34305477</pub-id>
+</mixed-citation></ref><ref id="bib29"><label>29.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Jawahar</surname>
+<given-names>G</given-names>
+</string-name>, <string-name><surname>Sagot</surname><given-names>B</given-names></string-name>, <string-name><surname>Seddah</surname><given-names>D</given-names></string-name></person-group>. <article-title>What does BERT learn about the structure of language?</article-title> In: <person-group person-group-type="editor"><string-name><surname>Korhonen</surname><given-names>A</given-names></string-name>, <string-name><surname>Traum</surname><given-names>D</given-names></string-name>, <string-name><surname>M&#x000e0;rquez</surname><given-names>L</given-names></string-name></person-group>, editors. <source>ACL 2019-57th Annual Meeting of the Association for Computational Linguistics</source>. <publisher-loc>Florence, Italy</publisher-loc>: <publisher-name>Association for Computational Linguistics</publisher-name>. <year>2019</year>.</mixed-citation></ref><ref id="bib30"><label>30.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhao</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Wang</surname><given-names>J</given-names></string-name>, <string-name><surname>Chen</surname><given-names>J</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>A literature review of gene function prediction by modeling gene ontology</article-title>. <source>Front Genet</source>. <year>2020</year>;<volume>11</volume>:<fpage>400</fpage>. <pub-id pub-id-type="doi">10.3389/fgene.2020.00400</pub-id>.<pub-id pub-id-type="pmid">32391061</pub-id>
+</mixed-citation></ref><ref id="bib31"><label>31.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wang</surname>
+<given-names>K</given-names>
+</string-name>, <string-name><surname>Peng</surname><given-names>X</given-names></string-name>, <string-name><surname>Yang</surname><given-names>J</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Suppressing uncertainties for large-scale facial expression recognition</article-title>. In: <person-group person-group-type="editor"><string-name><surname>Boult</surname><given-names>T</given-names></string-name>, <string-name><surname>Medioni</surname><given-names>G</given-names></string-name>, <string-name><surname>Zabih</surname><given-names>R</given-names></string-name></person-group>, editors. <source>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</source>. <publisher-loc>Seattle, WA, USA</publisher-loc>: <publisher-name>IEEE</publisher-name>. <year>2020</year>:<fpage>6897</fpage>&#x02013;<lpage>906</lpage>.</mixed-citation></ref><ref id="bib32"><label>32.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>O&#x02019;Leary</surname>
+<given-names>NA</given-names>
+</string-name>, <string-name><surname>Wright</surname><given-names>MW</given-names></string-name>, <string-name><surname>Brister</surname><given-names>JR</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Reference sequence (RefSeq) database at NCBI: current status, taxonomic expansion, and functional annotation</article-title>. <source>Nucleic Acids Res</source>. <year>2016</year>;<volume>44</volume>(<issue>D1</issue>):<fpage>D733</fpage>&#x02013;<lpage>45</lpage>.. <pub-id pub-id-type="doi">10.1093/nar/gkv1189</pub-id>.<pub-id pub-id-type="pmid">26553804</pub-id>
+</mixed-citation></ref><ref id="bib33"><label>33.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Jiang</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Clark</surname><given-names>WT</given-names></string-name>, <string-name><surname>Friedberg</surname><given-names>I</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>The impact of incomplete knowledge on the evaluation of protein function prediction: a structured-output learning perspective</article-title>. <source>Bioinformatics</source>. <year>2014</year>;<volume>30</volume>(<issue>17</issue>):<fpage>i609</fpage>&#x02013;<lpage>16</lpage>.. <pub-id pub-id-type="doi">10.1093/bioinformatics/btu472</pub-id>.<pub-id pub-id-type="pmid">25161254</pub-id>
+</mixed-citation></ref><ref id="bib34"><label>34.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhou</surname>
+<given-names>N</given-names>
+</string-name>, <string-name><surname>Jiang</surname><given-names>Y</given-names></string-name>, <string-name><surname>Bergquist</surname><given-names>TR</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>The CAFA challenge reports improved protein function prediction and new functional annotations for hundreds of genes through experimental screens</article-title>. <source>Genome Biol</source>. <year>2019</year>;<volume>20</volume>:<fpage>1</fpage>&#x02013;<lpage>23</lpage>.. <pub-id pub-id-type="doi">10.1186/s13059-018-1612-0</pub-id>.<pub-id pub-id-type="pmid">30606230</pub-id>
+</mixed-citation></ref><ref id="bib35"><label>35.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>Reference sequence (RefSeq) plasmid database at NCBI</collab>
+</person-group>. <publisher-name>Bethesda (MD): National Library of Medicine (US), National Center for Biotechnology Information</publisher-name>; <year>2004</year>;. <ext-link xlink:href="https://ftp.ncbi.nlm.nih.gov/genomes/refseq/plasmid/" ext-link-type="uri">https://ftp.ncbi.nlm.nih.gov/genomes/refseq/plasmid/</ext-link>. Accessed 25 November 2024.</mixed-citation></ref><ref id="bib36"><label>36.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Dicenzo</surname>
+<given-names>GC</given-names>
+</string-name>, <string-name><surname>Finan</surname><given-names>TM</given-names></string-name></person-group>. <article-title>The divided bacterial genome: structure, function, and evolution</article-title>. <source>Microbiol Mol Biol Rev</source>. <year>2017</year>;<volume>81</volume>(<issue>3</issue>):<fpage>e00019</fpage>&#x02013;<lpage>17</lpage>.. <pub-id pub-id-type="doi">10.1128/MMBR.00019-17</pub-id>.<pub-id pub-id-type="pmid">28794225</pub-id>
+</mixed-citation></ref><ref id="bib37"><label>37.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Meier</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Rao</surname><given-names>R</given-names></string-name>, <string-name><surname>Verkuil</surname><given-names>R</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Language models enable zero-shot prediction of the effects of mutations on protein function</article-title>. <source>Adv Neur Inf Proc Syst</source>. <year>2021</year>;<volume>34</volume>:<fpage>29287</fpage>&#x02013;<lpage>303</lpage>.</mixed-citation></ref><ref id="bib38"><label>38.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Pesquita</surname>
+<given-names>C</given-names>
+</string-name>, <string-name><surname>Faria</surname><given-names>D</given-names></string-name>, <string-name><surname>Falcao</surname><given-names>AO</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Semantic similarity in biomedical ontologies</article-title>. <source>PLoS Comput Biol</source>. <year>2009</year>;<volume>5</volume>(<issue>7</issue>):<fpage>e1000443</fpage>. <pub-id pub-id-type="doi">10.1371/journal.pcbi.1000443</pub-id>.<pub-id pub-id-type="pmid">19649320</pub-id>
+</mixed-citation></ref><ref id="bib39"><label>39.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Supek</surname>
+<given-names>F</given-names>
+</string-name>, <string-name><surname>Bo&#x00161;njak</surname><given-names>M</given-names></string-name>, <string-name><surname>&#x00160;kunca</surname><given-names>N</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>REVIGO summarizes and visualizes long lists of gene ontology terms</article-title>. <source>PLoS One</source>. <year>2011</year>;<volume>6</volume>(<issue>7</issue>):<fpage>e21800</fpage>. <pub-id pub-id-type="doi">10.1371/journal.pone.0021800</pub-id>.<pub-id pub-id-type="pmid">21789182</pub-id>
+</mixed-citation></ref><ref id="bib40"><label>40.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Steinegger</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>S&#x000f6;ding</surname><given-names>J</given-names></string-name></person-group>. <article-title>Clustering huge protein sequence sets in linear time</article-title>. <source>Nat Commun</source>. <year>2018</year>;<volume>9</volume>(<issue>1</issue>):<fpage>2542</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-018-04964-5</pub-id>.<pub-id pub-id-type="pmid">29959318</pub-id>
+</mixed-citation></ref><ref id="bib41"><label>41.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Suzek</surname>
+<given-names>BE</given-names>
+</string-name>, <string-name><surname>Wang</surname><given-names>Y</given-names></string-name>, <string-name><surname>Huang</surname><given-names>H</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>UniRef clusters: a comprehensive and scalable alternative for improving sequence similarity searches</article-title>. <source>Bioinformatics</source>. <year>2015</year>;<volume>31</volume>(<issue>6</issue>):<fpage>926</fpage>&#x02013;<lpage>32</lpage>.. <pub-id pub-id-type="doi">10.1093/bioinformatics/btu739</pub-id>.<pub-id pub-id-type="pmid">25398609</pub-id>
+</mixed-citation></ref><ref id="bib42"><label>42.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Altschul</surname>
+<given-names>SF</given-names>
+</string-name>, <string-name><surname>Madden</surname><given-names>TL</given-names></string-name>, <string-name><surname>Sch&#x000e4;ffer</surname><given-names>AA</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Gapped BLAST and PSI-BLAST: a new generation of protein database search programs</article-title>. <source>Nucleic Acids Res</source>. <year>1997</year>;<volume>25</volume>(<issue>17</issue>):<fpage>3389</fpage>&#x02013;<lpage>402</lpage>.. <pub-id pub-id-type="doi">10.1093/nar/25.17.3389</pub-id>.<pub-id pub-id-type="pmid">9254694</pub-id>
+</mixed-citation></ref><ref id="bib43"><label>43.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Li</surname>
+<given-names>S</given-names>
+</string-name>, <string-name><surname>Moayedpour</surname><given-names>S</given-names></string-name>, <string-name><surname>Li</surname><given-names>R</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>CodonBERT large language model for mRNA vaccines</article-title>. <source>Genome Res</source>. <year>2024</year>;<volume>34</volume>(<issue>7</issue>):<fpage>1027</fpage>&#x02013;<lpage>35</lpage>.. <pub-id pub-id-type="doi">10.1101/gr.278870.123</pub-id>.<pub-id pub-id-type="pmid">38951026</pub-id>
+</mixed-citation></ref><ref id="bib44"><label>44.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Hamamsy</surname>
+<given-names>T</given-names>
+</string-name>, <string-name><surname>Morton</surname><given-names>JT</given-names></string-name>, <string-name><surname>Blackwell</surname><given-names>R</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Protein remote homology detection and structural alignment using deep learning</article-title>. <source>Nat Biotechnol</source>. <year>2023</year>;<volume>42</volume>(<issue>6</issue>):<fpage>1</fpage>&#x02013;<lpage>11</lpage>.</mixed-citation></ref><ref id="bib45"><label>45.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Buchfink</surname>
+<given-names>B</given-names>
+</string-name>, <string-name><surname>Xie</surname><given-names>C</given-names></string-name>, <string-name><surname>Huson</surname><given-names>DH</given-names></string-name></person-group>. <article-title>Fast and sensitive protein alignment using DIAMOND</article-title>. <source>Nat Methods</source>. <year>2015</year>;<volume>12</volume>(<issue>1</issue>):<fpage>59</fpage>&#x02013;<lpage>60</lpage>.. <pub-id pub-id-type="doi">10.1038/nmeth.3176</pub-id>.<pub-id pub-id-type="pmid">25402007</pub-id>
+</mixed-citation></ref><ref id="bib46"><label>46.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Hwang</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Cornman</surname><given-names>AL</given-names></string-name>, <string-name><surname>Kellogg</surname><given-names>EH</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Genomic language model predicts protein co-regulation and function</article-title>. <source>Nat Commun</source>. <year>2024</year>;<volume>15</volume>(<issue>1</issue>):<fpage>2880</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-024-46947-9</pub-id>.<pub-id pub-id-type="pmid">38570504</pub-id>
+</mixed-citation></ref><ref id="bib47"><label>47.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhang</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Skolnick</surname><given-names>J</given-names></string-name></person-group>. <article-title>TM-align: a protein structure alignment algorithm based on the TM-score</article-title>. <source>Nucleic Acids Res</source>. <year>2005</year>;<volume>33</volume>(<issue>7</issue>):<fpage>2302</fpage>&#x02013;<lpage>309</lpage>.. <pub-id pub-id-type="doi">10.1093/nar/gki524</pub-id>.<pub-id pub-id-type="pmid">15849316</pub-id>
+</mixed-citation></ref><ref id="bib48"><label>48.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Xu</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Zhang</surname><given-names>Y</given-names></string-name></person-group>. <article-title>How significant is a protein structure similarity with TM-score= 0.5?</article-title>. <source>Bioinformatics</source>. <year>2010</year>;<volume>26</volume>(<issue>7</issue>):<fpage>889</fpage>&#x02013;<lpage>95</lpage>.. <pub-id pub-id-type="doi">10.1093/bioinformatics/btq066</pub-id>.<pub-id pub-id-type="pmid">20164152</pub-id>
+</mixed-citation></ref><ref id="bib49"><label>49.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Yang</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name><surname>Dai</surname><given-names>Z</given-names></string-name>, <string-name><surname>Yang</surname><given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Xlnet: generalized autoregressive pretraining for language understanding</article-title>. <source>Adv Neur Inf Proc Syst</source>. <year>2019</year>;<volume>32</volume>:<fpage>5754</fpage>&#x02013;<lpage>64</lpage>.</mixed-citation></ref><ref id="bib50"><label>50.</label><mixed-citation publication-type="other">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lan</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name><surname>Chen</surname><given-names>M</given-names></string-name>, <string-name><surname>Goodman</surname><given-names>S</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Albert: A lite bert for self-supervised learning of language representations</article-title>. <comment>arXiv preprint arXiv:190911942</comment>. <year>2019</year>. <pub-id pub-id-type="doi">10.48550/arXiv.1909.11942</pub-id>. <comment>Accessed 6 December</comment>.</mixed-citation></ref><ref id="bib51"><label>51.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lichtarge</surname>
+<given-names>O</given-names>
+</string-name>, <string-name><surname>Bourne</surname><given-names>HR</given-names></string-name>, <string-name><surname>Cohen</surname><given-names>FE</given-names></string-name></person-group>. <article-title>An evolutionary trace method defines binding surfaces common to protein families</article-title>. <source>J Mol Biol</source>. <year>1996</year>;<volume>257</volume>(<issue>2</issue>):<fpage>342</fpage>&#x02013;<lpage>58</lpage>.. <pub-id pub-id-type="doi">10.1006/jmbi.1996.0167</pub-id>.<pub-id pub-id-type="pmid">8609628</pub-id>
+</mixed-citation></ref><ref id="bib52"><label>52.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Thomas</surname>
+<given-names>CM</given-names>
+</string-name>, <string-name><surname>Thomson</surname><given-names>NR</given-names></string-name>, <string-name><surname>Cerde&#x000f1;o-T&#x000e1;rraga</surname><given-names>AM</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Annotation of plasmid genes</article-title>. <source>Plasmid</source>. <year>2017</year>;<volume>91</volume>:<fpage>61</fpage>&#x02013;<lpage>67</lpage>.. <pub-id pub-id-type="doi">10.1016/j.plasmid.2017.03.006</pub-id>.<pub-id pub-id-type="pmid">28365184</pub-id>
+</mixed-citation></ref><ref id="bib53"><label>53.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Van&#x000a0;der&#x000a0;Maaten</surname>
+<given-names>L</given-names>
+</string-name>, <string-name><surname>Hinton</surname><given-names>G</given-names></string-name></person-group>. <article-title>Visualizing data using t-SNE</article-title>. <source>J Mach Learn Res</source>. <year>2008</year>;<volume>9</volume>(<issue>11</issue>):<fpage>2579</fpage>&#x02013;<lpage>605</lpage>.</mixed-citation></ref><ref id="bib54"><label>54.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Carattoli</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Hasman</surname><given-names>H</given-names></string-name></person-group>. <article-title>PlasmidFinder and in silico pMLST: identification and typing of plasmid replicons in whole-genome sequencing (WGS)</article-title>. <source>Methods Mol Biol</source>. <year>2020</year>:<volume>2075</volume>;<fpage>285</fpage>&#x02013;<lpage>94</lpage>.. <pub-id pub-id-type="doi">10.1007/978-1-4939-9877-7_20</pub-id>.<pub-id pub-id-type="pmid">31584170</pub-id>
+</mixed-citation></ref><ref id="bib55"><label>55.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Liu</surname>
+<given-names>MA</given-names>
+</string-name>, <string-name><surname>Kwong</surname><given-names>SM</given-names></string-name>, <string-name><surname>Jensen</surname><given-names>SO</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Biology of the staphylococcal conjugative multiresistance plasmid pSK41</article-title>. <source>Plasmid</source>. <year>2013</year>;<volume>70</volume>(<issue>1</issue>):<fpage>42</fpage>&#x02013;<lpage>51</lpage>.. <pub-id pub-id-type="doi">10.1016/j.plasmid.2013.02.001</pub-id>.<pub-id pub-id-type="pmid">23415796</pub-id>
+</mixed-citation></ref><ref id="bib56"><label>56.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Schmartz</surname>
+<given-names>GP</given-names>
+</string-name>, <string-name><surname>Hartung</surname><given-names>A</given-names></string-name>, <string-name><surname>Hirsch</surname><given-names>P</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>PLSDB: advancing a comprehensive database of bacterial plasmids</article-title>. <source>Nucleic Acids Res</source>. <year>2022</year>;<volume>50</volume>(<issue>D1</issue>):<fpage>D273</fpage>&#x02013;<lpage>78</lpage>.. <pub-id pub-id-type="doi">10.1093/nar/gkab1111</pub-id>.<pub-id pub-id-type="pmid">34850116</pub-id>
+</mixed-citation></ref><ref id="bib57"><label>57.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Camargo</surname>
+<given-names>AP</given-names>
+</string-name>, <string-name><surname>Call</surname><given-names>L</given-names></string-name>, <string-name><surname>Roux</surname><given-names>S</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>IMG/PR: a database of plasmids from genomes and metagenomes with rich annotations and metadata</article-title>. <source>Nucleic Acids Res</source>. <year>2024</year>;<volume>52</volume>(<issue>D1</issue>):<fpage>D164</fpage>&#x02013;<lpage>73</lpage>.. <pub-id pub-id-type="doi">10.1093/nar/gkad964</pub-id>.<pub-id pub-id-type="pmid">37930866</pub-id>
+</mixed-citation></ref><ref id="bib58"><label>58.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Tang</surname>
+<given-names>X</given-names>
+</string-name>, <string-name><surname>Shang</surname><given-names>J</given-names></string-name>, <string-name><surname>Ji</surname><given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>PLASMe: a tool to identify PLASMid contigs from short-read assemblies using transformer</article-title>. <source>Nucleic Acids Res</source>. <year>2023</year>;<volume>51</volume>(<issue>15</issue>):<fpage>e83</fpage>. <pub-id pub-id-type="doi">10.1093/nar/gkad578</pub-id>.<pub-id pub-id-type="pmid">37427782</pub-id>
+</mixed-citation></ref><ref id="bib59"><label>59.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Robertson</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Nash</surname><given-names>JH</given-names></string-name></person-group>. <article-title>MOB-suite: software tools for clustering, reconstruction and typing of plasmids from draft assemblies</article-title>. <source>Microbial Genom</source>. <year>2018</year>;<volume>4</volume>(<issue>8</issue>):<fpage>e000206</fpage>.</mixed-citation></ref><ref id="bib60"><label>60.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Hyatt</surname>
+<given-names>D</given-names>
+</string-name>, <string-name><surname>Chen</surname><given-names>GL</given-names></string-name>, <string-name><surname>LoCascio</surname><given-names>PF</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Prodigal: prokaryotic gene recognition and translation initiation site identification</article-title>. <source>BMC Bioinform</source>. <year>2010</year>;<volume>11</volume>:<fpage>1</fpage>&#x02013;<lpage>11</lpage>.. <pub-id pub-id-type="doi">10.1186/1471-2105-11-119</pub-id>.</mixed-citation></ref><ref id="bib61"><label>61.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Bairoch</surname>
+<given-names>A</given-names>
+</string-name>
+</person-group>. <article-title>The ENZYME database in 2000</article-title>. <source>Nucleic Acids Res</source>. <year>2000</year>;<volume>28</volume>(<issue>1</issue>):<fpage>304</fpage>&#x02013;<lpage>5</lpage>.. <pub-id pub-id-type="doi">10.1093/nar/28.1.304</pub-id>.<pub-id pub-id-type="pmid">10592255</pub-id>
+</mixed-citation></ref><ref id="bib62"><label>62.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Boutet</surname>
+<given-names>E</given-names>
+</string-name>, <string-name><surname>Lieberherr</surname><given-names>D</given-names></string-name>, <string-name><surname>Tognolli</surname><given-names>M</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>UniProtKB/Swiss-Prot, the manually annotated section of the UniProt KnowledgeBase: how to use the entry view</article-title>. <source>Methods Mol Biol</source>. <year>2016</year>;<volume>1374</volume>:<fpage>23</fpage>&#x02013;<lpage>54</lpage>.. <pub-id pub-id-type="doi">10.1007/978-1-4939-3167-5_2</pub-id>.<pub-id pub-id-type="pmid">26519399</pub-id>
+</mixed-citation></ref><ref id="bib63"><label>63.</label><mixed-citation publication-type="book">
+<person-group person-group-type="curator">
+<string-name>
+<surname>Ji</surname>
+<given-names>Y</given-names>
+</string-name>
+</person-group>. <data-title>PlasGO_dataset</data-title>. <publisher-name>Zenodo</publisher-name>.&#x000a0; <year>2024</year>. <pub-id pub-id-type="doi">10.5281/zenodo.14005015</pub-id>. <comment>Accessed 6 December.</comment></mixed-citation></ref><ref id="bib64"><label>64.</label><mixed-citation publication-type="book">
+<person-group person-group-type="curator">
+<string-name>
+<surname>Ji</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Shang</surname><given-names>J</given-names></string-name>, <string-name><surname>Guan</surname><given-names>J</given-names></string-name>, <etal>et al.</etal></person-group>
+<data-title>Supporting data for &#x0201c;PlasGO: Enhancing GO-Based Function Prediction for Plasmid-Encoded Proteins Based on Genetic Structure.&#x0201d;</data-title>
+<publisher-name>GigaScience Database</publisher-name>. <year>2024</year>. <pub-id pub-id-type="doi">10.5524/102621</pub-id>.</mixed-citation></ref></ref-list></back></article>

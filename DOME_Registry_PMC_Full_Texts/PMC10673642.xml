@@ -1,0 +1,936 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.3 20210610//EN" "JATS-archivearticle1-3-mathml3.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.3" xml:lang="en" article-type="research-article"><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.2?><?ConverterInfo.XSLTName jats2jats3.xsl?><?ConverterInfo.Version 1?><?properties open_access?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Gigascience</journal-id><journal-id journal-id-type="iso-abbrev">Gigascience</journal-id><journal-id journal-id-type="publisher-id">gigascience</journal-id><journal-title-group><journal-title>GigaScience</journal-title></journal-title-group><issn pub-type="epub">2047-217X</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">10673642</article-id><article-id pub-id-type="doi">10.1093/gigascience/giad098</article-id><article-id pub-id-type="publisher-id">giad098</article-id><article-categories><subj-group subj-group-type="heading"><subject>Technical Note</subject></subj-group><subj-group subj-group-type="category-taxonomy-collection"><subject>AcademicSubjects/SCI00960</subject><subject>AcademicSubjects/SCI02254</subject></subj-group></article-categories><title-group><article-title>Imputation method for single-cell RNA-seq data using neural topic model</article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0006-3210-6055</contrib-id><name><surname>Qi</surname><given-names>Yueyang</given-names></name><aff>
+<institution>Yunnan Normal University, School of Information</institution>, <addr-line>Kunming 650500</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0002-9337-5890</contrib-id><name><surname>Han</surname><given-names>Shuangkai</given-names></name><aff>
+<institution>Yunnan Normal University, School of Information</institution>, <addr-line>Kunming 650500</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author"><name><surname>Tang</surname><given-names>Lin</given-names></name><aff>
+<institution>Yunnan Normal University, Faculty of Education</institution>, <addr-line>Kunming 650500</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-8773-6162</contrib-id><name><surname>Liu</surname><given-names>Lin</given-names></name><!--liulinrachel@163.com--><aff>
+<institution>Yunnan Normal University, School of Information</institution>, <addr-line>Kunming 650500</addr-line>, <country country="CN">China</country></aff><xref rid="cor1" ref-type="corresp"/></contrib></contrib-group><author-notes><corresp id="cor1">
+<bold>Correspondence address</bold>. Lin Liu, Yunnan Normal University, Kunming 650500. E-mail: <email>liulinrachel@163.com</email></corresp></author-notes><pub-date pub-type="collection"><year>2023</year></pub-date><pub-date pub-type="epub" iso-8601-date="2023-11-24"><day>24</day><month>11</month><year>2023</year></pub-date><pub-date pub-type="pmc-release"><day>24</day><month>11</month><year>2023</year></pub-date><volume>12</volume><elocation-id>giad098</elocation-id><history><date date-type="received"><day>30</day><month>4</month><year>2023</year></date><date date-type="rev-recd"><day>02</day><month>9</month><year>2023</year></date><date date-type="accepted"><day>23</day><month>10</month><year>2023</year></date></history><permissions><copyright-statement>&#x000a9; The Author(s) 2023. Published by Oxford University Press GigaScience.</copyright-statement><copyright-year>2023</copyright-year><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xlink:href="giad098.pdf"/><abstract><title>Abstract</title><p>Single-cell RNA sequencing (scRNA-seq) technology studies transcriptome and cell-to-cell differences from higher single-cell resolution and different perspectives. Despite the advantage of high capture efficiency, downstream functional analysis of scRNA-seq data is made difficult by the excess of zero values (i.e., the dropout phenomenon). To effectively address this problem, we introduced scNTImpute, an imputation framework based on a neural topic model. A neural network encoder is used to extract underlying topic features of single-cell transcriptome data to infer high-quality cell similarity. At the same time, we determine which transcriptome data are affected by the dropout phenomenon according to the learning of the mixture model by the neural network. On the basis of stable cell similarity, the same gene information in other similar cells is borrowed to impute only the missing expression values. By evaluating the performance of real data, scNTImpute can accurately and efficiently identify the dropout values and imputes them accurately. In the meantime, the clustering of cell subsets is improved and the original biological information in cell clustering is solved, which is covered by technical noise. The source code for the scNTImpute module is available as open source at <ext-link xlink:href="https://github.com/qiyueyang-7/scNTImpute.git" ext-link-type="uri">https://github.com/qiyueyang-7/scNTImpute.git</ext-link>.</p></abstract><kwd-group kwd-group-type="keywords"><kwd>Single-cell RNA sequencing</kwd><kwd>imputation</kwd><kwd>dropout</kwd><kwd>neural topic model</kwd></kwd-group><funding-group><award-group award-type="grant"><funding-source>
+<institution-wrap><institution>National Natural Science Foundation of China</institution><institution-id institution-id-type="DOI">10.13039/501100001809</institution-id></institution-wrap>
+</funding-source><award-id>61862067</award-id><award-id>U1902201</award-id></award-group></funding-group><counts><page-count count="17"/></counts></article-meta></front><body><sec sec-type="intro" id="sec1"><title>Introduction</title><p>Bulk-cell RNA sequencing (RNA-seq) techniques have been widely used for transcriptome analysis to study transcriptional structure, splicing patterns, and expression levels of genes and transcriptomes [<xref rid="bib1" ref-type="bibr">1</xref>]. To address biological issues such as cell heterogeneity and gene expression randomness, it is particularly important to interpret cell-specific transcriptome landscapes [<xref rid="bib2" ref-type="bibr">2</xref>]. Although the bulk-cell RNA-seq technique is popular, it measures the average expression level of genes in batch cells, and the expression of variable genes will be pulled to average. Therefore, it is not possible to study cell specificity based on transcriptomics. Fortunately, by studying gene expression status in single cells, scRNA-seq technology overcomes the shortcomings of traditional batch cell sequencing technology and is becoming a powerful tool to capture the intercell variability of the transcriptome. It has dramatically changed the study of transcriptomics, helping us to decode life from a higher-resolution and spatiotemporal structure, accurately reflecting the heterogeneity between cells. The study of scRNA-seq data has become a hot subject today.</p><p>Currently, we use multiple single-cell RNA-seq (scRNA-seq) platforms, the two most popular being Fluidigm and Drop-Seq. The Drop-Seq processes thousands of cells in a single run, which not just saves time and cost but also is simple to operate. Fluidigm, while it usually processes fewer cells, has higher coverage rates. So, an increasing number of studies are using these techniques to discover new cell types [<xref rid="bib3" ref-type="bibr">3</xref>, <xref rid="bib4" ref-type="bibr">4</xref>], new markers for specific cell types [<xref rid="bib3" ref-type="bibr">3</xref>, <xref rid="bib5" ref-type="bibr">5</xref>, <xref rid="bib6" ref-type="bibr">6</xref>], and cell heterogeneity [<xref rid="bib6" ref-type="bibr">6&#x02013;11</xref>].</p><p>However, scRNA-seq technology has its corresponding drawbacks. scRNA-seq data have a relatively higher noise level than batch cell RNA-seq data, resulting in a major problem that is the sparsity of the gene expression matrix (i.e., the data often exhibit a large number of zero values) [<xref rid="bib12" ref-type="bibr">12</xref>]. Most of these zeros are artificially caused by defects in sequencing techniques, including, but not limited to, inadequate gene expression, low capture rates and sequencing depth, or other technical factors [<xref rid="bib13" ref-type="bibr">13</xref>, <xref rid="bib14" ref-type="bibr">14</xref>]. As a result, the observed zero value does not reflect the underlying true expression level [<xref rid="bib15" ref-type="bibr">15</xref>, <xref rid="bib16" ref-type="bibr">16</xref>]. This gene expression bias may be further increased during subsequent amplification steps. Thus, dropout events can significantly affect downstream bioinformatics analysis. At present, researchers have proposed a variety of imputation models through different principles and methods [<xref rid="bib17" ref-type="bibr">17</xref>, <xref rid="bib18" ref-type="bibr">18</xref>]. These research results have a great guiding role in scRNA-seq data integration, enrichment analysis, and so on. According to the design characteristics of the imputation algorithm, as well as the data feature learning and processing methods, we roughly divide the RNA-seq data imputation methods into two categories: deep learning&#x02013;based imputation method and non&#x02013;deep learning imputation method [<xref rid="bib19" ref-type="bibr">19</xref>].</p><p>In the traditional non&#x02013;deep learning imputation algorithm, because of its simple idea, it is able to usually fit the corresponding statistical probability model or use the expression matrix for smoothing and diffusion. So, there are certain advantages in some specific types of samples. Wagner et al. [<xref rid="bib20" ref-type="bibr">20</xref>] used the k-nearest neighbors (KNN) smoothing method by finding <italic toggle="yes">k</italic>-nearest neighbors between cells and aggregating gene-specific UMI (Unique Molecular Identifiers) counts to impute the gene expression matrix. In finding the number of nearest neighbors <italic toggle="yes">k</italic>, instead of using a way to fit a certain model, the data&#x02019;s imputation is achieved stepwise by constructing a partially smoothed profile with a variance-stabilizing transformation. Li and Li [<xref rid="bib21" ref-type="bibr">21</xref>] introduced a statistical method, scImpute, which uses a mixture model to learn the loss probability of each gene in each cell. By setting a loss probability threshold, the input data are divided into two parts: the set of genes severely affected by &#x0201c;dropout&#x0201d; <italic toggle="yes">A<sub>j</sub></italic> and the set of unaffected genes <italic toggle="yes">B<sub>j</sub></italic>. Eventually, the information on similar cells is learned from <italic toggle="yes">B<sub>j</sub></italic> for imputation. scImpute automatically identifies possible dropout values and performs imputation only on these values without introducing new biases to the rest of the data. Huang et al. [<xref rid="bib22" ref-type="bibr">22</xref>] proposed the SVAER algorithm, which is a method that uses information across genes and cells to impute zero values so as to optimize the expression of all genes. By looking for potential relationships between genes, the true expression level of each gene in each cell can be restored, eliminating technical differences. Nevertheless, SVAER alters all gene expression levels, including those not affected by dropout events, which could introduce new biases into the data and potentially eliminate biologically significant variation. For scRNA-seq data that are large, often high-dimensional, sparse, and complex, analysis using traditional computational methods becomes difficult and infeasible [<xref rid="bib23" ref-type="bibr">23</xref>, <xref rid="bib24" ref-type="bibr">24</xref>].</p><p>As deep neural network algorithms have gained great application in biomedical fields in recent years, they mine complex relationships within single-cell data through a series of basic hierarchical operations. The typical deep learning algorithms applied to scRNA-seq data are autoencoders (AEs), variational autoencoders (VAEs), generative adversarial networks (GANs), and other models. Eraslan et al. [<xref rid="bib25" ref-type="bibr">25</xref>] proposed the deep count autoencoder (DCA) network model by improving the conventional autoencoder. The reconstruction error is defined as the probability of the noise model distribution rather than the reconstruction of the input data themselves. Gene-specific distribution parameters are learned by minimizing reconstruction errors in an unsupervised manner. The noise model is eventually applied to sparse count data, giving it a loss function specifically for scRNA-seq data. Meanwhile, its deep learning framework is capable of capturing the complexity and nonlinearity of scRNA-seq data and is highly scalable. Arisdakessian et al. [<xref rid="bib26" ref-type="bibr">26</xref>] proposed a deep neural network&#x02013;based imputation algorithm (DeepImpute) by constructing multiple subneural networks, which impute genes in a divide-and-conquer manner, not only achieving the highest overall accuracy but also providing faster computing time and requiring less memory. Xu et al. [<xref rid="bib27" ref-type="bibr">27</xref>] proposed a scRNA-seq data imputation method (scIGANs) founded on generative adversarial network. The method uses networks to generate cells rather than cells observed in the original matrix to balance the performance between dominant and rare cell populations, enabling it to learn nonlinear gene-to-gene dependencies from complex samples of multicellular types and train generative models to generate realistic expression profiles of defined cell types. After training, KNN is used to impute the same type of cells, thereby eliminating technical variations without damaging intercell biological variability. This method is robust to small data with low expression or intercell differences [<xref rid="bib27" ref-type="bibr">27&#x02013;29</xref>].</p><p>Most downstream analyses of scRNA-seq, such as differential gene expression analysis, cell-type specific gene identification, and new cell-type definition, rely on the accuracy of gene expression measurements. Therefore, it is particularly important to correct the expression of &#x0201c;false zero values&#x0201d; caused by dropout events in scRNA-seq data through accurate and robust imputation methods [<xref rid="bib21" ref-type="bibr">21</xref>]. These imputation methods identify the dropout values in scRNA-seq data from different perspectives and impute them. However, for non&#x02013;deep learning, it is impossible to effectively learn the feature relationship of some complex nonlinear data, and it does not have good flexibility and expansibility. The architecture of deep learning itself is a &#x0201c;black box,&#x0201d; with many learning layers and thousands of nodes, making the underlying features learned and the full rich potential of the single-cell dataset unleashed uninterpretable [<xref rid="bib30" ref-type="bibr">30</xref>].</p><p>Although the study of RNA-seq data is an active area of research, accurate recovery of single-cell gene expression data remains a great challenge. Inspired by the neural topic, we have designed an accurate and stable imputation method, called scNTImpute, that can more precisely impute gene expression affected by dropout. Specifically, scNTImpute performs deep feature extraction and the construction of networks of encoders through the coding learning mechanism of transferable neural networks, learning network parameters and highly interpretable mixtures of cell topic from scRNA-seq data. Topic features can be used to learn the similarity of cells, and researchers are capable of performing topic pathway enrichment analysis on them at a later stage. This is used to explore whether they have relevance to currently known gene pathways, as well to uncover topics that may be condition specific or cell type specific to improve the interpretability of the deep feature from a biological perspective. Concurrently, we will get underlying connections such as cell to cell, cell to gene, or gene to gene in single-cell data. The flexibility of the neural topic model makes it excellent for processing scRNA-seq data. Besides, scNTImpute uses neural networks to learn the mixture model parameters of gene expression distribution, solving the dropout probability of each gene in each cell. This allows us to more directly understand the true state of the expression data of the scRNA-seq transcriptome and distinguish which gene transcripts are affected by dropout. Using information about the same gene in other similar cells allows us to impute the dropout value in a cell through underlying cell&#x02013;gene connections. Prior to this, it has been important that the borrowed information is selected for genes that are as free as possible from dropout events.</p></sec><sec sec-type="results" id="sec2"><title>Results</title><sec id="sec2-1"><title>scNTImpute model overview</title><p>We propose a new scRNA-seq data imputation method on account of a neural topic model that is adapted from the single-cell embedded topic model (scETM), which inherits the advantages of topic modeling and is very effective in dealing with heavy-tailed and large distributions of word frequencies [<xref rid="bib31" ref-type="bibr">31</xref>, <xref rid="bib32" ref-type="bibr">32</xref>]. For the analysis of the scRNA-seq data study, we pass the sampled cell and transcriptome expressions separately as vectors of normalized counts to two fully connected neural networks (i.e., tow-layer fully connected encoders). First, using a fully connected neural network encoder, we infer the topic mixing ratio of cells, namely, the cell-topic mixture (Fig. <xref rid="fig1" ref-type="fig">1A</xref>). Second, we use the second neural network to infer the mixed distribution parameters of the transcriptome and obtain probability estimates of whether the gene expression value in each cell is a dropout value by using the mixed distribution model. Finally, the cell-topic mixture infers similar cells of the cell in which the dropout gene is located and is the same genetic information from similar cells for the imputation of dropout values (Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1B</xref>).</p><fig position="float" id="fig1"><label>Figure 1:</label><caption><p>Workflow of scNTImpute. (A) scNTImpute uses a neural topic network architecture to model the single-cell transcriptome. Normalized counts of the gene expression data matrix and its transpose matrix for each single-cell dataset are used as input to the encoder. The encoder network generates random samples of potential cell-topic mixtures (<italic toggle="yes">&#x003b8;<sub>d</sub></italic>, cells <italic toggle="yes">d</italic> = 1, &#x02026;, <italic toggle="yes">N</italic>) that can be used to compute intercell similarity. Neural networks learn the parameters of a mixture model of gene expression data and can be used to identify dropout values. (B) Imputation works using similar cell information. A cell similarity matrix is generated by calculating the intercellular similarity from the resulting mixture of the cell topic. In view of the learned parameters of the mixture model, the dropout value is identified and imputed with the information of similar cells (cell <italic toggle="yes">j</italic>) of the cell where the dropout value is located (cell <italic toggle="yes">d</italic>). (C) Transfer learning workflow. The scNTImpute model trained on the reference scRNA-seq dataset can infer the mixture of cell topic <italic toggle="yes">&#x003b8;</italic> and the mixture model distributions from the unseen scRNA-seq dataset and perform accurate imputation on the unseen dataset. The scRNA-seq dataset is visualized by UMAP and evaluates by standard unsupervised clustering metrics using real cell types.</p></caption><graphic xlink:href="giad098fig1" position="float"/></fig></sec><sec id="sec2-2"><title>scNTImpute can efficiently impute scRNA-seq data</title><p>Recovery of biologically significant gene expression from dropout events is the primary goal of scRNA-seq imputation, which can further reduce the impact on downstream analysis. In order to accurately evaluate the imputation performance of different models, we use published real datasets for experiments (including human brain single-cell datasets [<xref rid="bib33" ref-type="bibr">33</xref>], Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>]). scNTImpute stably provides competitive results. To intuitively see the imputation performance between models, 4 indexes are adopted as the benchmark: adjusted Rand index (ARI), Rand index (RI), normalized mutual information (NMI), and mutual information (MI). To be specific, we used scNTImpute and several other advanced imputation methods to evaluate real human brain scRNA-seq datasets: scGGAN (scGGAN-fc, scGGAN-ng) [<xref rid="bib35" ref-type="bibr">35</xref>], SCRABBLE [<xref rid="bib36" ref-type="bibr">36</xref>], DCA [<xref rid="bib25" ref-type="bibr">25</xref>], MAGIC [<xref rid="bib37" ref-type="bibr">37</xref>], DeepImpute [<xref rid="bib26" ref-type="bibr">26</xref>], scIGANs(w/) [<xref rid="bib27" ref-type="bibr">27</xref>], AutoImpute [<xref rid="bib38" ref-type="bibr">38</xref>], DrImpute [<xref rid="bib39" ref-type="bibr">39</xref>], ENHANCE [<xref rid="bib40" ref-type="bibr">40</xref>], SAVER [<xref rid="bib22" ref-type="bibr">22</xref>], scGAIN [<xref rid="bib41" ref-type="bibr">41</xref>], scImpute [<xref rid="bib21" ref-type="bibr">21</xref>], VIPER [<xref rid="bib42" ref-type="bibr">42</xref>], and scIGANs(w/o) [<xref rid="bib27" ref-type="bibr">27</xref>]. By visualizing the evaluation results (Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2</xref>), we can intuitively see that the values of the 4 imputation evaluation indicators of scNTImpute are relatively high (specific imputation comparison results are shown in Table&#x000a0;<xref rid="tbl1" ref-type="table">1</xref>). After imputation, we used Leiden [<xref rid="bib43" ref-type="bibr">43</xref>] clustering and UMAP visualization for the complete scRNA-seq data (Fig. <xref rid="fig3" ref-type="fig">3</xref>). The results show that scNTImpute accurately and effectively recovers biologically significant gene expression from single-cell datasets.</p><fig position="float" id="fig2"><label>Figure 2:</label><caption><p>Visualization of human brain scRNA-seq data imputation metrics results.</p></caption><graphic xlink:href="giad098fig2" position="float"/></fig><fig position="float" id="fig3"><label>Figure 3:</label><caption><p>Clustering of human brain scRNA-seq data after imputation by scNTImpute.</p></caption><graphic xlink:href="giad098fig3" position="float"/></fig><table-wrap position="float" id="tbl1"><label>Table 1:</label><caption><p>Multiple metrics used to measure the imputing output of multiple imputation methods on real scRNA-seq data from the human brain</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1"/><th align="center" rowspan="1" colspan="1">NMI</th><th align="center" rowspan="1" colspan="1">ARI</th><th align="center" rowspan="1" colspan="1">MI</th><th align="center" rowspan="1" colspan="1">RI</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">scNTImpute</td><td rowspan="1" colspan="1">0.6873</td><td rowspan="1" colspan="1">0.6857</td><td rowspan="1" colspan="1">1.3015</td><td rowspan="1" colspan="1">0.906</td></tr><tr><td rowspan="1" colspan="1">scGGAN</td><td rowspan="1" colspan="1">0.395</td><td rowspan="1" colspan="1">0.301</td><td align="center" rowspan="1" colspan="1">NA</td><td align="center" rowspan="1" colspan="1">NA</td></tr><tr><td rowspan="1" colspan="1">scGGAN-fc</td><td rowspan="1" colspan="1">0.386</td><td rowspan="1" colspan="1">0.286</td><td align="center" rowspan="1" colspan="1">NA</td><td align="center" rowspan="1" colspan="1">NA</td></tr><tr><td rowspan="1" colspan="1">scGGAN-ng</td><td rowspan="1" colspan="1">0.389</td><td rowspan="1" colspan="1">0.292</td><td align="center" rowspan="1" colspan="1">NA</td><td align="center" rowspan="1" colspan="1">NA</td></tr><tr><td rowspan="1" colspan="1">SCRABBLE</td><td rowspan="1" colspan="1">0.126</td><td rowspan="1" colspan="1">0.083</td><td rowspan="1" colspan="1">0.225</td><td rowspan="1" colspan="1">0.48</td></tr><tr><td rowspan="1" colspan="1">DCA</td><td rowspan="1" colspan="1">0.496</td><td rowspan="1" colspan="1">0.328</td><td rowspan="1" colspan="1">0.886</td><td rowspan="1" colspan="1">0.78</td></tr><tr><td rowspan="1" colspan="1">MAGIC</td><td rowspan="1" colspan="1">0.615</td><td rowspan="1" colspan="1">0.39</td><td rowspan="1" colspan="1">1.169</td><td rowspan="1" colspan="1">0.812</td></tr><tr><td rowspan="1" colspan="1">DeepImpute</td><td rowspan="1" colspan="1">0.568</td><td rowspan="1" colspan="1">0.364</td><td rowspan="1" colspan="1">1.057</td><td rowspan="1" colspan="1">0.802</td></tr><tr><td rowspan="1" colspan="1">scIGANs(w/)</td><td rowspan="1" colspan="1">0.54</td><td rowspan="1" colspan="1">0.364</td><td rowspan="1" colspan="1">0.999</td><td rowspan="1" colspan="1">0.802</td></tr><tr><td rowspan="1" colspan="1">DrImpute</td><td rowspan="1" colspan="1">0.642</td><td rowspan="1" colspan="1">0.471</td><td rowspan="1" colspan="1">1.189</td><td rowspan="1" colspan="1">0.876</td></tr><tr><td rowspan="1" colspan="1">SAVER</td><td rowspan="1" colspan="1">0.602</td><td rowspan="1" colspan="1">0.575</td><td rowspan="1" colspan="1">1.076</td><td rowspan="1" colspan="1">0.833</td></tr><tr><td rowspan="1" colspan="1">scGAIN</td><td rowspan="1" colspan="1">0.138</td><td rowspan="1" colspan="1">0.092</td><td rowspan="1" colspan="1">0.246</td><td rowspan="1" colspan="1">0.862</td></tr><tr><td rowspan="1" colspan="1">scImpute</td><td rowspan="1" colspan="1">0.672</td><td rowspan="1" colspan="1">0.545</td><td rowspan="1" colspan="1">1.223</td><td rowspan="1" colspan="1">0.856</td></tr><tr><td rowspan="1" colspan="1">VIPER</td><td rowspan="1" colspan="1">0.544</td><td rowspan="1" colspan="1">0.306</td><td rowspan="1" colspan="1">0.972</td><td rowspan="1" colspan="1">0.626</td></tr><tr><td rowspan="1" colspan="1">scIGANs(w/o)</td><td rowspan="1" colspan="1">0.349</td><td rowspan="1" colspan="1">0.243</td><td rowspan="1" colspan="1">0.631</td><td rowspan="1" colspan="1">0.631</td></tr></tbody></table></table-wrap><p>We performed imputation experiments on another published real dataset, Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>]. The above imputation indexes are not the only criteria for evaluating the imputation of RNA-seq data. Different from the above, the other two imputation indexes have been used for evaluation (cosine similarity [CS], Fowlkes&#x02013;Mallows score [FMS]). Similarly, we compared it with several other existing excellent imputation models. The evaluation results were visualized (Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4</xref>), from which we could see that our model performed the best in both CS and FMS. Especially in FMS, a large gap was drawn with other imputation methods. (The specific imputation comparison results are shown in Table&#x000a0;<xref rid="tbl2" ref-type="table">2</xref>, and Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5</xref> shows the clustering effect on the complete Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>] data set).</p><fig position="float" id="fig4"><label>Figure 4:</label><caption><p>Comparison of imputation results of different methods for Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>] data.</p></caption><graphic xlink:href="giad098fig4" position="float"/></fig><fig position="float" id="fig5"><label>Figure 5:</label><caption><p>Clustering after imputation of Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>] data using scNTImpute.</p></caption><graphic xlink:href="giad098fig5" position="float"/></fig><table-wrap position="float" id="tbl2"><label>Table 2:</label><caption><p>Imputing output of multiple imputation methods on real Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>] scRNA-seq data using different metrics</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1"/><th rowspan="1" colspan="1">CS</th><th rowspan="1" colspan="1">FMS</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">scNTImpute</td><td rowspan="1" colspan="1">0.5394</td><td rowspan="1" colspan="1">0.8264</td></tr><tr><td rowspan="1" colspan="1">Magic</td><td rowspan="1" colspan="1">0.4890</td><td rowspan="1" colspan="1">0.5493</td></tr><tr><td rowspan="1" colspan="1">DCA</td><td rowspan="1" colspan="1">0.3280</td><td rowspan="1" colspan="1">0.4080</td></tr><tr><td rowspan="1" colspan="1">DeepImpute</td><td rowspan="1" colspan="1">0.2668</td><td rowspan="1" colspan="1">0.4392</td></tr><tr><td rowspan="1" colspan="1">SAUCIE</td><td rowspan="1" colspan="1">0.4762</td><td rowspan="1" colspan="1">0.5372</td></tr><tr><td rowspan="1" colspan="1">scIGANs</td><td rowspan="1" colspan="1">0.5048</td><td rowspan="1" colspan="1">0.5961</td></tr><tr><td rowspan="1" colspan="1">scImpute</td><td rowspan="1" colspan="1">0.4413</td><td rowspan="1" colspan="1">0.5531</td></tr><tr><td rowspan="1" colspan="1">SCVI</td><td rowspan="1" colspan="1">0.2071</td><td rowspan="1" colspan="1">0.2833</td></tr></tbody></table></table-wrap><p>To more effectively validate the robustness and stability of scNTImpute, as well as highlight the strengths of our model, we applied scNTImpute to more diverse real scRNA-seq datasets. In addition to the existing comparison methods mentioned above, we included several more advanced imputation methods for comparison (i.e., AE-TPGG [<xref rid="bib44" ref-type="bibr">44</xref>], scGNN [<xref rid="bib45" ref-type="bibr">45</xref>], scISR [<xref rid="bib46" ref-type="bibr">46</xref>], scScope [<xref rid="bib47" ref-type="bibr">47</xref>]). Besides, since the cell&#x02013;cell distance matrix in MAGIC is based on Euclidean distances, the added MAGIC-C method is based on counting the data to understand how the form of the data affects the imputation. For the convenience of comparison and differentiation, the original MAGIC method based on normalized data is referred to as MAGIC-N [<xref rid="bib44" ref-type="bibr">44</xref>]. First, we applied the model to a temporal scRNA-seq dataset involving mouse preimplantation embryonic development data (Deng et al. [<xref rid="bib48" ref-type="bibr">48</xref>]). The Deng et al. [<xref rid="bib48" ref-type="bibr">48</xref>] dataset includes single cells from 10 early mouse developmental stages, including zygotes; 2-, 4-, 8-, and 16-cell stages; and blastocysts [<xref rid="bib39" ref-type="bibr">39</xref>]. We compared scNTImpute with a new imputation method called AE-TPGG on this dataset, using the aforementioned evaluation metrics (ARI, NMI). We visualized the imputation results (Fig.&#x000a0;<xref rid="fig6" ref-type="fig">6</xref>), from which we could observe that scNTImpute achieved the highest scores in both metrics, followed by our newly added AE-TPGG imputation method (Fig.&#x000a0;<xref rid="fig7" ref-type="fig">7</xref> shows the clustering of the Deng dataset after imputation using scNTImpute). Specific imputation result data can be found in Table&#x000a0;<xref rid="tbl3" ref-type="table">3</xref>.</p><fig position="float" id="fig6"><label>Figure 6:</label><caption><p>Comparison of results after imputation of Deng et al. [<xref rid="bib48" ref-type="bibr">48</xref>] data by various methods.</p></caption><graphic xlink:href="giad098fig6" position="float"/></fig><fig position="float" id="fig7"><label>Figure 7:</label><caption><p>The clustering of the Deng et al. [<xref rid="bib48" ref-type="bibr">48</xref>] dataset after imputation using scNTImpute.</p></caption><graphic xlink:href="giad098fig7" position="float"/></fig><table-wrap position="float" id="tbl3"><label>Table 3:</label><caption><p>Measurement of the imputation results of multiple methods on real Deng et al. [<xref rid="bib48" ref-type="bibr">48</xref>] scRNA-seq data.</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1"/><th rowspan="1" colspan="1">ARI</th><th rowspan="1" colspan="1">NMI</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">scNTImpute</td><td rowspan="1" colspan="1">0.552</td><td rowspan="1" colspan="1">0.750</td></tr><tr><td rowspan="1" colspan="1">AE-TPGG</td><td rowspan="1" colspan="1">0.448</td><td rowspan="1" colspan="1">0.643</td></tr><tr><td rowspan="1" colspan="1">DCA</td><td rowspan="1" colspan="1">0.291</td><td rowspan="1" colspan="1">0.513</td></tr><tr><td rowspan="1" colspan="1">SAVER</td><td rowspan="1" colspan="1">0.424</td><td rowspan="1" colspan="1">0.623</td></tr><tr><td rowspan="1" colspan="1">scImpute</td><td rowspan="1" colspan="1">0.309</td><td rowspan="1" colspan="1">0.528</td></tr><tr><td rowspan="1" colspan="1">MAGIC-C</td><td rowspan="1" colspan="1">0.247</td><td rowspan="1" colspan="1">0.491</td></tr><tr><td rowspan="1" colspan="1">MAGIC-N</td><td rowspan="1" colspan="1">0.366</td><td rowspan="1" colspan="1">0.619</td></tr></tbody></table></table-wrap><p>On two additional real datasets (human pancreatic islet [HP] [<xref rid="bib49" ref-type="bibr">49</xref>], Romanov et al. [<xref rid="bib50" ref-type="bibr">50</xref>]), we compared three new imputation methods. scScope is a scalable deep learning&#x02013;based approach. The scGNN employs a graph neural network, which provides a hypothesis-free deep learning framework for scRNA-seq analysis. In contrast, scISR is a single-cell imputation method that utilizes subspace regression. We applied these three new methods alongside our model to these two real datasets. The evaluation was performed using the same metric, ARI. To visualize the results more intuitively, we plotted the imputation results of these methods (Figs.&#x000a0;<xref rid="fig8" ref-type="fig">8</xref> and&#x000a0;<xref rid="fig9" ref-type="fig">9</xref> represent the imputation results for the HP dataset [<xref rid="bib49" ref-type="bibr">49</xref>] and Romanov et al. [<xref rid="bib50" ref-type="bibr">50</xref>] dataset, respectively). From the figures, it is evident that scNTImpute achieved ARI scores close to 0.7 on both datasets, outperforming the other imputation methods (achieving the highest ARI). This further confirms scNTImpute&#x02019;s effectiveness in recovering true biological information from sparse single-cell data.</p><fig position="float" id="fig8"><label>Figure 8:</label><caption><p>Results of different imputation methods on the human islet dataset [<xref rid="bib49" ref-type="bibr">49</xref>].</p></caption><graphic xlink:href="giad098fig8" position="float"/></fig><fig position="float" id="fig9"><label>Figure 9:</label><caption><p>Results of different imputation methods in the Romanov et al. [<xref rid="bib50" ref-type="bibr">50</xref>] dataset.</p></caption><graphic xlink:href="giad098fig9" position="float"/></fig></sec><sec id="sec2-3"><title>scNTImpute improves the clustering of cell subpopulations</title><p>To test the ability of scNTImpute to improve cell type or cell subgroup clustering, we applied scNTImpute to real scRNA-seq (i.e., also on the Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>] dataset). In addition to reusing the above ARI and NMI evaluation indexes, we also adopted another commonly used clustering index, adjusted mutual information (AMI). We imputed scRNA-seq data with scNTImpute and other different imputation models, as well as compared cell clustering with complete imputation data. Through the comparison of evaluation data (refer to Table&#x000a0;<xref rid="tbl4" ref-type="table">4</xref> for specific data and Fig.&#x000a0;<xref rid="fig10" ref-type="fig">10</xref> for visualization of comparative data), our imputation method was the highest in the ARI index and had relatively significant and stable performance in the AMI and NMI clustering indexes (Fig.&#x000a0;<xref rid="fig11" ref-type="fig">11</xref> shows the clustering effect after imputation).</p><fig position="float" id="fig10"><label>Figure 10:</label><caption><p>Effectiveness of different imputation methods in clustering Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>] data.</p></caption><graphic xlink:href="giad098fig10" position="float"/></fig><fig position="float" id="fig11"><label>Figure 11:</label><caption><p>The clustering effect of using scNTImpute to impute Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>] data.</p></caption><graphic xlink:href="giad098fig11" position="float"/></fig><table-wrap position="float" id="tbl4"><label>Table 4:</label><caption><p>Clustering performance comparison of multiple methods in Chung et al. [<xref rid="bib34" ref-type="bibr">34</xref>] data</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1"/><th rowspan="1" colspan="1">ARI</th><th rowspan="1" colspan="1">AMI</th><th rowspan="1" colspan="1">NMI</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">scNTImpute</td><td rowspan="1" colspan="1">0.6403</td><td rowspan="1" colspan="1">0.5071</td><td rowspan="1" colspan="1">0.5093</td></tr><tr><td rowspan="1" colspan="1">Magic</td><td rowspan="1" colspan="1">0.3851</td><td rowspan="1" colspan="1">0.6195</td><td rowspan="1" colspan="1">0.6304</td></tr><tr><td rowspan="1" colspan="1">DCA</td><td rowspan="1" colspan="1">0.2362</td><td rowspan="1" colspan="1">0.4150</td><td rowspan="1" colspan="1">0.4327</td></tr><tr><td rowspan="1" colspan="1">DeepImpute</td><td rowspan="1" colspan="1">0.2625</td><td rowspan="1" colspan="1">0.3071</td><td rowspan="1" colspan="1">0.3225</td></tr><tr><td rowspan="1" colspan="1">SAUCIE</td><td rowspan="1" colspan="1">0.3706</td><td rowspan="1" colspan="1">0.6053</td><td rowspan="1" colspan="1">0.6165</td></tr><tr><td rowspan="1" colspan="1">scIGANs</td><td rowspan="1" colspan="1">0.4511</td><td rowspan="1" colspan="1">0.6102</td><td rowspan="1" colspan="1">0.6199</td></tr><tr><td rowspan="1" colspan="1">scImpute</td><td rowspan="1" colspan="1">0.3967</td><td rowspan="1" colspan="1">0.4986</td><td rowspan="1" colspan="1">0.5069</td></tr><tr><td rowspan="1" colspan="1">SCVI</td><td rowspan="1" colspan="1">0.1078</td><td rowspan="1" colspan="1">0.2463</td><td rowspan="1" colspan="1">0.2679</td></tr></tbody></table></table-wrap><p>Moreover, we evaluated the clustering effect of scRNA-seq data after imputation on another Hrvatin real data set [<xref rid="bib3" ref-type="bibr">3</xref>]. We used the cell type stated in the original publication as the basic fact and ARI as a performance indicator. Unlike the previous comparison, here we combined the scNTImpute with other developed imputation models and clustering methods to evaluate; that is, before using the clustering algorithm, we used other imputation models to process and compare the results with our model. Several excellent clustering algorithms, such as pcaReduce [<xref rid="bib51" ref-type="bibr">51</xref>], SC3 [<xref rid="bib52" ref-type="bibr">52</xref>], and t-SNE [<xref rid="bib53" ref-type="bibr">53</xref>], followed by k-means (t-SNE/kms), were used to cluster scRNA-seq data. These methods did not explicitly address the dropout events in scRNA-seq data. Therefore, in model comparison, there were two assumptions: (i) preprocessing of dropout event RNA-seq data by other imputation algorithms, which would improve the accuracy of these clustering methods, and (ii) comparison between scNTImpute and existing splendid imputation algorithms, such as DrImpute [<xref rid="bib39" ref-type="bibr">39</xref>], CIDR [<xref rid="bib54" ref-type="bibr">54</xref>], scImpute [<xref rid="bib21" ref-type="bibr">21</xref>], and MAGIC [<xref rid="bib37" ref-type="bibr">37</xref>]. scNTImpute performs better in handling dropout events to improve clustering performance (Fig.&#x000a0;<xref rid="fig12" ref-type="fig">12</xref> shows the visualization of evaluation data; see Table&#x000a0;<xref rid="tbl5" ref-type="table">5</xref> for specific data). We can clearly see the experimental comparison of 5 imputation methods and individual imputation methods combined with clustering algorithms. We found that the effect of scNTImpute was significantly better than the clustering enhancement performance of CIDR, followed by the SC3+ DrImpute (Fig.&#x000a0;<xref rid="fig13" ref-type="fig">13</xref>).</p><fig position="float" id="fig12"><label>Figure 12:</label><caption><p>Clustering performance of multiple imputation methods on Hrvatin real data [<xref rid="bib3" ref-type="bibr">3</xref>].</p></caption><graphic xlink:href="giad098fig12" position="float"/></fig><fig position="float" id="fig13"><label>Figure 13:</label><caption><p>The clustering effect after imputing Hrvatin using scNTImpute.</p></caption><graphic xlink:href="giad098fig13" position="float"/></fig><table-wrap position="float" id="tbl5"><label>Table 5:</label><caption><p>Clustering output of multiple imputation methods on real Hrvatin data</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1"/><th rowspan="1" colspan="1">ARI</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">scNTImpute</td><td rowspan="1" colspan="1">0.88</td></tr><tr><td rowspan="1" colspan="1">pcaR_M+ DrImpute</td><td rowspan="1" colspan="1">0.64</td></tr><tr><td rowspan="1" colspan="1">pcaR_M</td><td rowspan="1" colspan="1">0.53</td></tr><tr><td rowspan="1" colspan="1">pcaR_S+ DrImpute</td><td rowspan="1" colspan="1">0.58</td></tr><tr><td rowspan="1" colspan="1">pcaR_S</td><td rowspan="1" colspan="1">0.54</td></tr><tr><td rowspan="1" colspan="1">SC3+ DrImpute</td><td rowspan="1" colspan="1">0.76</td></tr><tr><td rowspan="1" colspan="1">SC3</td><td rowspan="1" colspan="1">0.77</td></tr><tr><td rowspan="1" colspan="1">t-SNE/kms+ DrImpute</td><td rowspan="1" colspan="1">0.60</td></tr><tr><td rowspan="1" colspan="1">t-SNE/kms</td><td rowspan="1" colspan="1">0.52</td></tr><tr><td rowspan="1" colspan="1">CIDR</td><td rowspan="1" colspan="1">0.16</td></tr><tr><td rowspan="1" colspan="1">scImpute</td><td rowspan="1" colspan="1">0.56</td></tr><tr><td rowspan="1" colspan="1">MAGIC</td><td rowspan="1" colspan="1">0.45</td></tr></tbody></table></table-wrap></sec><sec id="sec2-4"><title>Transfer learning across single-cell datasets</title><p>A prominent feature of scNTImpute is its parameters, so the knowledge of modeling scRNA-seq data can be transferred across datasets. As part of scNTImpute, the model trained on the reference scRNA-seq dataset can be applied to infer the cell-topic mixture and the parameters of the mixture model for the target scRNA-seq dataset, without ensuring that the two datasets share the same cell type. To illustrate, we employed two real RNA-seq datasets: HP datasets and mouse pancreatic islet (MP) datasets [<xref rid="bib32" ref-type="bibr">32</xref>] were used to conduct cross-species transfer learning of scNTImpute models. Both datasets were obtained using the inDrop method (a droplet-based single-cell RNA-seq sequencing technique). The assumption of transfer learning is that the distribution of data in the source domain should be similar to the distribution of data in the target domain. Therefore, we primarily demonstrate the similarity of the datasets used in the transfer learning section from two perspectives. First, mean, variance, and standard deviation are commonly used statistical measures to analyze the characteristics and similarities of datasets. If their mean is close and their variance and standard deviation are similar, then their similarity is higher. Conversely, if these measures differ significantly, their similarity is lower. By analyzing the calculations, the results of the evaluation metrics for the two datasets are shown in Table&#x000a0;<xref rid="tbl6" ref-type="table">6</xref>. We also visualize the data from Table&#x000a0;<xref rid="tbl6" ref-type="table">6</xref> (Fig.&#x000a0;<xref rid="fig14" ref-type="fig">14</xref>), which provides a more intuitive way of observation. We find that their values for all three statistical indicators are very close. Especially in terms of standard deviation, the two datasets have almost the same level of dispersion. Additionally, by comparing the mean, we can see that the central tendencies of the two datasets are also very similar.</p><fig position="float" id="fig14"><label>Figure 14:</label><caption><p>Comparison of similarity indexes (mean, variance, standard deviation) between mouse islet data and human islet data.</p></caption><graphic xlink:href="giad098fig14" position="float"/></fig><table-wrap position="float" id="tbl6"><label>Table 6:</label><caption><p>Three metrics used to measure the similarity of the data used for transfer learning</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">Evaluation index</th><th rowspan="1" colspan="1">Variance</th><th rowspan="1" colspan="1">Mean</th><th rowspan="1" colspan="1">Standard deviation</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">HP</td><td rowspan="1" colspan="1">55.61</td><td rowspan="1" colspan="1">0.38</td><td rowspan="1" colspan="1">7.46</td></tr><tr><td rowspan="1" colspan="1">MP</td><td rowspan="1" colspan="1">55.69</td><td rowspan="1" colspan="1">0.35</td><td rowspan="1" colspan="1">7.46</td></tr></tbody></table></table-wrap><p>Second, the probability distribution function is a function used to describe the probability of the possible values of a random variable. It can also help us understand and analyze similarities between datasets. For discrete data such as scRNA-seq datasets, we can calculate the frequency of occurrence for each value and divide these frequencies by the total size of the dataset to obtain the probability of each value. To facilitate the intuitive analysis of the probability distribution functions of the two datasets, we visualized the two probability distributions (Fig.&#x000a0;<xref rid="fig15" ref-type="fig">15</xref>). Due to the sparsity of the original scRNA-seq datasets, the frequencies of zero values are relatively high in both datasets. By visualizing the probability distributions, we can easily observe that the distributions of the two datasets are very similar.</p><fig position="float" id="fig15"><label>Figure 15:</label><caption><p>Probability distribution functions for mouse islet data and human islet data.</p></caption><graphic xlink:href="giad098fig15" position="float"/></fig><p>Next we conducted research on transfer learning. First, if the HP dataset was directly trained on the model, the 4 imputation indicators were ARI, 0.681; NMI, 0.751; RI, 0.884; and MI, 1.429. Second, we trained a scNTImpute model on the MP dataset and used the trained model to impute and evaluate HP data. Ultimately, an exciting transfer learning effect was produced (ARI reached 0.858 in the HP dataset; refer to Table&#x000a0;<xref rid="tbl7" ref-type="table">7</xref> for other specific results). In order to verify the stability of the model transfer learning, we conducted the transfer learning from the HP dataset to the MP dataset, and the results were also surprising. The results of direct imputation and transfer learning imputation of the HP data set were visualized by UMAP (Fig.&#x000a0;<xref rid="fig16" ref-type="fig">16</xref>). After transfer, scNTImpute improved many indicators and learned to be cell type-specific (Table&#x000a0;<xref rid="tbl7" ref-type="table">7</xref>, Fig.&#x000a0;<xref rid="fig16" ref-type="fig">16</xref>). To compare with other methods, we used scNTImpute, scVI-LD, and scVI to evaluate clustering performance in transfer learning tasks. Clustering performance was mainly measured by the ARI between real cell types and Leiden [<xref rid="bib43" ref-type="bibr">43</xref>] clusters. Overall, scNTImpute obtained the best learning results in cross-species transfer learning between HP and MP (Table&#x000a0;<xref rid="tbl8" ref-type="table">8</xref>).</p><fig position="float" id="fig16"><label>Figure 16:</label><caption><p>The transfer learning performance of scNTImpute: transfer learning from mouse pancreatic islet data to human pancreatic islet data (MP-HP) and human pancreatic islet data transfer learning to mouse pancreatic islet data (HP-MP).</p></caption><graphic xlink:href="giad098fig16" position="float"/></fig><table-wrap position="float" id="tbl7"><label>Table 7:</label><caption><p>Using multiple metrics to measure scNTImpute&#x02019;s transfer learning performance</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1"/><th rowspan="1" colspan="1">HP</th><th rowspan="1" colspan="1">MP&#x02192;HP</th><th rowspan="1" colspan="1">MP</th><th rowspan="1" colspan="1">HP&#x02192;MP</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">ARI</td><td rowspan="1" colspan="1">0.681</td><td rowspan="1" colspan="1">0.858</td><td rowspan="1" colspan="1">0.841</td><td rowspan="1" colspan="1">0.849</td></tr><tr><td rowspan="1" colspan="1">NMI</td><td rowspan="1" colspan="1">0.751</td><td rowspan="1" colspan="1">0.821</td><td rowspan="1" colspan="1">0.758</td><td rowspan="1" colspan="1">0.769</td></tr><tr><td rowspan="1" colspan="1">MI</td><td rowspan="1" colspan="1">1.429</td><td rowspan="1" colspan="1">1.345</td><td rowspan="1" colspan="1">1.163</td><td rowspan="1" colspan="1">1.232</td></tr><tr><td rowspan="1" colspan="1">RI</td><td rowspan="1" colspan="1">0.884</td><td rowspan="1" colspan="1">0.946</td><td rowspan="1" colspan="1">0.931</td><td rowspan="1" colspan="1">0.933</td></tr><tr><td rowspan="1" colspan="1">CS</td><td rowspan="1" colspan="1">0.930</td><td rowspan="1" colspan="1">0.8378</td><td rowspan="1" colspan="1">0.901</td><td rowspan="1" colspan="1">0.863</td></tr><tr><td rowspan="1" colspan="1">FMS</td><td rowspan="1" colspan="1">0.757</td><td rowspan="1" colspan="1">0.894</td><td rowspan="1" colspan="1">0.892</td><td rowspan="1" colspan="1">0.901</td></tr></tbody></table></table-wrap><table-wrap position="float" id="tbl8"><label>Table 8:</label><caption><p>Transfer learning effectiveness output of different methods</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">Source dataset</th><th rowspan="1" colspan="1">MP</th><th rowspan="1" colspan="1">HP</th></tr><tr><th rowspan="1" colspan="1">Target dataset</th><th rowspan="1" colspan="1">HP</th><th rowspan="1" colspan="1">MP</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">scNTImpute</td><td rowspan="1" colspan="1">0.858</td><td rowspan="1" colspan="1">0.849</td></tr><tr><td rowspan="1" colspan="1">scVI-LD</td><td rowspan="1" colspan="1">0.690</td><td rowspan="1" colspan="1">0.478</td></tr><tr><td rowspan="1" colspan="1">scVI</td><td rowspan="1" colspan="1">0.524</td><td rowspan="1" colspan="1">0.425</td></tr></tbody></table></table-wrap></sec><sec id="sec2-5"><title>Path enrichment analysis and statistical significance test of scNTImpute topics</title><p>We next investigated separately whether the topics of scNTImpute were biologically relevant to known human genetic pathways and whether there were differences between topics. First, we employed gene set enrichment analysis [<xref rid="bib55" ref-type="bibr">55</xref>] for exploration. We trained a scNTImpute with 50 topics using the HP dataset. For the obtained topics, we detected a number of significantly enriched pathways. Several of these were related to pancreatic function, including the insulin receptor recycling, cardiac myocyte insulin receptor signaling pathway, insulin signaling pathways, pancreatic cancer, and so on (Fig.&#x000a0;<xref rid="fig17" ref-type="fig">17</xref>, Fig.&#x000a0;<xref rid="fig18" ref-type="fig">18</xref>). The set of contained genes between the black bar in the middle and the highest point (ES value) is called the leader subset, which contributed to the upregulation of the entire pathway. Furthermore, based on the differences in the enrichment levels of topics in the pathway, there were also significant differences between topics. We calculated <italic toggle="yes">P</italic> value and fold change (FC), and converted <italic toggle="yes">P</italic> value as a negative logarithm to <inline-formula><tex-math id="TM0001" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$- {\log }_{10}( {{\mathrm{p}} - {\mathrm{value}}} )$\end{document}</tex-math></inline-formula>, while fold change was logarithmically converted to <inline-formula><tex-math id="TM0002" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\log ( {FC} )$\end{document}</tex-math></inline-formula>. (The red line in Fig.&#x000a0;<xref rid="fig19" ref-type="fig">19</xref> is the threshold line for <inline-formula><tex-math id="TM0003" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\langle i \rangle p\langle {/i} \rangle &#x0003c; 0.01$\end{document}</tex-math></inline-formula>.) In general, by taking the negative logarithm of the <italic toggle="yes">P</italic> values, most of our topics are smaller than the set threshold, which shows that there are significant differences in our topics (Fig.&#x000a0;<xref rid="fig19" ref-type="fig">19</xref>).</p><fig position="float" id="fig17"><label>Figure 17:</label><caption><p>The topic of human islet data is enriched in the insulin receptor recycling pathway.</p></caption><graphic xlink:href="giad098fig17" position="float"/></fig><fig position="float" id="fig18"><label>Figure 18:</label><caption><p>The topic of human islet data is enriched in the cardiac myocyte insulin receptor signaling pathway.</p></caption><graphic xlink:href="giad098fig18" position="float"/></fig><fig position="float" id="fig19"><label>Figure 19:</label><caption><p>Differences in the topic matter of human islet data.</p></caption><graphic xlink:href="giad098fig19" position="float"/></fig></sec><sec id="sec2-6"><title>Scalability and efficiency</title><p>To validate the scalability and efficiency of the proposed scNTImpute for transferable learning, we tested it on datasets with a different number of genes and recorded the runtime. Specifically, we took the trained model directly for imputation on additional datasets. We performed imputation on datasets containing 1k, 2k, 5k, 10k, and 15k genes and investigated the relationship between running time and the number of genes (Fig.&#x000a0;<xref rid="fig20" ref-type="fig">20</xref>). The running time of imputation exhibited a linear increase relative to the number of genes. As scNTImpute is a neural topic-based imputation method, its runtime increases with the number of genes. In practical applications, the number of genes and cells is limited. So, scNTImpute is more suitable for scRNA-seq datasets than other imputation methods.</p><fig position="float" id="fig20"><label>Figure 20:</label><caption><p>Time complexity analysis of scNTImpute transfer learning.</p></caption><graphic xlink:href="giad098fig20" position="float"/></fig></sec></sec><sec sec-type="materials|methods" id="sec3"><title>Methods</title><sec id="sec3-1"><title>Workflow</title><p>We adopted an imputation workflow based on a neural topic model, implemented using the PyTorch (<ext-link xlink:href="https://scicrunch.org/resolver/https://scicrunch.org/resolver/RRID:SCR_018536" ext-link-type="uri">RRID:SCR_018536</ext-link>) dynamic framework on the backend. Our work is divided into the following steps.</p></sec><sec id="sec3-2"><title>Data preprocessing</title><p>We took as input the scRNA-seq gene count expression matrix <italic toggle="yes">X</italic>, where the rows represented cells and the columns represented genes. Data filtering and quality control were performed as a previous step of data preprocessing, and we eventually wanted to get an imputation matrix with the same dimensionality as the original count matrix. To facilitate the subsequent work, we first normalized each sample (cell) and each gene in the matrix separately to obtain two normalized matrices, <inline-formula><tex-math id="TM0004" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Y}^C$\end{document}</tex-math></inline-formula> (normalized by cell) and <inline-formula><tex-math id="TM0005" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Y}^G$\end{document}</tex-math></inline-formula> (normalized by gene). Then, log10 transformed <inline-formula><tex-math id="TM0006" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Y}^G$\end{document}</tex-math></inline-formula> and pseudo-count 1.01 was added to generate the <italic toggle="yes">Y</italic> matrix [<xref rid="bib56" ref-type="bibr">56</xref>]:</p><disp-formula>
+<tex-math id="TM0007" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{Y}_{ij} = lo{g}_{10}\left( {Y_{ij}^G + 1.01} \right);{\mathrm{i}} = 1,2, \ldots ,{\mathrm{I}};{\mathrm{j}} = 1,2, \ldots ,{\mathrm{J}}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>
+<italic toggle="yes">I</italic> denotes the number of cells and <italic toggle="yes">J</italic> denotes the number of genes. To avoid infinite values of the parameters in later model training, we added pseudo-counts to it. The advantage of logarithmic transformation is that it can prevent some large observations from having a significant impact, eliminate heteroscedasticity issues, and transform the values into continuity, providing greater flexibility for modeling.</p></sec><sec id="sec3-3"><title>Topic generation process</title><p>Inspired by scETM&#x02019;s research on single-cell transcriptomics [<xref rid="bib31" ref-type="bibr">31</xref>], we adopted a neural topic model to model the scRNA-seq data distribution [<xref rid="bib57" ref-type="bibr">57</xref>]. We treated each cell as a document, and each scRNA-seq read (or UMI) served as a marker in the document. The gene that generates the read count (or UMI) is thought of as a word in a vocabulary. We assumed that each cell could be represented as a mixture of underlying cell types, and they were often referred to as potential topics. In the original LDA model [<xref rid="bib57" ref-type="bibr">57</xref>], a fixed set of <italic toggle="yes">N</italic>-independent Dirichlet distributions <inline-formula><tex-math id="TM0008" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathrm{\beta }}$\end{document}</tex-math></inline-formula> was defined, distributed over a vocabulary of size <italic toggle="yes">M</italic>. Formally, the cell-topic mixture generation process is as follows.</p><p>Obtaining the potential topic proportion of cell <italic toggle="yes">C</italic> from a logical normal distribution:</p><disp-formula>
+<tex-math id="TM0009" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{\delta }_C &#x00026;\sim&#x00026; {\boldsymbol{N}}\left( {0,I} \right),{\theta }_C = softmax\left( {{\delta }_C} \right) = \frac{{{\mathrm{exp}}\left( {{\delta }_{c,N}} \right)}}{{\mathop \sum \nolimits_{N = 1}^N {\mathrm{exp}}\left( {{\delta }_{c,N}} \right)}}\\
+{\theta }_C &#x00026;\sim&#x00026; LN\left( {0,I} \right)
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0010" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\ {\theta }_C$\end{document}</tex-math></inline-formula> is the <inline-formula><tex-math id="TM0011" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$1 \times N$\end{document}</tex-math></inline-formula> cell-topic mix of cell <italic toggle="yes">C</italic>. To simulate the sparsity of gene expression in each cell, the softmax function was used to regulate the expression of all genes. For this purpose, we obtained a mixture of all the cell topics <inline-formula><tex-math id="TM0012" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta $\end{document}</tex-math></inline-formula> [<xref rid="bib31" ref-type="bibr">31</xref>].</p><p>To enable the extraction of latent topics from the data, in scNTImpute, we consider the latent cell topic mixture <inline-formula><tex-math id="TM0013" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\theta }_C$\end{document}</tex-math></inline-formula> as the unique latent variable for each cell C. We denoted the posterior distribution of latent variables as <inline-formula><tex-math id="TM0014" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathrm{p}}({\mathrm{\delta }}|{Y}^C)({Y}^C$\end{document}</tex-math></inline-formula> (normalized gene expression matrix above). However, directly solving for the true posterior distribution in high-dimensional space is computationally challenging. Therefore, a variational inference method was employed to approximate the true posterior distribution by minimizing the difference between <inline-formula><tex-math id="TM0015" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathrm{q}}( {{\delta }_c} )$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0016" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathrm{p}}({\mathrm{\delta }}|{Y}^C)$\end{document}</tex-math></inline-formula>, and the variational posterior was easier to compute compared to the true posterior. Specifically, we defined the following distribution: <inline-formula><tex-math id="TM0017" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathrm{q}}({\mathrm{\delta }}|{\mathrm{y}})$\end{document}</tex-math></inline-formula>=<inline-formula><tex-math id="TM0018" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathop \prod \limits_c q({\delta }_c|{y}_c)$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math id="TM0019" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$q( {{\delta }_c{\mathrm{|}}{y}_c} ) = {\mu }_c + dia( {{\sigma }_c} ){\boldsymbol{N}}( {0,I} )$\end{document}</tex-math></inline-formula>. The parameters <inline-formula><tex-math id="TM0020" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$[ {{\mu }_c,\log \sigma _c^2} ]$\end{document}</tex-math></inline-formula> were estimated by a two-layer feed-forward neural network <inline-formula><tex-math id="TM0021" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathrm{NNET}}( {Y_c^C;{{\mathrm{W}}}_\theta } )$\end{document}</tex-math></inline-formula>. This network approximated the complete statistics of the cellular topic mixture <inline-formula><tex-math id="TM0022" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\delta }_c$\end{document}</tex-math></inline-formula>. To learn the variational parameter <inline-formula><tex-math id="TM0023" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{W}}}_\theta $\end{document}</tex-math></inline-formula> mentioned above, we optimized the evidence lower bound (ELBO) for the logarithmic likelihood [<xref rid="bib31" ref-type="bibr">31</xref>]. This involved minimizing the Kullback&#x02013;Leibler (KL) divergence, which measures the difference between the approximate posterior distribution and the true posterior distribution. The goal is to reduce this divergence and bring the approximate posterior closer to the true posterior:</p><disp-formula>
+<tex-math id="TM0024" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+ELBO = E\left[ {\log {\mathrm{p}}\left( {{\mathrm{Y|\theta }}} \right)} \right] - {D}_{KL}[{\mathrm{q}}({\mathrm{\theta }}|{\mathrm{Y}})||{\mathrm{p}}\left( {\mathrm{\theta }} \right)]
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>The first term represents the likelihood function, which is measured using negative log-likelihood. The second term, the reconstruction likelihood, is a regularization term involving the KL divergence between the approximate distribution (<inline-formula><tex-math id="TM0025" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$q( {{\delta }_c{\mathrm{|}}{y}_c} ) = N( {{\mu }_c,diag( {{\sigma }_c} )} )$\end{document}</tex-math></inline-formula>) and the prior distribution (<inline-formula><tex-math id="TM0026" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${\mathrm{p}}( {{\delta }_c} ) = N( {0,I} )$\end{document}</tex-math></inline-formula>), which encourages the variational posterior distribution to approximate the prior distribution. We sampled a few latent variable samples from the reparameterized Gaussian distribution <inline-formula><tex-math id="TM0027" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$q( {{\delta }_c{\mathrm{|}}{y}_c} )$\end{document}</tex-math></inline-formula>, where their mean and variance were determined by the aforementioned NNET (Double layer feedforward neural network for estimating sufficient statistics of the proposed distribution of cell topic mixtures). These samples served as noise estimates for ELBO [<xref rid="bib31" ref-type="bibr">31</xref>]. Ultimately, the gradients were backpropagated to optimize the weights of the encoder to achieve the goal of extracting topic features.</p></sec><sec id="sec3-4"><title>Study dropout values</title><p>After acquiring the transformed gene expression matrix <italic toggle="yes">Y</italic>, we can infer which genes in the cell were affected by the dropout event. Instead of considering all zero values as dropout values, we used a neural network to systematically determine whether zero values were dropout values. First, the normal distribution described continuous data, while the reads count (gene expression) data were discrete. Second, the reads count data could only take values that were nonnegative integers, and for scRNA-seq data, the most commonly used normal distribution was not reasonable. Certainly, the zero-inflated negative binomial distribution has proven to be a good model for describing scRNA-seq data and serves as the basis for some outstanding models. With the presence of dropout events, most genes have bimodal expression patterns in similar cells. We adapted the mixture model used in scImpute [<xref rid="bib21" ref-type="bibr">21</xref>]. The similar mixture models have been shown to effectively capture the bimodal features of single-cell gene expression data [<xref rid="bib32" ref-type="bibr">32</xref>, <xref rid="bib56" ref-type="bibr">56</xref>, <xref rid="bib45" ref-type="bibr">45</xref>], where the Gamma distribution represents the dropout phenomenon, and the Normal distribution is used for indicating actual gene expression. It is important to note that the transformed gene expression levels are no longer integers, so the widely used read counts obeying a negative binomial distribution are not an appropriate choice. For each gene, the proportions and parameters of the two components may be distinctive in different cell types. As a result, we assume that the expression level of each gene <italic toggle="yes">j</italic> is a random variable <inline-formula><tex-math id="TM0028" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Y}_j$\end{document}</tex-math></inline-formula> following a Gamma&#x02013;Normal mixed distribution, with a density function of [<xref rid="bib21" ref-type="bibr">21</xref>]:</p><disp-formula id="equ1">
+<label>(1)</label>
+<tex-math id="TM0029" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{f}_{{Y}_j}\left( y \right) = {{\mathrm{\lambda }}}_j \cdot {\mathrm{Gamma}}\left( {{\mathrm{y}};{{\mathrm{\alpha }}}_j,{{\mathrm{\beta }}}_j} \right) + \left( {1 - {{\mathrm{\lambda }}}_j} \right) \cdot {\mathrm{Normal}}\left( {{\mathrm{y}};{{\mathrm{\mu }}}_j,{{\mathrm{\sigma }}}_j} \right)
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0030" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{\lambda }}}_j$\end{document}</tex-math></inline-formula> is the dropout rate of genes, the <inline-formula><tex-math id="TM0031" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{\alpha }}}_j$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0032" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{\beta }}}_j$\end{document}</tex-math></inline-formula> are the shape and rate parameters in the Gamma distribution, and <inline-formula><tex-math id="TM0033" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{\mu }}}_j$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0034" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{\mathrm{\sigma }}}_j$\end{document}</tex-math></inline-formula> are the mean and standard deviation in the normal distribution, respectively. When a sequencing experiment fails to accurately capture the transcriptional expression of genes, the Gamma distribution models the observed gene expression, while the Normal distribution simulates the actual gene expression level. The intuition behind this mixture model is that if a gene has high expression and low variation in multiple cells, the &#x0201c;zero&#x0201d; count expression is more likely to be affected by dropout events; on the other hand, if a gene has consistently low or moderate expression and high variation, then the zero counts may reflect the true biological significance.</p><p>After a given distribution of the mixture model, the log-likelihood of each gene at all cell expression levels can be calculated as <inline-formula><tex-math id="TM0035" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$l( {{{\mathrm{\lambda }}}_j,{{\mathrm{\alpha }}}_j,{{\mathrm{\beta }}}_j,{{\mathrm{\mu }}}_j,{{\mathrm{\sigma }}}_j} ) = \mathop \sum \limits_{i = 1}^n {\mathrm{log}}{f}_{{Y}_j}( {{y}_{ij};{{\mathrm{\lambda }}}_j,{{\mathrm{\alpha }}}_j,{{\mathrm{\beta }}}_j,{{\mathrm{\mu }}}_j,{{\mathrm{\sigma }}}_j} )$\end{document}</tex-math></inline-formula> [<xref rid="bib56" ref-type="bibr">56</xref>]. The parameters in the model shown in&#x000a0;Equation (<xref rid="equ1" ref-type="disp-formula">1</xref>) are calculated by a neural network, and these estimates are denoted as <inline-formula><tex-math id="TM0036" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${{{\mathrm{\widetilde \lambda }}}_j}, {{{\mathrm{\widetilde \alpha }}}_j}, {{{\mathrm{\widetilde \beta }}}_j}, {{{\mathrm{\widetilde \mu }}}_j}, {{{\mathrm{\widetilde \sigma }}}_j}$\end{document}</tex-math></inline-formula>. We can filter the gene expression values based on the undetected probability of the gene in the cell [<xref rid="bib56" ref-type="bibr">56</xref>], and the dropout rate of gene <italic toggle="yes">j</italic> in cell <italic toggle="yes">i</italic> can be computed as:</p><disp-formula id="equ2">
+<label>(2)</label>
+<tex-math id="TM0037" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{d}_{ij} = \frac{{ {{{\mathrm{\widetilde \lambda }}}_j}{\mathrm{Gamma}}\left( {{Y}_{ij}; {{{\mathrm{\widetilde \alpha }}}_j}, {{{\mathrm{\widetilde \beta }}}_j}} \right)}}{{ {{{\mathrm{\widetilde \lambda }}}_j} \cdot {\mathrm{Gamma}}\left( {{Y}_{ij}; {{{\mathrm{\widetilde \alpha }}}_j}, {{{\mathrm{\widetilde \beta }}}_j}} \right) + \left( {1 - {{{\mathrm{\widetilde \lambda }}}_j}} \right) \cdot {\mathrm{Normal}}\left( {{Y}_{ij}; {{{\mathrm{\widetilde \mu }}}_j}, {{{\mathrm{\widetilde \sigma }}}_j}} \right)}}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>Because <inline-formula><tex-math id="TM0038" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\ {d}_{ij} \in ( {0,1} )$\end{document}</tex-math></inline-formula>, a smaller <inline-formula><tex-math id="TM0039" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${d}_{ij}$\end{document}</tex-math></inline-formula> indicates that the observed gene expression <inline-formula><tex-math id="TM0040" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Y}_{ij}$\end{document}</tex-math></inline-formula> has higher confidence. We set the threshold <italic toggle="yes">t</italic> by which the dropout rate <inline-formula><tex-math id="TM0041" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${d}_{ij} &#x0003c; t$\end{document}</tex-math></inline-formula> is considered an accurate measure with high confidence, and when the dropout rate <inline-formula><tex-math id="TM0042" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${d}_{ij} \ge t$\end{document}</tex-math></inline-formula>, then gene expression <inline-formula><tex-math id="TM0043" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+${Y}_{ij}$\end{document}</tex-math></inline-formula> is considered a dropout value.</p></sec><sec id="sec3-5"><title>Imputation</title><p>To impute the dropout values accurately, we needed to borrow expression data of gene <italic toggle="yes">j</italic> in other similar cells that were not affected by dropout to fill in. Specifically, on the basis of the above obtained cell-topic mixture <inline-formula><tex-math id="TM0044" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\theta $\end{document}</tex-math></inline-formula>, the essence of which was also the dimensionality reduction of scRNA-seq data while effectively reducing the impact of most dropouts in the data, we calculated the similarity matrix of cells, where each element means how similar the cell is to other cells. The degree of similarity of cell <italic toggle="yes">i</italic> and other cells is calculated as follows:</p><disp-formula>
+<tex-math id="TM0045" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{Z}_{ii^{\prime}} = min\sqrt {\mathop \sum \limits_{i^{\prime} = 1,i = 1}^{I,I} {{\left( {{\theta }_i - {\theta }_{i^{\prime}}} \right)}}^2} {\mathrm{\ }}\left( {i^{\prime},i = 1,2,3 \ldots I} \right)
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <italic toggle="yes">Z</italic> indicates the degree of similarity between cell <italic toggle="yes">i</italic> and cell <inline-formula><tex-math id="TM0046" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$i^{\prime}$\end{document}</tex-math></inline-formula>. A larger value indicates that two cells are less likely to belong to the same type of cell and less similar, and a smaller value indicates greater similarity (excluding the degree of similarity with itself, i.e., 0 value). In compliance with the similarity between cells, we can borrow the same nondropout gene expression data from similar cell <inline-formula><tex-math id="TM0047" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$i^{\prime}$\end{document}</tex-math></inline-formula> of cell <italic toggle="yes">i</italic> for the imputation of dropout genes in cell <italic toggle="yes">i</italic>.</p><disp-formula>
+<tex-math id="TM0048" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+{\mathop{X}^{\smallsmile}}_{ij} = {X}_{i^{\prime} j},({d}_{i^{\prime} j} &#x0003c; t)
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula></sec><sec id="sec3-6"><title>Imputation evaluation</title><p>To benchmark the imputation performance, we compared several scRNA-seq data imputation tools that were identical to scNTImpute. We utilized the original dataset for the evaluation experiments. After the imputation of the original data was completed, 4 leading evaluation indicators, ARI, RI, NMI, and MI, were utilized for the evaluation. ARI is interpreted as</p><disp-formula>
+<tex-math id="TM0049" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+ARI = \frac{{RI - E\left[ {RI} \right]}}{{MAX\left( {RI} \right) - E\left[ {RI} \right]}}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>RI is interpreted as</p><disp-formula>
+<tex-math id="TM0050" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+RI = \frac{{a + b}}{{C_n^2}}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <italic toggle="yes">a</italic> indicates the correct number of markers of cells that should have been of the identical type and after clustering were also in the same type, <italic toggle="yes">b</italic> represents the correct number of markers of cells that were not of the same type and did not cluster to the identical type after clustering, and <inline-formula><tex-math id="TM0051" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$C_n^2$\end{document}</tex-math></inline-formula> represents the total number of possible pairs. <inline-formula><tex-math id="TM0052" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$E[ {RI} ]$\end{document}</tex-math></inline-formula> is the expected RI of the random markers [<xref rid="bib45" ref-type="bibr">45</xref>].</p><p>NMI is explained as</p><disp-formula>
+<tex-math id="TM0053" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+NMI\left( {Q,R} \right) = \frac{{2MI\left( {Q,R} \right)}}{{H\left( Q \right) - H\left( R \right)}}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>MI is interpreted as</p><disp-formula>
+<tex-math id="TM0054" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+MI\left( {Q,R} \right) = \mathop \sum \limits_{i = 1}^{\left| Q \right|} \mathop \sum \limits_{j = 1}^{\left| R \right|} P\left( {i,j} \right)\log \left( {\frac{{P\left( {i,j} \right)}}{{P\left( i \right)P\left( j \right)}}} \right)
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>In the above equation, <italic toggle="yes">Q</italic> means the original category of each cell, while <italic toggle="yes">R</italic> indicates the category to which the cells belong after clustering. <inline-formula><tex-math id="TM0055" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$H( Q )$\end{document}</tex-math></inline-formula> expresses the entropy of <italic toggle="yes">Q</italic>.</p></sec></sec><sec id="sec4"><title>Availability of Source Code and Requirements</title><p>Project name: scNTImpute</p><p>Project homepage: <ext-link xlink:href="https://github.com/qiyueyang-7/scNTImpute.git" ext-link-type="uri">https://github.com/qiyueyang-7/scNTImpute.git</ext-link></p><p>Research Resource Identifier (#RRID): SCR_024395</p><p>BiotoolsID: scNTImpute</p><p>Operating system(s): Platform independent</p><p>Programming language: Python</p><p>Other requirements: conda, Python 3.7, numpy 1.21, pandas 1.3</p><p>License: MIT License</p></sec><sec id="sec6"><title>Abbreviations</title><p>AE: autoencoder; AMI: adjusted mutual information; ARI: adjusted Rand index; CS: cosine similarity; DCA: deep count autoencoder; ELBO: evidence lower bound; FMS: Fowlkes&#x02013;Mallows score; GAN: generative adversarial network; HP: human pancreatic islet; KL: Kullback&#x02013;Leibler; MI: mutual information; MP: mouse pancreatic islet; NMI: normalized mutual information; RI: Rand index; RNA-seq: RNA sequencing; scRNA-seq: single-cell RNA sequencing; VAE: variational autoencoder.</p></sec><sec id="sec8"><title>Authors&#x02019; Contributions</title><p>Y.Q. and L.L. conceived and developed the study. Y.Q. completed the scNTImput workflow and the writing of the main manuscript text. S.H. and L.T. reviewed and contributed to all versions of the manuscript text. All authors read and approved the final manuscript.</p></sec><sec sec-type="COI-statement" id="sec7"><title>Competing Interests</title><p>The authors declare that there no competitive interests.</p></sec><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material id="sup1" position="float" content-type="local-data"><label>giad098_GIGA-D-23-00090_Original_Submission</label><media xlink:href="giad098_giga-d-23-00090_original_submission.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup2" position="float" content-type="local-data"><label>giad098_GIGA-D-23-00090_Revision_1</label><media xlink:href="giad098_giga-d-23-00090_revision_1.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup3" position="float" content-type="local-data"><label>giad098_Response_to_Reviewer_Comments_Original_Submission</label><media xlink:href="giad098_response_to_reviewer_comments_original_submission.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup4" position="float" content-type="local-data"><label>giad098_Reviewer_1_Report_Original_Submission</label><caption><p>Ka-Chun Wong -- 6/26/2023 Reviewed</p></caption><media xlink:href="giad098_reviewer_1_report_original_submission.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup5" position="float" content-type="local-data"><label>giad098_Reviewer_1_Report_Revision_1</label><caption><p>Ka-Chun Wong -- 9/8/2023 Reviewed</p></caption><media xlink:href="giad098_reviewer_1_report_revision_1.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup6" position="float" content-type="local-data"><label>giad098_Reviewer_2_Report_Original_Submission</label><caption><p>Xuejun Liu -- 7/9/2023 Reviewed</p></caption><media xlink:href="giad098_reviewer_2_report_original_submission.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material id="sup7" position="float" content-type="local-data"><label>giad098_Reviewer_2_Report_Revision_1</label><caption><p>Xuejun Liu -- 9/11/2023 Reviewed</p></caption><media xlink:href="giad098_reviewer_2_report_revision_1.pdf"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="ack1"><title>Acknowledgement</title><p>This work was supported by the Applied Basic Research Project in Yunnan Province (No. 202201AT070042), the National Natural Science Foundation of China (No. 61862067), the project funding of the "Support Program for Xingdian Talents", and the NSFC&#x02013;Yunnan Union Key Grant (No. U1902201).</p></ack><sec sec-type="data-availability" id="sec5"><title>Data Availability</title><p>The scRNA-seq data used in this article are all publicly available. All data are available at GEO, with human brain data [<xref rid="bib33" ref-type="bibr">33</xref>] access number: GSE67835; Chung et al. dataset [<xref rid="bib34" ref-type="bibr">34</xref>] accession code: GSE75688; Hrvatin dataset [<xref rid="bib3" ref-type="bibr">3</xref>] GEO accession code: GSE59739; Romanov et al. dataset [<xref rid="bib50" ref-type="bibr">50</xref>] GEO accession code: GSE74672; Deng et al. dataset [<xref rid="bib48" ref-type="bibr">48</xref>] GEO accession code: GSE45719; mouse pancreatic islet data [<xref rid="bib32" ref-type="bibr">32</xref>] GEO accession code: GSE84133. Human pancreatic islet data [<xref rid="bib49" ref-type="bibr">49</xref>] are available at GEO or EMBL-EBI database with accession codes GSE81076, GSE85241, GSE86469, E-MTAB-5061, and GSE84133. All additional supporting data are available in the <italic toggle="yes">GigaScience</italic> repository, GigaDB [<xref rid="bib58" ref-type="bibr">58</xref>].</p></sec><ref-list id="ref1"><title>References</title><ref id="bib1"><label>1.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wang</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name><surname>Gerstein</surname><given-names>M</given-names></string-name>, <string-name><surname>Snyder</surname><given-names>M</given-names></string-name></person-group>. <article-title>RNA-seq: a revolutionary tool for transcriptomics</article-title>. <source>Nat Rev Genet</source>. <year>2009</year>;<volume>10</volume>(<issue>1</issue>):<fpage>57</fpage>&#x02013;<lpage>63</lpage>. <pub-id pub-id-type="doi">10.1038/nrg2484</pub-id>.<pub-id pub-id-type="pmid">19015660</pub-id></mixed-citation></ref><ref id="bib2"><label>2.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>McDavid</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Finak</surname><given-names>G</given-names></string-name>, <string-name><surname>Chattopadyay</surname><given-names>PK</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Data exploration, quality control and testing in single-cell qPCR-based gene expression experiments</article-title>. <source>Bioinformatics</source>. <year>2013</year>;<volume>29</volume>(<issue>4</issue>):<fpage>461</fpage>&#x02013;<lpage>7</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/bts714</pub-id>.<pub-id pub-id-type="pmid">23267174</pub-id></mixed-citation></ref><ref id="bib3"><label>3.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Usoskin</surname>
+<given-names>D</given-names>
+</string-name>, <string-name><surname>Furlan</surname><given-names>A</given-names></string-name>, <string-name><surname>Islam</surname><given-names>S</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Unbiased classification of sensory neuron types by large-scale single-cell RNA sequencing</article-title>. <source>Nat Neurosci</source>. <year>2015</year>;<volume>18</volume>(<issue>1</issue>):<fpage>145</fpage>&#x02013;<lpage>53</lpage>. <pub-id pub-id-type="doi">10.1038/nn.3881</pub-id>.<pub-id pub-id-type="pmid">25420068</pub-id></mixed-citation></ref><ref id="bib4"><label>4.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Villani</surname>
+<given-names>AC</given-names>
+</string-name>, <string-name><surname>Satija</surname><given-names>R</given-names></string-name>, <string-name><surname>Reynolds</surname><given-names>G</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Single-cell RNA-seq reveals new types of human blood dendritic cells, monocytes, and progenitors</article-title>. <source>Science</source>. <year>2017</year>;<volume>356</volume>(<issue>6335</issue>):<fpage>eaah4573</fpage>. <comment><ext-link xlink:href="https://doi.org/doi:10.1126/science.aah4573" ext-link-type="uri">https://doi.org/10.1126/science.aah4573</ext-link></comment>.<pub-id pub-id-type="pmid">28428369</pub-id></mixed-citation></ref><ref id="bib5"><label>5.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zeisel</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Mu&#x000f1;oz-Manchado</surname><given-names>AB</given-names></string-name>, <string-name><surname>Codeluppi</surname><given-names>S</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Cell types in the mouse cortex and hippocampus revealed by single-cell RNA-seq</article-title>. <source>Science</source>. <year>2015</year>;<volume>347</volume>(<issue>6226</issue>):<fpage>1138</fpage>&#x02013;<lpage>42</lpage>. <pub-id pub-id-type="doi">10.1126/science.aaa1934</pub-id>.<pub-id pub-id-type="pmid">25700174</pub-id></mixed-citation></ref><ref id="bib6"><label>6.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Jaitin</surname>
+<given-names>DA</given-names>
+</string-name>, <string-name><surname>Kenigsberg</surname><given-names>E</given-names></string-name>, <string-name><surname>Keren-Shaul</surname><given-names>H</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Massively parallel single-cell RNA-seq for marker-free decomposition of tissues into cell types</article-title>. <source>Science</source>. <year>2014</year>;<volume>343</volume>(<issue>6172</issue>):<fpage>776</fpage>&#x02013;<lpage>9</lpage>. <pub-id pub-id-type="doi">10.1126/science.1247651</pub-id>.<pub-id pub-id-type="pmid">24531970</pub-id></mixed-citation></ref><ref id="bib7"><label>7.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Pollen</surname>
+<given-names>AA</given-names>
+</string-name>, <string-name><surname>Nowakowski</surname><given-names>TJ</given-names></string-name>, <string-name><surname>Shuga</surname><given-names>J</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Low-coverage single-cell mRNA sequencing reveals cellular heterogeneity and activated signaling pathways in developing cerebral cortex</article-title>. <source>Nat Biotechnol</source>. <year>2014</year>;<volume>32</volume>(<issue>10</issue>):<fpage>1053</fpage>&#x02013;<lpage>8</lpage>. <pub-id pub-id-type="doi">10.1038/nbt.2967</pub-id>.<pub-id pub-id-type="pmid">25086649</pub-id></mixed-citation></ref><ref id="bib8"><label>8.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Treutlein</surname>
+<given-names>B</given-names>
+</string-name>, <string-name><surname>Brownfield</surname><given-names>DG</given-names></string-name>, <string-name><surname>Wu</surname><given-names>AR</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Reconstructing lineage hierarchies of the distal lung epithelium using single-cell RNA-seq</article-title>. <source>Nature</source>. <year>2014</year>;<volume>509</volume>(<issue>7500</issue>):<fpage>371</fpage>&#x02013;<lpage>5</lpage>. <pub-id pub-id-type="doi">10.1038/nature13173</pub-id>.<pub-id pub-id-type="pmid">24739965</pub-id></mixed-citation></ref><ref id="bib9"><label>9.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Tirosh</surname>
+<given-names>I</given-names>
+</string-name>, <string-name><surname>Venteicher</surname><given-names>AS</given-names></string-name>, <string-name><surname>Hebert</surname><given-names>C</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Single-cell RNA-seq supports a developmental hierarchy in human oligodendroglioma</article-title>. <source>Nature</source>. <year>2016</year>;<volume>539</volume>(<issue>7628</issue>):<fpage>309</fpage>&#x02013;<lpage>13</lpage>. <pub-id pub-id-type="doi">10.1038/nature20123</pub-id>.<pub-id pub-id-type="pmid">27806376</pub-id></mixed-citation></ref><ref id="bib10"><label>10.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Shalek</surname>
+<given-names>AK</given-names>
+</string-name>, <string-name><surname>Satija</surname><given-names>R</given-names></string-name>, <string-name><surname>Adiconis</surname><given-names>X</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Single-cell transcriptomics reveals bimodality in expression and splicing in immune cells</article-title>. <source>Nature</source>. <year>2013</year>;<volume>498</volume>(<issue>7453</issue>):<fpage>236</fpage>&#x02013;<lpage>40</lpage>. <pub-id pub-id-type="doi">10.1038/nature12172</pub-id>.<pub-id pub-id-type="pmid">23685454</pub-id></mixed-citation></ref><ref id="bib11"><label>11.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Tang</surname>
+<given-names>F</given-names>
+</string-name>, <string-name><surname>Barbacioru</surname><given-names>C</given-names></string-name>, <string-name><surname>Bao</surname><given-names>S</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Tracing the derivation of embryonic stem cells from the inner cell mass by single-cell RNA-seq analysis</article-title>. <source>Cell Stem Cell</source>. <year>2010</year>;<volume>6</volume>(<issue>5</issue>):<fpage>468</fpage>&#x02013;<lpage>78</lpage>. <pub-id pub-id-type="doi">10.1016/j.stem.2010.03.015</pub-id>.<pub-id pub-id-type="pmid">20452321</pub-id></mixed-citation></ref><ref id="bib12"><label>12.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Petropoulos</surname>
+<given-names>S</given-names>
+</string-name>, <string-name><surname>Edsg&#x000e4;rd</surname><given-names>D</given-names></string-name>, <string-name><surname>Reinius</surname><given-names>B</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Single-cell RNA-seq reveals lineage and X chromosome dynamics in human preimplantation embryos</article-title>. <source>Cell</source>. <year>2016</year>;<volume>167</volume>(<issue>1</issue>):<fpage>285</fpage>. <pub-id pub-id-type="doi">10.1016/j.cell.2016.08.009</pub-id>.<pub-id pub-id-type="pmid">27662094</pub-id></mixed-citation></ref><ref id="bib13"><label>13.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Kharchenko</surname>
+<given-names>P</given-names>
+</string-name>, <string-name><surname>Silberstein</surname><given-names>L</given-names></string-name>, <string-name><surname>Scadden</surname><given-names>D</given-names></string-name></person-group>. <article-title>Bayesian approach to single-cell differential expressionsis</article-title>. <source>Nat Methods</source>. <year>2014</year>;<volume>11</volume>(<issue>7</issue>):<fpage>740</fpage>&#x02013;<lpage>2</lpage>. <pub-id pub-id-type="doi">10.1038/nmeth.2967</pub-id>.<pub-id pub-id-type="pmid">24836921</pub-id></mixed-citation></ref><ref id="bib14"><label>14.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Li</surname>
+<given-names>WV</given-names>
+</string-name>, <string-name><surname>Li</surname><given-names>JJ</given-names></string-name></person-group>. <article-title>A statistical simulator scDesign for rational scRNA-seq experimental design</article-title>. <source>Bioinformatics</source>. <year>2019</year>;<volume>35</volume>(<issue>14</issue>):<fpage>i41</fpage>&#x02013;<lpage>50</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btz321</pub-id>.<pub-id pub-id-type="pmid">31510652</pub-id></mixed-citation></ref><ref id="bib15"><label>15.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Dijk</surname>
+<given-names>DV</given-names>
+</string-name>, <string-name><surname>Sharma</surname><given-names>R</given-names></string-name>, <string-name><surname>Nainys</surname><given-names>J</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Recovering gene interactions from single-cell data using data diffusion</article-title>. <source>Cell</source>. <year>2018</year>;<volume>174</volume>(<issue>3</issue>):<fpage>716</fpage>&#x02013;<lpage>729.e27</lpage>. <pub-id pub-id-type="doi">10.1016/j.cell.2018.05.061</pub-id>.<pub-id pub-id-type="pmid">29961576</pub-id></mixed-citation></ref><ref id="bib16"><label>16.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Vu</surname>
+<given-names>TN</given-names>
+</string-name>, <string-name><surname>Wills</surname><given-names>QF</given-names></string-name>, <string-name><surname>Kalari</surname><given-names>KR</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Beta-Poisson model for single-cell RNA-seq data analyses</article-title>. <source>Bioinformatics</source>. <year>2016</year>;<volume>32</volume>(<issue>14</issue>):<fpage>2128</fpage>&#x02013;<lpage>35</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btw202</pub-id>.<pub-id pub-id-type="pmid">27153638</pub-id></mixed-citation></ref><ref id="bib17"><label>17.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Backenroth</surname>
+<given-names>D</given-names>
+</string-name>, <string-name><surname>He</surname><given-names>Z</given-names></string-name>, <string-name><surname>Kiryluk</surname><given-names>K</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>FUN-LDA: a latent dirichlet allocation model for predicting tissue-specific functional effects of noncoding variation: methods and applications</article-title>. <source>Am Hum Genet</source>. <year>2018</year>;<volume>102</volume>(<issue>5</issue>):<fpage>920</fpage>&#x02013;<lpage>42</lpage>. <pub-id pub-id-type="doi">10.1016/j.ajhg.2018.03.026</pub-id>.</mixed-citation></ref><ref id="bib18"><label>18.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhang</surname>
+<given-names>L</given-names>
+</string-name>, <string-name><surname>Zhang</surname><given-names>S</given-names></string-name></person-group>. <article-title>Comparison of computational methods for imputing single-cell RNA-sequencing data</article-title>. <source>IEEE/ACM Trans Comput Biol Bioinf</source>. <year>2020</year>;<volume>17</volume>(<issue>2</issue>):<fpage>376</fpage>&#x02013;<lpage>389</lpage>. <pub-id pub-id-type="doi">10.1109/TCBB.2018.2848633</pub-id>.</mixed-citation></ref><ref id="bib19"><label>19.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wu</surname>
+<given-names>X</given-names>
+</string-name>, <string-name><surname>Zhou</surname><given-names>Y</given-names></string-name></person-group>. <article-title>GE-impute: graph embedding-based imputation for single-cell RNA-seq data</article-title>. <source>Briefings Bioinf</source>. <year>2022</year>;<volume>23</volume>(<issue>5</issue>):<fpage>bbac313</fpage>. <pub-id pub-id-type="doi">10.1093/bib/bbac313</pub-id>.</mixed-citation></ref><ref id="bib20"><label>20.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wagner</surname>
+<given-names>F</given-names>
+</string-name>, <string-name><surname>Yan</surname><given-names>Y</given-names></string-name>, <string-name><surname>Yanai</surname><given-names>I</given-names></string-name></person-group>. <article-title>K-nearest neighbor smoothing for high-through put single-cell RNA-seq data</article-title>. <comment>bioRxiv</comment>. <year>2017</year>. <pub-id pub-id-type="doi">10.1101/217737</pub-id>.</mixed-citation></ref><ref id="bib21"><label>21.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Li</surname>
+<given-names>WV</given-names>
+</string-name>, <string-name><surname>Li</surname><given-names>JJ</given-names></string-name></person-group>. <article-title>An accurate and robust imputation method scImpute for single-cell RNA-seq data</article-title>. <source>Nat Commun</source>. <year>2018</year>;<volume>9</volume>(<issue>1</issue>):<fpage>997</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-018-03405-7</pub-id>.<pub-id pub-id-type="pmid">29520097</pub-id></mixed-citation></ref><ref id="bib22"><label>22.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Huang</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Wang</surname><given-names>J</given-names></string-name>, <string-name><surname>Torre</surname><given-names>E</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>SAVER: gene expression recovery for single-cell RNA sequencing</article-title>. <source>Nat Methods</source>. <year>2018</year>;<volume>15</volume>(<issue>7</issue>):<fpage>539</fpage>&#x02013;<lpage>542</lpage>. <pub-id pub-id-type="doi">10.1038/s41592-018-0033-z</pub-id>.<pub-id pub-id-type="pmid">29941873</pub-id></mixed-citation></ref><ref id="bib23"><label>23.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Huang</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Ye</surname><given-names>X</given-names></string-name>, <string-name><surname>Li</surname><given-names>H</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Missing value imputation with low-rank matrix completion in single-cell RNA-seq data by considering cell heterogeneity</article-title>. <source>Front Genet</source>. <year>2022</year>;<volume>13</volume>:<fpage>952649</fpage>. <pub-id pub-id-type="doi">10.3389/fgene.2022.952649</pub-id>.<pub-id pub-id-type="pmid">35910201</pub-id></mixed-citation></ref><ref id="bib24"><label>24.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhang</surname>
+<given-names>L</given-names>
+</string-name>, <string-name><surname>Zhang</surname><given-names>S</given-names></string-name></person-group>. <article-title>Imputing single-cell RNA-seq data by considering cell heterogeneity and prior expression of dropouts</article-title>. <source>J Mol Cell Biol</source>. <year>2021</year>;<volume>13</volume>(<issue>1</issue>):<fpage>2940</fpage>. <pub-id pub-id-type="doi">10.1093/jmcb/mjaa052</pub-id>.</mixed-citation></ref><ref id="bib25"><label>25.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Eraslan</surname>
+<given-names>G</given-names>
+</string-name>, <string-name><surname>Simon</surname><given-names>LM</given-names></string-name>, <string-name><surname>Mircea</surname><given-names>M</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Single-cell RNA-seq denoising using a deep count autoencoder</article-title>. <source>Nat Commun</source>. <year>2019</year>;<volume>10</volume>(<issue>1</issue>):<fpage>390</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-018-07931-2</pub-id>.<pub-id pub-id-type="pmid">30674886</pub-id></mixed-citation></ref><ref id="bib26"><label>26.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Arisdakessian</surname>
+<given-names>C</given-names>
+</string-name>, <string-name><surname>Poirion</surname><given-names>O</given-names></string-name>, <string-name><surname>Yunits</surname><given-names>B</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>DeepImpute: an accurate, fast, and scalable deep neural network method to impute single-cell RNA-seq data</article-title>. <source>Genome Biol</source>. <year>2019</year>;<volume>20</volume>(<issue>1</issue>):<fpage>1</fpage>&#x02013;<lpage>14</lpage>. <pub-id pub-id-type="doi">10.1186/s13059-019-1837-6</pub-id>.<pub-id pub-id-type="pmid">30606230</pub-id></mixed-citation></ref><ref id="bib27"><label>27.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Xu</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Zhang</surname><given-names>Z</given-names></string-name>, <string-name><surname>You</surname><given-names>L</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>scIGANs: single-cell RNA-seq imputation using generative adversarial networks</article-title>. <source>Nucleic Acids Res</source>. <year>2020</year>;<volume>48</volume>(<issue>15</issue>):<fpage>e85</fpage>&#x02013;<lpage>e85</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkaa506</pub-id>.<pub-id pub-id-type="pmid">32588900</pub-id></mixed-citation></ref><ref id="bib28"><label>28.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Tian</surname>
+<given-names>T</given-names>
+</string-name>, <string-name><surname>Min</surname><given-names>MR</given-names></string-name>, <string-name><surname>Wei</surname><given-names>Z</given-names></string-name></person-group>. <article-title>Model-based autoencoders for imputing discrete single-cell RNA-seq data</article-title>. <source>Methods</source>. <year>2021</year>;<volume>192</volume>:<fpage>112</fpage>&#x02013;<lpage>119</lpage>. <pub-id pub-id-type="doi">10.1016/j.ymeth.2020.09.010</pub-id>.<pub-id pub-id-type="pmid">32971193</pub-id></mixed-citation></ref><ref id="bib29"><label>29.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lu</surname>
+<given-names>F</given-names>
+</string-name>, <string-name><surname>Lin</surname><given-names>Y</given-names></string-name>, <string-name><surname>Yuan</surname><given-names>C</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>EnTSSR: a weighted ensemble learning method to impute single-cell RNA sequencing data</article-title>. <source>IEEE/ACM Trans Comput Biol Bioinform</source>. <year>2021</year>;<volume>18</volume>(<issue>6</issue>):<fpage>2781</fpage>&#x02013;<lpage>7</lpage>. <pub-id pub-id-type="doi">10.1109/TCBB.2021.3110850</pub-id>.<pub-id pub-id-type="pmid">34495837</pub-id></mixed-citation></ref><ref id="bib30"><label>30.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhu</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Lai</surname><given-names>Y</given-names></string-name></person-group>. <article-title>Improvements achieved by multiple imputation for single-cell RNA-seq data in clustering analysis and differential expression analysis</article-title>. <source>J Comput Biol</source>. <year>2022</year>;<volume>29</volume>(<issue>7</issue>):<fpage>634</fpage>&#x02013;<lpage>49</lpage>. <pub-id pub-id-type="doi">10.1089/cmb.2021.0597</pub-id>.<pub-id pub-id-type="pmid">35575729</pub-id></mixed-citation></ref><ref id="bib31"><label>31.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhao</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Cai</surname><given-names>H</given-names></string-name>, <string-name><surname>Zhang</surname><given-names>Z</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Learning interpretable cellular and gene signature embeddings from single-cell transcriptomic data</article-title>. <source>Nat Commun</source>. <year>2021</year>;<volume>12</volume>(<issue>1</issue>):<fpage>5261</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-021-25534-2</pub-id>.<pub-id pub-id-type="pmid">34489404</pub-id></mixed-citation></ref><ref id="bib32"><label>32.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Baron</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Veres</surname><given-names>A</given-names></string-name>, <string-name><surname>Wolock</surname><given-names>S</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>A single-cell transcriptomic map of the human and mouse pancreas reveals inter- and intra-cell population structure</article-title>. <source>Cell Syst</source>. <year>2016</year>;3(<issue>4</issue>):<fpage>346</fpage>&#x02013;<lpage>360.e4</lpage>. <pub-id pub-id-type="doi">10.1016/j.cels.2016.08.011</pub-id>.<pub-id pub-id-type="pmid">27667365</pub-id></mixed-citation></ref><ref id="bib33"><label>33.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Darmanis</surname>
+<given-names>S</given-names>
+</string-name>, <string-name><surname>Sloan</surname><given-names>SA</given-names></string-name>, <string-name><surname>Zhang</surname><given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>A survey of human brain transcriptome diversity at the single cell level</article-title>. <source>Proc Natl Acad Sci</source>. <year>2015</year>;<volume>112</volume>(<issue>23</issue>):<fpage>7285</fpage>&#x02013;<lpage>90</lpage>. <pub-id pub-id-type="doi">10.1073/pnas.1507125112</pub-id>.<pub-id pub-id-type="pmid">26060301</pub-id></mixed-citation></ref><ref id="bib34"><label>34.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Chung</surname>
+<given-names>W</given-names>
+</string-name>, <string-name><surname>Eum</surname><given-names>HH</given-names></string-name>, <string-name><surname>Lee</surname><given-names>HO</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Single-cell RNA-seq enables comprehensive tumour and immune cell profiling in primary breast cancer</article-title>. <source>Nat Commun</source>. <year>2017</year>;<volume>8</volume>(<issue>1</issue>):<fpage>15081</fpage>. <pub-id pub-id-type="doi">10.1038/ncomms15081</pub-id>.<pub-id pub-id-type="pmid">28474673</pub-id></mixed-citation></ref><ref id="bib35"><label>35.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Huang</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name><surname>Wang</surname><given-names>J</given-names></string-name>, <string-name><surname>Lu</surname><given-names>X</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>scGGAN: single-cell RNA-seq imputation by graph-based generative adversarial network</article-title>. <source>Briefings Bioinf</source>. <year>2023</year>;<volume>24</volume>(<issue>2</issue>):<fpage>bbad040</fpage>. <pub-id pub-id-type="doi">10.1093/bib/bbad040</pub-id>.</mixed-citation></ref><ref id="bib36"><label>36.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Peng</surname>
+<given-names>T</given-names>
+</string-name>, <string-name><surname>Zhu</surname><given-names>Q</given-names></string-name>, <string-name><surname>Yin</surname><given-names>P</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>SCRABBLE: single-cell RNA-seq imputation constrained by bulk RNA-seq data</article-title>. <source>Genome Biol</source>. <year>2019</year>;<volume>20</volume>(<issue>1</issue>):<fpage>1</fpage>&#x02013;<lpage>12</lpage>. <pub-id pub-id-type="doi">10.1186/s13059-019-1681-8</pub-id>.<pub-id pub-id-type="pmid">30606230</pub-id></mixed-citation></ref><ref id="bib37"><label>37.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Dijk</surname>
+<given-names>DV</given-names>
+</string-name>, <string-name><surname>Nainys</surname><given-names>J</given-names></string-name>, <string-name><surname>Sharma</surname><given-names>R</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Recovering gene interactions from single-cell data using data diffusion</article-title>. <source>Cell</source>. <year>2018</year>;<volume>174</volume>(<issue>3</issue>):<fpage>716</fpage>&#x02013;<lpage>729.e27</lpage>. <pub-id pub-id-type="doi">10.1016/j.cell.2018.05.061</pub-id>.<pub-id pub-id-type="pmid">29961576</pub-id></mixed-citation></ref><ref id="bib38"><label>38.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Talwar</surname>
+<given-names>D</given-names>
+</string-name>, <string-name><surname>Mongia</surname><given-names>A</given-names></string-name>, <string-name><surname>Sengupta</surname><given-names>D</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>AutoImpute: autoencoder based imputation of single-cell RNA-seq data</article-title>. <source>Sci Rep</source>. <year>2018</year>;<volume>8</volume>(<issue>1</issue>):<fpage>16329</fpage>. <pub-id pub-id-type="doi">10.1038/s41598-018-34688-x</pub-id>.<pub-id pub-id-type="pmid">30397240</pub-id></mixed-citation></ref><ref id="bib39"><label>39.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Gong</surname>
+<given-names>W</given-names>
+</string-name>, <string-name><surname>Kwak</surname><given-names>IY</given-names></string-name>, <string-name><surname>Pota</surname><given-names>P</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>DrImpute: imputing dropout events in single cell RNA sequencing data</article-title>. <source>BMC Bioinf</source>. <year>2018</year>;<volume>19</volume>:<fpage>1</fpage>&#x02013;<lpage>10</lpage>. <pub-id pub-id-type="doi">10.1186/s12859-018-2226-y</pub-id>.</mixed-citation></ref><ref id="bib40"><label>40.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wagner</surname>
+<given-names>F</given-names>
+</string-name>, <string-name><surname>Barkley</surname><given-names>D</given-names></string-name>, <string-name><surname>Yanai</surname><given-names>I</given-names></string-name></person-group>. <article-title>Accurate denoising of single-cell RNA-seq data using unbiased principal component analysis</article-title>. <comment>bioRxiv</comment>. <year>2019.</year>; <pub-id pub-id-type="doi">10.1101/655365</pub-id>.</mixed-citation></ref><ref id="bib41"><label>41.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Gunady</surname>
+<given-names>MK</given-names>
+</string-name>, <string-name><surname>Kancherla</surname><given-names>J</given-names></string-name>, <string-name><surname>Bravo</surname><given-names>HC</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>scGAIN: single cell RNA-seq data imputation using generative adversarial networks</article-title>. <comment>bioRxiv</comment>. <year>2019</year>. <pub-id pub-id-type="doi">10.1101/837302</pub-id>.</mixed-citation></ref><ref id="bib42"><label>42.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Chen</surname>
+<given-names>M</given-names>
+</string-name>, <string-name><surname>Zhou</surname><given-names>X</given-names></string-name></person-group>. <article-title>VIPER: variability-preserving imputation for accurate gene expression recovery in single-cell RNA sequencing studies</article-title>. <source>Genome Biol</source>. <year>2018</year>;<volume>19</volume>(<issue>1</issue>):<fpage>196</fpage>. <pub-id pub-id-type="doi">10.1186/s13059-018-1575-1</pub-id>.<pub-id pub-id-type="pmid">30419955</pub-id></mixed-citation></ref><ref id="bib43"><label>43.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Traag</surname>
+<given-names>VA</given-names>
+</string-name>, <string-name><surname>Waltman</surname><given-names>L</given-names></string-name>, <string-name><surname>Eck</surname><given-names>NJ</given-names></string-name></person-group>. <article-title>From Louvain to Leiden: guaranteeing well-connected communities</article-title>. <source>Sci Rep</source>. <year>2019</year>;<volume>9</volume>(<issue>1</issue>):<fpage>5233</fpage>. <pub-id pub-id-type="doi">10.1038/s41598-019-41695-z</pub-id>.<pub-id pub-id-type="pmid">30914743</pub-id></mixed-citation></ref><ref id="bib44"><label>44.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhao</surname>
+<given-names>S</given-names>
+</string-name>, <string-name><surname>Zhang</surname><given-names>L</given-names></string-name>, <string-name><surname>Liu</surname><given-names>X</given-names></string-name></person-group>. <article-title>AE-TPGG: a novel autoencoder-based approach for single-cell RNA-seq data imputation and dimensionality reduction</article-title>. <source>Front Comput Sci</source>. <year>2023</year>;<volume>17</volume>(<issue>3</issue>):<fpage>173902</fpage>. <pub-id pub-id-type="doi">10.1007/s11704-022-2011-y</pub-id>.<pub-id pub-id-type="pmid">36320820</pub-id></mixed-citation></ref><ref id="bib45"><label>45.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wang</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Ma</surname><given-names>A</given-names></string-name>, <string-name><surname>Chang</surname><given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>scGNN is a novel graph neural network framework for single-cell RNA-seq analyses</article-title>. <source>Nat Commun</source>. <year>2021</year>;<volume>12</volume>(<issue>1</issue>):<fpage>1882</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-021-22197-x</pub-id>.<pub-id pub-id-type="pmid">33767197</pub-id></mixed-citation></ref><ref id="bib46"><label>46.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Tran</surname>
+<given-names>D</given-names>
+</string-name>, <string-name><surname>Tran</surname><given-names>B</given-names></string-name>, <string-name><surname>Nguyen</surname><given-names>H</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>A novel method for single-cell data imputation using subspace regression</article-title>. <source>Sci Rep</source>. <year>2022</year>;<volume>12</volume>(<issue>1</issue>):<fpage>2697</fpage>. <pub-id pub-id-type="doi">10.1038/s41598-022-06500-4</pub-id>.<pub-id pub-id-type="pmid">35177662</pub-id></mixed-citation></ref><ref id="bib47"><label>47.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Deng</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Bao</surname><given-names>F</given-names></string-name>, <string-name><surname>Dai</surname><given-names>Q</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Scalable analysis of cell-type composition from single-cell transcriptomics using deep recurrent learning</article-title>. <source>Nat Methods</source>. <year>2019</year>;<volume>16</volume>(<issue>4</issue>):<fpage>311</fpage>&#x02013;<lpage>314</lpage>. <pub-id pub-id-type="doi">10.1038/s41592-019-0353-7</pub-id>.<pub-id pub-id-type="pmid">30886411</pub-id></mixed-citation></ref><ref id="bib48"><label>48.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Deng</surname>
+<given-names>Q</given-names>
+</string-name>, <string-name><surname>Ramsk&#x000f6;ld</surname><given-names>D</given-names></string-name>, <string-name><surname>Reinius</surname><given-names>B</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Single-cell RNA-seq reveals dynamic, random monoallelic gene expression in mammalian cells</article-title>. <source>Science</source>. <year>2014</year>;<volume>343</volume>(<issue>6167</issue>):<fpage>193</fpage>&#x02013;<lpage>6</lpage>. <pub-id pub-id-type="doi">10.1126/science.1245316</pub-id>.<pub-id pub-id-type="pmid">24408435</pub-id></mixed-citation></ref><ref id="bib49"><label>49.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Stuart</surname>
+<given-names>T</given-names>
+</string-name>, <string-name><surname>Butler</surname><given-names>A</given-names></string-name>, <string-name><surname>Hoffman</surname><given-names>P</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Comprehensive integration of single-cell data</article-title>. <source>Cell</source>. <year>2019</year>;<volume>177</volume>(<issue>7</issue>):<fpage>1888</fpage>&#x02013;<lpage>1902.e21</lpage>. <pub-id pub-id-type="doi">10.1016/j.cell.2019.05.031</pub-id>.<pub-id pub-id-type="pmid">31178118</pub-id></mixed-citation></ref><ref id="bib50"><label>50.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Romanov</surname>
+<given-names>R</given-names>
+</string-name>, <string-name><surname>Zeisel</surname><given-names>A</given-names></string-name>, <string-name><surname>Bakker</surname><given-names>J</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Molecular interrogation of hypothalamic organization reveals distinct dopamine neuronal subtypes</article-title>. <source>Nat Neurosci</source>. <year>2017</year>;<volume>20</volume>(<issue>2</issue>):<fpage>176</fpage>&#x02013;<lpage>188</lpage>. <pub-id pub-id-type="doi">10.1038/nn.4462</pub-id>.<pub-id pub-id-type="pmid">27991900</pub-id></mixed-citation></ref><ref id="bib51"><label>51.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>&#x0017d;urauskien&#x00117;</surname>
+<given-names>J</given-names>
+</string-name>, <string-name><surname>Yau</surname><given-names>C</given-names></string-name></person-group>. <article-title>pcaReduce: hierarchical clustering of single cell transcriptional profiles</article-title>. <source>BMC Bioinf</source>. <year>2016</year>;<volume>17</volume>:<fpage>1</fpage>&#x02013;<lpage>11</lpage>. <pub-id pub-id-type="doi">10.1186/s12859-016-0984-y</pub-id>.</mixed-citation></ref><ref id="bib52"><label>52.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Kiselev</surname>
+<given-names>VY</given-names>
+</string-name>, <string-name><surname>Kirschner</surname><given-names>K</given-names></string-name>, <string-name><surname>Schaub</surname><given-names>MT</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>SC3: consensus clustering of single-cell RNA-seq data</article-title>. <source>Nat Methods</source>. <year>2017</year>;<volume>14</volume>(<issue>5</issue>):<fpage>483</fpage>&#x02013;<lpage>486</lpage>. <pub-id pub-id-type="doi">10.1038/nmeth.4236</pub-id>.<pub-id pub-id-type="pmid">28346451</pub-id></mixed-citation></ref><ref id="bib53"><label>53.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Maaten</surname>
+<given-names>L</given-names>
+</string-name>, <string-name><surname>Hinton</surname><given-names>G</given-names></string-name></person-group>. <article-title>Visualizing data using t-SNE</article-title>. <source>Journal of machine learning research</source>. <year>2008</year>;<volume>9</volume>(<issue>86</issue>):<fpage>2579</fpage>&#x02013;<lpage>2605</lpage>. <pub-id pub-id-type="doi">10.1038/nrg2484</pub-id>.</mixed-citation></ref><ref id="bib54"><label>54.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lin</surname>
+<given-names>P</given-names>
+</string-name>, <string-name><surname>Troup</surname><given-names>M</given-names></string-name>, <string-name><surname>Ho</surname><given-names>JW</given-names></string-name></person-group>. <article-title>CIDR: ultrafast and accurate clustering through imputation for single-cell RNA-seq data</article-title>. <source>Genome Biol</source>. <year>2017</year>;<volume>18</volume>(<issue>1</issue>):<fpage>59</fpage>. <pub-id pub-id-type="doi">10.1186/s13059-017-1188-0</pub-id>.<pub-id pub-id-type="pmid">28351406</pub-id></mixed-citation></ref><ref id="bib55"><label>55.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Subramanian</surname>
+<given-names>A</given-names>
+</string-name>, <string-name><surname>Tamayo</surname><given-names>P</given-names></string-name>, <string-name><surname>Mootha</surname><given-names>VK</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Gene set enrichment analysis: a knowledge-based approach for interpreting genome-wide expression profiles</article-title>. <source>Proc Natl Acad Sci</source>. <year>2005</year>;<volume>102</volume>(<issue>43</issue>):<fpage>15545</fpage>&#x02013;<lpage>50</lpage>. <pub-id pub-id-type="doi">10.1073/pnas.0506580102</pub-id>.<pub-id pub-id-type="pmid">16199517</pub-id></mixed-citation></ref><ref id="bib56"><label>56.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Li</surname>
+<given-names>WV</given-names>
+</string-name>, <string-name><surname>Li</surname><given-names>Y</given-names></string-name></person-group>. <article-title>scLink: inferring sparse gene co-expression networks from single-cell expression data</article-title>. <source>Genomics Proteomics Bioinformatics</source>. <year>2021</year>;<volume>19</volume>(<issue>3</issue>):<fpage>475</fpage>&#x02013;<lpage>92</lpage>. <pub-id pub-id-type="doi">10.1016/j.gpb.2020.11.006</pub-id>.<pub-id pub-id-type="pmid">34252628</pub-id></mixed-citation></ref><ref id="bib57"><label>57.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Blei</surname>
+<given-names>DM</given-names>
+</string-name>, <string-name><surname>Ng</surname><given-names>AY</given-names></string-name>, <string-name><surname>Jordan</surname><given-names>MI</given-names></string-name></person-group>. <article-title>Latent dirichlet allocation</article-title>. <source>J Mach Learn Res</source>. <year>2003</year>;<volume>3</volume>(<issue>Jan</issue>):<fpage>993</fpage>&#x02013;<lpage>1022</lpage>.</mixed-citation></ref><ref id="bib58"><label>58.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Qi</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name><surname>Han</surname><given-names>S</given-names></string-name>, <string-name><surname>Tang</surname><given-names>L</given-names></string-name>, <etal>et al.</etal></person-group>
+<article-title>Supporting data for &#x0201c;Imputation Methods for Single-Cell RNA-seq Data Using Neural Topic Models.&#x0201d;</article-title>. <source>GigaScience Database</source>. <year>2023</year>. <pub-id pub-id-type="doi">10.5524/102454</pub-id>.</mixed-citation></ref></ref-list></back></article>

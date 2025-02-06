@@ -1,0 +1,2095 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.3 20210610//EN" "JATS-archivearticle1-3-mathml3.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.3" xml:lang="en" article-type="research-article"><?DTDIdentifier.IdentifierValue -//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName JATS-journalpublishing1.dtd?><?SourceDTD.Version 1.2?><?ConverterInfo.XSLTName jats2jats3.xsl?><?ConverterInfo.Version 1?><?properties open_access?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Gigascience</journal-id><journal-id journal-id-type="iso-abbrev">Gigascience</journal-id><journal-id journal-id-type="publisher-id">gigascience</journal-id><journal-title-group><journal-title>GigaScience</journal-title></journal-title-group><issn pub-type="epub">2047-217X</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta>
+<article-meta><article-id pub-id-type="pmcid">11734293</article-id><article-id pub-id-type="pmid">39657158</article-id>
+<article-id pub-id-type="doi">10.1093/gigascience/giae093</article-id><article-id pub-id-type="publisher-id">giae093</article-id><article-categories><subj-group subj-group-type="heading"><subject>Technical Note</subject></subj-group><subj-group subj-group-type="category-taxonomy-collection"><subject>AcademicSubjects/SCI00960</subject><subject>AcademicSubjects/SCI02254</subject></subj-group></article-categories><title-group><article-title>Learning a generalized graph transformer for protein function prediction in dissimilar sequences</article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0009-0000-1637-6764</contrib-id><name><surname>Fu</surname><given-names>Yiwei</given-names></name><aff>
+<institution>School of Mathematical Sciences, Peking University</institution>, <addr-line>Beijing 100871</addr-line>, <country country="CN">China</country></aff><xref rid="afn1" ref-type="author-notes"/></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0001-6142-4358</contrib-id><name><surname>Gu</surname><given-names>Zhonghui</given-names></name><aff>
+<institution>Peking-Tsinghua Center for Life Sciences, Peking University</institution>, <addr-line>Beijing 100871</addr-line>, <country country="CN">China</country></aff><xref rid="afn1" ref-type="author-notes"/></contrib><contrib contrib-type="author"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-7987-3714</contrib-id><name><surname>Luo</surname><given-names>Xiao</given-names></name><aff>
+<institution>Department of Computer Science, University of California</institution>, <addr-line>Los Angeles, CA 90024</addr-line>, <country country="US">USA</country></aff></contrib><contrib contrib-type="author"><name><surname>Guo</surname><given-names>Qirui</given-names></name><aff>
+<institution>Center for Quantitative Biology, Peking University</institution>, <addr-line>Beijing 100871</addr-line>, <country country="CN">China</country></aff></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-8343-7587</contrib-id><name><surname>Lai</surname><given-names>Luhua</given-names></name><!--lhlai@pku.edu.cn--><aff>
+<institution>Peking-Tsinghua Center for Life Sciences, Peking University</institution>, <addr-line>Beijing 100871</addr-line>, <country country="CN">China</country></aff><aff>
+<institution>Center for Quantitative Biology, Peking University</institution>, <addr-line>Beijing 100871</addr-line>, <country country="CN">China</country></aff><xref rid="cor1" ref-type="corresp"/></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-9143-1898</contrib-id><name><surname>Deng</surname><given-names>Minghua</given-names></name><!--dengmh@math.pku.edu.cn--><aff>
+<institution>School of Mathematical Sciences, Peking University</institution>, <addr-line>Beijing 100871</addr-line>, <country country="CN">China</country></aff><aff>
+<institution>Center for Quantitative Biology, Peking University</institution>, <addr-line>Beijing 100871</addr-line>, <country country="CN">China</country></aff><aff>
+<institution>Center for Statistical Science, Peking University</institution>, <addr-line>Beijing 100871</addr-line>, <country country="CN">China</country></aff><xref rid="cor2" ref-type="corresp"/></contrib></contrib-group><author-notes><corresp id="cor1">Correspondence address. Luhua Lai, Center for Quantitative Biology, Peking University, 5 Yiheyuan Road, Beijing 100871, China. E-mail: <email>lhlai@pku.edu.cn</email></corresp><corresp id="cor2">Correspondence address. Minghua Deng, School of Mathematical Sciences, Peking University, 5 Yiheyuan Road, Beijing 100871, China. E-mail: <email>dengmh@math.pku.edu.cn</email></corresp><fn id="afn1"><p>Yiwei Fu and Zhonghui Gu are Contributed equally.</p></fn></author-notes><pub-date pub-type="collection"><year>2024</year></pub-date><pub-date pub-type="epub" iso-8601-date="2024-12-05"><day>05</day><month>12</month><year>2024</year></pub-date><pub-date pub-type="pmc-release"><day>05</day><month>12</month><year>2024</year></pub-date><volume>13</volume><elocation-id>giae093</elocation-id><history><date date-type="received"><day>05</day><month>4</month><year>2024</year></date><date date-type="rev-recd"><day>04</day><month>7</month><year>2024</year></date><date date-type="accepted"><day>25</day><month>10</month><year>2024</year></date></history><permissions><copyright-statement>&#x000a9; The Author(s) 2024. Published by Oxford University Press GigaScience.</copyright-statement><copyright-year>2024</copyright-year><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xlink:href="giae093.pdf"/><abstract><title>Abstract</title><sec id="abs1"><title>Background</title><p>In the face of a growing disparity between high-throughput sequence data and low-throughput experimental studies, the emerging field of deep learning stands as a promising alternative. Generally, many data-driven approaches are capable of facilitating fast and accurate predictions of protein functions. Nevertheless, the inherent statistical nature of deep learning techniques may limit their generalization capabilities when applied to novel nonhomologous proteins that diverge significantly from existing ones.</p></sec><sec id="abs2"><title>Results</title><p>In this work, we herein propose a novel, generalized approach named Graph Adversarial Learning with Alignment (GALA) for protein function prediction. Our GALA method integrates a graph transformer architecture with an attention pooling module to extract embeddings from both protein sequences and structures, facilitating unified learning of protein representations. Particularly noteworthy, GALA incorporates a domain discriminator conditioned on both learnable representations and predicted probabilities, which undergoes adversarial learning to ensure representation invariance across diverse environments. To optimize the model with abundant label information, we generate label embeddings in the hidden space, explicitly aligning them with protein representations. Benchmarked on datasets derived from the PDB database and Swiss-Prot database, our GALA achieves considerable performance comparable to several state-of-the-art methods. Even more, GALA demonstrates wonderful biological interpretability by identifying significant functional residues associated with Gene Ontology terms through class activation mapping.</p></sec><sec id="abs3"><title>Conclusions</title><p>GALA, which leverages adversarial learning and label embedding alignment to acquire domain-invariant protein representations, exhibits outstanding generalizability in function prediction for proteins from previously unseen sequence space. By incorporating the structures predicted by AlphaFold2, GALA demonstrates significant potential for function annotation in newly discovered sequences. A detailed implementation of our GALA is available at <ext-link xlink:href="https://github.com/fuyw-aisw/GALA" ext-link-type="uri">https://github.com/fuyw-aisw/GALA</ext-link>.</p></sec></abstract><kwd-group><kwd>protein function prediction</kwd><kwd>low sequence identity</kwd><kwd>domain adaptation</kwd><kwd>adversarial learning</kwd><kwd>graph transformer</kwd></kwd-group><funding-group><award-group award-type="grant"><funding-source>
+<institution-wrap><institution>National Key Research and Development Program of China</institution><institution-id institution-id-type="DOI">10.13039/501100012166</institution-id></institution-wrap>
+</funding-source><award-id>2021YFF1200902</award-id></award-group><award-group award-type="grant"><funding-source>
+<institution-wrap><institution>National Natural Science Foundation of China</institution><institution-id institution-id-type="DOI">10.13039/501100001809</institution-id></institution-wrap>
+</funding-source><award-id>32270689</award-id></award-group></funding-group><counts><page-count count="12"/></counts></article-meta></front><body><boxed-text position="float"><label>Key Points</label><p>We propose GALA, an innovative and generalized approach for protein function prediction, leveraging adversarial learning and label embedding alignment to ensure representation invariance across diverse environments and dissimilar protein sequences.</p><p>Comprehensive experimental evaluations efficiently demonstrate that GALA outperforms several state-of-the-art methods, showcasing exceptional generalizability and interpretability. This positions GALA as well suited for protein function prediction in dissimilar sequences.</p></boxed-text><sec sec-type="intro" id="sec1"><title>Introduction</title><p>Proteins serve as the primary catalysts, structural components, signaling messengers, and molecular machines in biological tissues, playing a significant role in diverse biological processes [<xref rid="bib1" ref-type="bibr">1</xref>]. Additionally, protein function prediction is a crucial challenge in comprehending the roles of proteins within biological systems, which holds of great significance implications for disease research, pharmaceutical discovery, and various domains of biotechnology and bioinformatics. The advancement of high-throughput sequencing technology has led to the creation of extensive protein sequence databases [<xref rid="bib2" ref-type="bibr">2&#x02013;5</xref>], yet a notable proportion of these proteins lack functional annotations. Experimentally determining the functional properties of protein sequences is not only labor-intensive but also time-consuming [<xref rid="bib6" ref-type="bibr">6</xref>]. In response to this challenge, a wide range of computational frameworks has been proposed for protein function annotation [<xref rid="bib7" ref-type="bibr">7&#x02013;10</xref>].</p><p>Traditional sequence-alignment based methods&#x000a0;[<xref rid="bib11" ref-type="bibr">11</xref>, <xref rid="bib12" ref-type="bibr">12</xref>] are utilized to transfer the functions from similar annotated sequences or functional domains to query sequences, assuming that proteins with similar sequences and structures tend to share congnate functions [<xref rid="bib13" ref-type="bibr">13</xref>]. For instance, Blast [<xref rid="bib11" ref-type="bibr">11</xref>] is a basic method to transfer annotations directly from homologous sequences with labeled protein functions, which cannot make confident prediction on proteins without annotated homologous sequences in the real scenarios.</p><p>Furthermore, machine learning&#x02013;based methods are developed leveraging existing information, such as amino acid sequences [<xref rid="bib8" ref-type="bibr">8</xref>,<xref rid="bib14" ref-type="bibr">14&#x02013;17</xref>], protein&#x02013;protein interactions [<xref rid="bib9" ref-type="bibr">9</xref>,<xref rid="bib18" ref-type="bibr">18&#x02013;22</xref>], evolutionary relations [<xref rid="bib23" ref-type="bibr">23</xref>], experimentally resolved or predicted protein structures [<xref rid="bib10" ref-type="bibr">10</xref>,<xref rid="bib24" ref-type="bibr">24&#x02013;27</xref>], literature [<xref rid="bib28" ref-type="bibr">28</xref>] and aforementioned multisource information combined [<xref rid="bib29" ref-type="bibr">29</xref>]. In general, the amino acid sequences are readily available, whereas other characteristics of proteins, such as protein&#x02013;protein interactions and protein structures, are often confined to a limited subset of proteins. This has facilitated the emergence of a plethora of sequence-based methods. For example, TALE+ [<xref rid="bib16" ref-type="bibr">16</xref>] utilizes protein sequence inputs jointly embedded with hierarchical function labels to enhance protein function prediction without taking structural information into consideration. Furthermore, DeepGOPlus [<xref rid="bib17" ref-type="bibr">17</xref>] combines a deep convolutional neural network (CNN) model with sequence similarity-based predictions to forecast protein functions based solely on sequences. Given that that protein structures have a direct relationship with functions, leveraging protein structures for function prediction may have a natural advantage over these sequence-based methods. Among the notable structure-based methods, DeepFRI [<xref rid="bib10" ref-type="bibr">10</xref>] pioneers the use of protein structures generated by homology modeling for reinforcement, achieving comparable performance with good interpretability. More importantly, I-TASSER-MTD [<xref rid="bib30" ref-type="bibr">30</xref>] is explicitly designed to model the structures and functions of multidomain proteins. Notably, although some protein structures have not been experimentally resolved, tools like AlphaFold2&#x000a0;[<xref rid="bib31" ref-type="bibr">31</xref>], RoseTTAFold&#x000a0;[<xref rid="bib32" ref-type="bibr">32</xref>], and ESMFold&#x000a0;[<xref rid="bib33" ref-type="bibr">33</xref>] have demonstrated remarkable success in protein structure prediction. Furthermore, Struct2GO [<xref rid="bib26" ref-type="bibr">26</xref>] validates the hypothesis that AlphaFold-predicted structures could enhance protein function annotation performance. Additionally, NetGO 3.0 [<xref rid="bib34" ref-type="bibr">34</xref>] has introduces a novel logistic regression (LR)&#x02013;ESM component, building upon NetGO 2.0 [<xref rid="bib29" ref-type="bibr">29</xref>], to improve large-scale functional annotations. HEAL [<xref rid="bib27" ref-type="bibr">27</xref>] utilizes a hierarchical graph transformer integrated with graph contrastive learning to optimize the similarity between different views represented by the graph. However, these deep learning&#x02013;based methods may rely to some extent on homology information of sequences and models, potentially compromising their ability to transfer protein function prediction information from known to unknown dissimilar sequences, resulting in less satisfactory performance. MetaGO [<xref rid="bib35" ref-type="bibr">35</xref>] is proposed to predict Gene Ontology (GO) of nonhomologous proteins by integrating 3 complementary pipelines: global and local structure alignments, sequence and sequence-profile matches, and protein&#x02013;protein interaction (PPI) network mapping. However, the quality of PPI network, including data noise and completeness, may influence the performance of function prediction to some extent. In conclusion, there are promising prospects for the development of highly generalized prediction frameworks that demonstrate superior performance on dissimilar target datasets compared to their source datasets.</p><p>To address the aforementioned challenges and formalize a generalized framework, we propose a novel domain adaptation approach named Graph Adversarial Learning with Alignment (GALA) for protein function prediction. To thoroughly explore protein structure and capture essential residues from diverse environments, we introduce a graph transformer with an attention mechanism for representation learning. The transformer first generates meta-node embeddings to interact with other residues, followed by aggregating node embeddings for better protein representations. To enhance generalizability, we introduce a domain discriminator conditioned on both representations and predictions, which is trained adversarially to minimize the discrepancy between the source and target domains in the embedding space. In addition, to improve the discriminability of protein representations, we generate label embeddings in the latent space and enforce source representations to approach their corresponding label embeddings compared to other embeddings. In this way, we can produce discriminative and domain-invariant protein representations for more accurate function prediction.</p><p>To evaluate the performance of GALA, we compare it with several baseline methods, including Blast [<xref rid="bib11" ref-type="bibr">11</xref>], DeepGOPlus[<xref rid="bib17" ref-type="bibr">17</xref>], TALE+ [<xref rid="bib16" ref-type="bibr">16</xref>], DeepFRI [<xref rid="bib10" ref-type="bibr">10</xref>], Struct2GO [<xref rid="bib26" ref-type="bibr">26</xref>], and HEAL [<xref rid="bib27" ref-type="bibr">27</xref>], across various settings. We retrain these models utilizing our partitioned training sets and then evaluate their performance on the protein test sets in 3 functional aspects: molecular function (MF), biological process (BP), and cellular component (CC). To demonstrate the efficiency of GALA, we derive 2 versions of the model: GALA-PDB and GALA. The former is trained with a subset of proteins, while the latter incorporates AlphaFold2-predicted protein structures into training. Our model has achieved outstanding performance across all 3 aspects. Furthermore, we evaluate their performance on distinct specificity GO terms, and GALA proves to be robust to GO terms with varying specificity, particularly for rare GO terms. On the test set of AlphaFold2-predicted protein structures, GALA significantly outperforms all other methods. What&#x02019;s more, GALA demonstrates exceptional performance on the nonhomologous PDBch test set. Notably, GALA excels on the newly annotated test set, underscoring its robustness over time. More importantly, our method GALA showcases exceptional generalizability and interpretability in identifying critical residues, rending it highly suitable for protein function prediction in dissimilar sequences. Finally, we perform an ablation study on our method GALA to evaluate the contribution of each module.</p></sec><sec sec-type="materials|methods" id="sec2"><title>Methods</title><sec id="sec2-1"><title>Problem definition</title><p>We begin by outlining the problem setting and notations. Previous protein function prediction approaches [<xref rid="bib27" ref-type="bibr">27</xref>] typically assume that both training and test samples originate from the same distribution, a condition that cannot be guaranteed when novel sequences are discovered in the real&#x02013;world scenarios. Toward this end, we study a relatively underexplored but more practical setting of domain-adaptive protein function prediction. Here, we have access to a labeled source domain <inline-formula><tex-math id="TM0001" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {D}^s=\lbrace (G_i^s,y_i^s)\rbrace _{i=1}^{n_s}$\end{document}</tex-math></inline-formula> with <inline-formula><tex-math id="TM0002" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$n_s$\end{document}</tex-math></inline-formula> protein graphs and an unlabeled target domain <inline-formula><tex-math id="TM0003" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {D}^t=\lbrace (G_j^t)\rbrace _{j=1}^{n_t}$\end{document}</tex-math></inline-formula> with <inline-formula><tex-math id="TM0004" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$n_t$\end{document}</tex-math></inline-formula> graphs. <inline-formula><tex-math id="TM0005" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {D}^s$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0006" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {D}^t$\end{document}</tex-math></inline-formula> share the same label space, that is, <inline-formula><tex-math id="TM0007" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {Y}=\lbrace 1,2,\dots ,C\rbrace$\end{document}</tex-math></inline-formula> with different distributions in the data space. Therefore, our objective is to minimize the discrepancy among diverse domains within the embedding space, thus enhancing the model&#x02019;s generalizability and enabling the seamless transfer of protein function label information from the source domain to the target domain.</p><p>To characterize the spatial structure, we represent each protein using a graph <inline-formula><tex-math id="TM0008" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$G = (\mathcal {V}, \mathcal {E})$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math id="TM0009" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {V}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0010" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {E}$\end{document}</tex-math></inline-formula> represent the node and edge sets, respectively. Specifically, the node set <inline-formula><tex-math id="TM0011" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {V}$\end{document}</tex-math></inline-formula> comprises the amino acid residue sequence of a graph with <inline-formula><tex-math id="TM0012" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$|\mathcal {V}|$\end{document}</tex-math></inline-formula> residues. Regarding the edge set, it is derived from the <inline-formula><tex-math id="TM0013" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$C_{\alpha }$\end{document}</tex-math></inline-formula>-<inline-formula><tex-math id="TM0014" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$C_{\alpha }$\end{document}</tex-math></inline-formula> contact map. We define 2 amino acid residues as adjacent if the distance between their <inline-formula><tex-math id="TM0015" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$C_{\alpha }$\end{document}</tex-math></inline-formula> atoms is less than <inline-formula><tex-math id="TM0016" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$10 \, {\mathring{\rm A}}$\end{document}</tex-math></inline-formula>. Subsequently, we add an edge between adjacent residues and construct an adjacency matrix <inline-formula><tex-math id="TM0017" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$A \in \mathcal {R}^{|\mathcal {V}|\times |\mathcal {V}|}$\end{document}</tex-math></inline-formula>. Additionally, the node feature matrix <inline-formula><tex-math id="TM0018" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$X \in \mathcal {R}^{|\mathcal {V}|\times F}$\end{document}</tex-math></inline-formula> is obtained from 2 sources: (i) a one-hot residue encoder encoded by amino acid symbols and (ii) the ESM-1b protein language model [<xref rid="bib36" ref-type="bibr">36</xref>], which produces residue embeddings to capture intrinsic protein sequence knowledge. These embeddings are then concatenated to form the feature matrix.</p></sec><sec id="sec2-2"><title>An overview of the proposed GALA</title><p>In this article, we propose a new approach named GALA for protein function prediction in dissimilar sequences. Our GALA utilizes the graph transformer to acquire graph-level embeddings that capture spatial semantics and essential information about key residues. In addition, a domain classifier is introduced conditioned on both representations and predictions, facilitating the acquisition of domain-invariant features by adversarial learning. Finally, label embedding alignment is adopted to enhance the discriminability of protein representations. For a more comprehensive understanding, please refer to the detailed information provided in Fig.&#x000a0;<xref rid="fig1" ref-type="fig">1</xref>.</p><fig position="float" id="fig1"><label>Figure 1:</label><caption><p>Overview of our proposed method GALA. GALA first adopts a GCN-based encoder to aggregate local niche information and obtain node-level feature embeddings for each graph. Subsequently, a multihead meta-nodes graph transformer is introduced to thoroughly explore protein structure, utilizing attention pooling module to aggregate graph-level representations. To better represent protein graphs, a 2-layer multilayer perception is applied to generate label embeddings in the latent space for labeled source data and then embed graph representations with label information for better function prediction. To enhance the generalizability of GALA, a domain adversarial discriminator is applied to narrow the discrepancy between source and target domains and align various domains with low sequence identity.</p></caption><graphic xlink:href="giae093fig1" position="float"/></fig></sec><sec id="sec2-3"><title>Graph transformer for representation learning</title><p>We first employ a graph convolutional network (GCN) to capture the overall structure of the graph [<xref rid="bib37" ref-type="bibr">37</xref>, <xref rid="bib38" ref-type="bibr">38</xref>]. In this process, the node embeddings are gradually updated by aggregating information from the nodes&#x02019; neighborhood in the last layer. The embeddings are updated with the following layer-wise rule.</p><disp-formula id="equ1">
+<label>(1)</label>
+<tex-math id="TM0019" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+H^{l+1}=\sigma (\tilde{D}^{-\frac{1}{2}}\tilde{A}\tilde{D}^{-\frac{1}{2}}H^{l}W^{l}).
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>Here, <inline-formula><tex-math id="TM0020" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\tilde{A}$\end{document}</tex-math></inline-formula> is the adjacency matrix of protein graph <inline-formula><tex-math id="TM0021" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$G$\end{document}</tex-math></inline-formula> with added self-loops. <inline-formula><tex-math id="TM0022" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\tilde{D}$\end{document}</tex-math></inline-formula> is the degree matrix and <inline-formula><tex-math id="TM0023" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$W^l$\end{document}</tex-math></inline-formula> is a layer-specific weight matrix that can be learnable. Furthermore, <inline-formula><tex-math id="TM0024" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\sigma (\cdot )$\end{document}</tex-math></inline-formula> is an activation function and <inline-formula><tex-math id="TM0025" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$ReLU(\cdot )=max(0,\cdot )$\end{document}</tex-math></inline-formula> is applied during training. <inline-formula><tex-math id="TM0026" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$H^l$\end{document}</tex-math></inline-formula> is the embedding matrix in the <inline-formula><tex-math id="TM0027" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$l$\end{document}</tex-math></inline-formula>th layer and <inline-formula><tex-math id="TM0028" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$H^0=X$\end{document}</tex-math></inline-formula>. After <inline-formula><tex-math id="TM0029" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$N$\end{document}</tex-math></inline-formula> layers, we generate the hidden embedding matrix <inline-formula><tex-math id="TM0030" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$H\triangleq H^N\in \mathcal {R}^{|\mathcal {V}|\times D}$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math id="TM0031" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$D$\end{document}</tex-math></inline-formula> is the dimension of hidden embeddings. After applying the GCN, we generate node-level embeddings for each graph.</p><p>To effectively integrate residue neighborhood information and represent protein structural information, we are required to aggregate node-level representations for each graph. In particular, we introduce <inline-formula><tex-math id="TM0032" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$K$\end{document}</tex-math></inline-formula> meta-nodes, denoted as learnable features <inline-formula><tex-math id="TM0033" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$q_1,\dots ,q_K$\end{document}</tex-math></inline-formula>, to interact with node embeddings and then capture the protein structure information. Inspired by the graph transformer [<xref rid="bib39" ref-type="bibr">39</xref>], we obtain key and value embedding vectors <inline-formula><tex-math id="TM0034" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {K}\in \mathcal {R}^{|\mathcal {V}|\times D}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0035" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {V}\in \mathcal {R}^{|\mathcal {V}|\times D}$\end{document}</tex-math></inline-formula> from another 2 graph convolution networks leveraging the graph structure, and the concatenated meta-node representation <inline-formula><tex-math id="TM0036" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {Q}=(q_1,\dots ,q_k)\in \mathcal {R}^{K\times D}$\end{document}</tex-math></inline-formula> performs as query vector. We calculate the similarity between <inline-formula><tex-math id="TM0037" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {Q}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0038" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {K}$\end{document}</tex-math></inline-formula> to obtain weights, which are then used to weight value vector <inline-formula><tex-math id="TM0039" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {V}$\end{document}</tex-math></inline-formula>, and finally derive the meta-node embedding matrix <inline-formula><tex-math id="TM0040" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\Gamma \in \mathcal {R}^{K\times D}$\end{document}</tex-math></inline-formula> using the following formula:</p><disp-formula id="equ2">
+<label>(2)</label>
+<tex-math id="TM0041" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\Gamma &#x00026;= softmax\left(\frac{\mathcal {Q}\cdot \mathcal {K}^T}{\sqrt{D}}\right)\cdot \mathcal {V},
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><disp-formula id="equ3">
+<label>(3)</label>
+<tex-math id="TM0042" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\mathcal {K}&#x00026;= GCN^1(H,A),\quad \mathcal {V} = GCN^2(H,A).
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>Instead of computing a single attention, we can further utilize multihead attention [<xref rid="bib40" ref-type="bibr">40</xref>]. This involves repeating the above formula for <inline-formula><tex-math id="TM0043" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$h$\end{document}</tex-math></inline-formula> times with distinct parameters, resulting in <inline-formula><tex-math id="TM0044" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$h$\end{document}</tex-math></inline-formula> different representation subspaces, denoted as <inline-formula><tex-math id="TM0045" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\Gamma _1, \dots , \Gamma _h$\end{document}</tex-math></inline-formula>. Subsequently, we concatenate these <inline-formula><tex-math id="TM0046" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$h$\end{document}</tex-math></inline-formula> derived meta-node embeddings and transform them to a multihead meta-node embedding using a fully connected network. In other words,</p><disp-formula id="equ4">
+<label>(4)</label>
+<tex-math id="TM0047" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+U = FC^1(\left[\Gamma _1,\dots ,\Gamma _h\right]),
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0048" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$FC^1$\end{document}</tex-math></inline-formula> denotes a multilayer perceptron (MLP), and thus <inline-formula><tex-math id="TM0049" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$U\in \mathcal {R}^{K\times D}$\end{document}</tex-math></inline-formula> is a multihead meta-nodes embedding matrix, which represents structure information in the protein graph.</p><p>To aggregate local niche information, we adopt an attention module, which summarizes these multihead meta-node representations into a graph-level representation in an adaptive fashion. Specifically, we utilize a query vector <inline-formula><tex-math id="TM0050" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {Q}^P\in \mathcal {R}^D$\end{document}</tex-math></inline-formula> and 2 transformation matrices <inline-formula><tex-math id="TM0051" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {K}^P\in \mathcal {R}^{D\times D}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0052" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\mathcal {V}^P\in \mathcal {R}^{D\times D}$\end{document}</tex-math></inline-formula>, and then the graph representation <inline-formula><tex-math id="TM0053" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$z$\end{document}</tex-math></inline-formula> is derived by the following formula:</p><disp-formula id="equ5">
+<label>(5)</label>
+<tex-math id="TM0054" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+z = softmax\left(\frac{\mathcal {Q}^P\cdot (U\cdot \mathcal {K}^P)^T}{\sqrt{D}}\right)\cdot U\cdot \mathcal {V}^P.
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>Finally, we construct a source classifier <inline-formula><tex-math id="TM0055" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$G$\end{document}</tex-math></inline-formula> to establish a projection between the graph representation <inline-formula><tex-math id="TM0056" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$z$\end{document}</tex-math></inline-formula> and the label <inline-formula><tex-math id="TM0057" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$y$\end{document}</tex-math></inline-formula>, and the predicted positive probability is denoted as <inline-formula><tex-math id="TM0058" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\hat{y} = G(z)$\end{document}</tex-math></inline-formula>. A binary cross-entropy loss objective function for multilabel classification of labeled source data is described as follows:</p><disp-formula id="equ6">
+<label>(6)</label>
+<tex-math id="TM0059" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\mathcal {L}_{sup}=-\frac{1}{M\cdot C}\sum \limits _{c=1}^C\sum \limits _{m=1}^M\left(y_{mc}log(\hat{y}_{mc})+(1-y_{mc})log(1-\hat{y}_{mc})\right).
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <italic toggle="yes">M</italic> is the sample size of a mini-batch, and <italic toggle="yes">C</italic> is the number of classes. What&#x02019;s more, <inline-formula><tex-math id="TM0060" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$y_{mc}$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0061" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\hat{y}_{mc}$\end{document}</tex-math></inline-formula> denote the ground truth and predicted probability for the <inline-formula><tex-math id="TM0062" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$c$\end{document}</tex-math></inline-formula>th function of <inline-formula><tex-math id="TM0063" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$m$\end{document}</tex-math></inline-formula>th sample, respectively.</p></sec><sec id="sec2-4"><title>Adversarial learning for domain alignment</title><p>Previous methods [<xref rid="bib10" ref-type="bibr">10</xref>] typically overlook domain alignment to some extent, assuming that the source and target domains inherently share the same distribution. As a result, annotating novel proteins that differ from known functional proteins poses considerable challenges. The key to addressing this issue lies in minimizing the gap between the source and target domains and subsequently learn domain-invariant features to achieve cross-domain protein functional annotation. In this context, we introduce a domain discriminator to learn domain-invariant graph representations to transfer annotations from the source domain to the target domain.</p><p>Specifically, we leverage adversarial learning [<xref rid="bib41" ref-type="bibr">41</xref>] to obtain domain-invariant graph representations, which can be formulated as an optimization problem involving source classifier <inline-formula><tex-math id="TM0064" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$G$\end{document}</tex-math></inline-formula> and domain discriminator <inline-formula><tex-math id="TM0065" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$D$\end{document}</tex-math></inline-formula> across the source and target domains. We randomly sample a mini-batch of <inline-formula><tex-math id="TM0066" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$M$\end{document}</tex-math></inline-formula> graphs from source and target data, respectively, and a binary cross-entropy loss is employed to distinguish whether a sample is from the source domain or the target domain. Let <inline-formula><tex-math id="TM0067" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$z$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0068" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\hat{y}$\end{document}</tex-math></inline-formula> denote the outputs of feature extractor <inline-formula><tex-math id="TM0069" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F$\end{document}</tex-math></inline-formula> and source classifier <inline-formula><tex-math id="TM0070" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$G$\end{document}</tex-math></inline-formula>, respectively. The adversarial learning loss is formulated as follows:</p><disp-formula id="equ7">
+<label>(7)</label>
+<tex-math id="TM0071" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\mathcal {L}_{adv}=&#x00026;-\frac{1}{M}\sum \limits _{i=1}^Mw(H(\hat{y}_i^s))\log D(T(z_i^s,\hat{y}_i^s)) \\
+&#x00026;-\frac{1}{M}\sum \limits _{j=1}^Mw(H(\hat{y}_j^t))\log \left(1-D(T(z_j^t,\hat{y}_j^t))\right),
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0072" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$z_i^s$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0073" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$z_j^t$\end{document}</tex-math></inline-formula> denote graph embeddings of graph <inline-formula><tex-math id="TM0074" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$i$\end{document}</tex-math></inline-formula> and graph <inline-formula><tex-math id="TM0075" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$j$\end{document}</tex-math></inline-formula> from the source data and target data. Moreover, <inline-formula><tex-math id="TM0076" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\hat{y}_i^s$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0077" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\hat{y}_j^t$\end{document}</tex-math></inline-formula> are predicted probabilities of graphs, and <inline-formula><tex-math id="TM0078" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$D$\end{document}</tex-math></inline-formula> denotes domain discriminator. <inline-formula><tex-math id="TM0079" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$T(z_i^s, \hat{y}_i^s) = \frac{1}{\sqrt{d}}(R_z z_i^s) \odot (R_{\hat{y}} \hat{y}_i^s)$\end{document}</tex-math></inline-formula> represents the explicit randomized multilinear map of dimension <inline-formula><tex-math id="TM0080" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$d$\end{document}</tex-math></inline-formula>. Here, <inline-formula><tex-math id="TM0081" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\odot$\end{document}</tex-math></inline-formula> denotes the element-wise product, and <inline-formula><tex-math id="TM0082" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$R_z$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0083" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$R_{\hat{y}}$\end{document}</tex-math></inline-formula> are random matrices sampled only once and held constant throughout training. Each element <inline-formula><tex-math id="TM0084" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$R_{i,j}$\end{document}</tex-math></inline-formula> follows a symmetric distribution with univariance. The mapping is used to capture multiplicative interactions between feature representation and classifier prediction, which is important to learn domain-invariant features. The entropy-aware weight, denoted as <inline-formula><tex-math id="TM0085" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$w(H(\hat{y}_i^s)) = 1 + e^{-H(\hat{y}_i^s)}$\end{document}</tex-math></inline-formula>, is employed to adjust the weights of samples. This aims to prioritize the discriminator&#x02019;s focus on examples that are easier to transfer, as indicated by more certain predictions. Through adversarial learning, we align source and target domains, which is beneficial for obtaining domain-invariant representations and consequently improving model generalizability.</p></sec><sec id="sec2-5"><title>Label embedding alignment</title><p>Inspired by TALE [<xref rid="bib16" ref-type="bibr">16</xref>], we introduce a label embedding alignment module, which first generates label embeddings for source data in the representation space and then aligns graph and label embeddings in the hidden space, aiding the learning of semantics from labeled source data. Specifically, we employ a 2-layer MLP <inline-formula><tex-math id="TM0086" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$P(\cdot )$\end{document}</tex-math></inline-formula> to project each label representation <inline-formula><tex-math id="TM0087" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$y$\end{document}</tex-math></inline-formula> into a label embedding <inline-formula><tex-math id="TM0088" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$b$\end{document}</tex-math></inline-formula> with the same dimension as <inline-formula><tex-math id="TM0089" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$z$\end{document}</tex-math></inline-formula> (i.e., <inline-formula><tex-math id="TM0090" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$b = P(y)$\end{document}</tex-math></inline-formula>). The subsequent goal is to align <inline-formula><tex-math id="TM0091" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$z$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0092" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$b$\end{document}</tex-math></inline-formula> for each protein, so that label information is contained in graph embedding. Comprehensively, we sample a mini-batch of <inline-formula><tex-math id="TM0093" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$M$\end{document}</tex-math></inline-formula> proteins, each of which produces graph embedding <inline-formula><tex-math id="TM0094" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$z$\end{document}</tex-math></inline-formula> and label embedding <inline-formula><tex-math id="TM0095" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$b$\end{document}</tex-math></inline-formula>, and then the loss function for label embedding alignment is written as follows:</p><disp-formula id="equ8">
+<label>(8)</label>
+<tex-math id="TM0096" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\mathcal {L}_{con}=-\frac{1}{M}\sum \limits _{i=1}^{M} log\frac{e^{z_i^s*b^s_i/\tau }}{\sum \limits _{j\ne i} e^{z_i^s*b^s_j/\tau }},
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0097" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\tau$\end{document}</tex-math></inline-formula> denotes a temperature parameter and <inline-formula><tex-math id="TM0098" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$*$\end{document}</tex-math></inline-formula> calculates the cosine similarity between graph and label embeddings of labeled source data. After the alignment, we can effectively generate protein embeddings that enrich label information.</p></sec><sec id="sec2-6"><title>Total loss and model training</title><p>The final loss function is derived by combining the above losses as</p><disp-formula id="equ9">
+<label>(9)</label>
+<tex-math id="TM0099" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+\mathcal {L} = \mathcal {L}_{sup} + \mathcal {L}_{adv} + \mathcal {L}_{con}.
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>We train the proposed model using Adam [<xref rid="bib42" ref-type="bibr">42</xref>] with learning rate 1e-4 and adopt SGD to train the domain discriminator with momentum 0.9 and learning rate 0.03. All modules are trained utilizing a single A100-PCIE 80 GB graphics processing unit (GPU), with training times of approximately 2 hours using a batch size of 64. Moreover, the running times for several protein cases are provided in Supplementary Table S6.</p></sec></sec><sec id="sec3"><title>Dataset</title><p>In our experiments, we utilize the same dataset, named PDBch, from DeepFRI [<xref rid="bib10" ref-type="bibr">10</xref>] work, which consists of 36,641 experimentally solved protein structures from the PDB database [<xref rid="bib2" ref-type="bibr">2</xref>] and their associated GO terms sourced from SIFTS [<xref rid="bib43" ref-type="bibr">43</xref>]. To ensure dissimilarity between our training and test sets, we employ the MMseqs [<xref rid="bib44" ref-type="bibr">44</xref>] sequence clustering tool with a sequence identity threshold of 30%. What&#x02019;s more, the training, validation, and test sets are then selected from different clusters, with an approximate ratio of 8:1:1, ensuring that the sequence identity between samples from different sets is below 30%. While the sequence identity among different sets is low, the pivotal issue we are addressing is the transfer of GO terms from the training set to the test set. After acquiring the sets, we proceed to assign functional labels to each protein sequence based on the GO terms compiled by Gligorijevi&#x00107; et&#x000a0;al. [<xref rid="bib10" ref-type="bibr">10</xref>]. These functional labels are categorized into 3 distinct groups: MF, BP, and CC [<xref rid="bib45" ref-type="bibr">45</xref>]. Each category serves as an independent prediction task during the training process.</p><p>We conduct additional experiment to assess whether recent advancements in protein structure prediction contribute to enhancing domain adaptation. Gligorijevi&#x00107; et&#x000a0;al. [<xref rid="bib10" ref-type="bibr">10</xref>] construct the SMch dataset through collecting homology models of the PDBch dataset with at least 1 annotation from the SWISS-MODEL repository [<xref rid="bib46" ref-type="bibr">46</xref>]. Following Gu et&#x000a0;al. [<xref rid="bib27" ref-type="bibr">27</xref>], we select 41,997 proteins from the SMch dataset with low-frequency GO terms (proteins with information content [IC] &#x0003e;10 from the PDBch dataset) and retrieve their structures predicted by AlphaFold2 (AF2) from the AlphaFold protein structure database [<xref rid="bib31" ref-type="bibr">31</xref>]. When selecting a portion from the SWISS-MODEL repository to construct the AFch set, we take into account the highly imbalanced distributions of GO term labels in the PDBch set. For low-frequency GO terms in the PDBch set, we specifically choose proteins with the corresponding GO term labels from the SWISS-MODEL respository to form the AFch set. This approach helps mitigate the imbalance in PDBch labels to some extent. Detailed information about datasets can be found at Table&#x000a0;<xref rid="tbl1" ref-type="table">1</xref> and <xref rid="sup1" ref-type="supplementary-material">Supplementary Section&#x000a0;1</xref>.</p><table-wrap position="float" id="tbl1"><label>Table 1:</label><caption><p>Number of sequences in the datasets</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">&#x000a0;</th><th colspan="3" align="center" rowspan="1">Number of sequences</th></tr><tr><th rowspan="1" colspan="1">Datasets</th><th rowspan="1" colspan="1">Training set</th><th rowspan="1" colspan="1">Validation set</th><th rowspan="1" colspan="1">Test set</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">PDBch set</td><td rowspan="1" colspan="1">29,304</td><td rowspan="1" colspan="1">3,660</td><td rowspan="1" colspan="1">3,665</td></tr><tr><td rowspan="1" colspan="1">AFch set</td><td rowspan="1" colspan="1">34,135</td><td rowspan="1" colspan="1">3,881</td><td rowspan="1" colspan="1">3,981</td></tr></tbody></table></table-wrap><p>Utilizing the frequency of each GO term in the combined training set (PDBch and AFch), we compute the IC for each GO term within this set. Higher information content indicates a more specialized GO term.</p><disp-formula id="equ10">
+<label>(10)</label>
+<tex-math id="TM0100" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+IC(GO_{i})=-\log _2(P(GO_i)).
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula></sec><sec id="sec4"><title>Evaluation metrics</title><p>Protein function prediction poses a significant challenge as it involves a highly imbalanced multilabel classification task. Complicating matters, the GO terms associated with these functions are not merely juxtaposed; instead, they exhibit a directed acyclic graph structure. To address the inherent bias and acknowledge the intricate relationships between these terms during model evaluation, we adopt several metrics proposed by the critical assessment of functional annotation (CAFA) algorithms challenge [<xref rid="bib13" ref-type="bibr">13</xref>]. These metrics are widely acknowledged and utilized to assess the performance of protein function prediction models.</p><p>The first metric is function-centric AUPR, which is calculated by averaging the sum of all <inline-formula><tex-math id="TM0101" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$AUPR_f$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math id="TM0102" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$f$\end{document}</tex-math></inline-formula> denotes a certain GO term. AUPR can be formulated as follows:</p><disp-formula id="equ11">
+<label>(11)</label>
+<tex-math id="TM0103" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+AUPR_f&#x00026;=\sum \limits _{t}(rc_f(t)-rc_f(t-1))\times pr_f(t),
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><disp-formula id="equ12">
+<label>(12)</label>
+<tex-math id="TM0104" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+AUPR&#x00026;=\frac{1}{N_f}\sum \limits _f AUPR_f,
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0105" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$t$\end{document}</tex-math></inline-formula> is a cutoff value ranging from 0 to 1 with step size 0.01, <inline-formula><tex-math id="TM0106" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$rc_f$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0107" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$pr_f$\end{document}</tex-math></inline-formula> represent recall and precision score for the GO term <inline-formula><tex-math id="TM0108" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$f$\end{document}</tex-math></inline-formula>. Furthermore, <inline-formula><tex-math id="TM0109" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$N_f$\end{document}</tex-math></inline-formula> is the number of GO terms.</p><p>The second metric is protein-centric <inline-formula><tex-math id="TM0110" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula>, which is defined as</p><disp-formula id="equ13">
+<label>(13)</label>
+<tex-math id="TM0111" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+AvgPr(t)&#x00026;=\frac{1}{m(t)}\sum \limits _{i=1}^{m(t)}pr_i(t),
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><disp-formula id="equ14">
+<label>(14)</label>
+<tex-math id="TM0112" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+AvgRc(t)&#x00026;=\frac{1}{n}\sum \limits _{i=1}^{n}rc_i(t),
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><disp-formula id="equ15">
+<label>(15)</label>
+<tex-math id="TM0113" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+F_{max}&#x00026;=\underset{t}{\text{max}}\left\lbrace \frac{2\cdot AvgPr(t)\cdot AvgRc(t)}{ AvgPr(t)+AvgRc(t)}\right\rbrace ,
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0114" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$m(t)$\end{document}</tex-math></inline-formula> is the number of proteins on which at least 1 prediction is made above threshold <inline-formula><tex-math id="TM0115" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$t$\end{document}</tex-math></inline-formula>, <inline-formula><tex-math id="TM0116" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$rc_i(t)$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0117" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$pr_i(t)$\end{document}</tex-math></inline-formula> represent recall and precision score of protein <inline-formula><tex-math id="TM0118" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$i$\end{document}</tex-math></inline-formula> at threshold <inline-formula><tex-math id="TM0119" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$t$\end{document}</tex-math></inline-formula>, and <inline-formula><tex-math id="TM0120" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$n$\end{document}</tex-math></inline-formula> is the number of proteins.</p><p>Given the highly imbalanced nature of the GO term labels, we introduce the Matthews correlation coefficient (MCC), computed under a threshold that yields a maximum protein-centric measure <inline-formula><tex-math id="TM0121" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> [<xref rid="bib8" ref-type="bibr">8</xref>]. MCC value is calculated as follows:</p><disp-formula id="equ16">
+<label>(16)</label>
+<tex-math id="TM0122" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+MCC=\frac{TP\cdot TN - FP\cdot FN}{\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}},
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where TP is the number of true positives, FN is the number of false negatives, FP is the number of false positives, and TN is the number of true positives.</p><p>Additionally, we propose <inline-formula><tex-math id="TM0123" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$S_{min}$\end{document}</tex-math></inline-formula> to denote the semantic distance between predicted and true annotations, considering information content of GO terms. <inline-formula><tex-math id="TM0124" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$S_{min}$\end{document}</tex-math></inline-formula> is computed using the following formula:</p><disp-formula id="equ17">
+<label>(17)</label>
+<tex-math id="TM0125" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+S_{min}=\underset{\text{t}}{\min }\sqrt{ru(t)^2+mi(t)^2},
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>where <inline-formula><tex-math id="TM0126" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$ru(t)$\end{document}</tex-math></inline-formula> represents the average uncertainty under threshold <italic toggle="yes">t</italic> and <inline-formula><tex-math id="TM0127" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$mi(t)$\end{document}</tex-math></inline-formula> is the average misinformation:</p><disp-formula id="equ18">
+<label>(18)</label>
+<tex-math id="TM0128" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+ru(t)&#x00026;=\frac{1}{n}\sum \limits _{i=1}^n\sum \limits _{c\in T_i-P_i(t)} IC(c|Pa(c)),
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><disp-formula id="equ19">
+<label>(19)</label>
+<tex-math id="TM0129" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+mi(t)&#x00026;=\frac{1}{n}\sum \limits _{i=1}^n\sum \limits _{c\in P_i(t)-T_i} IC(c|Pa(c)).
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>Here, <inline-formula><tex-math id="TM0130" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$T_i$\end{document}</tex-math></inline-formula> and <inline-formula><tex-math id="TM0131" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$P_i(t)$\end{document}</tex-math></inline-formula> represent the ground truth and predicted labels for protein <italic toggle="yes">i</italic>, respectively. Also, <inline-formula><tex-math id="TM0132" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$Pa(c)$\end{document}</tex-math></inline-formula> represents the parents of term <italic toggle="yes">c</italic>, and the information content is computed based on the posterior probability of term <italic toggle="yes">c</italic>, that is, <inline-formula><tex-math id="TM0133" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$IC(c|P(c))=-\log (P(c|Pa(c)))$\end{document}</tex-math></inline-formula>.</p></sec><sec sec-type="results" id="sec5"><title>Results</title><p>To thoroughly assess the efficiency of our proposed method, GALA, we conduct a comprehensive comparison with several baseline methods, which include a sequence alignment-based method (Blast) and 5 deep learning&#x02013;based methods (DeepGOPlus, TALE+, DeepFRI, Struct2GO, and HEAL) under several test sets. To facilitate differentiation, the model obtained using our method trained solely on the PDBch training set is called GALA-PDB, while the model trained on both the PDBch and AFch training sets is called GALA. Given the lower sequence identity between the training and test sets, our objective is to evaluate the performance of these methods when training and test sets are dissimilar. For a fair comparison, all the compared methods are retrained on both the PDBch and AFch training sets. Table&#x000a0;<xref rid="tbl2" ref-type="table">2</xref> presents the training set and input information for the compared methods. Subsequently, their performance is evaluated on our designated sets.</p><table-wrap position="float" id="tbl2"><label>Table 2:</label><caption><p>Several baseline methods for protein function prediction</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">Methods</th><th rowspan="1" colspan="1">Training set</th><th rowspan="1" colspan="1">Input information</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">Blast</td><td rowspan="1" colspan="1">&#x02014;</td><td rowspan="1" colspan="1">Sequence</td></tr><tr><td rowspan="1" colspan="1">DeepGOPlus</td><td rowspan="1" colspan="1">PDBch + AFch training set</td><td rowspan="1" colspan="1">Sequence</td></tr><tr><td rowspan="1" colspan="1">TALE+</td><td rowspan="1" colspan="1">PDBch + AFch training set</td><td rowspan="1" colspan="1">Sequence</td></tr><tr><td rowspan="1" colspan="1">DeepFRI</td><td rowspan="1" colspan="1">PDBch + AFch training set</td><td rowspan="1" colspan="1">Sequence and Structure</td></tr><tr><td rowspan="1" colspan="1">Struct2GO</td><td rowspan="1" colspan="1">PDBch + AFch training set</td><td rowspan="1" colspan="1">Sequence and Structure</td></tr><tr><td rowspan="1" colspan="1">HEAL</td><td rowspan="1" colspan="1">PDBch + AFch training set</td><td rowspan="1" colspan="1">Sequence and Structure</td></tr><tr><td rowspan="1" colspan="1">GALA-PDB</td><td rowspan="1" colspan="1">PDBch training set</td><td rowspan="1" colspan="1">Sequence and Structure</td></tr><tr><td rowspan="1" colspan="1">GALA</td><td rowspan="1" colspan="1">PDBch + AFch training set</td><td rowspan="1" colspan="1">Sequence and Structure</td></tr></tbody></table></table-wrap><sec id="sec5-1"><title>Performance of protein function prediction and domain adaptation</title><p>Table&#x000a0;<xref rid="tbl3" ref-type="table">3</xref> provides a summary of the overall results for all 6 protein prediction methods across 3 GO domains (MF, BP, and CC), and we show the best performance in bold and the second best performance underlined for better comparison. As we train GALA solely with the PDBch training test, we name it GALA-PDB. GALA-PDB achieves AUPR scores of 0.5386, 0.2104, and 0.3032 and <inline-formula><tex-math id="TM0134" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> scores of 0.6710, 0.5519, and 0.3712 on MF, BP, and CC tasks, respectively. GALA-PDB performs exceptionally well in MF and BP terms, outperforming Blast and other deep learning&#x02013;based methods, including DeepGOPlus, TALE+, DeepFRI, Struct2GO, and HEAL, in terms of AUPR, <inline-formula><tex-math id="TM0135" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max},S_{min}$\end{document}</tex-math></inline-formula>, and MCC. However, it shows slightly lower performance than Struct2GO and HEAL on the CC task, while still yielding comparable results. Despite the smaller training set and less available information to the model for GALA-PDB, it performs on par with other methods in areas such as feature extraction, protein function prediction, and domain knowledge transfer. In fact, it may even outshine other methods slightly. When incorporating the AFch training set into the training process, the resulting GALA model achieves AUPR scores of 0.5553, 0.2529, and 0.3625, as well as <inline-formula><tex-math id="TM0136" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> scores of 0.6730, 0.5833, and 0.3854, for 3 GO prediction tasks, respectively. Furthermore, it demonstrates superior performance compared to GALA-PDB and comprehensively outperforms other baseline methods in predicting 3 different GO tasks, assessed through 4 distinct evaluation metrics AUPR, <inline-formula><tex-math id="TM0137" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max},S_{min}$\end{document}</tex-math></inline-formula>, and MCC. As shown in Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2A</xref>, 2 versions of our method, GALA and GALA-PDB, exhibit superior performance compared to other baseline methods when tested on all GO terms.</p><fig position="float" id="fig2"><label>Figure 2:</label><caption><p>Comparison of GALA with several baseline methods based on 2 pairwise metrics, AUPR and MCC. In these figures, squares represent testing on MF GO terms, triangles represent testing on BP GO terms, and circles represent testing on CC GO terms. The left subfigure (A) shows the comparison between GALA and baseline methods on the PDBch test set, the subfigure (B) presents the comparison on the AFch test set, and the right subfigure (C) illustrates the comparison on the nonhomologous PDBch test set.</p></caption><graphic xlink:href="giae093fig2" position="float"/></fig><table-wrap position="float" id="tbl3"><label>Table 3:</label><caption><p>Comparison of our model with several baseline methods on the PDBch test set<sup>a</sup></p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">&#x000a0;</th><th colspan="3" align="center" rowspan="1">AUPR (<inline-formula><tex-math id="TM0138" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\uparrow$\end{document}</tex-math></inline-formula>)</th><th colspan="3" align="center" rowspan="1">
+<inline-formula>
+<tex-math id="TM0139" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math>
+</inline-formula> (<inline-formula><tex-math id="TM0140" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\uparrow$\end{document}</tex-math></inline-formula>)</th><th colspan="3" align="center" rowspan="1">Smin (<inline-formula><tex-math id="TM0141" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\downarrow$\end{document}</tex-math></inline-formula>)</th><th colspan="3" align="center" rowspan="1">MCC (<inline-formula><tex-math id="TM0142" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\uparrow$\end{document}</tex-math></inline-formula>)</th></tr><tr><th rowspan="1" colspan="1">Methods</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">Blast</td><td rowspan="1" colspan="1">0.1260</td><td rowspan="1" colspan="1">0.0363</td><td rowspan="1" colspan="1">0.0395</td><td rowspan="1" colspan="1">0.4304</td><td rowspan="1" colspan="1">0.3815</td><td rowspan="1" colspan="1">0.2087</td><td rowspan="1" colspan="1">2.5372</td><td rowspan="1" colspan="1">10.4218</td><td rowspan="1" colspan="1">1.3022</td><td rowspan="1" colspan="1">0.3025</td><td rowspan="1" colspan="1">0.1701</td><td rowspan="1" colspan="1">0.1467</td></tr><tr><td rowspan="1" colspan="1">DeepGOplus</td><td rowspan="1" colspan="1">0.1356</td><td rowspan="1" colspan="1">0.0618</td><td rowspan="1" colspan="1">0.0844</td><td rowspan="1" colspan="1">0.3844</td><td rowspan="1" colspan="1">0.3810</td><td rowspan="1" colspan="1">0.3034</td><td rowspan="1" colspan="1">2.3199</td><td rowspan="1" colspan="1">10.1569</td><td rowspan="1" colspan="1">1.2450</td><td rowspan="1" colspan="1">0.2716</td><td rowspan="1" colspan="1">0.1742</td><td rowspan="1" colspan="1">0.1999</td></tr><tr><td rowspan="1" colspan="1">TALE+</td><td rowspan="1" colspan="1">0.1584</td><td rowspan="1" colspan="1">0.0701</td><td rowspan="1" colspan="1">0.1299</td><td rowspan="1" colspan="1">0.3834</td><td rowspan="1" colspan="1">0.3784</td><td rowspan="1" colspan="1">0.3152</td><td rowspan="1" colspan="1">2.3258</td><td rowspan="1" colspan="1">10.0628</td><td rowspan="1" colspan="1">1.1999</td><td rowspan="1" colspan="1">0.2820</td><td rowspan="1" colspan="1">0.1885</td><td rowspan="1" colspan="1">0.2268</td></tr><tr><td rowspan="1" colspan="1">DeepFRI</td><td rowspan="1" colspan="1">0.3206</td><td rowspan="1" colspan="1">0.1144</td><td rowspan="1" colspan="1">0.2225</td><td rowspan="1" colspan="1">0.4923</td><td rowspan="1" colspan="1">0.4274</td><td rowspan="1" colspan="1">0.3249</td><td rowspan="1" colspan="1">1.9660</td><td rowspan="1" colspan="1">9.7596</td><td rowspan="1" colspan="1">1.1112</td><td rowspan="1" colspan="1">0.4460</td><td rowspan="1" colspan="1">0.2332</td><td rowspan="1" colspan="1">0.2688</td></tr><tr><td rowspan="1" colspan="1">Struct2GO</td><td rowspan="1" colspan="1">0.5234</td><td rowspan="1" colspan="1">
+<underline>0.2124</underline>
+</td><td rowspan="1" colspan="1">
+<underline>0.3248</underline>
+</td><td rowspan="1" colspan="1">0.6417</td><td rowspan="1" colspan="1">0.5376</td><td rowspan="1" colspan="1">0.3741</td><td rowspan="1" colspan="1">1.4829</td><td rowspan="1" colspan="1">
+<underline>8.7021</underline>
+</td><td rowspan="1" colspan="1">
+<underline>0.9759</underline>
+</td><td rowspan="1" colspan="1">0.6453</td><td rowspan="1" colspan="1">0.3615</td><td rowspan="1" colspan="1">0.3344</td></tr><tr><td rowspan="1" colspan="1">HEAL</td><td rowspan="1" colspan="1">0.5156</td><td rowspan="1" colspan="1">0.1924</td><td rowspan="1" colspan="1">0.3176</td><td rowspan="1" colspan="1">0.6376</td><td rowspan="1" colspan="1">0.5218</td><td rowspan="1" colspan="1">
+<underline>0.3830</underline>
+</td><td rowspan="1" colspan="1">1.5213</td><td rowspan="1" colspan="1">9.1056</td><td rowspan="1" colspan="1">0.9892</td><td rowspan="1" colspan="1">0.6288</td><td rowspan="1" colspan="1">0.3582</td><td rowspan="1" colspan="1">
+<bold>0.3715</bold>
+</td></tr><tr><td rowspan="1" colspan="1">GALA-PDB</td><td rowspan="1" colspan="1">
+<underline>0.5386</underline>
+</td><td rowspan="1" colspan="1">0.2104</td><td rowspan="1" colspan="1">0.3032</td><td rowspan="1" colspan="1">
+<underline>0.6710</underline>
+</td><td rowspan="1" colspan="1">
+<underline>0.5519</underline>
+</td><td rowspan="1" colspan="1">0.3712</td><td rowspan="1" colspan="1">
+<bold>1.4134</bold>
+</td><td rowspan="1" colspan="1">8.8459</td><td rowspan="1" colspan="1">1.0193</td><td rowspan="1" colspan="1">
+<underline>0.6592</underline>
+</td><td rowspan="1" colspan="1">
+<underline>0.3794</underline>
+</td><td rowspan="1" colspan="1">
+<underline>0.3676</underline>
+</td></tr><tr><td rowspan="1" colspan="1">GALA</td><td rowspan="1" colspan="1">
+<bold>0.5553</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.2529</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.3625</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.6730</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.5833</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.3854</bold>
+</td><td rowspan="1" colspan="1">
+<underline>1.4212</underline>
+</td><td rowspan="1" colspan="1">
+<bold>8.3964</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.9343</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.6730</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.4253</bold>
+</td><td rowspan="1" colspan="1">0.3621</td></tr></tbody></table><table-wrap-foot><fn id="tbl3fn1"><p>
+<sup>a</sup>Bold indicates the best performance, while the underlining represents the second best performance.</p></fn></table-wrap-foot></table-wrap><p>Evidently, we observe that our method significantly enhances protein function prediction when compared to several state-of-the-art methods. It demonstrates strong performance even when the sequence identity between the training and test sets is minimal. What&#x02019;s more, it adeptly transfers information from the source domain, composed of the training set, to the target domain, which consists of the test set that is less similar to the source domain. The generalization ability of our method GALA is reflected to some extent.</p></sec><sec id="sec5-2"><title>Performance on GO terms with different specificity</title><p>The protein function prediction task is indeed a multiclassification problem, with MF comprising 489 terms, BP comprising 1,943 terms, and CC comprising 320 terms. It is imperative to address the issue of class imbalance, which can potentially lead to misleading classifications, particularly in deep learning&#x02013;based methods. In the Dataset section, we introduce information content metric to assess the specificity of different GO terms, representing the rarity of each GO term. Combining MF, BP, and CC terms, we apply a categorization based on information content, utilizing thresholds of 5 and 10. This categorization leads to the division of GO terms into 3 groups: IC &#x0003c; 5, 5 &#x0003c; IC &#x0003c; 10, and IC &#x0003e; 10. More importantly, this stratification allows for a more nuanced analysis of predictive performance across GO terms with varying degrees of specificity.</p><p>As shown in Fig.&#x000a0;<xref rid="fig3" ref-type="fig">3</xref>, the left subfigure illustrates the distribution of information content in the combination of PDBch and AFch training sets. Simultaneously, the right subfigure depicts the performance of different methods across 3 categories of GO terms, utilizing 10 bootstrap iterations on all test proteins. As the information content value increases, all methods exhibit a consistent downward trend. For commonly occurring terms (IC &#x0003c; 5), GALA and DeepFRI achieve average AUPR scores of 0.4396 and 0.2330, respectively. In the mid-range terms (5 &#x0003c; IC &#x0003c; 10), GALA and DeepFRI attain average AUPR scores of 0.3269 and 0.1668, respectively. Meanwhile, on highly specific terms (IC &#x0003e; 10), GALA and DeepFRI achieve average AUPR scores of 0.2885 and 0.1309, respectively. Overall, GALA outperforms all other methods significantly across the 3 categories of GO terms. Moreover, as GO terms become more specific, GALA exhibits a much slower decrease in performance compared to other methods (<xref rid="sup1" ref-type="supplementary-material">Supplementary Section&#x000a0;2</xref>). Indeed, this observation to a certain extent demonstrates the robustness and superiority of GALA in predicting specific GO terms, aligning with our requirements for accurate and nuanced predictions in the context of protein function prediction.</p><fig position="float" id="fig3"><label>Figure 3:</label><caption><p>The left subfigure (A) shows the frequency of information content (IC) for protein functions over collection of 3 categories (MF, BP, and CC) in the combination of the PDBch training set and AFch training set. The right subfigure (B) shows AUPR of different methods over distinct IC.</p></caption><graphic xlink:href="giae093fig3" position="float"/></fig></sec><sec id="sec5-3"><title>Performance on AlphaFold2-predicted structures</title><p>For proteins with experimentally resolved structures or highly similar annotated proteins, predicting their functions is relatively straightforward. Therefore, our focus and practical significance lie in proteins with unknown structures that lack homology to existing proteins. Extending functional annotation from well-characterized protein domains to those that are unknown can significantly impact the discovery and understanding of novel proteins in biomedicine and other fields. To assess the model&#x02019;s generalization ability, particularly its performance on proteins with unknown structures, we conduct experiments on the AFch test set whose structures are predicted by AlphaFold2. This set serves as a valuable measure of the model&#x02019;s capability to generalize.</p><p>During the dataset preprocessing stage, we selectively remove all protein sequences from the AFch test set with a sequence identity of more than 30% with the combined training set (comprising PDBch and AFch training sets). As illustrated in Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4</xref>, GALA outperforms all other methods significantly in MF, BP, and CC tasks. The AUPR scores for MF, BP, and CC are 0.5040, 0.2034, and 0.2813, respectively, while the corresponding <inline-formula><tex-math id="TM0151" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> scores are 0.6140, 0.5340, and 0.6133 (<xref rid="sup1" ref-type="supplementary-material">Supplementary Table S5</xref>). The results are depicted in Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2B</xref> and Fig.&#x000a0;<xref rid="fig4" ref-type="fig">4</xref>, highlighting the effectiveness of our approach. Notably, GALA-PDB performs poorly due to the exclusion of the AFch set during training, while GALA demonstrates superior performance compared to other methods.</p><fig position="float" id="fig4"><label>Figure 4:</label><caption><p>The figure&#x000a0;shows AUPR and <inline-formula><tex-math id="TM0152" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> scores of different methods on the AFch test set. GALA outperforms all other methods significantly in molecular function (MF), biological process (BP), and cellular component (CC) tasks.</p></caption><graphic xlink:href="giae093fig4" position="float"/></fig></sec><sec id="sec5-4"><title>Performance on nonhomologous proteins</title><p>Given that protein structures diverge much more slowly than sequences, certain proteins with dissimilar sequences can still possess similar structures, indicating distant homology [<xref rid="bib47" ref-type="bibr">47</xref>]. Furthermore, we utilize both sequence identity and TM-score to identify nonhomologous proteins in the PDBch test set. Specifically, proteins in the PDBch test set with a sequence identity of less than 30% and a TM-score [<xref rid="bib48" ref-type="bibr">48</xref>, <xref rid="bib49" ref-type="bibr">49</xref>] below 0.5 from sequences in the PDBch training set are classified as nonhomologous. This stricter test set is referred to as the nonhomologous PDBch test set. The performance comparison of GALA and several baseline methods are shown in Table&#x000a0;<xref rid="tbl4" ref-type="table">4</xref>. Notably, GALA demonstrates exceptional performance on the nonhomologous PDBch test set. Furthermore, as illustrated in Fig.&#x000a0;<xref rid="fig2" ref-type="fig">2C</xref>, GALA outperforms several baseline methods on the nonhomologous PDBch test set, based on the pairwise metrics AUPR and MCC.</p><table-wrap position="float" id="tbl4"><label>Table 4:</label><caption><p>Comparison of our model with several baseline methods on the nonhomologous PDBch test set<sup>a</sup></p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">&#x000a0;</th><th colspan="3" align="center" rowspan="1">AUPR (<inline-formula><tex-math id="TM0153" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\uparrow$\end{document}</tex-math></inline-formula>)</th><th colspan="3" align="center" rowspan="1">
+<inline-formula>
+<tex-math id="TM0154" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math>
+</inline-formula> (<inline-formula><tex-math id="TM0155" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\uparrow$\end{document}</tex-math></inline-formula>)</th><th colspan="3" align="center" rowspan="1">Smin (<inline-formula><tex-math id="TM0156" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\downarrow$\end{document}</tex-math></inline-formula>)</th><th colspan="3" align="center" rowspan="1">MCC (<inline-formula><tex-math id="TM0157" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\uparrow$\end{document}</tex-math></inline-formula>)</th></tr><tr><th rowspan="1" colspan="1">Methods</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">Blast</td><td rowspan="1" colspan="1">0.1095</td><td rowspan="1" colspan="1">0.0545</td><td rowspan="1" colspan="1">0.0601</td><td rowspan="1" colspan="1">0.3045</td><td rowspan="1" colspan="1">0.2417</td><td rowspan="1" colspan="1">0.1955</td><td rowspan="1" colspan="1">2.7853</td><td rowspan="1" colspan="1">10.5673</td><td rowspan="1" colspan="1">1.1936</td><td rowspan="1" colspan="1">0.2815</td><td rowspan="1" colspan="1">0.1099</td><td rowspan="1" colspan="1">0.0909</td></tr><tr><td rowspan="1" colspan="1">DeepGOplus</td><td rowspan="1" colspan="1">0.2159</td><td rowspan="1" colspan="1">0.1445</td><td rowspan="1" colspan="1">0.1646</td><td rowspan="1" colspan="1">0.3638</td><td rowspan="1" colspan="1">0.3014</td><td rowspan="1" colspan="1">0.3001</td><td rowspan="1" colspan="1">2.6467</td><td rowspan="1" colspan="1">10.3173</td><td rowspan="1" colspan="1">1.1699</td><td rowspan="1" colspan="1">0.2674</td><td rowspan="1" colspan="1">0.1620</td><td rowspan="1" colspan="1">0.1695</td></tr><tr><td rowspan="1" colspan="1">TALE+</td><td rowspan="1" colspan="1">0.1602</td><td rowspan="1" colspan="1">0.1246</td><td rowspan="1" colspan="1">0.2413</td><td rowspan="1" colspan="1">0.3100</td><td rowspan="1" colspan="1">0.2832</td><td rowspan="1" colspan="1">0.3227</td><td rowspan="1" colspan="1">2.6626</td><td rowspan="1" colspan="1">10.3933</td><td rowspan="1" colspan="1">1.1678</td><td rowspan="1" colspan="1">0.2175</td><td rowspan="1" colspan="1">0.1624</td><td rowspan="1" colspan="1">0.2251</td></tr><tr><td rowspan="1" colspan="1">DeepFRI</td><td rowspan="1" colspan="1">0.3264</td><td rowspan="1" colspan="1">0.1588</td><td rowspan="1" colspan="1">0.2749</td><td rowspan="1" colspan="1">0.3761</td><td rowspan="1" colspan="1">0.3188</td><td rowspan="1" colspan="1">0.3131</td><td rowspan="1" colspan="1">2.4628</td><td rowspan="1" colspan="1">9.9593</td><td rowspan="1" colspan="1">1.1309</td><td rowspan="1" colspan="1">0.3441</td><td rowspan="1" colspan="1">0.1908</td><td rowspan="1" colspan="1">0.2368</td></tr><tr><td rowspan="1" colspan="1">Struct2GO</td><td rowspan="1" colspan="1">0.3694</td><td rowspan="1" colspan="1">0.2362</td><td rowspan="1" colspan="1">0.3511</td><td rowspan="1" colspan="1">0.4554</td><td rowspan="1" colspan="1">0.3674</td><td rowspan="1" colspan="1">0.3690</td><td rowspan="1" colspan="1">2.2184</td><td rowspan="1" colspan="1">9.5941</td><td rowspan="1" colspan="1">
+<bold>1.0258</bold>
+</td><td rowspan="1" colspan="1">0.4187</td><td rowspan="1" colspan="1">0.2656</td><td rowspan="1" colspan="1">0.2274</td></tr><tr><td rowspan="1" colspan="1">HEAL</td><td rowspan="1" colspan="1">0.4709</td><td rowspan="1" colspan="1">
+<underline>0.2868</underline>
+</td><td rowspan="1" colspan="1">0.3905</td><td rowspan="1" colspan="1">0.5024</td><td rowspan="1" colspan="1">0.4093</td><td rowspan="1" colspan="1">
+<underline>0.3843</underline>
+</td><td rowspan="1" colspan="1">
+<bold>1.9050</bold>
+</td><td rowspan="1" colspan="1">9.4427</td><td rowspan="1" colspan="1">1.0462</td><td rowspan="1" colspan="1">
+<underline>0.5719</underline>
+</td><td rowspan="1" colspan="1">0.3085</td><td rowspan="1" colspan="1">0.3410</td></tr><tr><td rowspan="1" colspan="1">GALA-PDB</td><td rowspan="1" colspan="1">
+<underline>0.4742</underline>
+</td><td rowspan="1" colspan="1">
+<bold>0.3221</bold>
+</td><td rowspan="1" colspan="1">
+<underline>0.4121</underline>
+</td><td rowspan="1" colspan="1">
+<bold>0.5147</bold>
+</td><td rowspan="1" colspan="1">
+<underline>0.4213</underline>
+</td><td rowspan="1" colspan="1">0.3734</td><td rowspan="1" colspan="1">1.9398</td><td rowspan="1" colspan="1">
+<underline>9.1878</underline>
+</td><td rowspan="1" colspan="1">
+<underline>1.0344</underline>
+</td><td rowspan="1" colspan="1">0.5667</td><td rowspan="1" colspan="1">
+<bold>0.3437</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.3685</bold>
+</td></tr><tr><td rowspan="1" colspan="1">GALA</td><td rowspan="1" colspan="1">
+<bold>0.5423</bold>
+</td><td rowspan="1" colspan="1">0.2821</td><td rowspan="1" colspan="1">
+<bold>0.4142</bold>
+</td><td rowspan="1" colspan="1">
+<underline>0.5082</underline>
+</td><td rowspan="1" colspan="1">
+<bold>0.4385</bold>
+</td><td rowspan="1" colspan="1">
+<bold>0.3951</bold>
+</td><td rowspan="1" colspan="1">
+<underline>1.9259</underline>
+</td><td rowspan="1" colspan="1">
+<bold>9.0331</bold>
+</td><td rowspan="1" colspan="1">1.0599</td><td rowspan="1" colspan="1">
+<bold>0.6092</bold>
+</td><td rowspan="1" colspan="1">
+<underline>0.3091</underline>
+</td><td rowspan="1" colspan="1">
+<underline>0.3558</underline>
+</td></tr></tbody></table><table-wrap-foot><fn id="tbl4fn1"><p>
+<sup>a</sup>Bold indicates the best performance, while the underlining represents the second best performance.</p></fn></table-wrap-foot></table-wrap></sec><sec id="sec5-5"><title>Performance on proteins newly annotated in the Swiss-Prot database since 2021</title><p>Conducting temporal validation is crucial as it provides a comprehensive assessment of our method&#x02019;s robustness over time. Specifically, we collect proteins newly annotated and reviewed in the Swiss-Prot database [<xref rid="bib4" ref-type="bibr">4</xref>, <xref rid="bib50" ref-type="bibr">50</xref>] between January 2021 and June 2024, resulting in a total of 7,799 proteins. We then select proteins with sequence identity less than 30% of those in the combined PDBch and AFch training set, forming a newly annotated test set comprising 2,270 proteins with predicted structures in the AlphaFold database. Consequently, we evaluate the performance of different methods on this newly annotated test set, as shown in Fig.&#x000a0;<xref rid="fig5" ref-type="fig">5</xref>. Significantly, GALA exhibits outstanding performance on the newly annotated test set, confirming its robustness over time.</p><fig position="float" id="fig5"><label>Figure 5:</label><caption><p>The figure&#x000a0;shows <inline-formula><tex-math id="TM0158" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}$\end{document}</tex-math></inline-formula> scores of different methods on the test set, composed of newly annotated proteins in the Swiss-Prot database since 2021.</p></caption><graphic xlink:href="giae093fig5" position="float"/></fig></sec><sec id="sec5-6"><title>Key residues identification and analysis</title><p>To demonstrate the biological interpretability of GALA, we employ Grad-CAM [<xref rid="bib51" ref-type="bibr">51</xref>] to identify the key residues contributing to the corresponding GO annotation function, effectively discerned by GALA. In our context, we utilize the output of the final graph convolution layer represented as <inline-formula><tex-math id="TM0159" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F\in \mathcal {R}^{L\times D}$\end{document}</tex-math></inline-formula>, where <inline-formula><tex-math id="TM0160" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$L$\end{document}</tex-math></inline-formula> denotes the number of protein residues and <inline-formula><tex-math id="TM0161" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$D$\end{document}</tex-math></inline-formula> is the dimension of the feature space, as the feature map for this purpose. Then we take the derivative of the protein function <inline-formula><tex-math id="TM0162" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$y_{l}$\end{document}</tex-math></inline-formula> with respect to <inline-formula><tex-math id="TM0163" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F$\end{document}</tex-math></inline-formula> as the gradient weight <inline-formula><tex-math id="TM0164" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$W^l_{i,j}$\end{document}</tex-math></inline-formula>:</p><disp-formula id="equ20">
+<label>(20)</label>
+<tex-math id="TM0165" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+W^l_{i,j}=\frac{\partial y_l}{\partial F_{i,j}}
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>The contribution score of the <inline-formula><tex-math id="TM0166" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$i$\end{document}</tex-math></inline-formula>th residue to the <inline-formula><tex-math id="TM0167" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$l$\end{document}</tex-math></inline-formula>th function <inline-formula><tex-math id="TM0168" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$CAM^l_i$\end{document}</tex-math></inline-formula> can be obtained as</p><disp-formula id="equ21">
+<label>(21)</label>
+<tex-math id="TM0169" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+\begin{eqnarray*}
+CAM^l_i=Relu(\frac{\sum _{j=1}^DW^l_{i,j}\cdot F_{i,j}}{D})
+\end{eqnarray*}\end{document}</tex-math>
+</disp-formula><p>which is subsequently normalized to fall within the range of 0 to 100, and then we generate heatmaps to illustrate the contribution scores. Furthermore, we project the heatmap onto the protein structure and observe sites with a strong signal, as depicted in Fig.&#x000a0;<xref rid="fig6" ref-type="fig">6</xref>.</p><fig position="float" id="fig6"><label>Figure 6:</label><caption><p>Four examples of the Grad-CAM activation profiles mapped onto the experimentally solved structures. (A), (B), and (C) are protein structures colored by the contribution scores computed by Grad-CAM. (D) ROC curves indicate that contribution scores computed by Grad-CAM overlap with binding sites retrieved from the BioLiP database.</p></caption><graphic xlink:href="giae093fig6" position="float"/></fig><p>For MF-GO terms, we provide 2 cases where the generated heatmaps align with experimentally confirmed binding sites. In the first example, 3DNF (Fig.&#x000a0;<xref rid="fig6" ref-type="fig">6</xref> A, <xref rid="sup1" ref-type="supplementary-material">Supplementary Fig. S2</xref>), a protein associated with the function of iron&#x02013;sulfur cluster binding (GO:0051536), exhibits strong signals in key residues binding with the iron&#x02013;sulfur cluster. The second example, 2ZSC (Fig.&#x000a0;<xref rid="fig6" ref-type="fig">6</xref> B, <xref rid="sup1" ref-type="supplementary-material">Supplementary Fig. S3</xref>), a protein involved in monocarboxylic acid binding (GO:0033293), reveals regions of strong signal surrounding its binding sites. For BP-GO terms, an example is presented, namely, 1P4U (Fig.&#x000a0;<xref rid="fig6" ref-type="fig">6C</xref>, <xref rid="sup1" ref-type="supplementary-material">Supplementary Fig. S4</xref>), with the function of peptide transport (GO:0015833). The residues of 1P4U within the peptide binding interface demonstrate a significant Grad-CAM signal.</p><p>We proceed to extract the binding sites of the 3 proteins from the BioLiP database [<xref rid="bib52" ref-type="bibr">52</xref>]. What&#x02019;s more, we compare the high-contribution residues identified by Grad-CAM with those experimentally verified in the binding sites. As illustrated in Fig.&#x000a0;<xref rid="fig6" ref-type="fig">6D</xref>, the area under the receiver operating characteristic curve (AUC-ROC) demonstrates that our model possesses an excellent capability to capture functional residues, providing strong evidence for its biological interpretability.</p></sec><sec id="sec5-7"><title>Ablation study</title><p>To investigate the effectiveness of various modules in GALA to its enhanced performance, we design an ablation study. In this study, we systematically introduce various modules incrementally to construct advanced models. Specifically, we denote the models as M1 (corresponding to GALA-PDB), M2, M3, M4, and M5 (representing the complete GALA model). This experimental design allows us to analyze and understand the contribution of each module to the overall improvement in performance.</p><p>In M1, the PDBch set is solely employed as the training set. The network undergoes training with domain adaptation from the source domain to the target domain, coupled with the utilization of contrastive loss, which aligns the protein embedding with the label embedding in the latent space. The key distinction between M1 and M5 lies in whether the AFch set is included in the training process. Moving on to M2, this model is trained with the combined set of PDBch and AFch without domain alignment module and label embedding alignment. Additionally, M3 incorporates transfer loss from source data to target data on the basis of M2. Building upon M3, M5 introduces alignment between protein and label embeddings from labeled source data, which are implemented on the foundation of M3, further refining the model&#x02019;s ability to capture and transfer information across different domains.To demonstrate the effectiveness of domain alignment module, we exclude the adversarial loss from training, as compared to M5.</p><p>Table&#x000a0;<xref rid="tbl5" ref-type="table">5</xref> presents AUPR, <inline-formula><tex-math id="TM0170" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max},S_{min}$\end{document}</tex-math></inline-formula> values for 5 models across 3 GO aspects on the PDBch test set. Upon comparing M1 and M5, the significance of incorporating the AFch set into model training becomes evident, resulting in improved performance across all 3 GO terms. This observation suggests that the protein structures predicted by AlphaFold2 can enhance the efficiency of protein function prediction. Further comparisons between M2, M3, M4, and M5 reveal a progressive enhancement in the performance of GALA. Notably, the inclusion of the domain alignment module and the protein-label embedding alignment module contribute to this improvement, which can be proved by experimental results on the MF and BP aspects. While we acknowledge potential conflicts in the Fmax score for predicting CC terms across different methods, we posit that AUPR and Smin metrics for CC terms validate the utility of our diverse modules. Moreover, the 3 metrics employed for predicting MF and BP terms collectively underscore the comprehensive effectiveness of those modules.</p><table-wrap position="float" id="tbl5"><label>Table 5:</label><caption><p>Ablation study of GALA on PDBch test set<sup>a</sup></p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">&#x000a0;</th><th colspan="3" align="center" rowspan="1">Modules</th><th colspan="3" align="center" rowspan="1">AUPR(<inline-formula><tex-math id="TM0171" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$\uparrow$\end{document}</tex-math></inline-formula>)</th><th colspan="3" align="center" rowspan="1">
+<inline-formula>
+<tex-math id="TM0172" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$F_{max}(\uparrow$\end{document}</tex-math>
+</inline-formula>)</th><th colspan="3" align="center" rowspan="1">
+<inline-formula>
+<tex-math id="TM0173" notation="LaTeX">\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+$S_{min}(\downarrow$\end{document}</tex-math>
+</inline-formula>)</th></tr><tr><th rowspan="1" colspan="1">&#x000a0;</th><th rowspan="1" colspan="1">AFch</th><th rowspan="1" colspan="1">adv</th><th rowspan="1" colspan="1">cl</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th><th rowspan="1" colspan="1">MF</th><th rowspan="1" colspan="1">BP</th><th rowspan="1" colspan="1">CC</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">M1</td><td rowspan="1" colspan="1">&#x000a0;</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">0.5386</td><td rowspan="1" colspan="1">0.2104</td><td rowspan="1" colspan="1">0.3032</td><td rowspan="1" colspan="1">0.6710</td><td rowspan="1" colspan="1">0.5519</td><td rowspan="1" colspan="1">0.3712</td><td rowspan="1" colspan="1">1.4134</td><td rowspan="1" colspan="1">8.8459</td><td rowspan="1" colspan="1">1.0193</td></tr><tr><td rowspan="1" colspan="1">M2</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">&#x000a0;</td><td rowspan="1" colspan="1">&#x000a0;</td><td rowspan="1" colspan="1">0.5269</td><td rowspan="1" colspan="1">0.1903</td><td rowspan="1" colspan="1">0.3160</td><td rowspan="1" colspan="1">0.6426</td><td rowspan="1" colspan="1">0.5292</td><td rowspan="1" colspan="1">0.3925</td><td rowspan="1" colspan="1">1.5131</td><td rowspan="1" colspan="1">8.9711</td><td rowspan="1" colspan="1">0.9875</td></tr><tr><td rowspan="1" colspan="1">M3</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">&#x000a0;</td><td rowspan="1" colspan="1">0.5338</td><td rowspan="1" colspan="1">0.2043</td><td rowspan="1" colspan="1">0.3207</td><td rowspan="1" colspan="1">0.6522</td><td rowspan="1" colspan="1">0.5372</td><td rowspan="1" colspan="1">0.3911</td><td rowspan="1" colspan="1">1.4947</td><td rowspan="1" colspan="1">8.9335</td><td rowspan="1" colspan="1">0.9866</td></tr><tr><td rowspan="1" colspan="1">M4</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">&#x000a0;</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">0.5482</td><td rowspan="1" colspan="1">0.2387</td><td rowspan="1" colspan="1">0.3234</td><td rowspan="1" colspan="1">0.6692</td><td rowspan="1" colspan="1">0.5736</td><td rowspan="1" colspan="1">0.3800</td><td rowspan="1" colspan="1">1.4662</td><td rowspan="1" colspan="1">8.4983</td><td rowspan="1" colspan="1">0.9682</td></tr><tr><td rowspan="1" colspan="1">M5</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">&#x02713;</td><td rowspan="1" colspan="1">0.5553</td><td rowspan="1" colspan="1">0.2529</td><td rowspan="1" colspan="1">0.3625</td><td rowspan="1" colspan="1">0.6730</td><td rowspan="1" colspan="1">0.5833</td><td rowspan="1" colspan="1">0.3854</td><td rowspan="1" colspan="1">1.4212</td><td rowspan="1" colspan="1">8.3964</td><td rowspan="1" colspan="1">0.9343</td></tr></tbody></table><table-wrap-foot><fn id="tbl5fn1"><p>
+<sup>a</sup>AFch, adv, and cl correspond to training with the AFch set, adversarial learning for domain alignment, and label embedding alignment.</p></fn></table-wrap-foot></table-wrap></sec></sec><sec sec-type="discussion" id="sec6"><title>Discussion</title><p>In this study, we have proposed GALA for protein prediction and generalization to proteins with dissimilar sequences, leveraging both sequence and structural data as input. For proteins that diverge from known counterparts and lack experimentally resolved structures, utilizing AlphaFold2 to predict structures and then feeding them into our model aligns seamlessly with real-world scenarios. GALA employs adversarial learning and label embedding alignment to extract domain-invariant representations, thereby augmenting the model&#x02019;s generalization ability. Notably, the model outperforms several state-of-the-art methods, showcasing superior generalization capabilities to novel proteins dissimilar to known ones. GALA also demonstrates the close relationship between protein functions and pivotal residues, accentuating the interpretability and generalization ability of our model.</p><p>Moving ahead, we plan to incorporate the hierarchical directed acyclic structure of GO terms to refine the training process, while many methods take an extra postprocessing step during model evaluation to prevent hierarchy violations. Furthermore, as sequencing technology advances and protein structure&#x02013;related methods develop, an increasing amount of protein-related information will become accessible. The integration of protein&#x02013;protein interactions into the model can offer richer information for protein functional annotation, thereby enhancing the overall robustness and generalizability of the model.</p></sec><sec sec-type="supplementary-material" id="sec7"><title>Additional Files</title><p>
+<bold>Supplementary Files</bold>. (1) Detailed information about the construction of datasets, (2) description of several baseline methods, (3) AUPR comparison for GO terms on the PDBch test set, (4) performance on the PDBch test set under a different specificity, (5) performance on the AFch test set, (6) runtime for several cases, and (7) plots for interpretability of key residues.</p><p>
+<bold>Supplementary Fig. S1</bold>. Frequency of IC for protein functions over collection of 3 categories (MF, BP, and CC) in the combination of the PDBch training set.</p><p>
+<bold>Supplementary Fig. S2</bold>. Contribution score computed by Grad-CAM of protein 3DNF with function of iron&#x02013;sulfur cluster binding (GO:0051536).</p><p>
+<bold>Supplementary Fig. S3</bold>. Contribution score computed by Grad-CAM of protein 2ZSC with function of monocarboxylic acid binding (GO:0033293).</p><p>
+<bold>Supplementary Fig. S4</bold>. Contribution score computed by Grad-CAM of protein 1P4U with function of peptide transport (GO:0015833).</p><p>
+<bold>Supplementary Table S1</bold>. AUPR comparison for MF-GO terms on the PDBch test set.</p><p>
+<bold>Supplementary Table S2</bold>. AUPR comparison for BP-GO terms on the PDBch test set.</p><p>
+<bold>Supplementary Table S3</bold>. AUPR comparison for CC-GO terms on the PDBch test set.</p><p>
+<bold>Supplementary Table S4</bold>. Performance of GALA and other baseline methods on the PDBch test set under a different specificity.</p><p>
+<bold>Supplementary Table S5</bold>. Performance of GALA and other baseline methods on the AFch test set.</p><p>
+<bold>Supplementary Table S6</bold>. The running times for several cases.</p><supplementary-material id="sup1" position="float" content-type="local-data"><label>giae093_Supplementary_Files</label><media xlink:href="giae093_supplementary_files.zip"/></supplementary-material><supplementary-material id="sup2" position="float" content-type="local-data"><label>giae093_GIGA-D-24-00109_Original_Submission</label><media xlink:href="giae093_giga-d-24-00109_original_submission.pdf"/></supplementary-material><supplementary-material id="sup3" position="float" content-type="local-data"><label>giae093_GIGA-D-24-00109_Revision_1</label><media xlink:href="giae093_giga-d-24-00109_revision_1.pdf"/></supplementary-material><supplementary-material id="sup4" position="float" content-type="local-data"><label>giae093_GIGA-D-24-00109_Revision_2</label><media xlink:href="giae093_giga-d-24-00109_revision_2.pdf"/></supplementary-material><supplementary-material id="sup5" position="float" content-type="local-data"><label>giae093_GIGA-D-24-00109_Revision_3</label><media xlink:href="giae093_giga-d-24-00109_revision_3.pdf"/></supplementary-material><supplementary-material id="sup6" position="float" content-type="local-data"><label>giae093_Response_to_Reviewer_Comments_Original_Submission</label><media xlink:href="giae093_response_to_reviewer_comments_original_submission.pdf"/></supplementary-material><supplementary-material id="sup7" position="float" content-type="local-data"><label>giae093_Response_to_Reviewer_Comments_Revision_1</label><media xlink:href="giae093_response_to_reviewer_comments_revision_1.pdf"/></supplementary-material><supplementary-material id="sup8" position="float" content-type="local-data"><label>giae093_Response_to_Reviewer_Comments_Revision_2</label><media xlink:href="giae093_response_to_reviewer_comments_revision_2.pdf"/></supplementary-material><supplementary-material id="sup9" position="float" content-type="local-data"><label>giae093_Reviewer_1_Report_Original_Submission</label><caption><p>Xiaogen Zhou -- 5/7/2024</p></caption><media xlink:href="giae093_reviewer_1_report_original_submission.pdf"/></supplementary-material><supplementary-material id="sup10" position="float" content-type="local-data"><label>giae093_Reviewer_1_Report_Revision_1</label><caption><p>Xiaogen Zhou -- 7/16/2024</p></caption><media xlink:href="giae093_reviewer_1_report_revision_1.pdf"/></supplementary-material><supplementary-material id="sup11" position="float" content-type="local-data"><label>giae093_Reviewer_2_Report_Original_Submission</label><caption><p>Amarda Shehu -- 5/11/2024</p></caption><media xlink:href="giae093_reviewer_2_report_original_submission.pdf"/></supplementary-material><supplementary-material id="sup12" position="float" content-type="local-data"><label>giae093_Reviewer_2_Report_Revision_1</label><caption><p>Amarda Shehu -- 8/12/2024</p></caption><media xlink:href="giae093_reviewer_2_report_revision_1.pdf"/></supplementary-material><supplementary-material id="sup13" position="float" content-type="local-data"><label>giae093_Reviewer_3_Report_Original_Submission</label><caption><p>Cen Wan, Ph.D. -- 5/13/2024</p></caption><media xlink:href="giae093_reviewer_3_report_original_submission.pdf"/></supplementary-material><supplementary-material id="sup14" position="float" content-type="local-data"><label>giae093_Reviewer_3_Report_Revision_1</label><caption><p>Cen Wan, Ph.D. -- 7/17/2024</p></caption><media xlink:href="giae093_reviewer_3_report_revision_1.pdf"/></supplementary-material></sec><sec id="h1content1731647939236"><title>Abbreviations</title><p>AUC-ROC: area under the receiver operating characteristic curve; BP: biological process; CAFA: critical assessment of functional annotation; CC: cellular component; CNN: convolutional neural network; GALA: Graph Adversarial Learning with Alignment; GCN: graph convolutional network; GO: Gene Ontology; GPU: graphics processing unit; LR: logistic regression; MCC: Matthews correlation coefficient; MF: molecular function; MLP: multilayer perceptron; PPI: protein&#x02013;protein interaction.</p></sec></body><back><sec id="h1content1733208851038"><title>Author Contributions</title><p>Y.F. and X.L. designed this study. Y.F., X.L. and Z.G. designed the model. Y.F., Z.G. and Q.G. ran all the experiments. Y.F., Z.G., X.L., Q.G., L.L. and M.D. wrote the manuscript. X.L., L.L. and M.D. supervised this work.</p></sec><sec id="sec11"><title>Funding</title><p>This work was supported by the National Key Research and Development Program of China (2021YFF1200902) and the National Natural Science Foundation of China (32270689).</p></sec><sec sec-type="data-availability" id="sec8"><title>Data Availability</title><p>Supporting datasets for this article are sourced from DeepFRI [<xref rid="bib10" ref-type="bibr">10</xref>]. The first dataset, named PDBch, is selected from the PDB database and clustered using MMseqs [<xref rid="bib53" ref-type="bibr">53</xref>] at a sequence identity of 30%. The training, validation, and test sets are chosen from different clusters with an approximate ratio of 8:1:1. As for the second dataset, AFch, we initially select 41,997 proteins from SWISS-MODEL and then partition them into training, validation, and test sets similar to the PDBch dataset. For more detailed information, refer to the&#x000a0;Dataset section. An archival copy of the code and other data further supporting this work are openly available in the <italic toggle="yes">GigaScience</italic> repository, GigaDB [<xref rid="bib54" ref-type="bibr">54</xref>]. Furthermore, a link to DOME-ML (Data, Optimization, Model, and Evaluation in Machine Learning) annotations is available via GigaDB [<xref rid="bib54" ref-type="bibr">54</xref>].</p></sec><sec id="sec9"><title>Availability of Supporting Source Code and Requirements</title><list list-type="bullet"><list-item><p>Project name: GALA</p></list-item><list-item><p>Project homepage: <ext-link xlink:href="https://github.com/fuyw-aisw/GALA" ext-link-type="uri">https://github.com/fuyw-aisw/GALA</ext-link></p></list-item><list-item><p>Operating system(s): Platform independent</p></list-item><list-item><p>Programming language: Python</p></list-item><list-item><p>Other requirements: not applicable</p></list-item><list-item><p>License: MIT license</p></list-item><list-item><p>RRID: SCR_025194</p></list-item><list-item><p>Docker package: fuyw99/gala</p></list-item></list></sec><sec sec-type="COI-statement" id="sec10"><title>Competing interests</title><p>The authors declared no competing interests.</p></sec><ref-list id="ref1"><title>References</title><ref id="bib1"><label>1.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Eisenberg</surname> &#x000a0;<given-names>&#x000a0;D</given-names></string-name>, <string-name><surname>Marcotte</surname> &#x000a0;<given-names>EM</given-names></string-name>, <string-name><surname>Xenarios</surname> &#x000a0;<given-names>I</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Protein function in the post-genomic era</article-title>. <source>Nature</source>. <year>2000</year>;<volume>405</volume>(<issue>6788</issue>):<fpage>823</fpage>&#x02013;<lpage>26</lpage>. <pub-id pub-id-type="doi">10.1038/35015694.</pub-id><pub-id pub-id-type="pmid">10866208</pub-id>
+</mixed-citation></ref><ref id="bib2"><label>2.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Berman</surname> &#x000a0;<given-names>&#x000a0;HM</given-names></string-name>, <string-name><surname>Westbrook</surname> &#x000a0;<given-names>&#x000a0;J</given-names></string-name>, <string-name><surname>Feng</surname> &#x000a0;<given-names>&#x000a0;Z</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>The protein data bank</article-title>. <source>Nucleic Acids Res</source>. <year>2000</year>;<volume>28</volume>(<issue>1</issue>):<fpage>235</fpage>&#x02013;<lpage>42</lpage>. <pub-id pub-id-type="doi">10.1093/nar/28.1.235.</pub-id><pub-id pub-id-type="pmid">10592235</pub-id>
+</mixed-citation></ref><ref id="bib3"><label>3.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Apweiler</surname> &#x000a0;<given-names>R</given-names></string-name>, <string-name><surname>Bairoch</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Wu</surname> &#x000a0;<given-names>CH</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>UniProt: the universal protein knowledgebase</article-title>. <source>Nucleic Acids Res</source>. <year>2004</year>;<volume>32</volume>:<fpage>D115</fpage>&#x02013;<lpage>19</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkh131.</pub-id><pub-id pub-id-type="pmid">14681372</pub-id>
+</mixed-citation></ref><ref id="bib4"><label>4.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Boutet</surname> &#x000a0;<given-names>E</given-names></string-name>, <string-name><surname>Lieberherr</surname> &#x000a0;<given-names>D</given-names></string-name>, <string-name><surname>Tognolli</surname> &#x000a0;<given-names>M</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>UniProtKB/Swiss-Prot:&#x000a0;the Manually Annotated Section of the UniProt KnowledgeBase</article-title>. In: <person-group person-group-type="editor"><string-name><surname>Edwards&#x000a0;</surname> &#x000a0;<given-names>D</given-names></string-name></person-group>ed. <source>Plant bioinformatics: methods and protocols</source>. <publisher-loc>Totowa, New York</publisher-loc>: <publisher-name>Humana Press</publisher-name>; <year>2007:</year>; <fpage>89</fpage>&#x02013;<lpage>112</lpage>. <pub-id pub-id-type="doi">10.1007/978-1-59745-535-0_4.</pub-id></mixed-citation></ref><ref id="bib5"><label>5.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Consortium</surname> &#x000a0;<given-names>UniProt</given-names></string-name>
+</person-group>. <article-title>UniProt: a worldwide hub of protein knowledge</article-title>. <source>Nucleic Acids Res</source>. <year>2019</year>;<volume>47</volume>(<issue>D1</issue>):<fpage>D506</fpage>&#x02013;<lpage>15</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gky1049</pub-id>.<pub-id pub-id-type="pmid">30395287</pub-id>
+</mixed-citation></ref><ref id="bib6"><label>6.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhou</surname> &#x000a0;<given-names>N</given-names></string-name>, <string-name><surname>Jiang</surname> &#x000a0;<given-names>&#x000a0;Y</given-names></string-name>, <string-name><surname>Bergquist</surname> &#x000a0;<given-names>TR</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>The CAFA challenge reports improved protein function prediction and new functional annotations for hundreds of genes through experimental screens</article-title>. <source>Genome Biol</source>. <year>2019</year>;<volume>20</volume>(<issue>1</issue>):<fpage>1</fpage>&#x02013;<lpage>23</lpage>. <pub-id pub-id-type="doi">10.1186/s13059-018-1612-0</pub-id>.<pub-id pub-id-type="pmid">30606230</pub-id>
+</mixed-citation></ref><ref id="bib7"><label>7.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>You</surname> &#x000a0;<given-names>&#x000a0;R</given-names></string-name>, <string-name><surname>Zhang</surname> &#x000a0;<given-names>&#x000a0;Z</given-names></string-name>, <string-name><surname>Xiong</surname> &#x000a0;<given-names>&#x000a0;Y</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>GOLabeler: improving sequence-based large-scale protein function prediction by learning to rank</article-title>. <source>Bioinformatics</source>. <year>2018</year>;<volume>34</volume>(<issue>14</issue>):<fpage>2465</fpage>&#x02013;<lpage>73</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/bty130.</pub-id><pub-id pub-id-type="pmid">29522145</pub-id>
+</mixed-citation></ref><ref id="bib8"><label>8.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Kulmanov</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Khan</surname> &#x000a0;<given-names>MA</given-names></string-name>, <string-name><surname>Hoehndorf</surname> &#x000a0;<given-names>R</given-names></string-name></person-group>. <article-title>DeepGO: predicting protein functions from sequence and interactions using a deep ontology-aware classifier</article-title>. <source>Bioinformatics</source>. <year>2018</year>;<volume>34</volume>(<issue>4</issue>):<fpage>660</fpage>&#x02013;<lpage>68</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btx624.</pub-id><pub-id pub-id-type="pmid">29028931</pub-id>
+</mixed-citation></ref><ref id="bib9"><label>9.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>You</surname> &#x000a0;<given-names>&#x000a0;R</given-names></string-name>, <string-name><surname>Yao</surname> &#x000a0;<given-names>&#x000a0;S</given-names></string-name>, <string-name><surname>Xiong</surname> &#x000a0;<given-names>&#x000a0;Y</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>NetGO: improving large-scale protein function prediction with massive network information</article-title>. <source>Nucleic Acids Res</source>. <year>2019</year>;<volume>47</volume>(<issue>W1</issue>):<fpage>W379</fpage>&#x02013;<lpage>87</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkz388.</pub-id><pub-id pub-id-type="pmid">31106361</pub-id>
+</mixed-citation></ref><ref id="bib10"><label>10.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Gligorijevi&#x00107;</surname> &#x000a0;<given-names>V</given-names></string-name>, <string-name><surname>Renfrew</surname> &#x000a0;<given-names>PD</given-names></string-name>, <string-name><surname>Kosciolek</surname> &#x000a0;<given-names>T</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Structure-based protein function prediction using graph convolutional networks</article-title>. <source>Nat Commun</source>. <year>2021</year>;<volume>12</volume>(<issue>1</issue>):<fpage>3168</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-021-23303-9.</pub-id><pub-id pub-id-type="pmid">34039967</pub-id>
+</mixed-citation></ref><ref id="bib11"><label>11.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Altschul</surname> &#x000a0;<given-names>SF</given-names></string-name>, <string-name><surname>Gish</surname> &#x000a0;<given-names>W</given-names></string-name>, <string-name><surname>Miller</surname> &#x000a0;<given-names>W</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Basic local alignment search tool</article-title>. <source>J Mol Biol 19</source>. <year>90</year>;<volume>215</volume>(<issue>3</issue>):<fpage>403</fpage>&#x02013;<lpage>10</lpage>. <pub-id pub-id-type="doi">10.1016/S0022-2836(05)80360-2.</pub-id></mixed-citation></ref><ref id="bib12"><label>12.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Das</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>Lee</surname> &#x000a0;<given-names>D</given-names></string-name>, <string-name><surname>Sillitoe</surname> &#x000a0;<given-names>I</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>Functional classification of CATH superfamilies: a domain-based approach for protein function annotation</article-title>. <source>Bioinformatics</source>. <year>2015</year>;<volume>31</volume>(<issue>21</issue>):<fpage>3460</fpage>&#x02013;<lpage>67</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btv398.</pub-id><pub-id pub-id-type="pmid">26139634</pub-id>
+</mixed-citation></ref><ref id="bib13"><label>13.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Radivojac</surname> &#x000a0;<given-names>P</given-names></string-name>, <string-name><surname>Clark</surname> &#x000a0;<given-names>WT</given-names></string-name>, <string-name><surname>Oron</surname> &#x000a0;<given-names>TR</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>A large-scale evaluation of computational protein function prediction</article-title>. <source>Nat Methods</source>. <year>2013</year>;<volume>10</volume>(<issue>3</issue>):<fpage>221</fpage>&#x02013;<lpage>27</lpage>. <pub-id pub-id-type="doi">10.1038/nmeth.2340.</pub-id><pub-id pub-id-type="pmid">23353650</pub-id>
+</mixed-citation></ref><ref id="bib14"><label>14.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Fa</surname> &#x000a0;<given-names>R</given-names></string-name>, <string-name><surname>Cozzetto</surname> &#x000a0;<given-names>D</given-names></string-name>, <string-name><surname>Wan</surname> &#x000a0;<given-names>C</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>Predicting human protein function with multi-task deep neural networks</article-title>. <source>PLoS One</source>. <year>2018</year>;<volume>13</volume>(<issue>6</issue>):<fpage>e0198216</fpage>. <pub-id pub-id-type="doi">10.1371/journal.pone.0198216.</pub-id><pub-id pub-id-type="pmid">29889900</pub-id>
+</mixed-citation></ref><ref id="bib15"><label>15.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhang</surname> &#x000a0;<given-names>X</given-names></string-name>, <string-name><surname>Wang</surname> &#x000a0;<given-names>L</given-names></string-name>, <string-name><surname>Liu</surname> &#x000a0;<given-names>H</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Prot2GO: predicting GO annotations from protein sequences and interactions</article-title>. <source>IIEEE/ACM Trans Comput Biol Bioinform</source>. <year>2021</year>;<volume>20</volume>(<issue>5</issue>):<fpage>2772</fpage>&#x02013;<lpage>80</lpage>. <pub-id pub-id-type="doi">10.1109/tcbb.2021.3139841.</pub-id></mixed-citation></ref><ref id="bib16"><label>16.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Cao</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Shen</surname> &#x000a0;<given-names>Y</given-names></string-name></person-group>. <article-title>TALE: Transformer-based protein function annotation with joint sequence&#x02014;label embedding</article-title>. <source>Bioinformatics</source>. <year>2021</year>;<volume>37</volume>(<issue>18</issue>):<fpage>2825</fpage>&#x02013;<lpage>33</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btab198</pub-id>.<pub-id pub-id-type="pmid">33755048</pub-id>
+</mixed-citation></ref><ref id="bib17"><label>17.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Kulmanov</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Hoehndorf</surname> &#x000a0;<given-names>R</given-names></string-name></person-group>. <article-title>DeepGOPlus: improved protein function prediction from sequence</article-title>. <source>Bioinformatics</source>. <year>2021</year>;<volume>37</volume>(<issue>8</issue>):<fpage>1187</fpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btaa763.</pub-id><pub-id pub-id-type="pmid">34009304</pub-id>
+</mixed-citation></ref><ref id="bib18"><label>18.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Sharan</surname> &#x000a0;<given-names>R</given-names></string-name>, <string-name><surname>Ulitsky</surname> &#x000a0;<given-names>I</given-names></string-name>, <string-name><surname>Shamir</surname> &#x000a0;<given-names>R</given-names></string-name></person-group>. <article-title>Network-based prediction of protein function</article-title>. <source>Mol Syst Biol</source>. <year>2007</year>;<volume>3</volume>(<issue>1</issue>):<fpage>88</fpage>. <pub-id pub-id-type="doi">10.1038/msb4100129.</pub-id><pub-id pub-id-type="pmid">17353930</pub-id>
+</mixed-citation></ref><ref id="bib19"><label>19.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Mostafavi</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>Ray</surname> &#x000a0;<given-names>D</given-names></string-name>, <string-name><surname>Warde-Farley</surname> &#x000a0;<given-names>D</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>GeneMANIA: a real-time multiple association network integration algorithm for predicting gene function</article-title>. <source>Genome Biol</source>. <year>2008</year>;<volume>9</volume>(<issue>1</issue>):<fpage>1</fpage>&#x02013;<lpage>15</lpage>. <pub-id pub-id-type="doi">10.1186/gb-2008-9-s1-s4.</pub-id></mixed-citation></ref><ref id="bib20"><label>20.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Jiang</surname> &#x000a0;<given-names>JQ</given-names></string-name>, <string-name><surname>McQuay</surname> &#x000a0;<given-names>LJ</given-names></string-name></person-group>. <article-title>Predicting protein function by multi-label correlated semi-supervised learning</article-title>. <source>IEEE ACM Trans Comput Biol Bioinform</source>. <year>2011</year>;<volume>9</volume>(<issue>4</issue>):<fpage>1059</fpage>&#x02013;<lpage>69</lpage>. <pub-id pub-id-type="doi">10.1109/TCBB.2011.156.</pub-id></mixed-citation></ref><ref id="bib21"><label>21.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Cho</surname> &#x000a0;<given-names>H</given-names></string-name>, <string-name><surname>Berger</surname> &#x000a0;<given-names>B</given-names></string-name>, <string-name><surname>Peng</surname> &#x000a0;<given-names>J</given-names></string-name></person-group>. <article-title>Compact integration of multi-network topology for functional analysis of genes</article-title>. <source>Cell Syst</source>. <year>2016</year>;<volume>3</volume>(<issue>6</issue>):<fpage>540</fpage>&#x02013;<lpage>48</lpage>. <pub-id pub-id-type="doi">10.1016/j.cels.2016.10.017.</pub-id><pub-id pub-id-type="pmid">27889536</pub-id>
+</mixed-citation></ref><ref id="bib22"><label>22.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>You</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Chen</surname> &#x000a0;<given-names>T</given-names></string-name>, <string-name><surname>Shen</surname> &#x000a0;<given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Graph contrastive learning automated</article-title>. In: <person-group person-group-type="editor"><string-name><surname>Meila</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Zhang</surname> &#x000a0;<given-names>T</given-names></string-name></person-group>, eds. <source>Proceedings of the 38th International Conference on Machine Learning</source>. <publisher-loc>Virtual Event</publisher-loc>: <source>International Conference on Machine Learning (ICML)</source>; <year>2021</year>:<fpage>12121</fpage>&#x02013;<lpage>32</lpage>. <pub-id pub-id-type="doi">10.48550/arXiv.2106.07594.</pub-id> &#x000a0;<comment>Accessed 22 October 2024.</comment></mixed-citation></ref><ref id="bib23"><label>23.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Gaudet</surname> &#x000a0;<given-names>P</given-names></string-name>, <string-name><surname>Livstone</surname> &#x000a0;<given-names>MS</given-names></string-name>, <string-name><surname>Lewis</surname> &#x000a0;<given-names>SE</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>Phylogenetic-based propagation of functional annotations within the Gene Ontology consortium</article-title>. <source>Briefings Bioinf</source>. <year>2011</year>;<volume>12</volume>(<issue>5</issue>):<fpage>449</fpage>&#x02013;<lpage>62</lpage>. <pub-id pub-id-type="doi">10.1093/bib/bbr042.</pub-id></mixed-citation></ref><ref id="bib24"><label>24.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Konc</surname> &#x000a0;<given-names>J</given-names></string-name>, <string-name><surname>Hodo&#x00161;&#x0010d;ek</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Ogrizek</surname> &#x000a0;<given-names>M</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Structure-based function prediction of uncharacterized protein using binding sites comparison</article-title>. <source>PLoS Comput Biol</source>. <year>2013</year>;<volume>9</volume>(<issue>11</issue>):<fpage>e1003341</fpage>. <pub-id pub-id-type="doi">10.1371/journal.pcbi.1003341.</pub-id><pub-id pub-id-type="pmid">24244144</pub-id>
+</mixed-citation></ref><ref id="bib25"><label>25.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lai</surname> &#x000a0;<given-names>B</given-names></string-name>, <string-name><surname>Xu</surname> &#x000a0;<given-names>J</given-names></string-name></person-group>. <article-title>Accurate protein function prediction via graph attention networks with predicted structure information</article-title>. <source>Briefings Bioinf</source>. <year>2022</year>;<volume>23</volume>(<issue>1</issue>):<fpage>bbab502</fpage>. <pub-id pub-id-type="doi">10.1093/bib/bbab502.</pub-id></mixed-citation></ref><ref id="bib26"><label>26.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Ma</surname> &#x000a0;<given-names>W</given-names></string-name>, <string-name><surname>Zhang</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>Li</surname> &#x000a0;<given-names>Z</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>Enhancing protein function prediction performance by utilizing AlphaFold-predicted protein structures</article-title>. <source>J Chem Inf Model</source>. <year>2022</year>;<volume>62</volume>(<issue>17</issue>):<fpage>4008</fpage>&#x02013;<lpage>17</lpage>. <pub-id pub-id-type="doi">10.1021/acs.jcim.2c00885.</pub-id><pub-id pub-id-type="pmid">36006049</pub-id>
+</mixed-citation></ref><ref id="bib27"><label>27.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Gu</surname> &#x000a0;<given-names>Z</given-names></string-name>, <string-name><surname>Luo</surname> &#x000a0;<given-names>X</given-names></string-name>, <string-name><surname>Chen</surname> &#x000a0;<given-names>J</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Hierarchical graph transformer with contrastive learning for protein function prediction</article-title>. <source>Bioinformatics</source>. <year>2023</year>;<volume>39</volume>(<issue>7</issue>):<fpage>btad410</fpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btad410.</pub-id><pub-id pub-id-type="pmid">37369035</pub-id>
+</mixed-citation></ref><ref id="bib28"><label>28.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Verspoor</surname> &#x000a0;<given-names>KM</given-names></string-name>
+</person-group>. <article-title>Roles for text mining in protein function prediction</article-title>. In:<person-group person-group-type="editor"><string-name><surname>VD</surname> &#x000a0;<given-names>Kumar</given-names></string-name> &#x000a0;<string-name><surname>HJ</surname> &#x000a0;<given-names>Tipney</given-names></string-name></person-group>, eds. <source>Biomedical Literature Mining</source>. <publisher-loc>New York</publisher-loc>: <publisher-name>Springer</publisher-name>; <year>2014</year>:<fpage>95</fpage>&#x02013;<lpage>108</lpage>. <pub-id pub-id-type="doi">10.1007/978-1-4939-0709-0_6.</pub-id></mixed-citation></ref><ref id="bib29"><label>29.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Yao</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>You</surname> &#x000a0;<given-names>R</given-names></string-name>, <string-name><surname>Wang</surname> &#x000a0;<given-names>S</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>NetGO 2.0: improving large-scale protein function prediction with massive sequence, text, domain, family and network information</article-title>. <source>Nucleic Acids Res</source>. <year>2021</year>;<volume>49</volume>(<issue>W1</issue>):<fpage>W469</fpage>&#x02013;<lpage>75</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkab398.</pub-id><pub-id pub-id-type="pmid">34038555</pub-id>
+</mixed-citation></ref><ref id="bib30"><label>30.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhou</surname> &#x000a0;<given-names>X</given-names></string-name>, <string-name><surname>Zheng</surname> &#x000a0;<given-names>W</given-names></string-name>, <string-name><surname>Li</surname> &#x000a0;<given-names>Y</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>I-TASSER-MTD: a deep-learning-based platform for multi-domain protein structure and function prediction</article-title>. <source>Nat Protoc</source>. <year>2022</year>;<volume>17</volume>(<issue>10</issue>):<fpage>2326</fpage>&#x02013;<lpage>53</lpage>. <pub-id pub-id-type="doi">10.1038/s41596-022-00728-0.</pub-id><pub-id pub-id-type="pmid">35931779</pub-id>
+</mixed-citation></ref><ref id="bib31"><label>31.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Varadi</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Anyango</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>Deshpande</surname> &#x000a0;<given-names>M</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models</article-title>. <source>Nucleic Acids Res</source>. <year>2022</year>;<volume>50</volume>(<issue>D1</issue>):<fpage>D439</fpage>&#x02013;<lpage>44</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gkab1061.</pub-id><pub-id pub-id-type="pmid">34791371</pub-id>
+</mixed-citation></ref><ref id="bib32"><label>32.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Baek</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>DiMaio</surname> &#x000a0;<given-names>F</given-names></string-name>, <string-name><surname>Anishchenko</surname> &#x000a0;<given-names>I</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Accurate prediction of protein structures and interactions using a three-track neural network</article-title>. <source>Science</source>. <year>2021</year>;<volume>373</volume>(<issue>6557</issue>):<fpage>871</fpage>&#x02013;<lpage>76</lpage>. <pub-id pub-id-type="doi">10.1126/science.abj8754.</pub-id><pub-id pub-id-type="pmid">34282049</pub-id>
+</mixed-citation></ref><ref id="bib33"><label>33.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Lin</surname> &#x000a0;<given-names>Z</given-names></string-name>, <string-name><surname>Akin</surname> &#x000a0;<given-names>H</given-names></string-name>, <string-name><surname>Rao</surname> &#x000a0;<given-names>R</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Evolutionary-scale prediction of atomic-level protein structure with a language model</article-title>. <source>Science</source>. <year>2023</year>;<volume>379</volume>(<issue>6637</issue>):<fpage>1123</fpage>&#x02013;<lpage>30</lpage>. <pub-id pub-id-type="doi">10.1126/science.ade2574</pub-id>.<pub-id pub-id-type="pmid">36927031</pub-id>
+</mixed-citation></ref><ref id="bib34"><label>34.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Wang</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>You</surname> &#x000a0;<given-names>R</given-names></string-name>, <string-name><surname>Liu</surname> &#x000a0;<given-names>Y</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>NetGO 3.0: protein language model improves large-scale functional annotations</article-title>. <source>Genomics Proteomics Bioinformatics</source>. <year>2023</year>;<volume>21</volume>(<issue>2</issue>):<fpage>349</fpage>&#x02013;<lpage>58</lpage>. <pub-id pub-id-type="doi">10.1016/j.gpb.2023.04.001.</pub-id><pub-id pub-id-type="pmid">37075830</pub-id>
+</mixed-citation></ref><ref id="bib35"><label>35.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhang</surname> &#x000a0;<given-names>C</given-names></string-name>, <string-name><surname>Zheng</surname> &#x000a0;<given-names>W</given-names></string-name>, <string-name><surname>Freddolino</surname> &#x000a0;<given-names>PL</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>MetaGO: predicting Gene Ontology of non-homologous proteins through low-resolution protein structure prediction and protein&#x02013;protein network mapping</article-title>. <source>J Mol Biol</source>. <year>2018</year>;<volume>430</volume>(<issue>15</issue>):<fpage>2256</fpage>&#x02013;<lpage>65</lpage>. <pub-id pub-id-type="doi">10.1016/j.jmb.2018.03.004</pub-id>.<pub-id pub-id-type="pmid">29534977</pub-id>
+</mixed-citation></ref><ref id="bib36"><label>36.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Rives</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Meier</surname> &#x000a0;<given-names>J</given-names></string-name>, <string-name><surname>Sercu</surname> &#x000a0;<given-names>T</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences</article-title>. <source>Proc Natl Acad Sci</source>. <year>2021</year>;<volume>118</volume>(<issue>15</issue>):<fpage>e2016239118</fpage>. <pub-id pub-id-type="doi">10.1073/pnas.2016239118.</pub-id><pub-id pub-id-type="pmid">33876751</pub-id>
+</mixed-citation></ref><ref id="bib37"><label>37.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Xu</surname> &#x000a0;<given-names>K</given-names></string-name>, <string-name><surname>Hu</surname> &#x000a0;<given-names>W</given-names></string-name>, <string-name><surname>Leskovec</surname> &#x000a0;<given-names>&#x000a0;J</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<source>arXiv preprint arXiv:1810.00826</source>. <year>2019</year>. <pub-id pub-id-type="doi">10.48550/arXiv.1810.00826</pub-id>. <comment>Accessed 22 October 2024.</comment></mixed-citation></ref><ref id="bib38"><label>38.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Gilmer</surname> &#x000a0;<given-names>J</given-names></string-name>, <string-name><surname>Schoenholz</surname> &#x000a0;<given-names>SS</given-names></string-name>, <string-name><surname>Riley</surname> &#x000a0;<given-names>PF</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Message passing neural networks</article-title>. In: <person-group person-group-type="editor"><string-name><surname>Sch&#x000fc;tt</surname> &#x000a0;<given-names>KT</given-names></string-name>, <string-name><surname>Chmiela</surname> &#x000a0;<given-names>S</given-names></string-name>, <string-name><surname>von Lilienfeld</surname> &#x000a0;<given-names>OA</given-names></string-name></person-group>, et al., eds. <source>Machine learning meets quantum physics</source>. <publisher-loc>Cham</publisher-loc>: <publisher-name>Springer International Publishing</publisher-name>; <year>2020</year>:<fpage>199</fpage>&#x02013;<lpage>214</lpage>. <pub-id pub-id-type="doi">10.1007/978-3-030-40245-7_10</pub-id>.</mixed-citation></ref><ref id="bib39"><label>39.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Baek</surname> &#x000a0;<given-names>J</given-names></string-name>, <string-name><surname>Kang</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Hwang</surname> &#x000a0;<given-names>SJ</given-names></string-name></person-group>. <article-title>Accurate learning of graph representations with graph multiset pooling</article-title>. <source>arXiv preprint arXiv:2102.11533</source>. <year>2021</year>. <pub-id pub-id-type="doi">10.48550/arXiv.2102.11533</pub-id>. <comment>Accessed 22 October 2024.</comment></mixed-citation></ref><ref id="bib40"><label>40.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Vaswani</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Shazeer</surname> &#x000a0;<given-names>N</given-names></string-name>, <string-name><surname>Parmar</surname> &#x000a0;<given-names>N</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Attention is all you need</article-title>. In: <source>Proceedings of the 31st Conference on Neural Information Processing Systems</source>. <publisher-loc>Red Hook, NY</publisher-loc>: <publisher-name>Curran Associates Inc</publisher-name>; <year>2017</year>:<fpage>6000</fpage>&#x02013;<lpage>10</lpage>. <pub-id pub-id-type="doi">10.5555/3295222.3295349</pub-id>.</mixed-citation></ref><ref id="bib41"><label>41.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Long</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Cao</surname> &#x000a0;<given-names>Z</given-names></string-name>, <string-name><surname>Wang</surname> &#x000a0;<given-names>&#x000a0;J</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Conditional adversarial domain adaptation</article-title>. In: <source>Proceedings of the 32nd International Conference on Neural Information Processing Systems</source>. <publisher-loc>Red Hook, NY</publisher-loc>: <publisher-name>Curran Associates Inc</publisher-name>; <year>2018</year>:<fpage>1647</fpage>&#x02013;<lpage>57</lpage>. <pub-id pub-id-type="doi">10.5555/3326943.3327094</pub-id>.</mixed-citation></ref><ref id="bib42"><label>42.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Kingma</surname> &#x000a0;<given-names>DP</given-names></string-name>, <string-name><surname>Ba</surname> &#x000a0;<given-names>J</given-names></string-name></person-group>. <article-title>Adam: a method for stochastic optimization</article-title>. <source>arXiv preprint arXiv:14126980</source>. <year>2014</year>. <pub-id pub-id-type="doi">10.48550/arXiv.1412.6980</pub-id>. <comment>Accessed 22 October 2024.</comment></mixed-citation></ref><ref id="bib43"><label>43.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Dana</surname> &#x000a0;<given-names>JM</given-names></string-name>, <string-name><surname>Gutmanas</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Tyagi</surname> &#x000a0;<given-names>N</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>SIFTS: updated Structure Integration with Function, Taxonomy and Sequences resource allows 40-fold increase in coverage of structure-based annotations for proteins</article-title>. <source>Nucleic Acids Res</source>. <year>2019</year>;<volume>47</volume>(<issue>D1</issue>):<fpage>D482</fpage>&#x02013;<lpage>89</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gky1114</pub-id>.<pub-id pub-id-type="pmid">30445541</pub-id>
+</mixed-citation></ref><ref id="bib44"><label>44.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Mirdita</surname> &#x000a0;<given-names>&#x000a0;M</given-names></string-name>, <string-name><surname>Steinegger</surname> &#x000a0;<given-names>&#x000a0;M</given-names></string-name>, <string-name><surname>Breitwieser</surname> &#x000a0;<given-names>&#x000a0;F</given-names></string-name> &#x000a0;<etal>et al.</etal></person-group> &#x000a0;<article-title>Fast and sensitive taxonomic assignment to metagenomic contigs</article-title>. <source>Bioinformatics</source>. <year>2021</year>;<volume>37</volume>(<issue>18</issue>):<fpage>3029</fpage>&#x02013;<lpage>31</lpage>. <pub-id pub-id-type="doi">10.1093/bioinformatics/btab184.</pub-id><pub-id pub-id-type="pmid">33734313</pub-id>
+</mixed-citation></ref><ref id="bib45"><label>45.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Ashburner</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Ball</surname> &#x000a0;<given-names>CA</given-names></string-name>, <string-name><surname>Blake</surname> &#x000a0;<given-names>JA</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Gene ontology: tool for the unification of biology</article-title>. <source>Nat Genet</source>. <year>2000</year>;<volume>25</volume>(<issue>1</issue>):<fpage>25</fpage>&#x02013;<lpage>29</lpage>. <pub-id pub-id-type="doi">10.1038/75556</pub-id>.<pub-id pub-id-type="pmid">10802651</pub-id>
+</mixed-citation></ref><ref id="bib46"><label>46.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Waterhouse</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Bertoni</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Bienert</surname> &#x000a0;<given-names>S</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>SWISS-MODEL: homology modelling of protein structures and complexes</article-title>. <source>Nucleic Acids Res</source>. <year>2018</year>;<volume>46</volume>(<issue>W1</issue>):<fpage>W296</fpage>&#x02013;<lpage>W303</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gky427</pub-id>.<pub-id pub-id-type="pmid">29788355</pub-id>
+</mixed-citation></ref><ref id="bib47"><label>47.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Liu</surname> &#x000a0;<given-names>W</given-names></string-name>, <string-name><surname>Wang</surname> &#x000a0;<given-names>Z</given-names></string-name>, <string-name><surname>You</surname> &#x000a0;<given-names>R</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>PLMSearch: protein language model powers accurate and fast sequence search for remote homology</article-title>. <source>Nat Commun</source>. <year>2024</year>;<volume>15</volume>(<issue>1</issue>):<fpage>2775</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-024-46808-5</pub-id>.<pub-id pub-id-type="pmid">38555371</pub-id>
+</mixed-citation></ref><ref id="bib48"><label>48.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Zhang</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Skolnick</surname> &#x000a0;<given-names>J</given-names></string-name></person-group>. <article-title>TM-align: a protein structure alignment algorithm based on the TM-score</article-title>. <source>Nucleic Acids Res</source>. <year>2005</year>;<volume>33</volume>(<issue>7</issue>):<fpage>2302</fpage>&#x02013;<lpage>9</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gki524</pub-id>.<pub-id pub-id-type="pmid">15849316</pub-id>
+</mixed-citation></ref><ref id="bib49"><label>49.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>van&#x000a0;Kempen</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Kim</surname> &#x000a0;<given-names>SS</given-names></string-name>, <string-name><surname>Tumescheit</surname> &#x000a0;<given-names>C</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Fast and accurate protein structure search with Foldseek</article-title>. <source>Nat Biotechnol</source>. <year>2024</year>;<volume>42</volume>(<issue>2</issue>):<fpage>243</fpage>&#x02013;<lpage>6</lpage>. <pub-id pub-id-type="doi">10.1038/s41587-023-01773-0</pub-id>.<pub-id pub-id-type="pmid">37156916</pub-id>
+</mixed-citation></ref><ref id="bib50"><label>50.</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name>
+<surname>Boutet</surname> &#x000a0;<given-names>E</given-names></string-name>, <string-name><surname>Lieberherr</surname> &#x000a0;<given-names>D</given-names></string-name>, <string-name><surname>Tognolli</surname> &#x000a0;<given-names>M</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>UniProtKB/Swiss-Prot, the manually annotated section of the UniProt KnowledgeBase: how to use the entry view</article-title>. In:<person-group person-group-type="editor"><string-name><surname>D</surname> &#x000a0;<given-names>Edwards</given-names></string-name></person-group>, ed. <source>Plant bioinformatics: Methods and protocols.</source> &#x000a0;<publisher-loc>New York</publisher-loc>: <publisher-name>Springer</publisher-name>, <year>2016</year>: <fpage>23</fpage>&#x02013;<lpage>54</lpage>. <pub-id pub-id-type="doi">10.1007/978-1-4939-3167-5_2</pub-id>.</mixed-citation></ref><ref id="bib51"><label>51.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Selvaraju</surname> &#x000a0;<given-names>RR</given-names></string-name>, <string-name><surname>Cogswell</surname> &#x000a0;<given-names>M</given-names></string-name>, <string-name><surname>Das</surname> &#x000a0;<given-names>A</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<article-title>Grad-CAM: visual explanations from deep networks via gradient-based localization</article-title>. <source>Int J Comput Vision</source>. <year>2020</year>;<volume>128</volume>(<issue>2</issue>):<fpage>336</fpage>&#x02013;<lpage>59</lpage>. <pub-id pub-id-type="doi">10.1007/s11263-019-01228-7</pub-id>.</mixed-citation></ref><ref id="bib52"><label>52.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Yang</surname> &#x000a0;<given-names>J</given-names></string-name>, <string-name><surname>Roy</surname> &#x000a0;<given-names>A</given-names></string-name>, <string-name><surname>Zhang</surname> &#x000a0;<given-names>Y</given-names></string-name></person-group>. <article-title>BioLiP: a semi-manually curated database for biologically relevant ligand&#x02013;protein interactions</article-title>. <source>Nucleic Acids Res</source>. <year>2012</year>;<volume>41</volume>(<issue>D1</issue>):<fpage>D1096</fpage>&#x02013;<lpage>103</lpage>. <pub-id pub-id-type="doi">10.1093/nar/gks966</pub-id>.<pub-id pub-id-type="pmid">23087378</pub-id>
+</mixed-citation></ref><ref id="bib53"><label>53.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name>
+<surname>Steinegger</surname> &#x000a0;<given-names>&#x000a0;M</given-names></string-name>, <string-name><surname>S&#x000f6;ding</surname> &#x000a0;<given-names>&#x000a0;J</given-names></string-name></person-group>. <article-title>Clustering huge protein sequence sets in linear time</article-title>. <source>Nat Commun</source>. <year>2018</year>;<volume>9</volume>(<issue>1</issue>):<fpage>2542</fpage>. <pub-id pub-id-type="doi">10.1038/s41467-018-04964-5</pub-id>.<pub-id pub-id-type="pmid">29959318</pub-id>
+</mixed-citation></ref><ref id="bib54"><label>54.</label><mixed-citation publication-type="data">
+<person-group person-group-type="curator">
+<string-name>
+<surname>Fu</surname> &#x000a0;<given-names>Y</given-names></string-name>, <string-name><surname>Gu</surname> &#x000a0;<given-names>Z</given-names></string-name>, <string-name><surname>Luo</surname> &#x000a0;<given-names>X</given-names></string-name>, <etal>et al.</etal></person-group> &#x000a0;<data-title>Supporting data for &#x0201c;Learning a Generalized Graph Transformer for Protein Function Prediction in Dissimilar Sequences.&#x0201d;</data-title>. <source>GigaScience Database</source>. <year>2024</year>. <pub-id pub-id-type="doi">10.5524/102588</pub-id>.</mixed-citation></ref></ref-list></back></article>
